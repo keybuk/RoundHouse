@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		D29F5C81267571EF00EC2F85 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C80267571EF00EC2F85 /* Tests_iOS.swift */; };
 		D29F5C8B267571EF00EC2F85 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C8A267571EF00EC2F85 /* Tests_macOS.swift */; };
-		D29F5C8C267571EF00EC2F85 /* RoundHouse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C67267571ED00EC2F85 /* RoundHouse.xcdatamodeld */; };
-		D29F5C8D267571EF00EC2F85 /* RoundHouse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C67267571ED00EC2F85 /* RoundHouse.xcdatamodeld */; };
 		D29F5C8E267571EF00EC2F85 /* RoundHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */; };
 		D29F5C8F267571EF00EC2F85 /* RoundHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */; };
 		D29F5C90267571EF00EC2F85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C6A267571ED00EC2F85 /* ContentView.swift */; };
@@ -19,6 +17,8 @@
 		D29F5C93267571EF00EC2F85 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C6B267571ED00EC2F85 /* Persistence.swift */; };
 		D29F5C94267571EF00EC2F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D29F5C6C267571EF00EC2F85 /* Assets.xcassets */; };
 		D29F5C95267571EF00EC2F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D29F5C6C267571EF00EC2F85 /* Assets.xcassets */; };
+		D29F5CB82675743800EC2F85 /* RoundHouse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D29F5CB12675743700EC2F85 /* RoundHouse.xcdatamodeld */; };
+		D29F5CB92675743800EC2F85 /* RoundHouse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D29F5CB12675743700EC2F85 /* RoundHouse.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D29F5C68267571ED00EC2F85 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseApp.swift; sourceTree = "<group>"; };
 		D29F5C6A267571ED00EC2F85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D29F5C6B267571ED00EC2F85 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		D29F5C80267571EF00EC2F85 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		D29F5C86267571EF00EC2F85 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29F5C8A267571EF00EC2F85 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		D29F5CB32675743700EC2F85 /* EngineShed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EngineShed.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +87,7 @@
 		D29F5C61267571ED00EC2F85 = {
 			isa = PBXGroup;
 			children = (
+				D29F5CB02675742800EC2F85 /* Model */,
 				D29F5C66267571ED00EC2F85 /* Shared */,
 				D29F5C7F267571EF00EC2F85 /* Tests iOS */,
 				D29F5C89267571EF00EC2F85 /* Tests macOS */,
@@ -101,7 +102,6 @@
 				D29F5C6A267571ED00EC2F85 /* ContentView.swift */,
 				D29F5C6B267571ED00EC2F85 /* Persistence.swift */,
 				D29F5C6C267571EF00EC2F85 /* Assets.xcassets */,
-				D29F5C67267571ED00EC2F85 /* RoundHouse.xcdatamodeld */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -131,6 +131,14 @@
 				D29F5C8A267571EF00EC2F85 /* Tests_macOS.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		D29F5CB02675742800EC2F85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D29F5CB12675743700EC2F85 /* RoundHouse.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D29F5C8C267571EF00EC2F85 /* RoundHouse.xcdatamodeld in Sources */,
+				D29F5CB82675743800EC2F85 /* RoundHouse.xcdatamodeld in Sources */,
 				D29F5C92267571EF00EC2F85 /* Persistence.swift in Sources */,
 				D29F5C8E267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
 				D29F5C90267571EF00EC2F85 /* ContentView.swift in Sources */,
@@ -302,7 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D29F5C8D267571EF00EC2F85 /* RoundHouse.xcdatamodeld in Sources */,
+				D29F5CB92675743800EC2F85 /* RoundHouse.xcdatamodeld in Sources */,
 				D29F5C93267571EF00EC2F85 /* Persistence.swift in Sources */,
 				D29F5C8F267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
 				D29F5C91267571EF00EC2F85 /* ContentView.swift in Sources */,
@@ -719,12 +727,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D29F5C67267571ED00EC2F85 /* RoundHouse.xcdatamodeld */ = {
+		D29F5CB12675743700EC2F85 /* RoundHouse.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D29F5C68267571ED00EC2F85 /* Shared.xcdatamodel */,
+				D29F5CB32675743700EC2F85 /* EngineShed.xcdatamodel */,
 			);
-			currentVersion = D29F5C68267571ED00EC2F85 /* Shared.xcdatamodel */;
+			currentVersion = D29F5CB32675743700EC2F85 /* EngineShed.xcdatamodel */;
 			path = RoundHouse.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
