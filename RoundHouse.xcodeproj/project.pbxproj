@@ -153,6 +153,8 @@
 				D29F5CB12675743700EC2F85 /* RoundHouse.xcdatamodeld */,
 				D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */,
 				D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */,
+				D29F5CBA2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift */,
+				D29F5C6B267571ED00EC2F85 /* PersistenceController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,8 +170,6 @@
 		D29F5CC1267579E800EC2F85 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				D29F5CBA2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift */,
-				D29F5C6B267571ED00EC2F85 /* PersistenceController.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
