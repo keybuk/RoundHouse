@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D23C3BD12676B6940017BC5B /* Model+Image (iOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BD02676B6940017BC5B /* Model+Image (iOS).swift */; };
+		D23C3BD32676B7180017BC5B /* Model+Image (macOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BD22676B7180017BC5B /* Model+Image (macOS).swift */; };
+		D23C3BD42676B8B70017BC5B /* Model+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4961F2675EAE90008AFB8 /* Model+Image.swift */; };
+		D23C3BD52676B8B80017BC5B /* Model+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4961F2675EAE90008AFB8 /* Model+Image.swift */; };
 		D29F5C81267571EF00EC2F85 /* UI_Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C80267571EF00EC2F85 /* UI_Tests_iOS.swift */; };
 		D29F5C8B267571EF00EC2F85 /* UI_Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C8A267571EF00EC2F85 /* UI_Tests_macOS.swift */; };
 		D29F5C8E267571EF00EC2F85 /* RoundHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */; };
@@ -87,6 +91,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D23C3BD02676B6940017BC5B /* Model+Image (iOS).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+Image (iOS).swift"; sourceTree = "<group>"; };
+		D23C3BD22676B7180017BC5B /* Model+Image (macOS).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+Image (macOS).swift"; sourceTree = "<group>"; };
 		D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseApp.swift; sourceTree = "<group>"; };
 		D29F5C6A267571ED00EC2F85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D29F5C6B267571ED00EC2F85 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 		D2C4960E267586A60008AFB8 /* RoundHouse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoundHouse.xcdatamodel; sourceTree = "<group>"; };
 		D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseMigrationPolicy.swift; sourceTree = "<group>"; };
 		D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = RoundHouseMappingModel.xcmappingmodel; sourceTree = "<group>"; };
+		D2C4961F2675EAE90008AFB8 /* Model+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+Image.swift"; sourceTree = "<group>"; };
 		D2C496222675F46E0008AFB8 /* Purchase+Condition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Purchase+Condition.swift"; sourceTree = "<group>"; };
 		D2C496252675F4AA0008AFB8 /* Model+Classification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+Classification.swift"; sourceTree = "<group>"; };
 		D2C496282675F4EC0008AFB8 /* Model+Era.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+Era.swift"; sourceTree = "<group>"; };
@@ -238,6 +245,9 @@
 				D2C496252675F4AA0008AFB8 /* Model+Classification.swift */,
 				D2C496282675F4EC0008AFB8 /* Model+Era.swift */,
 				D2C4962B2675F5160008AFB8 /* Model+Disposition.swift */,
+				D2C4961F2675EAE90008AFB8 /* Model+Image.swift */,
+				D23C3BD02676B6940017BC5B /* Model+Image (iOS).swift */,
+				D23C3BD22676B7180017BC5B /* Model+Image (macOS).swift */,
 				D2C496342675F8110008AFB8 /* Train+Members.swift */,
 			);
 			path = Model;
@@ -505,11 +515,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D29F5CB82675743800EC2F85 /* RoundHouse.xcdatamodeld in Sources */,
+				D23C3BD42676B8B70017BC5B /* Model+Image.swift in Sources */,
 				D29F5CBB2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift in Sources */,
 				D2C4962C2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
 				D2C496262675F4AA0008AFB8 /* Model+Classification.swift in Sources */,
 				D29F5CBE267578F300EC2F85 /* PreviewData.swift in Sources */,
 				D2C496382675F8860008AFB8 /* Purchase+Accessories.swift in Sources */,
+				D23C3BD12676B6940017BC5B /* Model+Image (iOS).swift in Sources */,
 				D2C496352675F8110008AFB8 /* Train+Members.swift in Sources */,
 				D29F5C92267571EF00EC2F85 /* PersistenceController.swift in Sources */,
 				D2C496322675F7A80008AFB8 /* Purchase+Models.swift in Sources */,
@@ -528,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D29F5CB92675743800EC2F85 /* RoundHouse.xcdatamodeld in Sources */,
+				D23C3BD52676B8B80017BC5B /* Model+Image.swift in Sources */,
 				D29F5CBC2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift in Sources */,
 				D2C4962D2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
 				D2C496272675F4AA0008AFB8 /* Model+Classification.swift in Sources */,
@@ -539,6 +552,7 @@
 				D2C496142675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */,
 				D2C4961A26758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
 				D29F5C8F267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
+				D23C3BD32676B7180017BC5B /* Model+Image (macOS).swift in Sources */,
 				D2C4962A2675F4EC0008AFB8 /* Model+Era.swift in Sources */,
 				D2C496302675F7250008AFB8 /* Purchase+Currency.swift in Sources */,
 				D2C496242675F46E0008AFB8 /* Purchase+Condition.swift in Sources */,
