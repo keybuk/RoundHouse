@@ -29,6 +29,14 @@
 		D2C496142675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */; };
 		D2C4961926758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */; };
 		D2C4961A26758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */; };
+		D2C496232675F46E0008AFB8 /* Purchase+Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496222675F46E0008AFB8 /* Purchase+Condition.swift */; };
+		D2C496242675F46E0008AFB8 /* Purchase+Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496222675F46E0008AFB8 /* Purchase+Condition.swift */; };
+		D2C496262675F4AA0008AFB8 /* Model+Classification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496252675F4AA0008AFB8 /* Model+Classification.swift */; };
+		D2C496272675F4AA0008AFB8 /* Model+Classification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496252675F4AA0008AFB8 /* Model+Classification.swift */; };
+		D2C496292675F4EC0008AFB8 /* Model+Era.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496282675F4EC0008AFB8 /* Model+Era.swift */; };
+		D2C4962A2675F4EC0008AFB8 /* Model+Era.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496282675F4EC0008AFB8 /* Model+Era.swift */; };
+		D2C4962C2675F5160008AFB8 /* Model+Disposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4962B2675F5160008AFB8 /* Model+Disposition.swift */; };
+		D2C4962D2675F5160008AFB8 /* Model+Disposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4962B2675F5160008AFB8 /* Model+Disposition.swift */; };
 		D2C496322675F7A80008AFB8 /* Purchase+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496312675F7A80008AFB8 /* Purchase+Models.swift */; };
 		D2C496332675F7A80008AFB8 /* Purchase+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496312675F7A80008AFB8 /* Purchase+Models.swift */; };
 		D2C496352675F8110008AFB8 /* Train+Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496342675F8110008AFB8 /* Train+Members.swift */; };
@@ -94,6 +102,10 @@
 		D2C4960E267586A60008AFB8 /* RoundHouse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoundHouse.xcdatamodel; sourceTree = "<group>"; };
 		D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseMigrationPolicy.swift; sourceTree = "<group>"; };
 		D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = RoundHouseMappingModel.xcmappingmodel; sourceTree = "<group>"; };
+		D2C496222675F46E0008AFB8 /* Purchase+Condition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Purchase+Condition.swift"; sourceTree = "<group>"; };
+		D2C496252675F4AA0008AFB8 /* Model+Classification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+Classification.swift"; sourceTree = "<group>"; };
+		D2C496282675F4EC0008AFB8 /* Model+Era.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+Era.swift"; sourceTree = "<group>"; };
+		D2C4962B2675F5160008AFB8 /* Model+Disposition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+Disposition.swift"; sourceTree = "<group>"; };
 		D2C496312675F7A80008AFB8 /* Purchase+Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Purchase+Models.swift"; sourceTree = "<group>"; };
 		D2C496342675F8110008AFB8 /* Train+Members.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Train+Members.swift"; sourceTree = "<group>"; };
 		D2C496372675F8860008AFB8 /* Purchase+Accessories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Purchase+Accessories.swift"; sourceTree = "<group>"; };
@@ -216,8 +228,12 @@
 				D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */,
 				D29F5CBA2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift */,
 				D29F5C6B267571ED00EC2F85 /* PersistenceController.swift */,
+				D2C496222675F46E0008AFB8 /* Purchase+Condition.swift */,
 				D2C496312675F7A80008AFB8 /* Purchase+Models.swift */,
 				D2C496372675F8860008AFB8 /* Purchase+Accessories.swift */,
+				D2C496252675F4AA0008AFB8 /* Model+Classification.swift */,
+				D2C496282675F4EC0008AFB8 /* Model+Era.swift */,
+				D2C4962B2675F5160008AFB8 /* Model+Disposition.swift */,
 				D2C496342675F8110008AFB8 /* Train+Members.swift */,
 			);
 			path = Model;
@@ -486,6 +502,8 @@
 			files = (
 				D29F5CB82675743800EC2F85 /* RoundHouse.xcdatamodeld in Sources */,
 				D29F5CBB2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift in Sources */,
+				D2C4962C2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
+				D2C496262675F4AA0008AFB8 /* Model+Classification.swift in Sources */,
 				D29F5CBE267578F300EC2F85 /* PreviewData.swift in Sources */,
 				D2C496382675F8860008AFB8 /* Purchase+Accessories.swift in Sources */,
 				D2C496352675F8110008AFB8 /* Train+Members.swift in Sources */,
@@ -494,6 +512,8 @@
 				D2C496132675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */,
 				D2C4961926758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
 				D29F5C8E267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
+				D2C496292675F4EC0008AFB8 /* Model+Era.swift in Sources */,
+				D2C496232675F46E0008AFB8 /* Purchase+Condition.swift in Sources */,
 				D29F5C90267571EF00EC2F85 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +524,8 @@
 			files = (
 				D29F5CB92675743800EC2F85 /* RoundHouse.xcdatamodeld in Sources */,
 				D29F5CBC2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift in Sources */,
+				D2C4962D2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
+				D2C496272675F4AA0008AFB8 /* Model+Classification.swift in Sources */,
 				D29F5CBF267578F300EC2F85 /* PreviewData.swift in Sources */,
 				D2C496392675F8860008AFB8 /* Purchase+Accessories.swift in Sources */,
 				D2C496362675F8110008AFB8 /* Train+Members.swift in Sources */,
@@ -512,6 +534,8 @@
 				D2C496142675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */,
 				D2C4961A26758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
 				D29F5C8F267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
+				D2C4962A2675F4EC0008AFB8 /* Model+Era.swift in Sources */,
+				D2C496242675F46E0008AFB8 /* Purchase+Condition.swift in Sources */,
 				D29F5C91267571EF00EC2F85 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
