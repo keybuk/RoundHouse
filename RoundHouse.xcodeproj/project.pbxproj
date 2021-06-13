@@ -23,6 +23,10 @@
 		D29F5CBC2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5CBA2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift */; };
 		D29F5CBE267578F300EC2F85 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5CBD267578F300EC2F85 /* PreviewData.swift */; };
 		D29F5CBF267578F300EC2F85 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5CBD267578F300EC2F85 /* PreviewData.swift */; };
+		D2C496132675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */; };
+		D2C496142675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */; };
+		D2C4961926758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */; };
+		D2C4961A26758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,9 @@
 		D29F5CB32675743700EC2F85 /* EngineShed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EngineShed.xcdatamodel; sourceTree = "<group>"; };
 		D29F5CBA2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureUnarchiveDateComponentsFromDataTransformer.swift; sourceTree = "<group>"; };
 		D29F5CBD267578F300EC2F85 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		D2C4960E267586A60008AFB8 /* RoundHouse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoundHouse.xcdatamodel; sourceTree = "<group>"; };
+		D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseMigrationPolicy.swift; sourceTree = "<group>"; };
+		D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = RoundHouseMappingModel.xcmappingmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				D29F5CB12675743700EC2F85 /* RoundHouse.xcdatamodeld */,
+				D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */,
+				D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,6 +336,8 @@
 				D29F5CBB2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift in Sources */,
 				D29F5CBE267578F300EC2F85 /* PreviewData.swift in Sources */,
 				D29F5C92267571EF00EC2F85 /* PersistenceController.swift in Sources */,
+				D2C496132675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */,
+				D2C4961926758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
 				D29F5C8E267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
 				D29F5C90267571EF00EC2F85 /* ContentView.swift in Sources */,
 			);
@@ -340,6 +351,8 @@
 				D29F5CBC2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift in Sources */,
 				D29F5CBF267578F300EC2F85 /* PreviewData.swift in Sources */,
 				D29F5C93267571EF00EC2F85 /* PersistenceController.swift in Sources */,
+				D2C496142675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */,
+				D2C4961A26758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
 				D29F5C8F267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
 				D29F5C91267571EF00EC2F85 /* ContentView.swift in Sources */,
 			);
@@ -762,9 +775,10 @@
 		D29F5CB12675743700EC2F85 /* RoundHouse.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D2C4960E267586A60008AFB8 /* RoundHouse.xcdatamodel */,
 				D29F5CB32675743700EC2F85 /* EngineShed.xcdatamodel */,
 			);
-			currentVersion = D29F5CB32675743700EC2F85 /* EngineShed.xcdatamodel */;
+			currentVersion = D2C4960E267586A60008AFB8 /* RoundHouse.xcdatamodel */;
 			path = RoundHouse.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
