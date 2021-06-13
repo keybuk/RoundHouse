@@ -27,6 +27,7 @@ struct PersistenceController {
 
         if inMemory {
             containerStoreDescription.url = URL(fileURLWithPath: "/dev/null")
+            containerStoreDescription.cloudKitContainerOptions = nil
         }
 
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
