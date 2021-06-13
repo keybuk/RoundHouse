@@ -23,6 +23,8 @@
 		D29F5CBC2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5CBA2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift */; };
 		D29F5CBE267578F300EC2F85 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5CBD267578F300EC2F85 /* PreviewData.swift */; };
 		D29F5CBF267578F300EC2F85 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5CBD267578F300EC2F85 /* PreviewData.swift */; };
+		D2C4960026757FBB0008AFB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C495FF26757FBB0008AFB8 /* Preview Assets.xcassets */; };
+		D2C4960126757FBB0008AFB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C495FF26757FBB0008AFB8 /* Preview Assets.xcassets */; };
 		D2C496132675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */; };
 		D2C496142675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */; };
 		D2C4961926758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */; };
@@ -76,6 +78,7 @@
 		D29F5CB32675743700EC2F85 /* EngineShed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EngineShed.xcdatamodel; sourceTree = "<group>"; };
 		D29F5CBA2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureUnarchiveDateComponentsFromDataTransformer.swift; sourceTree = "<group>"; };
 		D29F5CBD267578F300EC2F85 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		D2C495FF26757FBB0008AFB8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D2C4960E267586A60008AFB8 /* RoundHouse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoundHouse.xcdatamodel; sourceTree = "<group>"; };
 		D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseMigrationPolicy.swift; sourceTree = "<group>"; };
 		D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = RoundHouseMappingModel.xcmappingmodel; sourceTree = "<group>"; };
@@ -136,7 +139,6 @@
 			children = (
 				D29F5CB02675742800EC2F85 /* Model */,
 				D29F5CC1267579E800EC2F85 /* Persistence */,
-				D29F5CC0267579BE00EC2F85 /* Preview Content */,
 				D29F5C66267571ED00EC2F85 /* Shared */,
 				D2C4963A2675F9BA0008AFB8 /* Tests */,
 				D2C4966E267601420008AFB8 /* Unit Tests (iOS) */,
@@ -152,7 +154,9 @@
 			children = (
 				D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */,
 				D29F5C6A267571ED00EC2F85 /* ContentView.swift */,
+				D29F5CBD267578F300EC2F85 /* PreviewData.swift */,
 				D29F5C6C267571EF00EC2F85 /* Assets.xcassets */,
+				D29F5CC0267579BE00EC2F85 /* Preview Content */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -201,7 +205,7 @@
 		D29F5CC0267579BE00EC2F85 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				D29F5CBD267578F300EC2F85 /* PreviewData.swift */,
+				D2C495FF26757FBB0008AFB8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -400,6 +404,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C4960026757FBB0008AFB8 /* Preview Assets.xcassets in Resources */,
 				D29F5C94267571EF00EC2F85 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +413,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C4960126757FBB0008AFB8 /* Preview Assets.xcassets in Resources */,
 				D29F5C95267571EF00EC2F85 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,7 +659,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "Shared/Preview\\ Content";
 				DEVELOPMENT_TEAM = 79P776W2YF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -683,7 +689,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "Shared/Preview\\ Content";
 				DEVELOPMENT_TEAM = 79P776W2YF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -716,6 +722,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "Shared/Preview\\ Content";
 				DEVELOPMENT_TEAM = 79P776W2YF;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -745,6 +752,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "Shared/Preview\\ Content";
 				DEVELOPMENT_TEAM = 79P776W2YF;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
