@@ -29,8 +29,20 @@
 		D2C496142675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */; };
 		D2C4961926758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */; };
 		D2C4961A26758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */; };
+		D2C496322675F7A80008AFB8 /* Purchase+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496312675F7A80008AFB8 /* Purchase+Models.swift */; };
+		D2C496332675F7A80008AFB8 /* Purchase+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496312675F7A80008AFB8 /* Purchase+Models.swift */; };
+		D2C496352675F8110008AFB8 /* Train+Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496342675F8110008AFB8 /* Train+Members.swift */; };
+		D2C496362675F8110008AFB8 /* Train+Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496342675F8110008AFB8 /* Train+Members.swift */; };
+		D2C496382675F8860008AFB8 /* Purchase+Accessories.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496372675F8860008AFB8 /* Purchase+Accessories.swift */; };
+		D2C496392675F8860008AFB8 /* Purchase+Accessories.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496372675F8860008AFB8 /* Purchase+Accessories.swift */; };
 		D2C49663267601330008AFB8 /* Unit_Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C49662267601330008AFB8 /* Unit_Tests_macOS.swift */; };
 		D2C49670267601420008AFB8 /* Unit_Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4966F267601420008AFB8 /* Unit_Tests_iOS.swift */; };
+		D2C4967F267601FC0008AFB8 /* TrainMembersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4963B2675F9D40008AFB8 /* TrainMembersTests.swift */; };
+		D2C49680267601FC0008AFB8 /* PurchaseAccessoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496452675FACA0008AFB8 /* PurchaseAccessoriesTests.swift */; };
+		D2C49681267601FC0008AFB8 /* PurchaseModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4963C2675F9D40008AFB8 /* PurchaseModelsTests.swift */; };
+		D2C49682267601FE0008AFB8 /* TrainMembersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4963B2675F9D40008AFB8 /* TrainMembersTests.swift */; };
+		D2C49683267601FE0008AFB8 /* PurchaseAccessoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496452675FACA0008AFB8 /* PurchaseAccessoriesTests.swift */; };
+		D2C49684267601FE0008AFB8 /* PurchaseModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4963C2675F9D40008AFB8 /* PurchaseModelsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +94,12 @@
 		D2C4960E267586A60008AFB8 /* RoundHouse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoundHouse.xcdatamodel; sourceTree = "<group>"; };
 		D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseMigrationPolicy.swift; sourceTree = "<group>"; };
 		D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = RoundHouseMappingModel.xcmappingmodel; sourceTree = "<group>"; };
+		D2C496312675F7A80008AFB8 /* Purchase+Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Purchase+Models.swift"; sourceTree = "<group>"; };
+		D2C496342675F8110008AFB8 /* Train+Members.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Train+Members.swift"; sourceTree = "<group>"; };
+		D2C496372675F8860008AFB8 /* Purchase+Accessories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Purchase+Accessories.swift"; sourceTree = "<group>"; };
+		D2C4963B2675F9D40008AFB8 /* TrainMembersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainMembersTests.swift; sourceTree = "<group>"; };
+		D2C4963C2675F9D40008AFB8 /* PurchaseModelsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseModelsTests.swift; sourceTree = "<group>"; };
+		D2C496452675FACA0008AFB8 /* PurchaseAccessoriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseAccessoriesTests.swift; sourceTree = "<group>"; };
 		D2C49660267601330008AFB8 /* Unit Tests (macOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests (macOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C49662267601330008AFB8 /* Unit_Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit_Tests_macOS.swift; sourceTree = "<group>"; };
 		D2C4966D267601420008AFB8 /* Unit Tests (iOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests (iOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +216,9 @@
 				D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */,
 				D29F5CBA2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift */,
 				D29F5C6B267571ED00EC2F85 /* PersistenceController.swift */,
+				D2C496312675F7A80008AFB8 /* Purchase+Models.swift */,
+				D2C496372675F8860008AFB8 /* Purchase+Accessories.swift */,
+				D2C496342675F8110008AFB8 /* Train+Members.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,6 +236,16 @@
 			children = (
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		D2C4963A2675F9BA0008AFB8 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D2C4963C2675F9D40008AFB8 /* PurchaseModelsTests.swift */,
+				D2C496452675FACA0008AFB8 /* PurchaseAccessoriesTests.swift */,
+				D2C4963B2675F9D40008AFB8 /* TrainMembersTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		D2C49661267601330008AFB8 /* Unit Tests (macOS) */ = {
@@ -456,7 +487,10 @@
 				D29F5CB82675743800EC2F85 /* RoundHouse.xcdatamodeld in Sources */,
 				D29F5CBB2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift in Sources */,
 				D29F5CBE267578F300EC2F85 /* PreviewData.swift in Sources */,
+				D2C496382675F8860008AFB8 /* Purchase+Accessories.swift in Sources */,
+				D2C496352675F8110008AFB8 /* Train+Members.swift in Sources */,
 				D29F5C92267571EF00EC2F85 /* PersistenceController.swift in Sources */,
+				D2C496322675F7A80008AFB8 /* Purchase+Models.swift in Sources */,
 				D2C496132675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */,
 				D2C4961926758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
 				D29F5C8E267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
@@ -471,7 +505,10 @@
 				D29F5CB92675743800EC2F85 /* RoundHouse.xcdatamodeld in Sources */,
 				D29F5CBC2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift in Sources */,
 				D29F5CBF267578F300EC2F85 /* PreviewData.swift in Sources */,
+				D2C496392675F8860008AFB8 /* Purchase+Accessories.swift in Sources */,
+				D2C496362675F8110008AFB8 /* Train+Members.swift in Sources */,
 				D29F5C93267571EF00EC2F85 /* PersistenceController.swift in Sources */,
+				D2C496332675F7A80008AFB8 /* Purchase+Models.swift in Sources */,
 				D2C496142675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */,
 				D2C4961A26758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
 				D29F5C8F267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
@@ -499,6 +536,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C4967F267601FC0008AFB8 /* TrainMembersTests.swift in Sources */,
+				D2C49680267601FC0008AFB8 /* PurchaseAccessoriesTests.swift in Sources */,
+				D2C49681267601FC0008AFB8 /* PurchaseModelsTests.swift in Sources */,
 				D2C49663267601330008AFB8 /* Unit_Tests_macOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +547,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C49682267601FE0008AFB8 /* TrainMembersTests.swift in Sources */,
+				D2C49683267601FE0008AFB8 /* PurchaseAccessoriesTests.swift in Sources */,
+				D2C49684267601FE0008AFB8 /* PurchaseModelsTests.swift in Sources */,
 				D2C49670267601420008AFB8 /* Unit_Tests_iOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
