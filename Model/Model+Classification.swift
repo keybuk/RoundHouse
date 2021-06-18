@@ -38,4 +38,17 @@ extension Model.Classification: CustomStringConvertible {
         case .vehicle: return "Vehicle"
         }
     }
+
+    var pluralDescription: String {
+        switch self {
+        case .dieselElectricLocomotive: return "Diesel and Electric Locomotives"
+        case .steamLocomotive: return "Steam Locomotives"
+        case .coach: return "Coaches"
+        case .wagon: return "Wagons"
+        case .multipleUnit: return "Multiple Units"
+        case .departmental: return "Departmentals"
+        case .noPrototype: return "No Prototype"
+        case .vehicle: return "Vehicles"
+        }
+    }
 }

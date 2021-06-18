@@ -11,6 +11,14 @@
 		D23C3BD32676B7180017BC5B /* Model+Image (macOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BD22676B7180017BC5B /* Model+Image (macOS).swift */; };
 		D23C3BD42676B8B70017BC5B /* Model+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4961F2675EAE90008AFB8 /* Model+Image.swift */; };
 		D23C3BD52676B8B80017BC5B /* Model+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4961F2675EAE90008AFB8 /* Model+Image.swift */; };
+		D23C3BDA2676BC9F0017BC5B /* AppSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BD92676BC9F0017BC5B /* AppSidebar.swift */; };
+		D23C3BDB2676BC9F0017BC5B /* AppSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BD92676BC9F0017BC5B /* AppSidebar.swift */; };
+		D23C3BE32676D61D0017BC5B /* PurchasesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BE22676D61D0017BC5B /* PurchasesList.swift */; };
+		D23C3BE42676D61D0017BC5B /* PurchasesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BE22676D61D0017BC5B /* PurchasesList.swift */; };
+		D23C3BE62676D6640017BC5B /* AccessoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BE52676D6640017BC5B /* AccessoriesList.swift */; };
+		D23C3BE72676D6640017BC5B /* AccessoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BE52676D6640017BC5B /* AccessoriesList.swift */; };
+		D23C3BE92676D67A0017BC5B /* DecoderTypesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BE82676D67A0017BC5B /* DecoderTypesList.swift */; };
+		D23C3BEA2676D67A0017BC5B /* DecoderTypesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BE82676D67A0017BC5B /* DecoderTypesList.swift */; };
 		D29F5C81267571EF00EC2F85 /* UI_Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C80267571EF00EC2F85 /* UI_Tests_iOS.swift */; };
 		D29F5C8B267571EF00EC2F85 /* UI_Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C8A267571EF00EC2F85 /* UI_Tests_macOS.swift */; };
 		D29F5C8E267571EF00EC2F85 /* RoundHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */; };
@@ -29,6 +37,8 @@
 		D29F5CBF267578F300EC2F85 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5CBD267578F300EC2F85 /* PreviewData.swift */; };
 		D2C4960026757FBB0008AFB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C495FF26757FBB0008AFB8 /* Preview Assets.xcassets */; };
 		D2C4960126757FBB0008AFB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C495FF26757FBB0008AFB8 /* Preview Assets.xcassets */; };
+		D2C4960C267585920008AFB8 /* ModelsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4960B267585920008AFB8 /* ModelsList.swift */; };
+		D2C4960D267585920008AFB8 /* ModelsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4960B267585920008AFB8 /* ModelsList.swift */; };
 		D2C496132675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */; };
 		D2C496142675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */; };
 		D2C4961926758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */; };
@@ -95,6 +105,10 @@
 /* Begin PBXFileReference section */
 		D23C3BD02676B6940017BC5B /* Model+Image (iOS).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+Image (iOS).swift"; sourceTree = "<group>"; };
 		D23C3BD22676B7180017BC5B /* Model+Image (macOS).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+Image (macOS).swift"; sourceTree = "<group>"; };
+		D23C3BD92676BC9F0017BC5B /* AppSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSidebar.swift; sourceTree = "<group>"; };
+		D23C3BE22676D61D0017BC5B /* PurchasesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesList.swift; sourceTree = "<group>"; };
+		D23C3BE52676D6640017BC5B /* AccessoriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesList.swift; sourceTree = "<group>"; };
+		D23C3BE82676D67A0017BC5B /* DecoderTypesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTypesList.swift; sourceTree = "<group>"; };
 		D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseApp.swift; sourceTree = "<group>"; };
 		D29F5C6A267571ED00EC2F85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D29F5C6B267571ED00EC2F85 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
@@ -109,6 +123,7 @@
 		D29F5CBA2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureUnarchiveDateComponentsFromDataTransformer.swift; sourceTree = "<group>"; };
 		D29F5CBD267578F300EC2F85 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		D2C495FF26757FBB0008AFB8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D2C4960B267585920008AFB8 /* ModelsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsList.swift; sourceTree = "<group>"; };
 		D2C4960E267586A60008AFB8 /* RoundHouse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoundHouse.xcdatamodel; sourceTree = "<group>"; };
 		D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseMigrationPolicy.swift; sourceTree = "<group>"; };
 		D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = RoundHouseMappingModel.xcmappingmodel; sourceTree = "<group>"; };
@@ -176,11 +191,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D23C3BF12676F96D0017BC5B /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */,
+				D29F5C6A267571ED00EC2F85 /* ContentView.swift */,
+				D23C3BD92676BC9F0017BC5B /* AppSidebar.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		D29F5C61267571ED00EC2F85 = {
 			isa = PBXGroup;
 			children = (
 				D29F5CB02675742800EC2F85 /* Model */,
 				D29F5CC1267579E800EC2F85 /* Persistence */,
+				D23C3BF12676F96D0017BC5B /* Navigation */,
 				D29F5C66267571ED00EC2F85 /* Shared */,
 				D2C4963A2675F9BA0008AFB8 /* Tests */,
 				D2C4966E267601420008AFB8 /* Unit Tests (iOS) */,
@@ -194,8 +220,10 @@
 		D29F5C66267571ED00EC2F85 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */,
-				D29F5C6A267571ED00EC2F85 /* ContentView.swift */,
+				D2C4960B267585920008AFB8 /* ModelsList.swift */,
+				D23C3BE22676D61D0017BC5B /* PurchasesList.swift */,
+				D23C3BE52676D6640017BC5B /* AccessoriesList.swift */,
+				D23C3BE82676D67A0017BC5B /* DecoderTypesList.swift */,
 				D29F5CBD267578F300EC2F85 /* PreviewData.swift */,
 				D29F5C6C267571EF00EC2F85 /* Assets.xcassets */,
 				D29F5CC0267579BE00EC2F85 /* Preview Content */,
@@ -519,10 +547,14 @@
 				D2E3078D267D295300577B27 /* Model+Image (macOS).swift in Sources */,
 				D29F5CB82675743800EC2F85 /* RoundHouse.xcdatamodeld in Sources */,
 				D23C3BD42676B8B70017BC5B /* Model+Image.swift in Sources */,
+				D2C4960C267585920008AFB8 /* ModelsList.swift in Sources */,
+				D23C3BE32676D61D0017BC5B /* PurchasesList.swift in Sources */,
 				D29F5CBB2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift in Sources */,
 				D2C4962C2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
 				D2C496262675F4AA0008AFB8 /* Model+Classification.swift in Sources */,
 				D29F5CBE267578F300EC2F85 /* PreviewData.swift in Sources */,
+				D23C3BDA2676BC9F0017BC5B /* AppSidebar.swift in Sources */,
+				D23C3BE62676D6640017BC5B /* AccessoriesList.swift in Sources */,
 				D2C496382675F8860008AFB8 /* Purchase+Accessories.swift in Sources */,
 				D23C3BD12676B6940017BC5B /* Model+Image (iOS).swift in Sources */,
 				D2C496352675F8110008AFB8 /* Train+Members.swift in Sources */,
@@ -533,6 +565,7 @@
 				D29F5C8E267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
 				D2C496292675F4EC0008AFB8 /* Model+Era.swift in Sources */,
 				D2C4962F2675F7250008AFB8 /* Purchase+Currency.swift in Sources */,
+				D23C3BE92676D67A0017BC5B /* DecoderTypesList.swift in Sources */,
 				D2C496232675F46E0008AFB8 /* Purchase+Condition.swift in Sources */,
 				D29F5C90267571EF00EC2F85 /* ContentView.swift in Sources */,
 			);
@@ -544,11 +577,15 @@
 			files = (
 				D29F5CB92675743800EC2F85 /* RoundHouse.xcdatamodeld in Sources */,
 				D23C3BD52676B8B80017BC5B /* Model+Image.swift in Sources */,
+				D2C4960D267585920008AFB8 /* ModelsList.swift in Sources */,
+				D23C3BE42676D61D0017BC5B /* PurchasesList.swift in Sources */,
 				D29F5CBC2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift in Sources */,
 				D2E3078E267D295600577B27 /* Model+Image (iOS).swift in Sources */,
 				D2C4962D2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
 				D2C496272675F4AA0008AFB8 /* Model+Classification.swift in Sources */,
 				D29F5CBF267578F300EC2F85 /* PreviewData.swift in Sources */,
+				D23C3BDB2676BC9F0017BC5B /* AppSidebar.swift in Sources */,
+				D23C3BE72676D6640017BC5B /* AccessoriesList.swift in Sources */,
 				D2C496392675F8860008AFB8 /* Purchase+Accessories.swift in Sources */,
 				D2C496362675F8110008AFB8 /* Train+Members.swift in Sources */,
 				D29F5C93267571EF00EC2F85 /* PersistenceController.swift in Sources */,
@@ -559,6 +596,7 @@
 				D23C3BD32676B7180017BC5B /* Model+Image (macOS).swift in Sources */,
 				D2C4962A2675F4EC0008AFB8 /* Model+Era.swift in Sources */,
 				D2C496302675F7250008AFB8 /* Purchase+Currency.swift in Sources */,
+				D23C3BEA2676D67A0017BC5B /* DecoderTypesList.swift in Sources */,
 				D2C496242675F46E0008AFB8 /* Purchase+Condition.swift in Sources */,
 				D29F5C91267571EF00EC2F85 /* ContentView.swift in Sources */,
 			);

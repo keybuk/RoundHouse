@@ -14,5 +14,8 @@ struct RoundHouseApp: App {
             ContentView()
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
         }
+        .commands {
+            SidebarCommands()
+        }
     }
 }
