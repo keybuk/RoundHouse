@@ -8,8 +8,10 @@
 import CoreData
 
 struct PreviewData {
+    static let shared = PreviewData()
+
     let persistenceController: PersistenceController
-    var container: NSPersistentCloudKitContainer { persistenceController.container }
+    var viewContext: NSManagedObjectContext { persistenceController.container.viewContext }
 
     var sockets: [Int16: Socket] = [:]
     var purchases: [String: Purchase] = [:]
@@ -18,7 +20,6 @@ struct PreviewData {
 
     init() {
         persistenceController = PersistenceController(inMemory: true)
-        let viewContext = persistenceController.container.viewContext
 
         do {
             let socket = Socket(context: viewContext)
@@ -120,5 +121,3 @@ struct PreviewData {
         }
     }
 }
-
-let previewData = PreviewData()
