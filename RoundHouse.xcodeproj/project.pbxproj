@@ -211,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				D29F5CB02675742800EC2F85 /* Model */,
-				D29F5CC1267579E800EC2F85 /* Persistence */,
 				D23C3BF12676F96D0017BC5B /* Navigation */,
 				D29F5C66267571ED00EC2F85 /* Shared */,
 				D2C4963A2675F9BA0008AFB8 /* Tests */,
@@ -297,13 +296,6 @@
 				D2C495FF26757FBB0008AFB8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		D29F5CC1267579E800EC2F85 /* Persistence */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Persistence;
 			sourceTree = "<group>";
 		};
 		D2C4963A2675F9BA0008AFB8 /* Tests */ = {
