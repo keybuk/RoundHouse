@@ -37,6 +37,10 @@
 		D29F5CBF267578F300EC2F85 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5CBD267578F300EC2F85 /* PreviewData.swift */; };
 		D2C4960026757FBB0008AFB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C495FF26757FBB0008AFB8 /* Preview Assets.xcassets */; };
 		D2C4960126757FBB0008AFB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C495FF26757FBB0008AFB8 /* Preview Assets.xcassets */; };
+		D2C49603267581070008AFB8 /* BoxedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C49602267581070008AFB8 /* BoxedImage.swift */; };
+		D2C49604267581070008AFB8 /* BoxedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C49602267581070008AFB8 /* BoxedImage.swift */; };
+		D2C496062675810D0008AFB8 /* ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496052675810D0008AFB8 /* ModelCell.swift */; };
+		D2C496072675810D0008AFB8 /* ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496052675810D0008AFB8 /* ModelCell.swift */; };
 		D2C4960C267585920008AFB8 /* ModelsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4960B267585920008AFB8 /* ModelsList.swift */; };
 		D2C4960D267585920008AFB8 /* ModelsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4960B267585920008AFB8 /* ModelsList.swift */; };
 		D2C496132675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */; };
@@ -123,6 +127,8 @@
 		D29F5CBA2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureUnarchiveDateComponentsFromDataTransformer.swift; sourceTree = "<group>"; };
 		D29F5CBD267578F300EC2F85 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		D2C495FF26757FBB0008AFB8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D2C49602267581070008AFB8 /* BoxedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxedImage.swift; sourceTree = "<group>"; };
+		D2C496052675810D0008AFB8 /* ModelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelCell.swift; sourceTree = "<group>"; };
 		D2C4960B267585920008AFB8 /* ModelsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsList.swift; sourceTree = "<group>"; };
 		D2C4960E267586A60008AFB8 /* RoundHouse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoundHouse.xcdatamodel; sourceTree = "<group>"; };
 		D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseMigrationPolicy.swift; sourceTree = "<group>"; };
@@ -220,6 +226,8 @@
 		D29F5C66267571ED00EC2F85 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				D2C49602267581070008AFB8 /* BoxedImage.swift */,
+				D2C496052675810D0008AFB8 /* ModelCell.swift */,
 				D2C4960B267585920008AFB8 /* ModelsList.swift */,
 				D23C3BE22676D61D0017BC5B /* PurchasesList.swift */,
 				D23C3BE52676D6640017BC5B /* AccessoriesList.swift */,
@@ -552,10 +560,12 @@
 				D29F5CBB2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift in Sources */,
 				D2C4962C2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
 				D2C496262675F4AA0008AFB8 /* Model+Classification.swift in Sources */,
+				D2C496062675810D0008AFB8 /* ModelCell.swift in Sources */,
 				D29F5CBE267578F300EC2F85 /* PreviewData.swift in Sources */,
 				D23C3BDA2676BC9F0017BC5B /* AppSidebar.swift in Sources */,
 				D23C3BE62676D6640017BC5B /* AccessoriesList.swift in Sources */,
 				D2C496382675F8860008AFB8 /* Purchase+Accessories.swift in Sources */,
+				D2C49603267581070008AFB8 /* BoxedImage.swift in Sources */,
 				D23C3BD12676B6940017BC5B /* Model+Image (iOS).swift in Sources */,
 				D2C496352675F8110008AFB8 /* Train+Members.swift in Sources */,
 				D29F5C92267571EF00EC2F85 /* PersistenceController.swift in Sources */,
@@ -583,10 +593,12 @@
 				D2E3078E267D295600577B27 /* Model+Image (iOS).swift in Sources */,
 				D2C4962D2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
 				D2C496272675F4AA0008AFB8 /* Model+Classification.swift in Sources */,
+				D2C496072675810D0008AFB8 /* ModelCell.swift in Sources */,
 				D29F5CBF267578F300EC2F85 /* PreviewData.swift in Sources */,
 				D23C3BDB2676BC9F0017BC5B /* AppSidebar.swift in Sources */,
 				D23C3BE72676D6640017BC5B /* AccessoriesList.swift in Sources */,
 				D2C496392675F8860008AFB8 /* Purchase+Accessories.swift in Sources */,
+				D2C49604267581070008AFB8 /* BoxedImage.swift in Sources */,
 				D2C496362675F8110008AFB8 /* Train+Members.swift in Sources */,
 				D29F5C93267571EF00EC2F85 /* PersistenceController.swift in Sources */,
 				D2C496332675F7A80008AFB8 /* Purchase+Models.swift in Sources */,
