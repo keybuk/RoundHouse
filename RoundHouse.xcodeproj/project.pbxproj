@@ -57,6 +57,8 @@
 		D2C49682267601FE0008AFB8 /* TrainMembersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4963B2675F9D40008AFB8 /* TrainMembersTests.swift */; };
 		D2C49683267601FE0008AFB8 /* PurchaseAccessoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496452675FACA0008AFB8 /* PurchaseAccessoriesTests.swift */; };
 		D2C49684267601FE0008AFB8 /* PurchaseModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4963C2675F9D40008AFB8 /* PurchaseModelsTests.swift */; };
+		D2E3078D267D295300577B27 /* Model+Image (macOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BD22676B7180017BC5B /* Model+Image (macOS).swift */; };
+		D2E3078E267D295600577B27 /* Model+Image (iOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BD02676B6940017BC5B /* Model+Image (iOS).swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -514,6 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2E3078D267D295300577B27 /* Model+Image (macOS).swift in Sources */,
 				D29F5CB82675743800EC2F85 /* RoundHouse.xcdatamodeld in Sources */,
 				D23C3BD42676B8B70017BC5B /* Model+Image.swift in Sources */,
 				D29F5CBB2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift in Sources */,
@@ -542,6 +545,7 @@
 				D29F5CB92675743800EC2F85 /* RoundHouse.xcdatamodeld in Sources */,
 				D23C3BD52676B8B80017BC5B /* Model+Image.swift in Sources */,
 				D29F5CBC2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift in Sources */,
+				D2E3078E267D295600577B27 /* Model+Image (iOS).swift in Sources */,
 				D2C4962D2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
 				D2C496272675F4AA0008AFB8 /* Model+Classification.swift in Sources */,
 				D29F5CBF267578F300EC2F85 /* PreviewData.swift in Sources */,

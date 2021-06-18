@@ -1,10 +1,11 @@
 //
 //  Model+Image (iOS).swift
-//  RoundHouse (iOS)
+//  RoundHouse
 //
 //  Created by Scott James Remnant on 6/13/21.
 //
 
+#if os(iOS)
 import UIKit
 import SwiftUI
 
@@ -24,3 +25,5 @@ extension Model {
         uiImage = UIImage(named: name)
     }
 }
+#endif
+
