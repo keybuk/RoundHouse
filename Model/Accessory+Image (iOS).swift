@@ -1,15 +1,15 @@
 //
-//  Model+Image (iOS).swift
+//  Accessory+Image (iOS).swift
 //  RoundHouse
 //
-//  Created by Scott James Remnant on 6/13/21.
+//  Created by Scott James Remnant on 6/18/21.
 //
 
 #if os(iOS)
 import UIKit
 import SwiftUI
 
-extension Model {
+extension Accessory {
     var uiImage: UIImage? {
         get { imageData.flatMap { UIImage(data: $0) } }
         set { imageData = newValue?.pngData() }

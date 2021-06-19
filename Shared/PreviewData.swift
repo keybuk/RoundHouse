@@ -16,6 +16,7 @@ struct PreviewData {
     var sockets: [Int16: Socket] = [:]
     var purchases: [String: Purchase] = [:]
     var models: [String: Model] = [:]
+    var accessories: [String: Accessory] = [:]
     var trains: [String: Train] = [:]
 
     init() {
@@ -109,6 +110,46 @@ struct PreviewData {
             bskMember.model = bskCoach
 
             trains["Hogwarts Express"] = train
+
+            let straightTrack = purchase.addAccessory()
+            straightTrack.manufacturer = "Hornby"
+            straightTrack.catalogNumber = "R600"
+            straightTrack.catalogDescription = "Straight Track"
+            straightTrack.setPreviewImage(named: "R600")
+
+            for _ in 0..<8 {
+                let accessory = purchase.addAccessory()
+                accessory.manufacturer = "Hornby"
+                accessory.catalogNumber = "R609"
+                accessory.catalogDescription = "Double Curve - 3rd Radius"
+                accessory.setPreviewImage(named: "R609")
+            }
+
+            let powerTrack = purchase.addAccessory()
+            powerTrack.manufacturer = "Hornby"
+            powerTrack.catalogNumber = "R8206"
+            powerTrack.catalogDescription = "Power Track"
+            powerTrack.setPreviewImage(named: "R8206")
+
+            accessories["R8206"] = powerTrack
+
+            let powerController = purchase.addAccessory()
+            powerController.manufacturer = "Hornby"
+            powerController.catalogNumber = "R7229"
+            powerController.catalogDescription = "Analogue Train and Accessory Controller"
+            powerController.setPreviewImage(named: "R7229")
+
+            let powerTransformer = purchase.addAccessory()
+            powerTransformer.manufacturer = "Hornby"
+            powerTransformer.catalogNumber = "P9000"
+            powerTransformer.catalogDescription = "Standard Wall Plug Mains Transformer"
+            powerTransformer.setPreviewImage(named: "P9000")
+
+            let rerailer = purchase.addAccessory()
+            rerailer.manufacturer = "Hornby"
+            rerailer.catalogNumber = "HUB68"
+            rerailer.catalogDescription = "Rerailer"
+            rerailer.setPreviewImage(named: "HUB68")
         }
 
         do {

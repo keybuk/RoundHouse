@@ -1,15 +1,15 @@
 //
-//  Model+Image (macOS).swift
+//  Accessory+Image (macOS).swift
 //  RoundHouse
 //
-//  Created by Scott James Remnant on 6/13/21.
+//  Created by Scott James Remnant on 6/18/21.
 //
 
 #if os(macOS)
 import Cocoa
 import SwiftUI
 
-extension Model {
+extension Accessory {
     var nsImage: NSImage? {
         get { imageData.flatMap { NSImage(data: $0) } }
         set { imageData = try? newValue?.pngData() }
@@ -26,4 +26,3 @@ extension Model {
     }
 }
 #endif
-

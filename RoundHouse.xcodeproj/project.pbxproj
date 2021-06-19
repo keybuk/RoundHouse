@@ -73,6 +73,18 @@
 		D2C49684267601FE0008AFB8 /* PurchaseModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4963C2675F9D40008AFB8 /* PurchaseModelsTests.swift */; };
 		D2E3078D267D295300577B27 /* Model+Image (macOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BD22676B7180017BC5B /* Model+Image (macOS).swift */; };
 		D2E3078E267D295600577B27 /* Model+Image (iOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BD02676B6940017BC5B /* Model+Image (iOS).swift */; };
+		D2E307DA267D791600577B27 /* Accessory+Image (iOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307D9267D791600577B27 /* Accessory+Image (iOS).swift */; };
+		D2E307DB267D791600577B27 /* Accessory+Image (iOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307D9267D791600577B27 /* Accessory+Image (iOS).swift */; };
+		D2E307DD267D792D00577B27 /* Accessory+Image (macOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307DC267D792D00577B27 /* Accessory+Image (macOS).swift */; };
+		D2E307DE267D792D00577B27 /* Accessory+Image (macOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307DC267D792D00577B27 /* Accessory+Image (macOS).swift */; };
+		D2E307E0267D794C00577B27 /* Accessory+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307DF267D794C00577B27 /* Accessory+Image.swift */; };
+		D2E307E1267D794C00577B27 /* Accessory+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307DF267D794C00577B27 /* Accessory+Image.swift */; };
+		D2E307E3267D797300577B27 /* CGImage+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307E2267D797300577B27 /* CGImage+Data.swift */; };
+		D2E307E4267D797300577B27 /* CGImage+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307E2267D797300577B27 /* CGImage+Data.swift */; };
+		D2E307E6267D79C600577B27 /* NSImage+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307E5267D79C600577B27 /* NSImage+Data.swift */; };
+		D2E307E7267D79C600577B27 /* NSImage+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307E5267D79C600577B27 /* NSImage+Data.swift */; };
+		D2E307E9267D7C0100577B27 /* AccessoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307E8267D7C0100577B27 /* AccessoryCell.swift */; };
+		D2E307EA267D7C0100577B27 /* AccessoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307E8267D7C0100577B27 /* AccessoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +161,12 @@
 		D2C49662267601330008AFB8 /* Unit_Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit_Tests_macOS.swift; sourceTree = "<group>"; };
 		D2C4966D267601420008AFB8 /* Unit Tests (iOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests (iOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C4966F267601420008AFB8 /* Unit_Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit_Tests_iOS.swift; sourceTree = "<group>"; };
+		D2E307D9267D791600577B27 /* Accessory+Image (iOS).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Accessory+Image (iOS).swift"; sourceTree = "<group>"; };
+		D2E307DC267D792D00577B27 /* Accessory+Image (macOS).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Accessory+Image (macOS).swift"; sourceTree = "<group>"; };
+		D2E307DF267D794C00577B27 /* Accessory+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Accessory+Image.swift"; sourceTree = "<group>"; };
+		D2E307E2267D797300577B27 /* CGImage+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImage+Data.swift"; sourceTree = "<group>"; };
+		D2E307E5267D79C600577B27 /* NSImage+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Data.swift"; sourceTree = "<group>"; };
+		D2E307E8267D7C0100577B27 /* AccessoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +228,8 @@
 		D29F5C61267571ED00EC2F85 = {
 			isa = PBXGroup;
 			children = (
+				D2E307E2267D797300577B27 /* CGImage+Data.swift */,
+				D2E307E5267D79C600577B27 /* NSImage+Data.swift */,
 				D29F5CB02675742800EC2F85 /* Model */,
 				D23C3BF12676F96D0017BC5B /* Navigation */,
 				D29F5C66267571ED00EC2F85 /* Shared */,
@@ -229,6 +249,7 @@
 				D2C496052675810D0008AFB8 /* ModelCell.swift */,
 				D2C4960B267585920008AFB8 /* ModelsList.swift */,
 				D23C3BE22676D61D0017BC5B /* PurchasesList.swift */,
+				D2E307E8267D7C0100577B27 /* AccessoryCell.swift */,
 				D23C3BE52676D6640017BC5B /* AccessoriesList.swift */,
 				D23C3BE82676D67A0017BC5B /* DecoderTypesList.swift */,
 				D29F5CBD267578F300EC2F85 /* PreviewData.swift */,
@@ -285,6 +306,9 @@
 				D2C4961F2675EAE90008AFB8 /* Model+Image.swift */,
 				D23C3BD02676B6940017BC5B /* Model+Image (iOS).swift */,
 				D23C3BD22676B7180017BC5B /* Model+Image (macOS).swift */,
+				D2E307DF267D794C00577B27 /* Accessory+Image.swift */,
+				D2E307D9267D791600577B27 /* Accessory+Image (iOS).swift */,
+				D2E307DC267D792D00577B27 /* Accessory+Image (macOS).swift */,
 				D2C496342675F8110008AFB8 /* Train+Members.swift */,
 			);
 			path = Model;
@@ -547,15 +571,18 @@
 				D2E3078D267D295300577B27 /* Model+Image (macOS).swift in Sources */,
 				D29F5CB82675743800EC2F85 /* RoundHouse.xcdatamodeld in Sources */,
 				D23C3BD42676B8B70017BC5B /* Model+Image.swift in Sources */,
+				D2E307DD267D792D00577B27 /* Accessory+Image (macOS).swift in Sources */,
 				D2C4960C267585920008AFB8 /* ModelsList.swift in Sources */,
 				D23C3BE32676D61D0017BC5B /* PurchasesList.swift in Sources */,
 				D29F5CBB2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift in Sources */,
 				D2C4962C2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
 				D2C496262675F4AA0008AFB8 /* Model+Classification.swift in Sources */,
 				D2C496062675810D0008AFB8 /* ModelCell.swift in Sources */,
+				D2E307E0267D794C00577B27 /* Accessory+Image.swift in Sources */,
 				D29F5CBE267578F300EC2F85 /* PreviewData.swift in Sources */,
 				D23C3BDA2676BC9F0017BC5B /* AppSidebar.swift in Sources */,
 				D23C3BE62676D6640017BC5B /* AccessoriesList.swift in Sources */,
+				D2E307DA267D791600577B27 /* Accessory+Image (iOS).swift in Sources */,
 				D2C496382675F8860008AFB8 /* Purchase+Accessories.swift in Sources */,
 				D2C49603267581070008AFB8 /* BoxedImage.swift in Sources */,
 				D23C3BD12676B6940017BC5B /* Model+Image (iOS).swift in Sources */,
@@ -563,7 +590,10 @@
 				D29F5C92267571EF00EC2F85 /* PersistenceController.swift in Sources */,
 				D2C496322675F7A80008AFB8 /* Purchase+Models.swift in Sources */,
 				D2C496132675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */,
+				D2E307E6267D79C600577B27 /* NSImage+Data.swift in Sources */,
 				D2C4961926758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
+				D2E307E3267D797300577B27 /* CGImage+Data.swift in Sources */,
+				D2E307E9267D7C0100577B27 /* AccessoryCell.swift in Sources */,
 				D29F5C8E267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
 				D2C496292675F4EC0008AFB8 /* Model+Era.swift in Sources */,
 				D2C4962F2675F7250008AFB8 /* Purchase+Currency.swift in Sources */,
@@ -580,15 +610,18 @@
 				D29F5CB92675743800EC2F85 /* RoundHouse.xcdatamodeld in Sources */,
 				D23C3BD52676B8B80017BC5B /* Model+Image.swift in Sources */,
 				D2C4960D267585920008AFB8 /* ModelsList.swift in Sources */,
+				D2E307DE267D792D00577B27 /* Accessory+Image (macOS).swift in Sources */,
 				D23C3BE42676D61D0017BC5B /* PurchasesList.swift in Sources */,
 				D29F5CBC2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift in Sources */,
 				D2E3078E267D295600577B27 /* Model+Image (iOS).swift in Sources */,
 				D2C4962D2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
 				D2C496272675F4AA0008AFB8 /* Model+Classification.swift in Sources */,
 				D2C496072675810D0008AFB8 /* ModelCell.swift in Sources */,
+				D2E307E1267D794C00577B27 /* Accessory+Image.swift in Sources */,
 				D29F5CBF267578F300EC2F85 /* PreviewData.swift in Sources */,
 				D23C3BDB2676BC9F0017BC5B /* AppSidebar.swift in Sources */,
 				D23C3BE72676D6640017BC5B /* AccessoriesList.swift in Sources */,
+				D2E307DB267D791600577B27 /* Accessory+Image (iOS).swift in Sources */,
 				D2C496392675F8860008AFB8 /* Purchase+Accessories.swift in Sources */,
 				D2C49604267581070008AFB8 /* BoxedImage.swift in Sources */,
 				D2C496362675F8110008AFB8 /* Train+Members.swift in Sources */,
@@ -596,7 +629,10 @@
 				D2C496332675F7A80008AFB8 /* Purchase+Models.swift in Sources */,
 				D2C496142675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */,
 				D2C4961A26758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
+				D2E307E7267D79C600577B27 /* NSImage+Data.swift in Sources */,
 				D29F5C8F267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
+				D2E307E4267D797300577B27 /* CGImage+Data.swift in Sources */,
+				D2E307EA267D7C0100577B27 /* AccessoryCell.swift in Sources */,
 				D23C3BD32676B7180017BC5B /* Model+Image (macOS).swift in Sources */,
 				D2C4962A2675F4EC0008AFB8 /* Model+Era.swift in Sources */,
 				D2C496302675F7250008AFB8 /* Purchase+Currency.swift in Sources */,
