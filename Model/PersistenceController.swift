@@ -9,6 +9,7 @@ import CoreData
 
 struct PersistenceController {
     static let shared = PersistenceController()
+    private static weak var managedObjectModel: NSManagedObjectModel?
 
     let container: NSPersistentCloudKitContainer
 
@@ -17,7 +18,14 @@ struct PersistenceController {
             SecureUnarchiveDateComponentsFromDataTransformer(),
             forName: NSValueTransformerName(rawValue: "SecureUnarchiveDateComponentsFromDataTransformer"))
 
-        container = NSPersistentCloudKitContainer(name: "RoundHouse")
+        if let managedObjectModel = Self.managedObjectModel {
+            // Force using the same managed object model, otherwise tests will create errors.
+            container = NSPersistentCloudKitContainer(name: "RoundHouse",
+                                                      managedObjectModel: managedObjectModel)
+        } else {
+            container = NSPersistentCloudKitContainer(name: "RoundHouse")
+            Self.managedObjectModel = container.managedObjectModel
+        }
 
         guard let containerStoreDescription = container.persistentStoreDescriptions.first else {
             preconditionFailure("Missing persistent store description")
