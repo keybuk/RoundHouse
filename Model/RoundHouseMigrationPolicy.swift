@@ -43,6 +43,40 @@ final class RoundHouseMigrationPolicy: NSEntityMigrationPolicy {
         }
     }
 
+    private func accessoryCatalogSplit(_ modelClass: String) -> (String, String) {
+        let components = modelClass.components(separatedBy: .whitespaces)
+        guard components.count > 2 else { return ("", modelClass) }
+        guard let _ = components[0].rangeOfCharacter(from: .decimalDigits) else { return ("", modelClass) }
+        guard !components[0].hasSuffix("ft") else { return ("", modelClass) }
+
+        let catalogDescription = modelClass
+            .dropFirst(components[0].count)
+            .drop(while: \.isWhitespace)
+
+        return (components[0], String(catalogDescription))
+
+    }
+
+    /// Extracts the accessory catalog number from a model class.
+    /// - Parameter modelClass: model class in source instance.
+    /// - Returns: `modelClass` or the first component if it contains a catalog number.
+    @objc
+    func accessoryCatalogNumber(_ modelClass: String?) -> String {
+        guard let modelClass = modelClass else { return "" }
+        let (catalogNumber, _) = accessoryCatalogSplit(modelClass)
+        return catalogNumber
+    }
+
+    /// Extracts the accessory catalog decription from a model class.
+    /// - Parameter modelClass: model class in source instance.
+    /// - Returns: `modelClass` or the following components if the first contains a catalog number.
+    @objc
+    func accessoryCatalogDescription(_ modelClass: String?) -> String {
+        guard let modelClass = modelClass else { return "" }
+        let (_, catalogDescription) = accessoryCatalogSplit(modelClass)
+        return catalogDescription
+    }
+
     override func createDestinationInstances(forSource sInstance: NSManagedObject, in mapping: NSEntityMapping, manager: NSMigrationManager) throws {
         try super.createDestinationInstances(forSource: sInstance, in: mapping, manager: manager)
 

@@ -5,7 +5,7 @@
     <databaseInfo>
         <version>134481920</version>
         <UUID>68FD2EA2-7550-4E16-9527-F4E57AB87F29</UUID>
-        <nextObjectID>229</nextObjectID>
+        <nextObjectID>232</nextObjectID>
         <metadata>
             <plist version="1.0">
                 <dict>
@@ -782,7 +782,7 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
         <attribute name="mappingnumber" type="int16">2</attribute>
         <attribute name="autogenerateexpression" type="bool">1</attribute>
         <relationship name="mappingmodel" type="1/1" destination="XDDEVMAPPINGMODEL" idrefs="z113"></relationship>
-        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z225 z220 z221 z222"></relationship>
+        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z232 z231 z221 z222 z225 z230 z220"></relationship>
         <relationship name="relationshipmappings" type="0/0" destination="XDDEVRELATIONSHIPMAPPING" idrefs="z219"></relationship>
     </object>
     <object type="XDDEVRELATIONSHIPMAPPING" id="z219">
@@ -792,7 +792,7 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
     </object>
     <object type="XDDEVATTRIBUTEMAPPING" id="z220">
         <attribute name="valueexpressiondata" type="binary">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
-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
+D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAREhMUFRZZTlNPcGVyYW5kXk5TU2VsZWN0b3JOYW1lXxAQTlNFeHByZXNzaW9uVHlwZVtOU0FyZ3VtZW50c1YkY2xhc3OAA4ACEASABoASXxAcYWNjZXNzb3J5Q2F0YWxvZ0Rlc2NyaXB0aW9uOtMZDxEaGxxaTlNWYXJpYWJsZYAEEAKABVxlbnRpdHlQb2xpY3nSHyAhIlokY2xhc3NuYW1lWCRjbGFzc2VzXxAUTlNWYXJpYWJsZUV4cHJlc3Npb26jIyQlXxAUTlNWYXJpYWJsZUV4cHJlc3Npb25cTlNFeHByZXNzaW9uWE5TT2JqZWN00icRKCpaTlMub2JqZWN0c6EpgAeAEdUNDg8QESwtFC4vgAmACIALgBBfEBB2YWx1ZUZvcktleVBhdGg60xkPETIbHIAKgAVWc291cmNl0icRNjihN4AMgA/TEQ86Ozw9WU5TS2V5UGF0aIAOEAqADVptb2RlbENsYXNz0h8gQEFfEBxOU0tleVBhdGhTcGVjaWZpZXJFeHByZXNzaW9uo0AkJdIfIENEXk5TTXV0YWJsZUFycmF5o0NFJVdOU0FycmF50h8gR0hfEBNOU0tleVBhdGhFeHByZXNzaW9upEdJJCVfEBROU0Z1bmN0aW9uRXhwcmVzc2lvbtIfIEVLokUl0h8gSU2jSSQlAAgAEQAaACQAKQAyADcASQBMAFEAUwBpAG8AegCEAJMApgCyALkAuwC9AL8AwQDDAOIA6QD0APYA+AD6AQcBDAEXASABNwE7AVIBXwFoAW0BeAF6AXwBfgGJAYsBjQGPAZEBpAGrAa0BrwG2AbsBvQG/AcEByAHSAdQB1gHYAeMB6AIHAgsCEAIfAiMCKwIwAkYCSwJiAmcCagJvAAAAAAAAAgEAAAAAAAAATgAAAAAAAAAAAAAAAAAAAnM=
 </attribute>
         <attribute name="name" type="string">catalogDescription</attribute>
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z218"></relationship>
@@ -842,5 +842,23 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGsCwwXGB0eJiswMTQ4VSRudWxs1Q0ODxAREhMUFRZZTlNP
 </attribute>
         <attribute name="name" type="string">catalogName</attribute>
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z203"></relationship>
+    </object>
+    <object type="XDDEVATTRIBUTEMAPPING" id="z230">
+        <attribute name="valueexpressiondata" type="binary">YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8Q
+D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGsCwwXGB0eJiswMTQ4VSRudWxs1Q0ODxAREhMUFRZZTlNPcGVyYW5kXk5TU2VsZWN0b3JOYW1lXxAQTlNFeHByZXNzaW9uVHlwZVtOU0FyZ3VtZW50c1YkY2xhc3OAA4ACEASABoALXxAQdmFsdWVGb3JLZXlQYXRoOtMZDxEaGxxaTlNWYXJpYWJsZYAEEAKABVZzb3VyY2XSHyAhIlokY2xhc3NuYW1lWCRjbGFzc2VzXxAUTlNWYXJpYWJsZUV4cHJlc3Npb26jIyQlXxAUTlNWYXJpYWJsZUV4cHJlc3Npb25cTlNFeHByZXNzaW9uWE5TT2JqZWN00icRKCpaTlMub2JqZWN0c6EpgAeACtMRDywtLi9ZTlNLZXlQYXRogAkQCoAIXxAVcHVyY2hhc2UubWFudWZhY3R1cmVy0h8gMjNfEBxOU0tleVBhdGhTcGVjaWZpZXJFeHByZXNzaW9uozIkJdIfIDU2Xk5TTXV0YWJsZUFycmF5ozU3JVdOU0FycmF50h8gOTpfEBNOU0tleVBhdGhFeHByZXNzaW9upDk7JCVfEBROU0Z1bmN0aW9uRXhwcmVzc2lvbgAIABEAGgAkACkAMgA3AEkATABRAFMAYABmAHEAewCKAJ0AqQCwALIAtAC2ALgAugDNANQA3wDhAOMA5QDsAPEA/AEFARwBIAE3AUQBTQFSAV0BXwFhAWMBagF0AXYBeAF6AZIBlwG2AboBvwHOAdIB2gHfAfUB+gAAAAAAAAIBAAAAAAAAADwAAAAAAAAAAAAAAAAAAAIR
+</attribute>
+        <attribute name="name" type="string">manufacturer</attribute>
+        <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z218"></relationship>
+    </object>
+    <object type="XDDEVATTRIBUTEMAPPING" id="z231">
+        <attribute name="name" type="string">gauge</attribute>
+        <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z218"></relationship>
+    </object>
+    <object type="XDDEVATTRIBUTEMAPPING" id="z232">
+        <attribute name="valueexpressiondata" type="binary">YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8Q
+D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAREhMUFRZZTlNPcGVyYW5kXk5TU2VsZWN0b3JOYW1lXxAQTlNFeHByZXNzaW9uVHlwZVtOU0FyZ3VtZW50c1YkY2xhc3OAA4ACEASABoASXxAXYWNjZXNzb3J5Q2F0YWxvZ051bWJlcjrTGQ8RGhscWk5TVmFyaWFibGWABBACgAVcZW50aXR5UG9saWN50h8gISJaJGNsYXNzbmFtZVgkY2xhc3Nlc18QFE5TVmFyaWFibGVFeHByZXNzaW9uoyMkJV8QFE5TVmFyaWFibGVFeHByZXNzaW9uXE5TRXhwcmVzc2lvblhOU09iamVjdNInESgqWk5TLm9iamVjdHOhKYAHgBHVDQ4PEBEsLRQuL4AJgAiAC4AQXxAQdmFsdWVGb3JLZXlQYXRoOtMZDxEyGxyACoAFVnNvdXJjZdInETY4oTeADIAP0xEPOjs8PVlOU0tleVBhdGiADhAKgA1abW9kZWxDbGFzc9IfIEBBXxAcTlNLZXlQYXRoU3BlY2lmaWVyRXhwcmVzc2lvbqNAJCXSHyBDRF5OU011dGFibGVBcnJheaNDRSVXTlNBcnJhedIfIEdIXxATTlNLZXlQYXRoRXhwcmVzc2lvbqRHSSQlXxAUTlNGdW5jdGlvbkV4cHJlc3Npb27SHyBFS6JFJdIfIElNo0kkJQAIABEAGgAkACkAMgA3AEkATABRAFMAaQBvAHoAhACTAKYAsgC5ALsAvQC/AMEAwwDdAOQA7wDxAPMA9QECAQcBEgEbATIBNgFNAVoBYwFoAXMBdQF3AXkBhAGGAYgBigGMAZ8BpgGoAaoBsQG2AbgBugG8AcMBzQHPAdEB0wHeAeMCAgIGAgsCGgIeAiYCKwJBAkYCXQJiAmUCagAAAAAAAAIBAAAAAAAAAE4AAAAAAAAAAAAAAAAAAAJu
+</attribute>
+        <attribute name="name" type="string">catalogNumber</attribute>
+        <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z218"></relationship>
     </object>
 </database>

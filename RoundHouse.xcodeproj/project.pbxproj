@@ -85,6 +85,8 @@
 		D2E307E7267D79C600577B27 /* NSImage+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307E5267D79C600577B27 /* NSImage+Data.swift */; };
 		D2E307E9267D7C0100577B27 /* AccessoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307E8267D7C0100577B27 /* AccessoryCell.swift */; };
 		D2E307EA267D7C0100577B27 /* AccessoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307E8267D7C0100577B27 /* AccessoryCell.swift */; };
+		D2E307ED267E8C6000577B27 /* RoundHouseMigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307EB267E8C6000577B27 /* RoundHouseMigrationTests.swift */; };
+		D2E307EE267EAEE100577B27 /* RoundHouseMigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307EB267E8C6000577B27 /* RoundHouseMigrationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +169,7 @@
 		D2E307E2267D797300577B27 /* CGImage+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImage+Data.swift"; sourceTree = "<group>"; };
 		D2E307E5267D79C600577B27 /* NSImage+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Data.swift"; sourceTree = "<group>"; };
 		D2E307E8267D7C0100577B27 /* AccessoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryCell.swift; sourceTree = "<group>"; };
+		D2E307EB267E8C6000577B27 /* RoundHouseMigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseMigrationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +328,7 @@
 		D2C4963A2675F9BA0008AFB8 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				D2E307EB267E8C6000577B27 /* RoundHouseMigrationTests.swift */,
 				D2C4963C2675F9D40008AFB8 /* PurchaseModelsTests.swift */,
 				D2C496452675FACA0008AFB8 /* PurchaseAccessoriesTests.swift */,
 				D2C4963B2675F9D40008AFB8 /* TrainMembersTests.swift */,
@@ -663,6 +667,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2C4967F267601FC0008AFB8 /* TrainMembersTests.swift in Sources */,
+				D2E307ED267E8C6000577B27 /* RoundHouseMigrationTests.swift in Sources */,
 				D2C49680267601FC0008AFB8 /* PurchaseAccessoriesTests.swift in Sources */,
 				D2C49681267601FC0008AFB8 /* PurchaseModelsTests.swift in Sources */,
 				D2C49663267601330008AFB8 /* Unit_Tests_macOS.swift in Sources */,
@@ -674,6 +679,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2C49682267601FE0008AFB8 /* TrainMembersTests.swift in Sources */,
+				D2E307EE267EAEE100577B27 /* RoundHouseMigrationTests.swift in Sources */,
 				D2C49683267601FE0008AFB8 /* PurchaseAccessoriesTests.swift in Sources */,
 				D2C49684267601FE0008AFB8 /* PurchaseModelsTests.swift in Sources */,
 				D2C49670267601420008AFB8 /* Unit_Tests_iOS.swift in Sources */,
