@@ -14,10 +14,6 @@ struct PersistenceController {
     let container: NSPersistentCloudKitContainer
 
     init(inMemory: Bool = false) {
-        ValueTransformer.setValueTransformer(
-            SecureUnarchiveDateComponentsFromDataTransformer(),
-            forName: NSValueTransformerName(rawValue: "SecureUnarchiveDateComponentsFromDataTransformer"))
-
         if let managedObjectModel = Self.managedObjectModel {
             // Force using the same managed object model, otherwise tests will create errors.
             container = NSPersistentCloudKitContainer(name: "RoundHouse",

@@ -16,7 +16,7 @@
     </entity>
     <entity name="Decoder" representedClassName="Decoder" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="firmwareDateComponents" optional="YES" attributeType="Transformable" valueTransformerName="SecureUnarchiveDateComponentsFromDataTransformer" customClassName=".DateComponents"/>
+        <attribute name="firmwareDateComponents" optional="YES" attributeType="Transformable" valueTransformerName="SecureDateComponentsTransformer" customClassName=".DateComponents"/>
         <attribute name="firmwareVersion" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="serialNumber" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="soundAuthor" optional="YES" attributeType="String" defaultValueString=""/>
@@ -62,8 +62,8 @@
         <attribute name="gauge" optional="YES" attributeType="String" defaultValueString="OO"/>
         <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="lastOilDateComponents" optional="YES" attributeType="Transformable" valueTransformerName="SecureUnarchiveDateComponentsFromDataTransformer" customClassName=".DateComponents"/>
-        <attribute name="lastRunDateComponents" optional="YES" attributeType="Transformable" valueTransformerName="SecureUnarchiveDateComponentsFromDataTransformer" customClassName=".DateComponents"/>
+        <attribute name="lastOilDateComponents" optional="YES" attributeType="Transformable" valueTransformerName="SecureDateComponentsTransformer" customClassName=".DateComponents"/>
+        <attribute name="lastRunDateComponents" optional="YES" attributeType="Transformable" valueTransformerName="SecureDateComponentsTransformer" customClassName=".DateComponents"/>
         <attribute name="livery" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="modelClass" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="motor" optional="YES" attributeType="String" defaultValueString=""/>
@@ -94,7 +94,7 @@
         <attribute name="catalogNumberPrefix" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="catalogYear" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="conditionRawValue" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="dateComponents" optional="YES" attributeType="Transformable" valueTransformerName="SecureUnarchiveDateComponentsFromDataTransformer" customClassName=".DateComponents"/>
+        <attribute name="dateComponents" optional="YES" attributeType="Transformable" valueTransformerName="SecureDateComponentsTransformer" customClassName=".DateComponents"/>
         <attribute name="dateForGrouping" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="dateForSort" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="limitedEdition" optional="YES" attributeType="String" defaultValueString=""/>
