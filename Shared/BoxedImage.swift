@@ -1,9 +1,8 @@
 //
 //  BoxedImage.swift
-//  EngineShed
+//  RoundHouse
 //
 //  Created by Scott James Remnant on 6/28/19.
-//  Copyright © 2019 Scott James Remnant. All rights reserved.
 //
 
 import SwiftUI

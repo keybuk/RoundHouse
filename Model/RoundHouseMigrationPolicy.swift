@@ -54,7 +54,6 @@ final class RoundHouseMigrationPolicy: NSEntityMigrationPolicy {
             .drop(while: \.isWhitespace)
 
         return (components[0], String(catalogDescription))
-
     }
 
     /// Extracts the accessory catalog number from a model class.
