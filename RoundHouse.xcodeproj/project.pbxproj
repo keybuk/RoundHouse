@@ -19,8 +19,8 @@
 		D23C3BE72676D6640017BC5B /* AccessoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BE52676D6640017BC5B /* AccessoriesList.swift */; };
 		D23C3BE92676D67A0017BC5B /* DecoderTypesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BE82676D67A0017BC5B /* DecoderTypesList.swift */; };
 		D23C3BEA2676D67A0017BC5B /* DecoderTypesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BE82676D67A0017BC5B /* DecoderTypesList.swift */; };
-		D29F5C81267571EF00EC2F85 /* UI_Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C80267571EF00EC2F85 /* UI_Tests_iOS.swift */; };
-		D29F5C8B267571EF00EC2F85 /* UI_Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C8A267571EF00EC2F85 /* UI_Tests_macOS.swift */; };
+		D29F5C81267571EF00EC2F85 /* UI Tests (iOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C80267571EF00EC2F85 /* UI Tests (iOS).swift */; };
+		D29F5C8B267571EF00EC2F85 /* UI Tests (macOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C8A267571EF00EC2F85 /* UI Tests (macOS).swift */; };
 		D29F5C8E267571EF00EC2F85 /* RoundHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */; };
 		D29F5C8F267571EF00EC2F85 /* RoundHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */; };
 		D29F5C90267571EF00EC2F85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C6A267571ED00EC2F85 /* ContentView.swift */; };
@@ -132,9 +132,9 @@
 		D29F5C71267571EF00EC2F85 /* RoundHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29F5C77267571EF00EC2F85 /* RoundHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29F5C7C267571EF00EC2F85 /* UI Tests (iOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UI Tests (iOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D29F5C80267571EF00EC2F85 /* UI_Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI_Tests_iOS.swift; sourceTree = "<group>"; };
+		D29F5C80267571EF00EC2F85 /* UI Tests (iOS).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI Tests (iOS).swift"; sourceTree = "<group>"; };
 		D29F5C86267571EF00EC2F85 /* UI Tests (macOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UI Tests (macOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D29F5C8A267571EF00EC2F85 /* UI_Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI_Tests_macOS.swift; sourceTree = "<group>"; };
+		D29F5C8A267571EF00EC2F85 /* UI Tests (macOS).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI Tests (macOS).swift"; sourceTree = "<group>"; };
 		D29F5CB32675743700EC2F85 /* EngineShed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EngineShed.xcdatamodel; sourceTree = "<group>"; };
 		D29F5CBA2675771D00EC2F85 /* SecureUnarchiveDateComponentsFromDataTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureUnarchiveDateComponentsFromDataTransformer.swift; sourceTree = "<group>"; };
 		D29F5CBD267578F300EC2F85 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
@@ -272,7 +272,7 @@
 		D29F5C7F267571EF00EC2F85 /* UI Tests (iOS) */ = {
 			isa = PBXGroup;
 			children = (
-				D29F5C80267571EF00EC2F85 /* UI_Tests_iOS.swift */,
+				D29F5C80267571EF00EC2F85 /* UI Tests (iOS).swift */,
 			);
 			path = "UI Tests (iOS)";
 			sourceTree = "<group>";
@@ -280,7 +280,7 @@
 		D29F5C89267571EF00EC2F85 /* UI Tests (macOS) */ = {
 			isa = PBXGroup;
 			children = (
-				D29F5C8A267571EF00EC2F85 /* UI_Tests_macOS.swift */,
+				D29F5C8A267571EF00EC2F85 /* UI Tests (macOS).swift */,
 			);
 			path = "UI Tests (macOS)";
 			sourceTree = "<group>";
@@ -628,7 +628,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D29F5C81267571EF00EC2F85 /* UI_Tests_iOS.swift in Sources */,
+				D29F5C81267571EF00EC2F85 /* UI Tests (iOS).swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,7 +636,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D29F5C8B267571EF00EC2F85 /* UI_Tests_macOS.swift in Sources */,
+				D29F5C8B267571EF00EC2F85 /* UI Tests (macOS).swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
