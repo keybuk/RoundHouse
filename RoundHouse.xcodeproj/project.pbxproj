@@ -103,6 +103,14 @@
 		D2E30806267EDAF700577B27 /* Purchase+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E30804267EDAF700577B27 /* Purchase+Date.swift */; };
 		D2E30808267EDB2000577B27 /* Purchase+WillSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E30807267EDB2000577B27 /* Purchase+WillSave.swift */; };
 		D2E30809267EDB2000577B27 /* Purchase+WillSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E30807267EDB2000577B27 /* Purchase+WillSave.swift */; };
+		D2E3080B267EDDDE00577B27 /* DecoderTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E3080A267EDDDE00577B27 /* DecoderTypeCell.swift */; };
+		D2E3080C267EDDDE00577B27 /* DecoderTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E3080A267EDDDE00577B27 /* DecoderTypeCell.swift */; };
+		D2E3080E267EDEC400577B27 /* DecoderType+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E3080D267EDEC400577B27 /* DecoderType+Image.swift */; };
+		D2E3080F267EDEC400577B27 /* DecoderType+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E3080D267EDEC400577B27 /* DecoderType+Image.swift */; };
+		D2E30811267EDECD00577B27 /* DecoderType+Image (iOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E30810267EDECD00577B27 /* DecoderType+Image (iOS).swift */; };
+		D2E30812267EDECD00577B27 /* DecoderType+Image (iOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E30810267EDECD00577B27 /* DecoderType+Image (iOS).swift */; };
+		D2E30814267EDED500577B27 /* DecoderType+Image (macOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E30813267EDED500577B27 /* DecoderType+Image (macOS).swift */; };
+		D2E30815267EDED500577B27 /* DecoderType+Image (macOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E30813267EDED500577B27 /* DecoderType+Image (macOS).swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +201,10 @@
 		D2E30801267ED88400577B27 /* PurchaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCell.swift; sourceTree = "<group>"; };
 		D2E30804267EDAF700577B27 /* Purchase+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Purchase+Date.swift"; sourceTree = "<group>"; };
 		D2E30807267EDB2000577B27 /* Purchase+WillSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Purchase+WillSave.swift"; sourceTree = "<group>"; };
+		D2E3080A267EDDDE00577B27 /* DecoderTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTypeCell.swift; sourceTree = "<group>"; };
+		D2E3080D267EDEC400577B27 /* DecoderType+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecoderType+Image.swift"; sourceTree = "<group>"; };
+		D2E30810267EDECD00577B27 /* DecoderType+Image (iOS).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecoderType+Image (iOS).swift"; sourceTree = "<group>"; };
+		D2E30813267EDED500577B27 /* DecoderType+Image (macOS).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecoderType+Image (macOS).swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +287,7 @@
 				D23C3BE22676D61D0017BC5B /* PurchasesList.swift */,
 				D2E307E8267D7C0100577B27 /* AccessoryCell.swift */,
 				D23C3BE52676D6640017BC5B /* AccessoriesList.swift */,
+				D2E3080A267EDDDE00577B27 /* DecoderTypeCell.swift */,
 				D23C3BE82676D67A0017BC5B /* DecoderTypesList.swift */,
 				D29F5CBD267578F300EC2F85 /* PreviewData.swift */,
 				D29F5C6C267571EF00EC2F85 /* Assets.xcassets */,
@@ -337,6 +350,9 @@
 				D2E307DC267D792D00577B27 /* Accessory+Image (macOS).swift */,
 				D2C496342675F8110008AFB8 /* Train+Members.swift */,
 				D2E307F8267ECFA100577B27 /* DecoderType+Decoders.swift */,
+				D2E3080D267EDEC400577B27 /* DecoderType+Image.swift */,
+				D2E30810267EDECD00577B27 /* DecoderType+Image (iOS).swift */,
+				D2E30813267EDED500577B27 /* DecoderType+Image (macOS).swift */,
 				D2C4963A2675F9BA0008AFB8 /* Tests */,
 			);
 			path = Model;
@@ -592,14 +608,17 @@
 				D2E307DD267D792D00577B27 /* Accessory+Image (macOS).swift in Sources */,
 				D2C4960C267585920008AFB8 /* ModelsList.swift in Sources */,
 				D23C3BE32676D61D0017BC5B /* PurchasesList.swift in Sources */,
+				D2E3080E267EDEC400577B27 /* DecoderType+Image.swift in Sources */,
 				D29F5CBB2675771D00EC2F85 /* SecureDateComponentsTransformer.swift in Sources */,
 				D2C4962C2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
 				D2E307F9267ECFA100577B27 /* DecoderType+Decoders.swift in Sources */,
 				D2C496262675F4AA0008AFB8 /* Model+Classification.swift in Sources */,
 				D2C496062675810D0008AFB8 /* ModelCell.swift in Sources */,
+				D2E30814267EDED500577B27 /* DecoderType+Image (macOS).swift in Sources */,
 				D2E30808267EDB2000577B27 /* Purchase+WillSave.swift in Sources */,
 				D2E307E0267D794C00577B27 /* Accessory+Image.swift in Sources */,
 				D29F5CBE267578F300EC2F85 /* PreviewData.swift in Sources */,
+				D2E30811267EDECD00577B27 /* DecoderType+Image (iOS).swift in Sources */,
 				D23C3BDA2676BC9F0017BC5B /* AppSidebar.swift in Sources */,
 				D2E30802267ED88400577B27 /* PurchaseCell.swift in Sources */,
 				D23C3BE62676D6640017BC5B /* AccessoriesList.swift in Sources */,
@@ -621,6 +640,7 @@
 				D2C4962F2675F7250008AFB8 /* Purchase+Currency.swift in Sources */,
 				D23C3BE92676D67A0017BC5B /* DecoderTypesList.swift in Sources */,
 				D2C496232675F46E0008AFB8 /* Purchase+Condition.swift in Sources */,
+				D2E3080B267EDDDE00577B27 /* DecoderTypeCell.swift in Sources */,
 				D29F5C90267571EF00EC2F85 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -635,14 +655,17 @@
 				D2E307DE267D792D00577B27 /* Accessory+Image (macOS).swift in Sources */,
 				D23C3BE42676D61D0017BC5B /* PurchasesList.swift in Sources */,
 				D29F5CBC2675771D00EC2F85 /* SecureDateComponentsTransformer.swift in Sources */,
+				D2E3080F267EDEC400577B27 /* DecoderType+Image.swift in Sources */,
 				D2E3078E267D295600577B27 /* Model+Image (iOS).swift in Sources */,
 				D2C4962D2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
 				D2E307FA267ECFA100577B27 /* DecoderType+Decoders.swift in Sources */,
 				D2C496272675F4AA0008AFB8 /* Model+Classification.swift in Sources */,
 				D2C496072675810D0008AFB8 /* ModelCell.swift in Sources */,
+				D2E30815267EDED500577B27 /* DecoderType+Image (macOS).swift in Sources */,
 				D2E30809267EDB2000577B27 /* Purchase+WillSave.swift in Sources */,
 				D2E307E1267D794C00577B27 /* Accessory+Image.swift in Sources */,
 				D29F5CBF267578F300EC2F85 /* PreviewData.swift in Sources */,
+				D2E30812267EDECD00577B27 /* DecoderType+Image (iOS).swift in Sources */,
 				D23C3BDB2676BC9F0017BC5B /* AppSidebar.swift in Sources */,
 				D2E30803267ED88400577B27 /* PurchaseCell.swift in Sources */,
 				D23C3BE72676D6640017BC5B /* AccessoriesList.swift in Sources */,
@@ -664,6 +687,7 @@
 				D2C496302675F7250008AFB8 /* Purchase+Currency.swift in Sources */,
 				D23C3BEA2676D67A0017BC5B /* DecoderTypesList.swift in Sources */,
 				D2C496242675F46E0008AFB8 /* Purchase+Condition.swift in Sources */,
+				D2E3080C267EDDDE00577B27 /* DecoderTypeCell.swift in Sources */,
 				D29F5C91267571EF00EC2F85 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

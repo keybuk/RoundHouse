@@ -18,6 +18,7 @@ struct PreviewData {
     var models: [String: Model] = [:]
     var accessories: [String: Accessory] = [:]
     var trains: [String: Train] = [:]
+    var decoderTypes: [String: DecoderType] = [:]
 
     init() {
         persistenceController = PersistenceController(inMemory: true)
@@ -28,6 +29,20 @@ struct PreviewData {
             socket.numberOfPins = 8
 
             sockets[8] = socket
+
+            let decoderType = DecoderType(context: viewContext)
+            decoderType.socket = socket
+            decoderType.manufacturer = "ESU"
+            decoderType.catalogNumber = "58420"
+            decoderType.catalogName = "LokSound 5 DCC"
+            decoderType.catalogFamily = "LokSound 5"
+            decoderType.catalogDescription = "LokSound 5 DCC \"blank decoder\", 8-pin NEM652, gauge: 0, H0"
+            decoderType.isProgrammable = true
+            decoderType.isSoundSupported = true
+            decoderType.isRailComSupported = true
+            decoderType.setPreviewImage(named: "58420")
+
+            decoderTypes["58420"] = decoderType
         }
 
         do {
@@ -36,6 +51,20 @@ struct PreviewData {
             socket.numberOfPins = 21
 
             sockets[21] = socket
+
+            let decoderType = DecoderType(context: viewContext)
+            decoderType.socket = socket
+            decoderType.manufacturer = "ESU"
+            decoderType.catalogNumber = "58429"
+            decoderType.catalogName = "LokSound 5 DCC"
+            decoderType.catalogFamily = "LokSound 5"
+            decoderType.catalogDescription = "LokSound 5 DCC \"blank decoder\", 21MTC NEM6660, gauge: 0, H0"
+            decoderType.isProgrammable = true
+            decoderType.isSoundSupported = true
+            decoderType.isRailComSupported = true
+            decoderType.setPreviewImage(named: "58429")
+
+            decoderTypes["58429"] = decoderType
         }
 
         do {
@@ -44,6 +73,20 @@ struct PreviewData {
             socket.numberOfPins = 22
 
             sockets[22] = socket
+
+            let decoderType = DecoderType(context: viewContext)
+            decoderType.socket = socket
+            decoderType.manufacturer = "ESU"
+            decoderType.catalogNumber = "58412"
+            decoderType.catalogName = "LokSound 5"
+            decoderType.catalogFamily = "LokSound 5"
+            decoderType.catalogDescription = "LokSound 5 DCC/MM/SX/M4 \"blank decoder\", PluX22, with speaker 11x15mm, gauge: 0, H0"
+            decoderType.isProgrammable = true
+            decoderType.isSoundSupported = true
+            decoderType.isRailComSupported = true
+            decoderType.setPreviewImage(named: "58412")
+
+            decoderTypes["58412"] = decoderType
         }
 
         do {
