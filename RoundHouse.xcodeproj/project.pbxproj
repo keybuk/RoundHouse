@@ -91,6 +91,12 @@
 		D2E307F4267ECC3200577B27 /* PurchaseDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307F2267ECC3200577B27 /* PurchaseDateTests.swift */; };
 		D2E307F6267ECC8E00577B27 /* ModelDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307F5267ECC8E00577B27 /* ModelDateTests.swift */; };
 		D2E307F7267ECC8E00577B27 /* ModelDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307F5267ECC8E00577B27 /* ModelDateTests.swift */; };
+		D2E307F9267ECFA100577B27 /* DecoderType+Decoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307F8267ECFA100577B27 /* DecoderType+Decoders.swift */; };
+		D2E307FA267ECFA100577B27 /* DecoderType+Decoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307F8267ECFA100577B27 /* DecoderType+Decoders.swift */; };
+		D2E307FC267ED05300577B27 /* DecoderTypeDecodersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307FB267ED05300577B27 /* DecoderTypeDecodersTests.swift */; };
+		D2E307FD267ED05300577B27 /* DecoderTypeDecodersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307FB267ED05300577B27 /* DecoderTypeDecodersTests.swift */; };
+		D2E307FF267ED17C00577B27 /* DecoderDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307FE267ED17B00577B27 /* DecoderDateTests.swift */; };
+		D2E30800267ED17C00577B27 /* DecoderDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307FE267ED17B00577B27 /* DecoderDateTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +181,9 @@
 		D2E307EF267ECA2400577B27 /* PurchaseCurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCurrencyTests.swift; sourceTree = "<group>"; };
 		D2E307F2267ECC3200577B27 /* PurchaseDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseDateTests.swift; sourceTree = "<group>"; };
 		D2E307F5267ECC8E00577B27 /* ModelDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDateTests.swift; sourceTree = "<group>"; };
+		D2E307F8267ECFA100577B27 /* DecoderType+Decoders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecoderType+Decoders.swift"; sourceTree = "<group>"; };
+		D2E307FB267ED05300577B27 /* DecoderTypeDecodersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTypeDecodersTests.swift; sourceTree = "<group>"; };
+		D2E307FE267ED17B00577B27 /* DecoderDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderDateTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +325,7 @@
 				D2E307D9267D791600577B27 /* Accessory+Image (iOS).swift */,
 				D2E307DC267D792D00577B27 /* Accessory+Image (macOS).swift */,
 				D2C496342675F8110008AFB8 /* Train+Members.swift */,
+				D2E307F8267ECFA100577B27 /* DecoderType+Decoders.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -338,6 +348,8 @@
 				D2C496452675FACA0008AFB8 /* PurchaseAccessoriesTests.swift */,
 				D2E307F5267ECC8E00577B27 /* ModelDateTests.swift */,
 				D2C4963B2675F9D40008AFB8 /* TrainMembersTests.swift */,
+				D2E307FB267ED05300577B27 /* DecoderTypeDecodersTests.swift */,
+				D2E307FE267ED17B00577B27 /* DecoderDateTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -570,6 +582,7 @@
 				D23C3BE32676D61D0017BC5B /* PurchasesList.swift in Sources */,
 				D29F5CBB2675771D00EC2F85 /* SecureDateComponentsTransformer.swift in Sources */,
 				D2C4962C2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
+				D2E307F9267ECFA100577B27 /* DecoderType+Decoders.swift in Sources */,
 				D2C496262675F4AA0008AFB8 /* Model+Classification.swift in Sources */,
 				D2C496062675810D0008AFB8 /* ModelCell.swift in Sources */,
 				D2E307E0267D794C00577B27 /* Accessory+Image.swift in Sources */,
@@ -609,6 +622,7 @@
 				D29F5CBC2675771D00EC2F85 /* SecureDateComponentsTransformer.swift in Sources */,
 				D2E3078E267D295600577B27 /* Model+Image (iOS).swift in Sources */,
 				D2C4962D2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
+				D2E307FA267ECFA100577B27 /* DecoderType+Decoders.swift in Sources */,
 				D2C496272675F4AA0008AFB8 /* Model+Classification.swift in Sources */,
 				D2C496072675810D0008AFB8 /* ModelCell.swift in Sources */,
 				D2E307E1267D794C00577B27 /* Accessory+Image.swift in Sources */,
@@ -659,8 +673,10 @@
 				D2E307F7267ECC8E00577B27 /* ModelDateTests.swift in Sources */,
 				D2E307F4267ECC3200577B27 /* PurchaseDateTests.swift in Sources */,
 				D2C4967F267601FC0008AFB8 /* TrainMembersTests.swift in Sources */,
+				D2E30800267ED17C00577B27 /* DecoderDateTests.swift in Sources */,
 				D2E307ED267E8C6000577B27 /* RoundHouseMigrationTests.swift in Sources */,
 				D2E307F1267ECA2400577B27 /* PurchaseCurrencyTests.swift in Sources */,
+				D2E307FD267ED05300577B27 /* DecoderTypeDecodersTests.swift in Sources */,
 				D2C49680267601FC0008AFB8 /* PurchaseAccessoriesTests.swift in Sources */,
 				D2C49681267601FC0008AFB8 /* PurchaseModelsTests.swift in Sources */,
 			);
@@ -673,8 +689,10 @@
 				D2E307F6267ECC8E00577B27 /* ModelDateTests.swift in Sources */,
 				D2E307F3267ECC3200577B27 /* PurchaseDateTests.swift in Sources */,
 				D2C49682267601FE0008AFB8 /* TrainMembersTests.swift in Sources */,
+				D2E307FF267ED17C00577B27 /* DecoderDateTests.swift in Sources */,
 				D2E307EE267EAEE100577B27 /* RoundHouseMigrationTests.swift in Sources */,
 				D2E307F0267ECA2400577B27 /* PurchaseCurrencyTests.swift in Sources */,
+				D2E307FC267ED05300577B27 /* DecoderTypeDecodersTests.swift in Sources */,
 				D2C49683267601FE0008AFB8 /* PurchaseAccessoriesTests.swift in Sources */,
 				D2C49684267601FE0008AFB8 /* PurchaseModelsTests.swift in Sources */,
 			);
