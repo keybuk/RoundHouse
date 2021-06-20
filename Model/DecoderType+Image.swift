@@ -6,11 +6,5 @@
 //
 
 import Foundation
-import CoreGraphics
 
-extension DecoderType {
-    var cgImage: CGImage? {
-        get { imageData.flatMap { CGImageCreateFromPNGData($0) } }
-        set { imageData = newValue?.pngData() }
-    }
-}
+extension DecoderType: StorableImage {}
