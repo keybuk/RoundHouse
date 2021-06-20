@@ -21,16 +21,11 @@ struct AccessoryCell: View {
             }
 
             VStack(alignment: .leading) {
-                HStack {
-                    if !accessory.manufacturer!.isEmpty {
-                        Text(accessory.manufacturer!)
-                    }
-                    if !accessory.catalogNumber!.isEmpty {
-                        Text(accessory.catalogNumber!)
-                    }
+                if !accessory.catalogNumber!.isEmpty {
+                    Text(accessory.catalogNumber!)
+                        .font(.headline)
                 }
-                .font(.headline)
-                
+
                 if !accessory.catalogDescription!.isEmpty {
                     Text(accessory.catalogDescription!)
                 }
