@@ -85,6 +85,12 @@
 		D2E307EA267D7C0100577B27 /* AccessoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307E8267D7C0100577B27 /* AccessoryCell.swift */; };
 		D2E307ED267E8C6000577B27 /* RoundHouseMigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307EB267E8C6000577B27 /* RoundHouseMigrationTests.swift */; };
 		D2E307EE267EAEE100577B27 /* RoundHouseMigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307EB267E8C6000577B27 /* RoundHouseMigrationTests.swift */; };
+		D2E307F0267ECA2400577B27 /* PurchaseCurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307EF267ECA2400577B27 /* PurchaseCurrencyTests.swift */; };
+		D2E307F1267ECA2400577B27 /* PurchaseCurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307EF267ECA2400577B27 /* PurchaseCurrencyTests.swift */; };
+		D2E307F3267ECC3200577B27 /* PurchaseDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307F2267ECC3200577B27 /* PurchaseDateTests.swift */; };
+		D2E307F4267ECC3200577B27 /* PurchaseDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307F2267ECC3200577B27 /* PurchaseDateTests.swift */; };
+		D2E307F6267ECC8E00577B27 /* ModelDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307F5267ECC8E00577B27 /* ModelDateTests.swift */; };
+		D2E307F7267ECC8E00577B27 /* ModelDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307F5267ECC8E00577B27 /* ModelDateTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +172,9 @@
 		D2E307E5267D79C600577B27 /* NSImage+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Data.swift"; sourceTree = "<group>"; };
 		D2E307E8267D7C0100577B27 /* AccessoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryCell.swift; sourceTree = "<group>"; };
 		D2E307EB267E8C6000577B27 /* RoundHouseMigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseMigrationTests.swift; sourceTree = "<group>"; };
+		D2E307EF267ECA2400577B27 /* PurchaseCurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCurrencyTests.swift; sourceTree = "<group>"; };
+		D2E307F2267ECC3200577B27 /* PurchaseDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseDateTests.swift; sourceTree = "<group>"; };
+		D2E307F5267ECC8E00577B27 /* ModelDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDateTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,8 +332,11 @@
 			isa = PBXGroup;
 			children = (
 				D2E307EB267E8C6000577B27 /* RoundHouseMigrationTests.swift */,
+				D2E307EF267ECA2400577B27 /* PurchaseCurrencyTests.swift */,
+				D2E307F2267ECC3200577B27 /* PurchaseDateTests.swift */,
 				D2C4963C2675F9D40008AFB8 /* PurchaseModelsTests.swift */,
 				D2C496452675FACA0008AFB8 /* PurchaseAccessoriesTests.swift */,
+				D2E307F5267ECC8E00577B27 /* ModelDateTests.swift */,
 				D2C4963B2675F9D40008AFB8 /* TrainMembersTests.swift */,
 			);
 			path = Tests;
@@ -644,8 +656,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2E307F7267ECC8E00577B27 /* ModelDateTests.swift in Sources */,
+				D2E307F4267ECC3200577B27 /* PurchaseDateTests.swift in Sources */,
 				D2C4967F267601FC0008AFB8 /* TrainMembersTests.swift in Sources */,
 				D2E307ED267E8C6000577B27 /* RoundHouseMigrationTests.swift in Sources */,
+				D2E307F1267ECA2400577B27 /* PurchaseCurrencyTests.swift in Sources */,
 				D2C49680267601FC0008AFB8 /* PurchaseAccessoriesTests.swift in Sources */,
 				D2C49681267601FC0008AFB8 /* PurchaseModelsTests.swift in Sources */,
 			);
@@ -655,8 +670,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2E307F6267ECC8E00577B27 /* ModelDateTests.swift in Sources */,
+				D2E307F3267ECC3200577B27 /* PurchaseDateTests.swift in Sources */,
 				D2C49682267601FE0008AFB8 /* TrainMembersTests.swift in Sources */,
 				D2E307EE267EAEE100577B27 /* RoundHouseMigrationTests.swift in Sources */,
+				D2E307F0267ECA2400577B27 /* PurchaseCurrencyTests.swift in Sources */,
 				D2C49683267601FE0008AFB8 /* PurchaseAccessoriesTests.swift in Sources */,
 				D2C49684267601FE0008AFB8 /* PurchaseModelsTests.swift in Sources */,
 			);
