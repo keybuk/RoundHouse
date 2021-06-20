@@ -13,22 +13,18 @@ import CoreData
 class TrainMembersTests: XCTestCase {
     var persistenceController: PersistenceController!
 
-    override func setUp() {
-        super.setUp()
-
+    override func setUpWithError() throws {
         persistenceController = PersistenceController(inMemory: true)
     }
 
-    override func tearDown() {
+    override func tearDownWithError() throws {
         persistenceController = nil
-
-        super.tearDown()
     }
 
     // MARK: addMember
 
     /// Check that we can add a member to an empty train.
-    func testAddFirstTrainMember() {
+    func testAddFirstTrainMember() throws {
         let train = Train(context: persistenceController.container.viewContext)
         let member = train.addMember()
 
@@ -40,7 +36,7 @@ class TrainMembersTests: XCTestCase {
     }
 
     /// Check that we can add a second member to a train.
-    func testAddSecondTrainMember() {
+    func testAddSecondTrainMember() throws {
         let train = Train(context: persistenceController.container.viewContext)
 
         var members: [TrainMember] = []
@@ -66,7 +62,7 @@ class TrainMembersTests: XCTestCase {
     // MARK: removeMember
 
     /// Check that we can remove the only member from a train.
-    func testRemoveMember() {
+    func testRemoveMember() throws {
         let train = Train(context: persistenceController.container.viewContext)
 
         var members: [TrainMember] = []
@@ -86,7 +82,7 @@ class TrainMembersTests: XCTestCase {
     }
 
     /// Check that we can remove a second member from a train.
-    func testRemoveSecondTrainMember() {
+    func testRemoveSecondTrainMember() throws {
         let train = Train(context: persistenceController.container.viewContext)
 
         var members: [TrainMember] = []
@@ -109,7 +105,7 @@ class TrainMembersTests: XCTestCase {
     }
 
     /// Check that we can remove the first of two members from a train, and the second is reindexed.
-    func testRemoveFirstTrainMemberOfTwo() {
+    func testRemoveFirstTrainMemberOfTwo() throws {
         let train = Train(context: persistenceController.container.viewContext)
 
         var members: [TrainMember] = []
@@ -132,7 +128,7 @@ class TrainMembersTests: XCTestCase {
     }
 
     /// Check that we can remove the first of three members from a train, and the second and third are reindexed.
-    func testRemoveFirstTrainMemberOfThree() {
+    func testRemoveFirstTrainMemberOfThree() throws {
         let train = Train(context: persistenceController.container.viewContext)
 
         var members: [TrainMember] = []
@@ -157,7 +153,7 @@ class TrainMembersTests: XCTestCase {
     }
 
     /// Check that removing a member makes minimal changes to indexes.
-    func testRemoveMinimizesChanges() {
+    func testRemoveMinimizesChanges() throws {
         let train = Train(context: persistenceController.container.viewContext)
 
         var members: [TrainMember] = []
@@ -169,7 +165,7 @@ class TrainMembersTests: XCTestCase {
             train.maxMemberIndex = member.index
         }
 
-        try! persistenceController.container.viewContext.save()
+        try persistenceController.container.viewContext.save()
 
         train.removeMember(members[1])
 
@@ -179,7 +175,7 @@ class TrainMembersTests: XCTestCase {
     // MARK: moveMember
 
     /// Check that moving a member forwards works.
-    func testMoveTrainMemberForwards() {
+    func testMoveTrainMemberForwards() throws {
         let train = Train(context: persistenceController.container.viewContext)
 
         var members: [TrainMember] = []
@@ -202,7 +198,7 @@ class TrainMembersTests: XCTestCase {
     }
 
     /// Check that moving a member backwards works.
-    func testMoveTrainMemberBackwards() {
+    func testMoveTrainMemberBackwards() throws {
         let train = Train(context: persistenceController.container.viewContext)
 
         var members: [TrainMember] = []
@@ -225,7 +221,7 @@ class TrainMembersTests: XCTestCase {
     }
 
     /// Check that moving a member to its existing location does nothing.
-    func testMoveTrainMemberToSameTrainMember() {
+    func testMoveTrainMemberToSameTrainMember() throws {
         let train = Train(context: persistenceController.container.viewContext)
 
         var members: [TrainMember] = []
@@ -245,7 +241,7 @@ class TrainMembersTests: XCTestCase {
     }
 
     /// Check that swapping two members forward in the middle of the set works.
-    func testMoveTrainMemberSwapForwards() {
+    func testMoveTrainMemberSwapForwards() throws {
         let train = Train(context: persistenceController.container.viewContext)
 
         var members: [TrainMember] = []
@@ -268,7 +264,7 @@ class TrainMembersTests: XCTestCase {
     }
 
     /// Check that swapping two members backward in the middle of the set works.
-    func testMoveTrainMemberSwapBackwards() {
+    func testMoveTrainMemberSwapBackwards() throws {
         let train = Train(context: persistenceController.container.viewContext)
 
         var members: [TrainMember] = []
@@ -291,7 +287,7 @@ class TrainMembersTests: XCTestCase {
     }
 
     /// Check that we can swap two members forwards.
-    func testMoveTrainMemberSwapTwoForwards() {
+    func testMoveTrainMemberSwapTwoForwards() throws {
         let train = Train(context: persistenceController.container.viewContext)
 
         var members: [TrainMember] = []
@@ -310,7 +306,7 @@ class TrainMembersTests: XCTestCase {
     }
 
     /// Check that we can swap two members backwards.
-    func testMoveTrainMemberSwapTwoBackwards() {
+    func testMoveTrainMemberSwapTwoBackwards() throws {
         let train = Train(context: persistenceController.container.viewContext)
 
         var members: [TrainMember] = []
@@ -329,7 +325,7 @@ class TrainMembersTests: XCTestCase {
     }
 
     /// Check that moving a member makes minimal changes to indexes.
-    func testMoveMinimizesChanges() {
+    func testMoveMinimizesChanges() throws {
         let train = Train(context: persistenceController.container.viewContext)
 
         var members: [TrainMember] = []
@@ -341,7 +337,7 @@ class TrainMembersTests: XCTestCase {
             train.maxMemberIndex = member.index
         }
 
-        try! persistenceController.container.viewContext.save()
+        try persistenceController.container.viewContext.save()
 
         train.moveMemberAt(1, to: 3)
 

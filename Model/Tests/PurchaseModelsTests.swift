@@ -13,22 +13,18 @@ import CoreData
 class PurchaseModelsTests: XCTestCase {
     var persistenceController: PersistenceController!
 
-    override func setUp() {
-        super.setUp()
-
+    override func setUpWithError() throws {
         persistenceController = PersistenceController(inMemory: true)
     }
 
-    override func tearDown() {
+    override func tearDownWithError() throws {
         persistenceController = nil
-
-        super.tearDown()
     }
 
     // MARK: addModel
 
     /// Check that we can add a model to an empty purchase.
-    func testAddFirstModel() {
+    func testAddFirstModel() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
         let model = purchase.addModel()
 
@@ -40,7 +36,7 @@ class PurchaseModelsTests: XCTestCase {
     }
 
     /// Check that we can add a second model to a purchase.
-    func testAddSecondModel() {
+    func testAddSecondModel() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var models: [Model] = []
@@ -64,7 +60,7 @@ class PurchaseModelsTests: XCTestCase {
     }
 
     /// Check that adding a model makes minimal changes to indexes.
-    func testAddMinimizesChanges() {
+    func testAddMinimizesChanges() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var models: [Model] = []
@@ -76,7 +72,7 @@ class PurchaseModelsTests: XCTestCase {
             purchase.maxModelIndex = model.index
         }
 
-        try! persistenceController.container.viewContext.save()
+        try persistenceController.container.viewContext.save()
 
         let _ = purchase.addModel()
 
@@ -86,7 +82,7 @@ class PurchaseModelsTests: XCTestCase {
     // MARK: removeModel
 
     /// Check that we can remove the only model from a purchase.
-    func testRemoveModel() {
+    func testRemoveModel() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var models: [Model] = []
@@ -106,7 +102,7 @@ class PurchaseModelsTests: XCTestCase {
     }
 
     /// Check that we can remove a second model from a purchase.
-    func testRemoveSecondModel() {
+    func testRemoveSecondModel() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var models: [Model] = []
@@ -129,7 +125,7 @@ class PurchaseModelsTests: XCTestCase {
     }
 
     /// Check that we can remove the first of two models from a purchase, and the second is reindexed.
-    func testRemoveFirstModelOfTwo() {
+    func testRemoveFirstModelOfTwo() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var models: [Model] = []
@@ -152,7 +148,7 @@ class PurchaseModelsTests: XCTestCase {
     }
 
     /// Check that we can remove the first of three models from a purchase, and the second and third are reindexed.
-    func testRemoveFirstModelOfThree() {
+    func testRemoveFirstModelOfThree() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var models: [Model] = []
@@ -177,7 +173,7 @@ class PurchaseModelsTests: XCTestCase {
     }
 
     /// Check that removing a model makes minimal changes to indxes.
-    func testRemoveMinimxesChanges() {
+    func testRemoveMinimxesChanges() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var models: [Model] = []
@@ -189,7 +185,7 @@ class PurchaseModelsTests: XCTestCase {
             purchase.maxModelIndex = model.index
         }
 
-        try! persistenceController.container.viewContext.save()
+        try persistenceController.container.viewContext.save()
 
         purchase.removeModel(models[1])
 
@@ -199,7 +195,7 @@ class PurchaseModelsTests: XCTestCase {
     // MARK: moveModel
 
     /// Check that moving a model forwards works.
-    func testMoveModelForwards() {
+    func testMoveModelForwards() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var models: [Model] = []
@@ -222,7 +218,7 @@ class PurchaseModelsTests: XCTestCase {
     }
 
     /// Check that moving a model backwards works.
-    func testMoveModelBackwards() {
+    func testMoveModelBackwards() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var models: [Model] = []
@@ -245,7 +241,7 @@ class PurchaseModelsTests: XCTestCase {
     }
 
     /// Check that moving a model to its existing location does nothing.
-    func testMoveModelToSameModel() {
+    func testMoveModelToSameModel() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var models: [Model] = []
@@ -265,7 +261,7 @@ class PurchaseModelsTests: XCTestCase {
     }
 
     /// Check that swapping two models forward in the middle of the set works.
-    func testMoveModelSwapForwards() {
+    func testMoveModelSwapForwards() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var models: [Model] = []
@@ -288,7 +284,7 @@ class PurchaseModelsTests: XCTestCase {
     }
 
     /// Check that swapping two models backward in the middle of the set works.
-    func testMoveModelSwapBackwards() {
+    func testMoveModelSwapBackwards() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var models: [Model] = []
@@ -311,7 +307,7 @@ class PurchaseModelsTests: XCTestCase {
     }
 
     /// Check that we can swap two models forward.
-    func testMoveModelSwapTwoForwards() {
+    func testMoveModelSwapTwoForwards() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var models: [Model] = []
@@ -330,7 +326,7 @@ class PurchaseModelsTests: XCTestCase {
     }
 
     /// Check that we can swap two models backward.
-    func testMoveModelSwapTwoBackwards() {
+    func testMoveModelSwapTwoBackwards() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var models: [Model] = []
@@ -349,7 +345,7 @@ class PurchaseModelsTests: XCTestCase {
     }
 
     /// Check that moving a model makes minimal changes to indexes.
-    func testMoveMinimizesChanges() {
+    func testMoveMinimizesChanges() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var models: [Model] = []
@@ -361,7 +357,7 @@ class PurchaseModelsTests: XCTestCase {
             purchase.maxModelIndex = model.index
         }
 
-        try! persistenceController.container.viewContext.save()
+        try persistenceController.container.viewContext.save()
 
         purchase.moveModelAt(1, to: 3)
 

@@ -24,7 +24,7 @@ class DecoderTypeDecodersTests: XCTestCase {
     // MARK: addDecoder
 
     /// Check that we can add a decoder to an empty type.
-    func testAddFirstDecoder() {
+    func testAddFirstDecoder() throws {
         let decoderType = DecoderType(context: persistenceController.container.viewContext)
         let decoder = decoderType.addDecoder()
 
@@ -34,7 +34,7 @@ class DecoderTypeDecodersTests: XCTestCase {
     }
 
     /// Check that we can add a second decoder to a type.
-    func testAddSecondDecoder() {
+    func testAddSecondDecoder() throws {
         let decoderType = DecoderType(context: persistenceController.container.viewContext)
 
         for _ in 0...0 {
@@ -53,7 +53,7 @@ class DecoderTypeDecodersTests: XCTestCase {
     // MARK: removeDecoder
 
     /// Check that we can remove the only decoder from a type.
-    func testRemoveDecoder() {
+    func testRemoveDecoder() throws {
         let decoderType = DecoderType(context: persistenceController.container.viewContext)
 
         var decoders: [Decoder] = []
@@ -71,7 +71,7 @@ class DecoderTypeDecodersTests: XCTestCase {
     }
 
     /// Check that we can remove a second decoder from a type.
-    func testRemoveSecondDecoder() {
+    func testRemoveSecondDecoder() throws {
         let decoderType = DecoderType(context: persistenceController.container.viewContext)
 
         var decoders: [Decoder] = []

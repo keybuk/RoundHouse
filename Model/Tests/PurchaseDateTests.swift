@@ -1,5 +1,5 @@
 //
-//  PurchaseCurrencyTests.swift
+//  PurchaseDateTests.swift
 //  RoundHouse
 //
 //  Created by Scott James Remnant on 6/19/21.
@@ -10,7 +10,7 @@ import CoreData
 
 @testable import RoundHouse
 
-class PurchaseCurrencyTests: XCTestCase {
+class PurchaseDateTests: XCTestCase {
     var persistenceController: PersistenceController!
 
     override func setUpWithError() throws {
@@ -21,17 +21,15 @@ class PurchaseCurrencyTests: XCTestCase {
         persistenceController = nil
     }
 
-    func testTypeConversion() throws {
+    /// Check that we can store and retrieve DateComponents via the transformer.
+    func testTransformer() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
-        purchase.price = Decimal(299.99)
-        purchase.valuation = Decimal(150)
+        purchase.dateComponents = DateComponents(year: 2020, month: 6, day: 13)
 
         try persistenceController.container.viewContext.save()
         persistenceController.container.viewContext.refreshAllObjects()
 
-        XCTAssertEqual(purchase.price, Decimal(299.99),
-                       "price did not have expected value after refresh")
-        XCTAssertEqual(purchase.valuation, Decimal(150),
-                       "valuation did not have expected value after refresh")
+        XCTAssertEqual(purchase.dateComponents, DateComponents(year: 2020, month: 6, day: 13),
+                       "dateComponents did not have expected value after refresh")
     }
 }

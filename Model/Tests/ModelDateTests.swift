@@ -21,6 +21,7 @@ class ModelDateTests: XCTestCase {
         persistenceController = nil
     }
 
+    /// Check that we can store and retrieve DateComponents via the transformer.
     func testTransformer() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
         let model = purchase.addModel()

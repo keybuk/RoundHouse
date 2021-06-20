@@ -250,7 +250,6 @@
 				D29F5CB02675742800EC2F85 /* Model */,
 				D23C3BF12676F96D0017BC5B /* Navigation */,
 				D29F5C66267571ED00EC2F85 /* Shared */,
-				D2C4963A2675F9BA0008AFB8 /* Tests */,
 				D29F5C7F267571EF00EC2F85 /* UI Tests (iOS) */,
 				D29F5C89267571EF00EC2F85 /* UI Tests (macOS) */,
 				D29F5C72267571EF00EC2F85 /* Products */,
@@ -326,6 +325,7 @@
 				D2E307DC267D792D00577B27 /* Accessory+Image (macOS).swift */,
 				D2C496342675F8110008AFB8 /* Train+Members.swift */,
 				D2E307F8267ECFA100577B27 /* DecoderType+Decoders.swift */,
+				D2C4963A2675F9BA0008AFB8 /* Tests */,
 			);
 			path = Model;
 			sourceTree = "<group>";

@@ -89,6 +89,7 @@ class RoundHouseMigrationTests: XCTestCase {
 
     // MARK: ModelToAccessory
 
+    /// Check that an old accessory Model is converted to Accessory with all properties copied.
     func testModelToAccessory() throws {
         let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
                                         insertInto: managedObjectContext)
@@ -129,6 +130,7 @@ class RoundHouseMigrationTests: XCTestCase {
                        "notes not copied from source Model")
     }
 
+    /// Check that an old modelClass containing a Hornby catalog number is extracted.
     func testModelToAccessoryHornby() throws {
         let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
                                         insertInto: managedObjectContext)
@@ -152,6 +154,7 @@ class RoundHouseMigrationTests: XCTestCase {
                        "catalogDescription not extracted from source Model.modelClass")
     }
 
+    /// Check that an old modelClass containing a Bachmann catalog number is extracted.
     func testModelToAccessoryBachmann() throws {
         let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
                                         insertInto: managedObjectContext)
@@ -175,6 +178,7 @@ class RoundHouseMigrationTests: XCTestCase {
                        "catalogDescription not extracted from source Model.modelClass")
     }
 
+    /// Check that an old modelClass containing a PECO catalog number is extracted.
     func testModelToAccessoryPeco() throws {
         let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
                                         insertInto: managedObjectContext)
@@ -198,6 +202,7 @@ class RoundHouseMigrationTests: XCTestCase {
                        "catalogDescription not extracted from source Model.modelClass")
     }
 
+    /// Check that an old modelClass containing a container size isn't extracted as a catalog number.
     func testModelToAccessoryContainer() throws {
         let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
                                         insertInto: managedObjectContext)

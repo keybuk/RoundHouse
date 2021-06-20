@@ -1,5 +1,5 @@
 //
-//  PurchaseDateTests.swift
+//  PurchaseCurrencyTests.swift
 //  RoundHouse
 //
 //  Created by Scott James Remnant on 6/19/21.
@@ -10,7 +10,7 @@ import CoreData
 
 @testable import RoundHouse
 
-class PurchaseDateTests: XCTestCase {
+class PurchaseCurrencyTests: XCTestCase {
     var persistenceController: PersistenceController!
 
     override func setUpWithError() throws {
@@ -21,14 +21,18 @@ class PurchaseDateTests: XCTestCase {
         persistenceController = nil
     }
 
-    func testTransformer() throws {
+    /// Check that we can convert to and from Decimal via the property.
+    func testTypeConversion() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
-        purchase.dateComponents = DateComponents(year: 2020, month: 6, day: 13)
+        purchase.price = Decimal(299.99)
+        purchase.valuation = Decimal(150)
 
         try persistenceController.container.viewContext.save()
         persistenceController.container.viewContext.refreshAllObjects()
 
-        XCTAssertEqual(purchase.dateComponents, DateComponents(year: 2020, month: 6, day: 13),
-                       "dateComponents did not have expected value after refresh")
+        XCTAssertEqual(purchase.price, Decimal(299.99),
+                       "price did not have expected value after refresh")
+        XCTAssertEqual(purchase.valuation, Decimal(150),
+                       "valuation did not have expected value after refresh")
     }
 }

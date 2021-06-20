@@ -13,22 +13,18 @@ import CoreData
 class PurchaseAccessoriesTests: XCTestCase {
     var persistenceController: PersistenceController!
 
-    override func setUp() {
-        super.setUp()
-
+    override func setUpWithError() throws {
         persistenceController = PersistenceController(inMemory: true)
     }
 
-    override func tearDown() {
+    override func tearDownWithError() throws {
         persistenceController = nil
-
-        super.tearDown()
     }
 
     // MARK: addAccessory
 
     /// Check that we can add an accessory to an empty purchase.
-    func testAddFirstAccessory() {
+    func testAddFirstAccessory() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
         let accessory = purchase.addAccessory()
 
@@ -40,7 +36,7 @@ class PurchaseAccessoriesTests: XCTestCase {
     }
 
     /// Check that we can add a second accessory to a purchase.
-    func testAddSecondAccessory() {
+    func testAddSecondAccessory() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var accessories: [Accessory] = []
@@ -64,7 +60,7 @@ class PurchaseAccessoriesTests: XCTestCase {
     }
 
     /// Check that adding an accessory makes minimal changes to indexes.
-    func testAddMinimizesChanges() {
+    func testAddMinimizesChanges() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var accessories: [Accessory] = []
@@ -76,7 +72,7 @@ class PurchaseAccessoriesTests: XCTestCase {
             purchase.maxAccessoryIndex = accessory.index
         }
 
-        try! persistenceController.container.viewContext.save()
+        try persistenceController.container.viewContext.save()
 
         let _ = purchase.addAccessory()
 
@@ -86,7 +82,7 @@ class PurchaseAccessoriesTests: XCTestCase {
     // MARK: removeAccessory
 
     /// Check that we can remove the only accessory from a purchase.
-    func testRemoveAccessory() {
+    func testRemoveAccessory() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var accessories: [Accessory] = []
@@ -106,7 +102,7 @@ class PurchaseAccessoriesTests: XCTestCase {
     }
 
     /// Check that we can remove a second accessory from a purchase.
-    func testRemoveSecondAccessory() {
+    func testRemoveSecondAccessory() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var accessories: [Accessory] = []
@@ -129,7 +125,7 @@ class PurchaseAccessoriesTests: XCTestCase {
     }
 
     /// Check that we can remove the first of two accessories from a purchase, and the second is reindexed.
-    func testRemoveFirstAccessoryOfTwo() {
+    func testRemoveFirstAccessoryOfTwo() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var accessories: [Accessory] = []
@@ -152,7 +148,7 @@ class PurchaseAccessoriesTests: XCTestCase {
     }
 
     /// Check that we can remove the first of three accessories from a purchase, and the second and third are reindexed.
-    func testRemoveFirstAccessoryOfThree() {
+    func testRemoveFirstAccessoryOfThree() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var accessories: [Accessory] = []
@@ -177,7 +173,7 @@ class PurchaseAccessoriesTests: XCTestCase {
     }
 
     /// Check that removing an accessory makes minimal changes to indxes.
-    func testRemoveMinimxesChanges() {
+    func testRemoveMinimxesChanges() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var accessories: [Accessory] = []
@@ -189,7 +185,7 @@ class PurchaseAccessoriesTests: XCTestCase {
             purchase.maxAccessoryIndex = accessory.index
         }
 
-        try! persistenceController.container.viewContext.save()
+        try persistenceController.container.viewContext.save()
 
         purchase.removeAccessory(accessories[1])
 
@@ -199,7 +195,7 @@ class PurchaseAccessoriesTests: XCTestCase {
     // MARK: moveAccessory
 
     /// Check that moving an accessory forwards works.
-    func testMoveAccessoryForwards() {
+    func testMoveAccessoryForwards() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var accessories: [Accessory] = []
@@ -222,7 +218,7 @@ class PurchaseAccessoriesTests: XCTestCase {
     }
 
     /// Check that moving an accessory backwards works.
-    func testMoveAccessoryBackwards() {
+    func testMoveAccessoryBackwards() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var accessories: [Accessory] = []
@@ -245,7 +241,7 @@ class PurchaseAccessoriesTests: XCTestCase {
     }
 
     /// Check that moving an accessory to its existing location does nothing.
-    func testMoveAccessoryToSameAccessory() {
+    func testMoveAccessoryToSameAccessory() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var accessories: [Accessory] = []
@@ -265,7 +261,7 @@ class PurchaseAccessoriesTests: XCTestCase {
     }
 
     /// Check that swapping two accessories forward in the middle of the set works.
-    func testMoveAccessorySwapForwards() {
+    func testMoveAccessorySwapForwards() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var accessories: [Accessory] = []
@@ -288,7 +284,7 @@ class PurchaseAccessoriesTests: XCTestCase {
     }
 
     /// Check that swapping two accessories backward in the middle of the set works.
-    func testMoveAccessorySwapBackwards() {
+    func testMoveAccessorySwapBackwards() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var accessories: [Accessory] = []
@@ -311,7 +307,7 @@ class PurchaseAccessoriesTests: XCTestCase {
     }
 
     /// Check that we can swap two accessories forward.
-    func testMoveAccessorySwapTwoForwards() {
+    func testMoveAccessorySwapTwoForwards() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var accessories: [Accessory] = []
@@ -330,7 +326,7 @@ class PurchaseAccessoriesTests: XCTestCase {
     }
 
     /// Check that we can swap two accessories backward.
-    func testMoveAccessorySwapTwoBackwards() {
+    func testMoveAccessorySwapTwoBackwards() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var accessories: [Accessory] = []
@@ -349,7 +345,7 @@ class PurchaseAccessoriesTests: XCTestCase {
     }
 
     /// Check that moving an accessory makes minimal changes to indexes.
-    func testMoveMinimizesChanges() {
+    func testMoveMinimizesChanges() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
         var accessories: [Accessory] = []
@@ -361,7 +357,7 @@ class PurchaseAccessoriesTests: XCTestCase {
             purchase.maxAccessoryIndex = accessory.index
         }
 
-        try! persistenceController.container.viewContext.save()
+        try persistenceController.container.viewContext.save()
 
         purchase.moveAccessoryAt(1, to: 3)
 
