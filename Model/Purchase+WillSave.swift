@@ -12,7 +12,7 @@ extension Purchase {
     public override func willSave() {
         super.willSave()
 
-        let newDateForSort = makeDateForSort(from: dateComponents)
+        let newDateForSort = Self.makeDateForSort(from: dateComponents)
         if dateForSort != newDateForSort { dateForSort = newDateForSort }
     }
 }

@@ -14,7 +14,7 @@ extension Purchase {
     /// - Parameter dateComponents: components of date.
     /// - Returns: a `Date` equivalent to UTC midnight on `dateComponents` or `.distantPast` when
     /// `dateComponents` is `nil`.
-    func makeDateForSort(from dateComponents: DateComponents?) -> Date {
+    static func makeDateForSort(from dateComponents: DateComponents?) -> Date {
         guard let dateComponents = dateComponents else { return .distantPast }
 
         var calendar = Calendar.current
