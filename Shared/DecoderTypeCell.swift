@@ -9,8 +9,7 @@ import SwiftUI
 
 extension DecoderType {
     var title: String {
-        [manufacturer, catalogNumber]
-            .compactMap({ $0 })
+        [manufacturer!, catalogNumber!]
             .joined(separator: " ")
     }
 }
