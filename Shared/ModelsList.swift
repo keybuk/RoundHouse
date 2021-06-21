@@ -11,64 +11,159 @@ extension Model {
     static func predicateForClassification(_ classification: Classification) -> NSPredicate {
         NSPredicate(format: "classificationRawValue == \(classification.rawValue)")
     }
+}
 
-    // This will end up being sectionIdentifierForGrouping
-    static func sectionIdentifier() -> KeyPath<Model, String?> {
-        \.modelClass
-    }
-
-    // This will end up being sortDescriptorsForGrouping
-    static func sortDescriptors() -> [SortDescriptor<Model>] {
-        [
-            SortDescriptor(\.modelClass),
-            SortDescriptor(\.number),
-            SortDescriptor(\.name),
-            SortDescriptor(\.dispositionRawValue)
-        ]
-    }
+extension SectionedFetchResults {
+    var recordCount: Int { reduce(0, { $0 + $1.count }) }
 }
 
 struct ModelsList: View {
-    @Environment(\.managedObjectContext) var viewContext
-
     var classification: Model.Classification?
+    @State var grouping: Model.Grouping = .modelClass
 
+    var body: some View {
+        List {
+            ModelGroupingPicker(grouping: $grouping)
+                .padding([ .leading, .trailing ])
+                .listRowSeparator(.hidden)
+
+            switch grouping {
+            case .modelClass:
+                ModelsByClass(classification: classification)
+            case .era:
+                ModelsByEra(classification: classification)
+            case .livery:
+                ModelsByLivery(classification: classification)
+            }
+
+        }
+        .listStyle(.plain)
+        .navigationTitle(classification?.pluralDescription ?? "Models")
+        .frame(minWidth: 250)
+    }
+}
+
+extension SectionedFetchResults.Section where Element == Model, SectionIdentifier == String? {
+    var title: String {
+        let modelClass = id!
+        let wheelArrangements = Set(map({ $0.wheelArrangement! }))
+
+        if wheelArrangements.count != 1 {
+            return modelClass
+        } else {
+            return [ modelClass, wheelArrangements.first! ]
+                .filter({ !$0.isEmpty })
+                .joined(separator: " ")
+        }
+    }
+}
+
+struct ModelsByClass: View {
     @SectionedFetchRequest
     var models: SectionedFetchResults<String?, Model>
 
     init(classification: Model.Classification? = nil) {
-        self.classification = classification
-
         _models = SectionedFetchRequest(
-            sectionIdentifier: Model.sectionIdentifier(),
-            sortDescriptors: Model.sortDescriptors(),
+            sectionIdentifier: \Model.modelClass,
+            sortDescriptors: [
+                SortDescriptor(\Model.modelClass),
+                SortDescriptor(\Model.number),
+                SortDescriptor(\Model.name),
+                SortDescriptor(\Model.dispositionRawValue)
+            ],
             predicate: classification.map { Model.predicateForClassification($0) },
             animation: .default)
     }
 
     var body: some View {
-        List {
-            ForEach(models) { section in
-                Section(header: Text(section.id!)) {
-                    ForEach(section) { model in
-                        ModelCell(model: model)
-                    }
+        ForEach(models) { section in
+            Section(header: Text(section.title)) {
+                ForEach(section) { model in
+                    ModelCell(model: model)
                 }
             }
         }
-        .listStyle(.plain)
-        .navigationTitle(classification?.pluralDescription ?? "Models")
         #if os(macOS)
-        .navigationSubtitle("\(models.reduce(0, { $0 + $1.count })) Models")
+        .navigationSubtitle("\(models.recordCount) Models")
         #endif
         // BUG(FB9191598) Simulator will fail to build if the view ends at #endif
-        .frame(minWidth: 250)
+        .listStyle(.plain)
+    }
+}
+
+struct ModelsByEra: View {
+    @SectionedFetchRequest
+    var models: SectionedFetchResults<Int16, Model>
+
+    init(classification: Model.Classification? = nil) {
+        _models = SectionedFetchRequest(
+            sectionIdentifier: \Model.eraRawValue,
+            sortDescriptors: [
+                SortDescriptor(\Model.eraRawValue),
+                SortDescriptor(\Model.modelClass),
+                SortDescriptor(\Model.number),
+                SortDescriptor(\Model.name),
+                SortDescriptor(\Model.dispositionRawValue)
+            ],
+            predicate: classification.map { Model.predicateForClassification($0) },
+            animation: .default)
+    }
+
+    var body: some View {
+        ForEach(models) { section in
+            Section(header: Text(Model.Era(rawValue: section.id)?.description ?? "")) {
+                ForEach(section) { model in
+                    ModelCell(model: model)
+                }
+            }
+        }
+        #if os(macOS)
+        .navigationSubtitle("\(models.recordCount) Models")
+        #endif
+        // BUG(FB9191598) Simulator will fail to build if the view ends at #endif
+        .listStyle(.plain)
+    }
+}
+
+struct ModelsByLivery: View {
+    @SectionedFetchRequest
+    var models: SectionedFetchResults<String?, Model>
+
+    init(classification: Model.Classification? = nil) {
+        _models = SectionedFetchRequest(
+            sectionIdentifier: \Model.livery,
+            sortDescriptors: [
+                SortDescriptor(\Model.livery),
+                SortDescriptor(\Model.modelClass),
+                SortDescriptor(\Model.number),
+                SortDescriptor(\Model.name),
+                SortDescriptor(\Model.dispositionRawValue)
+            ],
+            predicate: classification.map { Model.predicateForClassification($0) },
+            animation: .default)
+    }
+
+    var body: some View {
+        ForEach(models) { section in
+            Section(header: Text(section.id!)) {
+                ForEach(section) { model in
+                    ModelCell(model: model)
+                }
+            }
+        }
+        #if os(macOS)
+        .navigationSubtitle("\(models.recordCount) Models")
+        #endif
+        // BUG(FB9191598) Simulator will fail to build if the view ends at #endif
+        .listStyle(.plain)
     }
 }
 
 struct ModelsList_Previews: PreviewProvider {
     static var previews: some View {
-        ModelsList()
-            .environment(\.managedObjectContext, PreviewData.shared.viewContext)
+        NavigationView {
+            ModelsList()
+                .environment(\.managedObjectContext, PreviewData.shared.viewContext)
+        }
     }
 }

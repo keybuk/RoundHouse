@@ -97,6 +97,8 @@
 		D2E3080F267EDEC400577B27 /* DecoderType+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E3080D267EDEC400577B27 /* DecoderType+Image.swift */; };
 		D2E30817267EE77000577B27 /* StorableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E30816267EE77000577B27 /* StorableImage.swift */; };
 		D2E30818267EE77000577B27 /* StorableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E30816267EE77000577B27 /* StorableImage.swift */; };
+		D2E30820267FD50E00577B27 /* ModelGroupingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E3081F267FD50E00577B27 /* ModelGroupingPicker.swift */; };
+		D2E30821267FD50E00577B27 /* ModelGroupingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E3081F267FD50E00577B27 /* ModelGroupingPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +186,7 @@
 		D2E3080A267EDDDE00577B27 /* DecoderTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTypeCell.swift; sourceTree = "<group>"; };
 		D2E3080D267EDEC400577B27 /* DecoderType+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecoderType+Image.swift"; sourceTree = "<group>"; };
 		D2E30816267EE77000577B27 /* StorableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorableImage.swift; sourceTree = "<group>"; };
+		D2E3081F267FD50E00577B27 /* ModelGroupingPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelGroupingPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +262,7 @@
 			children = (
 				D2C49602267581070008AFB8 /* BoxedImage.swift */,
 				D2C496052675810D0008AFB8 /* ModelCell.swift */,
+				D2E3081F267FD50E00577B27 /* ModelGroupingPicker.swift */,
 				D2C4960B267585920008AFB8 /* ModelsList.swift */,
 				D2E30801267ED88400577B27 /* PurchaseCell.swift */,
 				D23C3BE22676D61D0017BC5B /* PurchasesList.swift */,
@@ -579,6 +583,7 @@
 				D2C4960C267585920008AFB8 /* ModelsList.swift in Sources */,
 				D23C3BE32676D61D0017BC5B /* PurchasesList.swift in Sources */,
 				D2E3080E267EDEC400577B27 /* DecoderType+Image.swift in Sources */,
+				D2E30820267FD50E00577B27 /* ModelGroupingPicker.swift in Sources */,
 				D29F5CBB2675771D00EC2F85 /* SecureDateComponentsTransformer.swift in Sources */,
 				D2C4962C2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
 				D2E307F9267ECFA100577B27 /* DecoderType+Decoders.swift in Sources */,
@@ -619,6 +624,7 @@
 				D2C4960D267585920008AFB8 /* ModelsList.swift in Sources */,
 				D23C3BE42676D61D0017BC5B /* PurchasesList.swift in Sources */,
 				D29F5CBC2675771D00EC2F85 /* SecureDateComponentsTransformer.swift in Sources */,
+				D2E30821267FD50E00577B27 /* ModelGroupingPicker.swift in Sources */,
 				D2E3080F267EDEC400577B27 /* DecoderType+Image.swift in Sources */,
 				D2C4962D2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
 				D2E307FA267ECFA100577B27 /* DecoderType+Decoders.swift in Sources */,
