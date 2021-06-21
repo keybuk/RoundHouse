@@ -82,28 +82,28 @@ final class RoundHouseMigrationPolicy: NSEntityMigrationPolicy {
         // Migrate "socket" string field of Model and DecoderType to a new Socket table.
         if mapping.name == "ModelToModel" || mapping.name == "DecoderTypeToDecoderType" {
             guard let dInstance = manager.destinationInstances(forEntityMappingName: mapping.name, sourceInstances: [sInstance]).first else { preconditionFailure("Missing destination instance") }
-            guard let title = sInstance.value(forKey: "socket") as! String?, !title.isEmpty else { return }
+            if let title = sInstance.value(forKey: "socket") as! String?, !title.isEmpty {
+                let pinCount = title.components(separatedBy: .decimalDigits.inverted)
+                    .first { $0 != "" }
+                    .flatMap { Int16($0) }
+                let numberOfPins = pinCount ?? 0
 
-            let pinCount = title.components(separatedBy: .decimalDigits.inverted)
-                .first { $0 != "" }
-                .flatMap { Int16($0) }
-            let numberOfPins = pinCount ?? 0
+                var userInfo = manager.userInfo ?? ["sockets": [String: NSManagedObject]()]
+                var sockets = userInfo["sockets"] as! [String: NSManagedObject]
 
-            var userInfo = manager.userInfo ?? ["sockets": [String: NSManagedObject]()]
-            var sockets = userInfo["sockets"] as! [String: NSManagedObject]
+                var socketInstance = sockets[title]
+                if socketInstance == nil {
+                    socketInstance = NSEntityDescription.insertNewObject(forEntityName: Socket.entity().name!, into: manager.destinationContext)
+                    socketInstance!.setValue(title, forKey: "title")
+                    socketInstance!.setValue(numberOfPins, forKey: "numberOfPins")
 
-            var socketInstance = sockets[title]
-            if socketInstance == nil {
-                socketInstance = NSEntityDescription.insertNewObject(forEntityName: Socket.entity().name!, into: manager.destinationContext)
-                socketInstance!.setValue(title, forKey: "title")
-                socketInstance!.setValue(numberOfPins, forKey: "numberOfPins")
+                    sockets[title] = socketInstance!
+                    userInfo["sockets"] = sockets
+                    manager.userInfo = userInfo
+                }
 
-                sockets[title] = socketInstance!
-                userInfo["sockets"] = sockets
-                manager.userInfo = userInfo
+                dInstance.setValue(socketInstance, forKey: "socket")
             }
-
-            dInstance.setValue(socketInstance, forKey: "socket")
         }
     }
 
