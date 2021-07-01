@@ -100,7 +100,11 @@ class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
-        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
         XCTAssertEqual(dPurchase.value(forKey: "priceCurrencyCode") as! String?, "GBP",
                        "priceCurrency not correctly converted")
 
@@ -115,7 +119,11 @@ class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
-        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
         XCTAssertEqual(dPurchase.value(forKey: "priceCurrencyCode") as! String?, "USD",
                        "priceCurrency not correctly converted")
 
@@ -130,7 +138,11 @@ class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
-        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
         XCTAssertEqual(dPurchase.value(forKey: "valuationCurrencyCode") as! String?, "GBP",
                        "valuationCurrency not correctly converted")
 
@@ -145,7 +157,11 @@ class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
-        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
         XCTAssertEqual(dPurchase.value(forKey: "valuationCurrencyCode") as! String?, "USD",
                        "valuationCurrency not correctly converted")
 
@@ -363,7 +379,11 @@ class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
-        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
         let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
         XCTAssertEqual(dModels.count, 1, "Expected models in purchase")
         
@@ -387,7 +407,11 @@ class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
-        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
         let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
         XCTAssertEqual(dModels.count, 1, "Expected models in purchase")
         
@@ -411,7 +435,11 @@ class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
-        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
         let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
         XCTAssertEqual(dModels.count, 1, "Expected models in purchase")
         
@@ -435,7 +463,11 @@ class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
-        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
         let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
         XCTAssertEqual(dModels.count, 1, "Expected models in purchase")
         
@@ -459,7 +491,11 @@ class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
-        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
         let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
         XCTAssertEqual(dModels.count, 1, "Expected models in purchase")
         
@@ -483,7 +519,11 @@ class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
-        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
         let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
         XCTAssertEqual(dModels.count, 1, "Expected models in purchase")
         
@@ -507,7 +547,11 @@ class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
-        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
         let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
         XCTAssertEqual(dModels.count, 1, "Expected models in purchase")
         
@@ -531,7 +575,11 @@ class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
-        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
         let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
         XCTAssertEqual(dModels.count, 1, "Expected models in purchase")
         
@@ -561,7 +609,11 @@ class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
-        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
         let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
         XCTAssertEqual(dModels.count, 0, "Unexpected models in purchase, should have been converted to accessory")
 
@@ -596,7 +648,11 @@ class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
-        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
         let dAccessories = try XCTUnwrap(dPurchase.value(forKey: "accessories") as! Set<NSManagedObject>?)
         XCTAssertEqual(dAccessories.count, 1, "Expected accessories in purchase")
 
@@ -620,7 +676,11 @@ class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
-        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
         let dAccessories = try XCTUnwrap(dPurchase.value(forKey: "accessories") as! Set<NSManagedObject>?)
         XCTAssertEqual(dAccessories.count, 1, "Expected accessories in purchase")
 
@@ -644,7 +704,11 @@ class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
-        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
         let dAccessories = try XCTUnwrap(dPurchase.value(forKey: "accessories") as! Set<NSManagedObject>?)
         XCTAssertEqual(dAccessories.count, 1, "Expected accessories in purchase")
 
@@ -668,7 +732,11 @@ class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
-        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
         let dAccessories = try XCTUnwrap(dPurchase.value(forKey: "accessories") as! Set<NSManagedObject>?)
         XCTAssertEqual(dAccessories.count, 1, "Expected accessories in purchase")
 
