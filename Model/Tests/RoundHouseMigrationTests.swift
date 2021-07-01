@@ -8,6 +8,8 @@
 import XCTest
 import CoreData
 
+@testable import RoundHouse
+
 class RoundHouseMigrationTests: XCTestCase {
     var tempDirectoryURL: URL!
 
@@ -147,6 +149,200 @@ class RoundHouseMigrationTests: XCTestCase {
         XCTAssertEqual(dPurchase.value(forKey: "valuationCurrencyCode") as! String?, "USD",
                        "valuationCurrency not correctly converted")
 
+    }
+    
+    // MARK: ModelToModel
+    
+    /// Check that classification for diesel and electric locomotives remains the same.
+    func testClassificationDieselElectricLocomotive() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+        
+        let sModel = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel.setValue(sPurchase, forKey: "purchase")
+        sModel.setValue(1, forKey: "classificationRawValue")
+        
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
+        XCTAssertEqual(dModels.count, 1, "Expected models in purchase")
+        
+        let dModel = dModels[dModels.startIndex]
+        XCTAssertEqual(dModel.value(forKey: "classificationRawValue") as! Int16, Model.Classification.dieselElectricLocomotive.rawValue,
+                       "classificationRawValue not copied from source Model")
+    }
+
+    /// Check that classification for steam locomotives is renumbered.
+    func testClassificationSteamLocomotive() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+        
+        let sModel = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel.setValue(sPurchase, forKey: "purchase")
+        sModel.setValue(9, forKey: "classificationRawValue")
+        
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
+        XCTAssertEqual(dModels.count, 1, "Expected models in purchase")
+        
+        let dModel = dModels[dModels.startIndex]
+        XCTAssertEqual(dModel.value(forKey: "classificationRawValue") as! Int16, Model.Classification.steamLocomotive.rawValue,
+                       "classificationRawValue not converted from source Model")
+    }
+
+    /// Check that classification for coaches is renumbered.
+    func testClassificationCoach() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+        
+        let sModel = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel.setValue(sPurchase, forKey: "purchase")
+        sModel.setValue(2, forKey: "classificationRawValue")
+        
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
+        XCTAssertEqual(dModels.count, 1, "Expected models in purchase")
+        
+        let dModel = dModels[dModels.startIndex]
+        XCTAssertEqual(dModel.value(forKey: "classificationRawValue") as! Int16, Model.Classification.coach.rawValue,
+                       "classificationRawValue not converted from source Model")
+    }
+
+    /// Check that classification for wagons is renumbered.
+    func testClassificationWagon() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+        
+        let sModel = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel.setValue(sPurchase, forKey: "purchase")
+        sModel.setValue(3, forKey: "classificationRawValue")
+        
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
+        XCTAssertEqual(dModels.count, 1, "Expected models in purchase")
+        
+        let dModel = dModels[dModels.startIndex]
+        XCTAssertEqual(dModel.value(forKey: "classificationRawValue") as! Int16, Model.Classification.wagon.rawValue,
+                       "classificationRawValue not converted from source Model")
+    }
+
+    /// Check that classification for multiple unites is renumbered.
+    func testClassificationMultipleUnit() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+        
+        let sModel = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel.setValue(sPurchase, forKey: "purchase")
+        sModel.setValue(4, forKey: "classificationRawValue")
+        
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
+        XCTAssertEqual(dModels.count, 1, "Expected models in purchase")
+        
+        let dModel = dModels[dModels.startIndex]
+        XCTAssertEqual(dModel.value(forKey: "classificationRawValue") as! Int16, Model.Classification.multipleUnit.rawValue,
+                       "classificationRawValue not converted from source Model")
+    }
+
+    /// Check that classification for departmentals is renumbered.
+    func testClassificationDepartmental() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+        
+        let sModel = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel.setValue(sPurchase, forKey: "purchase")
+        sModel.setValue(5, forKey: "classificationRawValue")
+        
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
+        XCTAssertEqual(dModels.count, 1, "Expected models in purchase")
+        
+        let dModel = dModels[dModels.startIndex]
+        XCTAssertEqual(dModel.value(forKey: "classificationRawValue") as! Int16, Model.Classification.departmental.rawValue,
+                       "classificationRawValue not converted from source Model")
+    }
+
+    /// Check that classification for models with no protoype is renumbered.
+    func testClassificationNoPrototype() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+        
+        let sModel = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel.setValue(sPurchase, forKey: "purchase")
+        sModel.setValue(6, forKey: "classificationRawValue")
+        
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
+        XCTAssertEqual(dModels.count, 1, "Expected models in purchase")
+        
+        let dModel = dModels[dModels.startIndex]
+        XCTAssertEqual(dModel.value(forKey: "classificationRawValue") as! Int16, Model.Classification.noPrototype.rawValue,
+                       "classificationRawValue not converted from source Model")
+    }
+
+    /// Check that classification for vehicles is renumbered.
+    func testClassificationVehicle() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+        
+        let sModel = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel.setValue(sPurchase, forKey: "purchase")
+        sModel.setValue(8, forKey: "classificationRawValue")
+        
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
+        XCTAssertEqual(dModels.count, 1, "Expected models in purchase")
+        
+        let dModel = dModels[dModels.startIndex]
+        XCTAssertEqual(dModel.value(forKey: "classificationRawValue") as! Int16, Model.Classification.vehicle.rawValue,
+                       "classificationRawValue not converted from source Model")
     }
 
     // MARK: ModelToAccessory
