@@ -1181,6 +1181,53 @@ class RoundHouseMigrationTests: XCTestCase {
                        "notes not converted to empty string")
     }
 
+    /// Check that train members retain their order.
+    func testTrainMemberIndexes() throws {
+        let sTrain = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Train"]!,
+                                     insertInto: managedObjectContext)
+        sTrain.setValue(1, forKey: "maxMemberIndex")
+
+        let sTrainMember1 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["TrainMember"]!,
+                                            insertInto: managedObjectContext)
+        sTrainMember1.setValue(sTrain, forKey: "train")
+        sTrainMember1.setValue("One", forKey: "numberOrName")
+        sTrainMember1.setValue(0, forKey: "index")
+
+        let sTrainMember2 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["TrainMember"]!,
+                                            insertInto: managedObjectContext)
+        sTrainMember2.setValue(sTrain, forKey: "train")
+        sTrainMember2.setValue("Two", forKey: "numberOrName")
+        sTrainMember2.setValue(1, forKey: "index")
+
+        try managedObjectContext.save()
+        try performMigration()
+        
+        let dTrainsFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Train")
+        let dTrains = try managedObjectContext.fetch(dTrainsFetchRequest)
+        XCTAssertEqual(dTrains.count, 1, "Expected trains after migration")
+        
+        let dTrain = dTrains.first!
+        let dTrainMembers = try XCTUnwrap(dTrain.value(forKey: "members") as! Set<NSManagedObject>?)
+        XCTAssertEqual(dTrainMembers.count, 2, "Expected train members in purchase")
+        
+        let sortedTrainMembers = dTrainMembers.sorted {
+            ($0.value(forKey: "index") as! Int16) < ($1.value(forKey: "index") as! Int16)
+        }
+
+        XCTAssertEqual(sortedTrainMembers[0].value(forKey: "numberOrName") as! String?, "One",
+                       "members in incorrect order")
+        XCTAssertEqual(sortedTrainMembers[0].value(forKey: "index") as! Int16, 0,
+                       "TrainMember has incorrect index")
+
+        XCTAssertEqual(sortedTrainMembers[1].value(forKey: "numberOrName") as! String?, "Two",
+                       "members in incorrect order")
+        XCTAssertEqual(sortedTrainMembers[1].value(forKey: "index") as! Int16, 1,
+                       "TrainMember has incorrect index")
+
+        XCTAssertEqual(dTrain.value(forKey: "maxMemberIndex") as! Int16, 1,
+                       "maxMemberIndex not correctly calculated")
+    }
+
     // MARK: TrainMemberToTrainMember
     
     /// Check that expected fields are copied.
