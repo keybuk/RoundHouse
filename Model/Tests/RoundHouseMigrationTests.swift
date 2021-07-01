@@ -151,6 +151,201 @@ class RoundHouseMigrationTests: XCTestCase {
 
     }
     
+    /// Check that models retain their order.
+    func testModelIndexes() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+        sPurchase.setValue(1, forKey: "maxModelIndex")
+
+        let sModel1 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel1.setValue(sPurchase, forKey: "purchase")
+        sModel1.setValue("One", forKey: "modelClass")
+        sModel1.setValue(0, forKey: "index")
+
+        let sModel2 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel2.setValue(sPurchase, forKey: "purchase")
+        sModel2.setValue("Two", forKey: "modelClass")
+        sModel2.setValue(1, forKey: "index")
+
+        try managedObjectContext.save()
+        try performMigration()
+        
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
+        let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
+        XCTAssertEqual(dModels.count, 2, "Expected models in purchase")
+        
+        let sortedModels = dModels.sorted {
+            ($0.value(forKey: "index") as! Int16) < ($1.value(forKey: "index") as! Int16)
+        }
+
+        XCTAssertEqual(sortedModels[0].value(forKey: "modelClass") as! String?, "One",
+                       "models in incorrect order")
+        XCTAssertEqual(sortedModels[0].value(forKey: "index") as! Int16, 0,
+                       "Model has incorrect index")
+
+        XCTAssertEqual(sortedModels[1].value(forKey: "modelClass") as! String?, "Two",
+                       "models in incorrect order")
+        XCTAssertEqual(sortedModels[1].value(forKey: "index") as! Int16, 1,
+                       "Model has incorrect index")
+
+        XCTAssertEqual(dPurchase.value(forKey: "maxModelIndex") as! Int16, 1,
+                       "maxModelIndex not correctly calculated")
+        
+        let dAccessories = try XCTUnwrap(dPurchase.value(forKey: "accessories") as! Set<NSManagedObject>?)
+        XCTAssertEqual(dAccessories.count, 0, "Unexpected accessories in purchase")
+
+        XCTAssertEqual(dPurchase.value(forKey: "maxAccessoryIndex") as! Int16, -1,
+                       "maxAccessoryIndex not correctly calculated")
+    }
+    
+    /// Check that models retain their order when converted to accesories.
+    func testAccessoryIndexes() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+        sPurchase.setValue(1, forKey: "maxModelIndex")
+
+        let sModel1 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel1.setValue(sPurchase, forKey: "purchase")
+        sModel1.setValue(7, forKey: "classificationRawValue")
+        sModel1.setValue("One", forKey: "modelClass")
+        sModel1.setValue(0, forKey: "index")
+
+        let sModel2 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel2.setValue(sPurchase, forKey: "purchase")
+        sModel2.setValue(7, forKey: "classificationRawValue")
+        sModel2.setValue("Two", forKey: "modelClass")
+        sModel2.setValue(1, forKey: "index")
+
+        try managedObjectContext.save()
+        try performMigration()
+        
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
+        let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
+        XCTAssertEqual(dModels.count, 0, "Unexpected models in purchase")
+        
+        XCTAssertEqual(dPurchase.value(forKey: "maxModelIndex") as! Int16, -1,
+                       "maxModelIndex not correctly calculated")
+        
+        let dAccessories = try XCTUnwrap(dPurchase.value(forKey: "accessories") as! Set<NSManagedObject>?)
+        XCTAssertEqual(dAccessories.count, 2, "Expected accessories in purchase")
+
+        let sortedAccessories = dAccessories.sorted {
+            ($0.value(forKey: "index") as! Int16) < ($1.value(forKey: "index") as! Int16)
+        }
+
+        XCTAssertEqual(sortedAccessories[0].value(forKey: "catalogDescription") as! String?, "One",
+                       "accessories in incorrect order")
+        XCTAssertEqual(sortedAccessories[0].value(forKey: "index") as! Int16, 0,
+                       "Accessory has incorrect index")
+
+        XCTAssertEqual(sortedAccessories[1].value(forKey: "catalogDescription") as! String?, "Two",
+                       "accessories in incorrect order")
+        XCTAssertEqual(sortedAccessories[1].value(forKey: "index") as! Int16, 1,
+                       "Accessory has incorrect index")
+
+        XCTAssertEqual(dPurchase.value(forKey: "maxAccessoryIndex") as! Int16, 1,
+                       "maxAccessoryIndex not correctly calculated")
+    }
+
+    /// Check that models and accessories retain their order when some are converted to accesories.
+    func testModelAndAccessoryIndexes() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+        sPurchase.setValue(1, forKey: "maxModelIndex")
+
+        let sModel1 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel1.setValue(sPurchase, forKey: "purchase")
+        sModel1.setValue("One", forKey: "modelClass")
+        sModel1.setValue(0, forKey: "index")
+
+        let sModel2 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel2.setValue(sPurchase, forKey: "purchase")
+        sModel2.setValue(7, forKey: "classificationRawValue")
+        sModel2.setValue("Two", forKey: "modelClass")
+        sModel2.setValue(1, forKey: "index")
+
+        let sModel3 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel3.setValue(sPurchase, forKey: "purchase")
+        sModel3.setValue("Three", forKey: "modelClass")
+        sModel3.setValue(2, forKey: "index")
+
+        let sModel4 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel4.setValue(sPurchase, forKey: "purchase")
+        sModel4.setValue(7, forKey: "classificationRawValue")
+        sModel4.setValue("Four", forKey: "modelClass")
+        sModel4.setValue(3, forKey: "index")
+
+        try managedObjectContext.save()
+        try performMigration()
+        
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
+        let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
+        XCTAssertEqual(dModels.count, 2, "Expected models in purchase")
+        
+        let sortedModels = dModels.sorted {
+            ($0.value(forKey: "index") as! Int16) < ($1.value(forKey: "index") as! Int16)
+        }
+
+        XCTAssertEqual(sortedModels[0].value(forKey: "modelClass") as! String?, "One",
+                       "models in incorrect order")
+        XCTAssertEqual(sortedModels[0].value(forKey: "index") as! Int16, 0,
+                       "Model has incorrect index")
+
+        XCTAssertEqual(sortedModels[1].value(forKey: "modelClass") as! String?, "Three",
+                       "models in incorrect order")
+        XCTAssertEqual(sortedModels[1].value(forKey: "index") as! Int16, 1,
+                       "Model has incorrect index")
+
+        XCTAssertEqual(dPurchase.value(forKey: "maxModelIndex") as! Int16, 1,
+                       "maxModelIndex not correctly calculated")
+
+        let dAccessories = try XCTUnwrap(dPurchase.value(forKey: "accessories") as! Set<NSManagedObject>?)
+        XCTAssertEqual(dAccessories.count, 2, "Expected accessories in purchase")
+
+        let sortedAccessories = dAccessories.sorted {
+            ($0.value(forKey: "index") as! Int16) < ($1.value(forKey: "index") as! Int16)
+        }
+
+        XCTAssertEqual(sortedAccessories[0].value(forKey: "catalogDescription") as! String?, "Two",
+                       "accessories in incorrect order")
+        XCTAssertEqual(sortedAccessories[0].value(forKey: "index") as! Int16, 0,
+                       "Accessory has incorrect index")
+
+        XCTAssertEqual(sortedAccessories[1].value(forKey: "catalogDescription") as! String?, "Four",
+                       "accessories in incorrect order")
+        XCTAssertEqual(sortedAccessories[1].value(forKey: "index") as! Int16, 1,
+                       "Accessory has incorrect index")
+
+        XCTAssertEqual(dPurchase.value(forKey: "maxAccessoryIndex") as! Int16, 1,
+                       "maxAccessoryIndex not correctly calculated")
+    }
+
     // MARK: ModelToModel
     
     /// Check that classification for diesel and electric locomotives remains the same.
