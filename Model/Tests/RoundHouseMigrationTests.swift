@@ -86,6 +86,68 @@ class RoundHouseMigrationTests: XCTestCase {
 
         try FileManager.default.removeItem(at: tempDirectoryURL)
     }
+    
+    // MARK: PurchaseToPurchase
+    
+    /// Check that the en_GB locale code is converted to a GBP currency code.
+    func testPriceCurrencyGBP() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("en_GB", forKey: "priceCurrency")
+        
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        XCTAssertEqual(dPurchase.value(forKey: "priceCurrencyCode") as! String?, "GBP",
+                       "priceCurrency not correctly converted")
+
+    }
+
+    /// Check that the en_US locale code is converted to a USD currency code.
+    func testPriceCurrencyUSD() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("en_US", forKey: "priceCurrency")
+        
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        XCTAssertEqual(dPurchase.value(forKey: "priceCurrencyCode") as! String?, "USD",
+                       "priceCurrency not correctly converted")
+
+    }
+
+    /// Check that the en_GB locale code is converted to a GBP currency code.
+    func testValuationCurrencyGBP() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("en_GB", forKey: "valuationCurrency")
+        
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        XCTAssertEqual(dPurchase.value(forKey: "valuationCurrencyCode") as! String?, "GBP",
+                       "valuationCurrency not correctly converted")
+
+    }
+
+    /// Check that the en_US locale code is converted to a USD currency code.
+    func testValuationCurrencyUSD() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("en_US", forKey: "valuationCurrency")
+        
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dPurchase = managedObjectContext.object(with: sPurchase.objectID)
+        XCTAssertEqual(dPurchase.value(forKey: "valuationCurrencyCode") as! String?, "USD",
+                       "valuationCurrency not correctly converted")
+
+    }
 
     // MARK: ModelToAccessory
 
