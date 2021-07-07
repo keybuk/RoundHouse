@@ -74,6 +74,22 @@ class PurchaseDateTests: XCTestCase {
 
     // MARK: dateForSort
 
+    /// Check that we convert a date components to the UTC midnight.
+    func testMakeDateForSort() throws {
+        let dateForSort = Purchase.makeDateForSort(from: DateComponents(year: 2020, month: 6, day: 13))
+        
+        XCTAssertEqual(dateForSort, Date(timeIntervalSince1970: 1592006400),
+                       "return value did not have expected value")
+    }
+    
+    /// Check that we convert `nil` to `.distantPast`
+    func testMakeDateForSortFromNil() throws {
+        let dateForSort = Purchase.makeDateForSort(from: nil)
+        
+        XCTAssertEqual(dateForSort, Date.distantPast,
+                       "return value did not have expected value")
+    }
+
     /// Check that `dateForSort` is set from `dateComponents`.
     func testDateForSort() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
