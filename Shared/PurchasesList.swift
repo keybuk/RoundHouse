@@ -7,22 +7,6 @@
 
 import SwiftUI
 
-extension Purchase {
-    // This will end up being sectionIdentifierForGrouping
-    static func sectionIdentifier() -> KeyPath<Purchase, String?> {
-        \.manufacturer
-    }
-
-    // This will end up being sortDescriptorsForGrouping
-    static func sortDescriptors() -> [SortDescriptor<Purchase>] {
-        [
-            SortDescriptor(\.manufacturer),
-            SortDescriptor(\.catalogNumber),
-            SortDescriptor(\.dateForSort),
-        ]
-    }
-}
-
 struct PurchasesList: View {
     @State var grouping: Purchase.Grouping = .date
 
@@ -41,10 +25,6 @@ struct PurchasesList: View {
         }
         .listStyle(.plain)
         .navigationTitle("Purchases")
-        #if os(macOS)
-        .navigationSubtitle("\(purchases.reduce(0, { $0 + $1.count })) Purchases")
-        #endif
-        // BUG(FB9191598) Simulator will fail to build if the view ends at #endif
         .frame(minWidth: 250)
     }
 }

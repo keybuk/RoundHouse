@@ -7,15 +7,10 @@
 
 import SwiftUI
 
-extension DecoderType {
-    var title: String {
-        [manufacturer!, catalogNumber!]
-            .joined(separator: " ")
-    }
-}
-
 struct DecoderTypeCell: View {
     var decoderType: DecoderType
+    var showManufacturer = true
+    var showSocket = false
 
     var body: some View {
         HStack {
@@ -28,14 +23,24 @@ struct DecoderTypeCell: View {
             }
 
             VStack(alignment: .leading) {
-                if !decoderType.title.isEmpty {
-                    Text(decoderType.title)
+                if showManufacturer && !decoderType.manufacturer!.isEmpty && !decoderType.catalogNumber!.isEmpty {
+                    Text("\(decoderType.manufacturer!) \(decoderType.catalogNumber!)")
+                        .font(.headline)
+                } else if showManufacturer && !decoderType.manufacturer!.isEmpty {
+                    Text(decoderType.manufacturer!)
+                        .font(.headline)
+                } else if !decoderType.catalogNumber!.isEmpty {
+                    Text(decoderType.catalogNumber!)
                         .font(.headline)
                 }
                 if !decoderType.catalogName!.isEmpty {
                     Text(decoderType.catalogName!)
                 } else if !decoderType.catalogFamily!.isEmpty {
                     Text(decoderType.catalogFamily!)
+                }
+                if showSocket {
+                    Text(decoderType.socket!.title!)
+                        .font(.caption)
                 }
             }
             
@@ -70,7 +75,7 @@ struct DecoderTypeCell_Previews: PreviewProvider {
             
             DecoderTypeCell(decoderType: PreviewData.shared.decoderTypes["58429"]!)
             
-            DecoderTypeCell(decoderType: PreviewData.shared.decoderTypes["58412"]!)
+            DecoderTypeCell(decoderType: PreviewData.shared.decoderTypes["58412"]!, showManufacturer: false, showSocket: true)
         }
     }
 }

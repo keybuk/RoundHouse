@@ -8,50 +8,82 @@
 import SwiftUI
 import CoreData
 
-extension DecoderType {
-    // This will end up being sectionIdentifierForGrouping
-    static func sectionIdentifier() -> KeyPath<DecoderType, String?> {
-        // BUG(FB9194735) We can't just use \.socket yet
-        \.socket?.title
-    }
-
-    // This will end up being sortDescriptorsForGrouping
-    static func sortDescriptors() -> [SortDescriptor<DecoderType>] {
-        [
-            SortDescriptor(\.socket?.title),
-            SortDescriptor(\.socket?.numberOfPins),
-            SortDescriptor(\.manufacturer),
-            SortDescriptor(\.catalogNumber),
-        ]
-    }
-}
-
 struct DecoderTypesList: View {
-    @Environment(\.managedObjectContext) var viewContext
-
-    @SectionedFetchRequest(
-        sectionIdentifier: DecoderType.sectionIdentifier(),
-        sortDescriptors: DecoderType.sortDescriptors(),
-        animation: .default)
-    var decoderTypes: SectionedFetchResults<String?, DecoderType>
+    @State var grouping: DecoderType.Grouping = .socket
 
     var body: some View {
         List {
-            ForEach(decoderTypes) { section in
-                Section(header: Text(section.id!)) {
-                    ForEach(section) { decoderType in
-                        DecoderTypeCell(decoderType: decoderType)
-                    }
-                }
+            DecoderTypeGroupingPicker(grouping: $grouping)
+                .padding([ .leading, .trailing ])
+                .listRowSeparator(.hidden)
+
+            switch grouping {
+            case .socket:
+                DecoderTypesBySocket()
+            case .catalog:
+                DecoderTypesByCatalog()
             }
         }
         .listStyle(.plain)
         .navigationTitle("Decoders")
+        .frame(minWidth: 250)
+    }
+}
+
+struct DecoderTypesBySocket: View {
+    @SectionedFetchRequest(
+        // BUG(FB9194735) We can't just use \.socket yet
+        sectionIdentifier: \DecoderType.socket?.title,
+        sortDescriptors: [
+            SortDescriptor(\DecoderType.socket?.title, order: .reverse),
+            SortDescriptor(\DecoderType.socket?.numberOfPins, order: .reverse),
+            SortDescriptor(\DecoderType.minimumStock, order: .reverse),
+            SortDescriptor(\DecoderType.remainingStock, order: .reverse),
+            SortDescriptor(\DecoderType.manufacturer),
+            SortDescriptor(\DecoderType.catalogNumber),
+        ],
+        animation: .default)
+    var decoderTypes: SectionedFetchResults<String?, DecoderType>
+
+    var body: some View {
+        ForEach(decoderTypes) { section in
+            Section(header: Text(section.id!)) {
+                ForEach(section) { decoderType in
+                    DecoderTypeCell(decoderType: decoderType)
+                }
+            }
+        }
         #if os(macOS)
-        .navigationSubtitle("\(decoderTypes.reduce(0, { $0 + $1.count })) Types")
+        .navigationSubtitle("\(decoderTypes.recordCount) Types")
         #endif
         // BUG(FB9191598) Simulator will fail to build if the view ends at #endif
-        .frame(minWidth: 250)
+        .listStyle(.plain)
+    }
+}
+
+struct DecoderTypesByCatalog: View {
+    @SectionedFetchRequest(
+        sectionIdentifier: \DecoderType.manufacturer,
+        sortDescriptors: [
+            SortDescriptor(\DecoderType.manufacturer),
+            SortDescriptor(\DecoderType.catalogNumber),
+        ],
+        animation: .default)
+    var decoderTypes: SectionedFetchResults<String?, DecoderType>
+
+    var body: some View {
+        ForEach(decoderTypes) { section in
+            Section(header: Text(section.id!)) {
+                ForEach(section) { decoderType in
+                    DecoderTypeCell(decoderType: decoderType, showManufacturer: false, showSocket: true)
+                }
+            }
+        }
+        #if os(macOS)
+        .navigationSubtitle("\(decoderTypes.recordCount) Types")
+        #endif
+        // BUG(FB9191598) Simulator will fail to build if the view ends at #endif
+        .listStyle(.plain)
     }
 }
 
