@@ -176,6 +176,47 @@ class RoundHouseMigrationTests: XCTestCase {
                        "notes not converted to empty string")
     }
     
+    /// Check that the dateForGrouping field is populated during migration.
+    func testPurchaseDateForGrouping() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+        sPurchase.setValue(DateComponents(year: 2005, month: 7, day: 18), forKey: "date")
+        
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
+        XCTAssertEqual(dPurchase.value(forKey: "dateForGrouping") as! Date?,
+                       Date(timeIntervalSince1970: 1120176000),
+                       "dateForSort not set during migration")
+    }
+    
+    /// Check that the dateForGrouping field is given the .distantPast value when date is nil.
+    func testPurchaseNilDateForGrouping() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+        
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
+        XCTAssertEqual(dPurchase.value(forKey: "dateForGrouping") as! Date?,
+                       Date.distantPast,
+                       "dateForSort not set during migration")
+    }
+
     /// Check that the dateForSort field is populated during migration.
     func testPurchaseDateForSort() throws {
         let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
