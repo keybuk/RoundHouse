@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ModelCell: View {
     var model: Model
+    var showClass = false
 
     var body: some View {
         HStack {
@@ -21,6 +22,10 @@ struct ModelCell: View {
             }
 
             VStack(alignment: .leading) {
+                if showClass && !model.modelClass!.isEmpty {
+                    Text("\(model.modelClass!) \(model.wheelArrangement!)")
+                        .font(.caption)
+                }
                 if !model.number!.isEmpty {
                     Text(model.number!)
                         .font(.headline)
@@ -40,6 +45,9 @@ struct ModelCell_Previews: PreviewProvider {
             ModelCell(model: PreviewData.shared.models["R3804"]!)
 
             ModelCell(model: PreviewData.shared.models["R4934A"]!)
+
+            ModelCell(model: PreviewData.shared.models["R3804"]!, showClass: true)
+
         }
     }
 }

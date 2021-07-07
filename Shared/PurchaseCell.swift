@@ -70,7 +70,7 @@ struct PurchaseCell: View {
 
 struct PurchaseCell_Previews: PreviewProvider {
     static var previews: some View {
-        VStack {
+        List {
             PurchaseCell(purchase: PreviewData.shared.purchases["R1234M"]!)
             
             PurchaseCell(purchase: PreviewData.shared.purchases["R1234M"]!, showDate: true, showManufacturer: true)

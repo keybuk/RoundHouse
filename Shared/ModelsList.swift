@@ -112,7 +112,7 @@ struct ModelsByEra: View {
         ForEach(models) { section in
             Section(header: Text(Model.Era(rawValue: section.id)?.description ?? "")) {
                 ForEach(section) { model in
-                    ModelCell(model: model)
+                    ModelCell(model: model, showClass: true)
                 }
             }
         }
@@ -146,7 +146,7 @@ struct ModelsByLivery: View {
         ForEach(models) { section in
             Section(header: Text(section.id!)) {
                 ForEach(section) { model in
-                    ModelCell(model: model)
+                    ModelCell(model: model, showClass: true)
                 }
             }
         }
