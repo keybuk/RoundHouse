@@ -1164,6 +1164,67 @@ class RoundHouseMigrationTests: XCTestCase {
                        "catalogDescription not converted to empty string")
     }
 
+    /// Check that the reminaingStock field is populated during migration.
+    func testDecoderTypeRemainingStock() throws {
+        let sDecoderType = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["DecoderType"]!,
+                                        insertInto: managedObjectContext)
+        
+        let sDecoder1 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Decoder"]!,
+                                      insertInto: managedObjectContext)
+        sDecoder1.setValue(sDecoderType, forKey: "type")
+        
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        let sModel = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel.setValue(sPurchase, forKey: "purchase")
+
+        let sDecoder2 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Decoder"]!,
+                                      insertInto: managedObjectContext)
+        sDecoder2.setValue(sDecoderType, forKey: "type")
+        sDecoder2.setValue(sModel, forKey: "model")
+
+        let sDecoder3 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Decoder"]!,
+                                      insertInto: managedObjectContext)
+        sDecoder3.setValue(sDecoderType, forKey: "type")
+
+        let sDecoder4 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Decoder"]!,
+                                      insertInto: managedObjectContext)
+        sDecoder4.setValue(sDecoderType, forKey: "type")
+        sDecoder4.setValue("Legomanbiffo", forKey: "soundAuthor")
+        sDecoder4.setValue("Class 68", forKey: "soundProject")
+        sDecoder4.setValue("1.0", forKey: "soundProjectVersion")
+        sDecoder4.setValue("Newer Horns (CV43 = 1)", forKey: "soundSettings")
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dDecoderTypesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "DecoderType")
+        let dDecoderTypes = try managedObjectContext.fetch(dDecoderTypesFetchRequest)
+        XCTAssertEqual(dDecoderTypes.count, 1, "Expected decoder types after migration")
+        
+        let dDecoderType = dDecoderTypes.first!
+        XCTAssertEqual(dDecoderType.value(forKey: "remainingStock") as! Int16, 2,
+                       "reminaingStock not set during migration")
+    }
+
+    /// Check that the reminaingStock field is set to zero string when the type has no decoders.
+    func testDecoderTypeEmptyRemainingStock() throws {
+        let _ = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["DecoderType"]!,
+                                insertInto: managedObjectContext)
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dDecoderTypesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "DecoderType")
+        let dDecoderTypes = try managedObjectContext.fetch(dDecoderTypesFetchRequest)
+        XCTAssertEqual(dDecoderTypes.count, 1, "Expected decoder types after migration")
+        
+        let dDecoderType = dDecoderTypes.first!
+        XCTAssertEqual(dDecoderType.value(forKey: "remainingStock") as! Int16, 0,
+                       "reminaingStock not set during migration")
+    }
+
     // MARK: DecoderToDecoder
     
     /// Check that expected fields are copied.

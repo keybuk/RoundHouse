@@ -155,6 +155,14 @@ final class RoundHouseMigrationPolicy: NSEntityMigrationPolicy {
 
             dInstance.setValue(accessoryObjects.count - 1, forKey: "maxAccessoryIndex")
         }
+        
+        // Populated "willSave" fields" that are based on relationships.
+        if mapping.name == "DecoderTypeToDecoderType" {
+            let fetchRequest = DecoderType.fetchRequestForRemainingStock(decoderType: dInstance)
+            let results = try manager.destinationContext.fetch(fetchRequest)
+            let remainingStock = results.first?.intValue ?? 0
+            dInstance.setValue(remainingStock, forKey: "remainingStock")
+        }
     }
 
 }

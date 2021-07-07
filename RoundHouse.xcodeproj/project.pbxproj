@@ -25,6 +25,16 @@
 		D278B1B2269546BA00CD4609 /* CatalogNumberPrefixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1AA26953E7D00CD4609 /* CatalogNumberPrefixTests.swift */; };
 		D278B1B52695484E00CD4609 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = D278B1B42695484E00CD4609 /* Algorithms */; };
 		D278B1B72695485700CD4609 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = D278B1B62695485700CD4609 /* Algorithms */; };
+		D278B1BB26954BE100CD4609 /* DecoderTypeStockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1B826954BC000CD4609 /* DecoderTypeStockTests.swift */; };
+		D278B1BC26954BE200CD4609 /* DecoderTypeStockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1B826954BC000CD4609 /* DecoderTypeStockTests.swift */; };
+		D278B1BE26954C4700CD4609 /* DecoderStockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1BD26954C4700CD4609 /* DecoderStockTests.swift */; };
+		D278B1BF26954C4700CD4609 /* DecoderStockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1BD26954C4700CD4609 /* DecoderStockTests.swift */; };
+		D278B1C126954C9000CD4609 /* Decoder+Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1C026954C9000CD4609 /* Decoder+Stock.swift */; };
+		D278B1C226954C9000CD4609 /* Decoder+Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1C026954C9000CD4609 /* Decoder+Stock.swift */; };
+		D278B1C426954C9700CD4609 /* DecoderType+Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1C326954C9700CD4609 /* DecoderType+Stock.swift */; };
+		D278B1C526954C9700CD4609 /* DecoderType+Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1C326954C9700CD4609 /* DecoderType+Stock.swift */; };
+		D278B1C72695506300CD4609 /* DecoderType+WillSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1C62695506300CD4609 /* DecoderType+WillSave.swift */; };
+		D278B1C82695506300CD4609 /* DecoderType+WillSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1C62695506300CD4609 /* DecoderType+WillSave.swift */; };
 		D28CDF35268E58AB00F761D5 /* PurchaseEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CDF34268E58AB00F761D5 /* PurchaseEnumTests.swift */; };
 		D28CDF36268E58AB00F761D5 /* PurchaseEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CDF34268E58AB00F761D5 /* PurchaseEnumTests.swift */; };
 		D28CDF38268E5AC300F761D5 /* ModelEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CDF37268E5AC300F761D5 /* ModelEnumTests.swift */; };
@@ -152,6 +162,11 @@
 		D278B1A726953E6900CD4609 /* Purchase+CatalogNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Purchase+CatalogNumber.swift"; sourceTree = "<group>"; };
 		D278B1AA26953E7D00CD4609 /* CatalogNumberPrefixTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogNumberPrefixTests.swift; sourceTree = "<group>"; };
 		D278B1AE269546B600CD4609 /* PurchaseCatalogNumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCatalogNumberTests.swift; sourceTree = "<group>"; };
+		D278B1B826954BC000CD4609 /* DecoderTypeStockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoderTypeStockTests.swift; sourceTree = "<group>"; };
+		D278B1BD26954C4700CD4609 /* DecoderStockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderStockTests.swift; sourceTree = "<group>"; };
+		D278B1C026954C9000CD4609 /* Decoder+Stock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decoder+Stock.swift"; sourceTree = "<group>"; };
+		D278B1C326954C9700CD4609 /* DecoderType+Stock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DecoderType+Stock.swift"; sourceTree = "<group>"; };
+		D278B1C62695506300CD4609 /* DecoderType+WillSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecoderType+WillSave.swift"; sourceTree = "<group>"; };
 		D28CDF34268E58AB00F761D5 /* PurchaseEnumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseEnumTests.swift; sourceTree = "<group>"; };
 		D28CDF37268E5AC300F761D5 /* ModelEnumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelEnumTests.swift; sourceTree = "<group>"; };
 		D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseApp.swift; sourceTree = "<group>"; };
@@ -357,6 +372,9 @@
 				D2C496342675F8110008AFB8 /* Train+Members.swift */,
 				D2E307F8267ECFA100577B27 /* DecoderType+Decoders.swift */,
 				D2E3080D267EDEC400577B27 /* DecoderType+Image.swift */,
+				D278B1C326954C9700CD4609 /* DecoderType+Stock.swift */,
+				D278B1C62695506300CD4609 /* DecoderType+WillSave.swift */,
+				D278B1C026954C9000CD4609 /* Decoder+Stock.swift */,
 				D2C4963A2675F9BA0008AFB8 /* Tests */,
 			);
 			path = Model;
@@ -384,8 +402,10 @@
 				D28CDF37268E5AC300F761D5 /* ModelEnumTests.swift */,
 				D2E307F5267ECC8E00577B27 /* ModelDateTests.swift */,
 				D2C4963B2675F9D40008AFB8 /* TrainMembersTests.swift */,
+				D278B1B826954BC000CD4609 /* DecoderTypeStockTests.swift */,
 				D2E307FB267ED05300577B27 /* DecoderTypeDecodersTests.swift */,
 				D2E307FE267ED17B00577B27 /* DecoderDateTests.swift */,
+				D278B1BD26954C4700CD4609 /* DecoderStockTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -634,10 +654,12 @@
 				D2C496062675810D0008AFB8 /* ModelCell.swift in Sources */,
 				D2E30808267EDB2000577B27 /* Purchase+WillSave.swift in Sources */,
 				D2E307E0267D794C00577B27 /* Accessory+Image.swift in Sources */,
+				D278B1C72695506300CD4609 /* DecoderType+WillSave.swift in Sources */,
 				D29F5CBE267578F300EC2F85 /* PreviewData.swift in Sources */,
 				D23C3BDA2676BC9F0017BC5B /* AppSidebar.swift in Sources */,
 				D2E30802267ED88400577B27 /* PurchaseCell.swift in Sources */,
 				D23C3BE62676D6640017BC5B /* AccessoriesList.swift in Sources */,
+				D278B1C126954C9000CD4609 /* Decoder+Stock.swift in Sources */,
 				D2C496382675F8860008AFB8 /* Purchase+Accessories.swift in Sources */,
 				D2C49603267581070008AFB8 /* BoxedImage.swift in Sources */,
 				D2E30805267EDAF700577B27 /* Purchase+Date.swift in Sources */,
@@ -646,6 +668,7 @@
 				D2C496322675F7A80008AFB8 /* Purchase+Models.swift in Sources */,
 				D2C496132675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */,
 				D2C4961926758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
+				D278B1C426954C9700CD4609 /* DecoderType+Stock.swift in Sources */,
 				D2E307E9267D7C0100577B27 /* AccessoryCell.swift in Sources */,
 				D29F5C8E267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
 				D2C496292675F4EC0008AFB8 /* Model+Era.swift in Sources */,
@@ -676,10 +699,12 @@
 				D2C496072675810D0008AFB8 /* ModelCell.swift in Sources */,
 				D2E30809267EDB2000577B27 /* Purchase+WillSave.swift in Sources */,
 				D2E307E1267D794C00577B27 /* Accessory+Image.swift in Sources */,
+				D278B1C82695506300CD4609 /* DecoderType+WillSave.swift in Sources */,
 				D29F5CBF267578F300EC2F85 /* PreviewData.swift in Sources */,
 				D23C3BDB2676BC9F0017BC5B /* AppSidebar.swift in Sources */,
 				D2E30803267ED88400577B27 /* PurchaseCell.swift in Sources */,
 				D23C3BE72676D6640017BC5B /* AccessoriesList.swift in Sources */,
+				D278B1C226954C9000CD4609 /* Decoder+Stock.swift in Sources */,
 				D2C496392675F8860008AFB8 /* Purchase+Accessories.swift in Sources */,
 				D2C49604267581070008AFB8 /* BoxedImage.swift in Sources */,
 				D2C496362675F8110008AFB8 /* Train+Members.swift in Sources */,
@@ -688,6 +713,7 @@
 				D2C496332675F7A80008AFB8 /* Purchase+Models.swift in Sources */,
 				D2C496142675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */,
 				D2C4961A26758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
+				D278B1C526954C9700CD4609 /* DecoderType+Stock.swift in Sources */,
 				D29F5C8F267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
 				D2E307EA267D7C0100577B27 /* AccessoryCell.swift in Sources */,
 				D2C4962A2675F4EC0008AFB8 /* Model+Era.swift in Sources */,
@@ -726,10 +752,12 @@
 				D2E307ED267E8C6000577B27 /* RoundHouseMigrationTests.swift in Sources */,
 				D2E307F1267ECA2400577B27 /* PurchaseCurrencyTests.swift in Sources */,
 				D278B1B0269546B600CD4609 /* PurchaseCatalogNumberTests.swift in Sources */,
+				D278B1BF26954C4700CD4609 /* DecoderStockTests.swift in Sources */,
 				D278B1B2269546BA00CD4609 /* CatalogNumberPrefixTests.swift in Sources */,
 				D2E307FD267ED05300577B27 /* DecoderTypeDecodersTests.swift in Sources */,
 				D28CDF39268E5AC300F761D5 /* ModelEnumTests.swift in Sources */,
 				D2C49680267601FC0008AFB8 /* PurchaseAccessoriesTests.swift in Sources */,
+				D278B1BC26954BE200CD4609 /* DecoderTypeStockTests.swift in Sources */,
 				D2C49681267601FC0008AFB8 /* PurchaseModelsTests.swift in Sources */,
 				D28CDF36268E58AB00F761D5 /* PurchaseEnumTests.swift in Sources */,
 			);
@@ -746,10 +774,12 @@
 				D2E307EE267EAEE100577B27 /* RoundHouseMigrationTests.swift in Sources */,
 				D2E307F0267ECA2400577B27 /* PurchaseCurrencyTests.swift in Sources */,
 				D278B1AF269546B600CD4609 /* PurchaseCatalogNumberTests.swift in Sources */,
+				D278B1BE26954C4700CD4609 /* DecoderStockTests.swift in Sources */,
 				D278B1B1269546BA00CD4609 /* CatalogNumberPrefixTests.swift in Sources */,
 				D2E307FC267ED05300577B27 /* DecoderTypeDecodersTests.swift in Sources */,
 				D28CDF38268E5AC300F761D5 /* ModelEnumTests.swift in Sources */,
 				D2C49683267601FE0008AFB8 /* PurchaseAccessoriesTests.swift in Sources */,
+				D278B1BB26954BE100CD4609 /* DecoderTypeStockTests.swift in Sources */,
 				D2C49684267601FE0008AFB8 /* PurchaseModelsTests.swift in Sources */,
 				D28CDF35268E58AB00F761D5 /* PurchaseEnumTests.swift in Sources */,
 			);
