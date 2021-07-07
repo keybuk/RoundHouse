@@ -24,22 +24,19 @@ extension Purchase {
 }
 
 struct PurchasesList: View {
-    @Environment(\.managedObjectContext) var viewContext
-
-    @SectionedFetchRequest(
-        sectionIdentifier: Purchase.sectionIdentifier(),
-        sortDescriptors: Purchase.sortDescriptors(),
-        animation: .default)
-    var purchases: SectionedFetchResults<String?, Purchase>
+    @State var grouping: Purchase.Grouping = .date
 
     var body: some View {
         List {
-            ForEach(purchases) { section in
-                Section(header: Text(section.id!)) {
-                    ForEach(section) { purchase in
-                        PurchaseCell(purchase: purchase)
-                    }
-                }
+            PurchaseGroupingPicker(grouping: $grouping)
+                .padding([ .leading, .trailing ])
+                .listRowSeparator(.hidden)
+
+            switch grouping {
+            case .date:
+                PurchasesByDate()
+            case .catalog:
+                PurchasesByCatalog()
             }
         }
         .listStyle(.plain)
@@ -49,6 +46,72 @@ struct PurchasesList: View {
         #endif
         // BUG(FB9191598) Simulator will fail to build if the view ends at #endif
         .frame(minWidth: 250)
+    }
+}
+
+private extension SectionedFetchResults.Section where Element == Purchase, SectionIdentifier == Date? {
+    var title: String {
+        let dateForGrouping = id!
+        guard dateForGrouping != .distantPast else { return "" }
+                
+        let formatStyle = Date.FormatStyle(date: .omitted, time: .omitted, timeZone: TimeZone(identifier: "UTC")!)
+            .year().month(.wide)
+        return dateForGrouping.formatted(formatStyle)
+    }
+}
+
+struct PurchasesByDate: View {
+    @SectionedFetchRequest(
+        sectionIdentifier: \Purchase.dateForGrouping,
+        sortDescriptors: [
+            SortDescriptor(\Purchase.dateForGrouping, order: .reverse),
+            SortDescriptor(\Purchase.dateForSort, order: .reverse),
+            SortDescriptor(\Purchase.manufacturer),
+            SortDescriptor(\Purchase.catalogNumber),
+        ],
+        animation: .default)
+    var purchases: SectionedFetchResults<Date?, Purchase>
+
+    var body: some View {
+        ForEach(purchases) { section in
+            Section(header: Text(section.title)) {
+                ForEach(section) { purchase in
+                    PurchaseCell(purchase: purchase, showDate: true, showManufacturer: true)
+                }
+            }
+        }
+        #if os(macOS)
+        .navigationSubtitle("\(purchases.recordCount) Purchases")
+        #endif
+        // BUG(FB9191598) Simulator will fail to build if the view ends at #endif
+        .listStyle(.plain)
+    }
+}
+
+struct PurchasesByCatalog: View {
+    @SectionedFetchRequest(
+        sectionIdentifier: \Purchase.manufacturer,
+        sortDescriptors: [
+            SortDescriptor(\Purchase.manufacturer),
+            SortDescriptor(\Purchase.catalogNumber),
+            SortDescriptor(\Purchase.dateForSort),
+        ],
+        animation: .default)
+    var purchases: SectionedFetchResults<String?, Purchase>
+
+    var body: some View {
+        ForEach(purchases) { section in
+            Section(header: Text(section.id!)) {
+                ForEach(section) { purchase in
+                    PurchaseCell(purchase: purchase)
+                }
+            }
+        }
+        #if os(macOS)
+        .navigationSubtitle("\(purchases.recordCount) Purchases")
+        #endif
+        // BUG(FB9191598) Simulator will fail to build if the view ends at #endif
+        .listStyle(.plain)
     }
 }
 

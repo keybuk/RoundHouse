@@ -31,6 +31,8 @@ extension Purchase {
 
 struct PurchaseCell: View {
     var purchase: Purchase
+    var showDate = false
+    var showManufacturer = false
 
     var body: some View {
         HStack {
@@ -43,7 +45,17 @@ struct PurchaseCell: View {
             }
 
             VStack(alignment: .leading) {
-                if !purchase.catalogNumber!.isEmpty {
+                if showDate, let date = purchase.date {
+                    Text(date, format: .dateTime.year().month(.defaultDigits).day())
+                        .font(.caption)
+                }
+                if showManufacturer && !purchase.manufacturer!.isEmpty && !purchase.catalogNumber!.isEmpty {
+                    Text("\(purchase.manufacturer!) \(purchase.catalogNumber!)")
+                        .font(.headline)
+                } else if showManufacturer && !purchase.manufacturer!.isEmpty {
+                    Text(purchase.manufacturer!)
+                        .font(.headline)
+                } else if !purchase.catalogNumber!.isEmpty {
                     Text(purchase.catalogNumber!)
                         .font(.headline)
                 }
@@ -58,6 +70,10 @@ struct PurchaseCell: View {
 
 struct PurchaseCell_Previews: PreviewProvider {
     static var previews: some View {
-        PurchaseCell(purchase: PreviewData.shared.purchases["R1234M"]!)
+        VStack {
+            PurchaseCell(purchase: PreviewData.shared.purchases["R1234M"]!)
+            
+            PurchaseCell(purchase: PreviewData.shared.purchases["R1234M"]!, showDate: true, showManufacturer: true)
+        }
     }
 }

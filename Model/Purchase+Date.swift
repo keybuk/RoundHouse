@@ -9,6 +9,16 @@ import Foundation
 import CoreData
 
 extension Purchase {
+    /// `dateComponents` as `Date` in current time zone.
+    public var date: Date? {
+        get { dateComponents.flatMap { Calendar.current.date(from: $0) } }
+        set {
+            dateComponents = newValue.map {
+                Calendar.current.dateComponents([ .year, .month, .day ], from: $0)
+            }
+        }
+    }
+
     /// Returns a date value suitable for grouping purchaes into months.
     ///
     /// - Parameter dateComponents: components of date.

@@ -35,7 +35,6 @@ struct ModelsList: View {
             case .livery:
                 ModelsByLivery(classification: classification)
             }
-
         }
         .listStyle(.plain)
         .navigationTitle(classification?.pluralDescription ?? "Models")
@@ -43,7 +42,7 @@ struct ModelsList: View {
     }
 }
 
-extension SectionedFetchResults.Section where Element == Model, SectionIdentifier == String? {
+private extension SectionedFetchResults.Section where Element == Model, SectionIdentifier == String? {
     var title: String {
         let modelClass = id!
         let wheelArrangements = Set(map({ $0.wheelArrangement! }))

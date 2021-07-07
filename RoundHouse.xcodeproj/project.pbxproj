@@ -35,6 +35,8 @@
 		D278B1C526954C9700CD4609 /* DecoderType+Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1C326954C9700CD4609 /* DecoderType+Stock.swift */; };
 		D278B1C72695506300CD4609 /* DecoderType+WillSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1C62695506300CD4609 /* DecoderType+WillSave.swift */; };
 		D278B1C82695506300CD4609 /* DecoderType+WillSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1C62695506300CD4609 /* DecoderType+WillSave.swift */; };
+		D278B1CA2695561000CD4609 /* PurchaseGroupingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1C92695561000CD4609 /* PurchaseGroupingPicker.swift */; };
+		D278B1CB2695561000CD4609 /* PurchaseGroupingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1C92695561000CD4609 /* PurchaseGroupingPicker.swift */; };
 		D28CDF35268E58AB00F761D5 /* PurchaseEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CDF34268E58AB00F761D5 /* PurchaseEnumTests.swift */; };
 		D28CDF36268E58AB00F761D5 /* PurchaseEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CDF34268E58AB00F761D5 /* PurchaseEnumTests.swift */; };
 		D28CDF38268E5AC300F761D5 /* ModelEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CDF37268E5AC300F761D5 /* ModelEnumTests.swift */; };
@@ -167,6 +169,7 @@
 		D278B1C026954C9000CD4609 /* Decoder+Stock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decoder+Stock.swift"; sourceTree = "<group>"; };
 		D278B1C326954C9700CD4609 /* DecoderType+Stock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DecoderType+Stock.swift"; sourceTree = "<group>"; };
 		D278B1C62695506300CD4609 /* DecoderType+WillSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecoderType+WillSave.swift"; sourceTree = "<group>"; };
+		D278B1C92695561000CD4609 /* PurchaseGroupingPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseGroupingPicker.swift; sourceTree = "<group>"; };
 		D28CDF34268E58AB00F761D5 /* PurchaseEnumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseEnumTests.swift; sourceTree = "<group>"; };
 		D28CDF37268E5AC300F761D5 /* ModelEnumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelEnumTests.swift; sourceTree = "<group>"; };
 		D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseApp.swift; sourceTree = "<group>"; };
@@ -307,6 +310,7 @@
 				D2E3081F267FD50E00577B27 /* ModelGroupingPicker.swift */,
 				D2C4960B267585920008AFB8 /* ModelsList.swift */,
 				D2E30801267ED88400577B27 /* PurchaseCell.swift */,
+				D278B1C92695561000CD4609 /* PurchaseGroupingPicker.swift */,
 				D23C3BE22676D61D0017BC5B /* PurchasesList.swift */,
 				D2E307E8267D7C0100577B27 /* AccessoryCell.swift */,
 				D23C3BE52676D6640017BC5B /* AccessoriesList.swift */,
@@ -672,6 +676,7 @@
 				D2E307E9267D7C0100577B27 /* AccessoryCell.swift in Sources */,
 				D29F5C8E267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
 				D2C496292675F4EC0008AFB8 /* Model+Era.swift in Sources */,
+				D278B1CA2695561000CD4609 /* PurchaseGroupingPicker.swift in Sources */,
 				D2C4962F2675F7250008AFB8 /* Purchase+Currency.swift in Sources */,
 				D23C3BE92676D67A0017BC5B /* DecoderTypesList.swift in Sources */,
 				D2C496232675F46E0008AFB8 /* Purchase+Condition.swift in Sources */,
@@ -717,6 +722,7 @@
 				D29F5C8F267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
 				D2E307EA267D7C0100577B27 /* AccessoryCell.swift in Sources */,
 				D2C4962A2675F4EC0008AFB8 /* Model+Era.swift in Sources */,
+				D278B1CB2695561000CD4609 /* PurchaseGroupingPicker.swift in Sources */,
 				D2C496302675F7250008AFB8 /* Purchase+Currency.swift in Sources */,
 				D23C3BEA2676D67A0017BC5B /* DecoderTypesList.swift in Sources */,
 				D2C496242675F46E0008AFB8 /* Purchase+Condition.swift in Sources */,
