@@ -176,6 +176,47 @@ class RoundHouseMigrationTests: XCTestCase {
                        "notes not converted to empty string")
     }
     
+    /// Check that the dateForSort field is populated during migration.
+    func testPurchaseDateForSort() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+        sPurchase.setValue(DateComponents(year: 2020, month: 6, day: 13), forKey: "date")
+        
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
+        XCTAssertEqual(dPurchase.value(forKey: "dateForSort") as! Date?,
+                       Date(timeIntervalSince1970: 1592006400),
+                       "dateForSort not set during migration")
+    }
+    
+    /// Check that the dateForSort field is given the .distantPast value when date is nil.
+    func testPurchaseNilDateForSort() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+        
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected purchases after migration")
+        
+        let dPurchase = dPurchases.first!
+        XCTAssertEqual(dPurchase.value(forKey: "dateForSort") as! Date?,
+                       Date.distantPast,
+                       "dateForSort not set during migration")
+    }
+
     /// Check that the en_GB locale code is converted to a GBP currency code.
     func testPriceCurrencyGBP() throws {
         let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,

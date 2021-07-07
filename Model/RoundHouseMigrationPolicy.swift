@@ -105,6 +105,14 @@ final class RoundHouseMigrationPolicy: NSEntityMigrationPolicy {
                 dInstance.setValue(socketInstance, forKey: "socket")
             }
         }
+        
+        // Populated "willSave" fields".
+        if mapping.name == "PurchaseToPurchase" {
+            guard let dInstance = manager.destinationInstances(forEntityMappingName: mapping.name, sourceInstances: [sInstance]).first else { preconditionFailure("Missing destination instance") }
+            
+            let dateForSort = Purchase.makeDateForSort(from: dInstance.value(forKey: "dateComponents") as! DateComponents?)
+            dInstance.setValue(dateForSort, forKey: "dateForSort")
+        }
     }
 
     override func createRelationships(forDestination dInstance: NSManagedObject, in mapping: NSEntityMapping, manager: NSMigrationManager) throws {
