@@ -91,7 +91,7 @@
     <entity name="Purchase" representedClassName="Purchase" syncable="YES" codeGenerationType="class">
         <attribute name="catalogDescription" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="catalogNumber" optional="YES" attributeType="String" defaultValueString=""/>
-        <attribute name="catalogNumberPrefix" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="catalogNumberPrefix" optional="YES" attributeType="String"/>
         <attribute name="catalogYear" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="conditionRawValue" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="dateComponents" optional="YES" attributeType="Transformable" valueTransformerName="SecureDateComponentsTransformer" customClassName=".DateComponents"/>

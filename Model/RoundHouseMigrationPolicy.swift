@@ -110,6 +110,10 @@ final class RoundHouseMigrationPolicy: NSEntityMigrationPolicy {
         if mapping.name == "PurchaseToPurchase" {
             guard let dInstance = manager.destinationInstances(forEntityMappingName: mapping.name, sourceInstances: [sInstance]).first else { preconditionFailure("Missing destination instance") }
             
+            let catalogNumber = dInstance.value(forKey: "catalogNumber") as! String?
+            let catalogNumberPrefix = Purchase.makeCatalogNumberPrefix(from: catalogNumber!)
+            dInstance.setValue(catalogNumberPrefix, forKey: "catalogNumberPrefix")
+            
             let dateComponents = dInstance.value(forKey: "dateComponents") as! DateComponents?
             
             let dateForGrouping = Purchase.makeDateForGrouping(from: dateComponents)
