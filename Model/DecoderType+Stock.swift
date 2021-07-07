@@ -34,7 +34,8 @@ extension DecoderType {
     /// - Parameter decoderType: `DecoderType` to count spare decoders for.
     /// - Returns: `NSFetchRequest` with a `.resultType` or `.countResultType`.
     static func fetchRequestForRemainingStock(decoderType: NSManagedObject) -> NSFetchRequest<NSNumber> {
-        let fetchRequest: NSFetchRequest<NSNumber> = NSFetchRequest(entityName: Decoder.entity().name!)
+        // The entity name has to be hardcoded here since there's no mapping during migration.
+        let fetchRequest: NSFetchRequest<NSNumber> = NSFetchRequest(entityName: "Decoder")
         fetchRequest.resultType = .countResultType
         fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [
             NSPredicate(format: "type = %@", decoderType),
