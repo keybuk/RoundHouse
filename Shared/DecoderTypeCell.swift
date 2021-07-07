@@ -38,13 +38,39 @@ struct DecoderTypeCell: View {
                     Text(decoderType.catalogFamily!)
                 }
             }
+            
+            if decoderType.isStocked {
+                Spacer()
+                DecoderTypeStock(decoderType: decoderType)
+            }
         }
         .frame(minHeight: 60)
     }
 }
 
+struct DecoderTypeStock : View {
+    var decoderType: DecoderType
+
+    var body: some View {
+        Text("\(decoderType.remainingStock)")
+            .font(.callout)
+            .padding([.leading, .trailing], 10)
+            .padding([.top, .bottom], 4)
+            .foregroundStyle(decoderType.isStocked ? .white : .secondary)
+            .background(decoderType.isStockLow ? .red : .secondary)
+            .mask(Capsule())
+            .padding([.leading])
+    }
+}
+
 struct DecoderTypeCell_Previews: PreviewProvider {
     static var previews: some View {
-        DecoderTypeCell(decoderType: PreviewData.shared.decoderTypes["58429"]!)
+        List {
+            DecoderTypeCell(decoderType: PreviewData.shared.decoderTypes["58420"]!)
+            
+            DecoderTypeCell(decoderType: PreviewData.shared.decoderTypes["58429"]!)
+            
+            DecoderTypeCell(decoderType: PreviewData.shared.decoderTypes["58412"]!)
+        }
     }
 }

@@ -63,8 +63,15 @@ struct PreviewData {
             decoderType.isSoundSupported = true
             decoderType.isRailComSupported = true
             decoderType.setPreviewImage(named: "58429")
+            decoderType.minimumStock = 5
 
             decoderTypes["58429"] = decoderType
+            
+            for serial in 1...decoderType.minimumStock {
+                let decoder = Decoder(context: viewContext)
+                decoder.type = decoderType
+                decoder.serialNumber = "\(serial)"
+            }
         }
 
         do {
@@ -85,8 +92,15 @@ struct PreviewData {
             decoderType.isSoundSupported = true
             decoderType.isRailComSupported = true
             decoderType.setPreviewImage(named: "58412")
+            decoderType.minimumStock = 5
 
             decoderTypes["58412"] = decoderType
+            
+            for serial in 1...(decoderType.minimumStock - 2) {
+                let decoder = Decoder(context: viewContext)
+                decoder.type = decoderType
+                decoder.serialNumber = "\(serial)"
+            }
         }
 
         do {
