@@ -15,7 +15,9 @@ struct DecoderTypesList: View {
         List {
             DecoderTypeGroupingPicker(grouping: $grouping)
                 .padding([ .leading, .trailing ])
+                #if !os(macOS)
                 .listRowSeparator(.hidden)
+                #endif
 
             switch grouping {
             case .socket:

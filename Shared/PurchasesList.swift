@@ -14,7 +14,9 @@ struct PurchasesList: View {
         List {
             PurchaseGroupingPicker(grouping: $grouping)
                 .padding([ .leading, .trailing ])
+                #if !os(macOS)
                 .listRowSeparator(.hidden)
+                #endif
 
             switch grouping {
             case .date:

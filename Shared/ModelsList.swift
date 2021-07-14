@@ -25,7 +25,9 @@ struct ModelsList: View {
         List {
             ModelGroupingPicker(grouping: $grouping)
                 .padding([ .leading, .trailing ])
+                #if !os(macOS)
                 .listRowSeparator(.hidden)
+                #endif
 
             switch grouping {
             case .modelClass:
