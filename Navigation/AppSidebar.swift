@@ -35,7 +35,6 @@ struct AppSidebar: View {
 
     var body: some View {
         List {
-            // BUG(FB9191591) Sections cause issues when pushing NavigationLinks
             Section {
                 NavigationLink(tag: NavigationItem.purchases, selection: $selection) {
                     PurchasesList()
