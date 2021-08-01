@@ -65,8 +65,6 @@ struct PurchasesByDate: View {
         #if os(macOS)
         .navigationSubtitle("\(purchases.recordCount) Purchases")
         #endif
-        // BUG(FB9191598) Simulator will fail to build if the view ends at #endif
-        .listStyle(.plain)
     }
 }
 
@@ -92,8 +90,6 @@ struct PurchasesByCatalog: View {
         #if os(macOS)
         .navigationSubtitle("\(purchases.recordCount) Purchases")
         #endif
-        // BUG(FB9191598) Simulator will fail to build if the view ends at #endif
-        .listStyle(.plain)
     }
 }
 

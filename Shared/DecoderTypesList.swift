@@ -58,8 +58,6 @@ struct DecoderTypesBySocket: View {
         #if os(macOS)
         .navigationSubtitle("\(decoderTypes.recordCount) Types")
         #endif
-        // BUG(FB9191598) Simulator will fail to build if the view ends at #endif
-        .listStyle(.plain)
     }
 }
 
@@ -84,8 +82,6 @@ struct DecoderTypesByCatalog: View {
         #if os(macOS)
         .navigationSubtitle("\(decoderTypes.recordCount) Types")
         #endif
-        // BUG(FB9191598) Simulator will fail to build if the view ends at #endif
-        .listStyle(.plain)
     }
 }
 

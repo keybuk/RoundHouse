@@ -45,7 +45,6 @@ struct AccessoriesList: View {
         #if os(macOS)
         .navigationSubtitle("\(accessories.reduce(0, { $0 + $1.count })) Accessories")
         #endif
-        // BUG(FB9191598) Simulator will fail to build if the view ends at #endif
         .frame(minWidth: 250)
     }
 }
