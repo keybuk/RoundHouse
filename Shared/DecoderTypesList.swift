@@ -31,10 +31,17 @@ struct DecoderTypesList: View {
     }
 }
 
+private extension SectionedFetchResults.Section where Element == DecoderType, SectionIdentifier == Socket? {
+    var title: String {
+        let socket = id!
+        return socket.title ?? ""
+    }
+}
+
 struct DecoderTypesBySocket: View {
     @SectionedFetchRequest(
         // BUG(FB9194735) We can't just use \.socket yet
-        sectionIdentifier: \DecoderType.socket?.title,
+        sectionIdentifier: \DecoderType.socket,
         sortDescriptors: [
             SortDescriptor(\DecoderType.socket?.title, order: .reverse),
             SortDescriptor(\DecoderType.socket?.numberOfPins, order: .reverse),
@@ -44,11 +51,11 @@ struct DecoderTypesBySocket: View {
             SortDescriptor(\DecoderType.catalogNumber),
         ],
         animation: .default)
-    var decoderTypes: SectionedFetchResults<String?, DecoderType>
+    var decoderTypes: SectionedFetchResults<Socket?, DecoderType>
 
     var body: some View {
         ForEach(decoderTypes) { section in
-            Section(header: Text(section.id!)) {
+            Section(header: Text(section.title)) {
                 ForEach(section) { decoderType in
                     DecoderTypeCell(decoderType: decoderType)
                 }
