@@ -12,12 +12,6 @@ struct PurchasesList: View {
 
     var body: some View {
         List {
-            PurchaseGroupingPicker(grouping: $grouping)
-                .padding([ .leading, .trailing ])
-                #if !os(macOS)
-                .listRowSeparator(.hidden)
-                #endif
-
             switch grouping {
             case .date:
                 PurchasesByDate()
@@ -27,6 +21,11 @@ struct PurchasesList: View {
         }
         .listStyle(.plain)
         .navigationTitle("Purchases")
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                PurchaseGroupingPicker(grouping: $grouping)
+            }
+        }
         .frame(minWidth: 250)
     }
 }

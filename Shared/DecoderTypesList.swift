@@ -13,12 +13,6 @@ struct DecoderTypesList: View {
 
     var body: some View {
         List {
-            DecoderTypeGroupingPicker(grouping: $grouping)
-                .padding([ .leading, .trailing ])
-                #if !os(macOS)
-                .listRowSeparator(.hidden)
-                #endif
-
             switch grouping {
             case .socket:
                 DecoderTypesBySocket()
@@ -28,6 +22,11 @@ struct DecoderTypesList: View {
         }
         .listStyle(.plain)
         .navigationTitle("Decoders")
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                DecoderTypeGroupingPicker(grouping: $grouping)
+            }
+        }
         .frame(minWidth: 250)
     }
 }

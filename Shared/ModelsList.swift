@@ -23,12 +23,6 @@ struct ModelsList: View {
 
     var body: some View {
         List {
-            ModelGroupingPicker(grouping: $grouping)
-                .padding([ .leading, .trailing ])
-                #if !os(macOS)
-                .listRowSeparator(.hidden)
-                #endif
-
             switch grouping {
             case .modelClass:
                 ModelsByClass(classification: classification)
@@ -40,6 +34,11 @@ struct ModelsList: View {
         }
         .listStyle(.plain)
         .navigationTitle(classification?.pluralDescription ?? "Models")
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                ModelGroupingPicker(grouping: $grouping)
+            }
+        }
         .frame(minWidth: 250)
     }
 }
