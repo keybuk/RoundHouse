@@ -7,43 +7,44 @@
 
 import SwiftUI
 
-extension Accessory {
-    static func sectionIdentifier() -> KeyPath<Accessory, String?> {
-        \.manufacturer
-    }
-
-    // This will end up being sortDescriptorsForGrouping
-    static func sortDescriptors() -> [SortDescriptor<Accessory>] {
-        [
-            SortDescriptor(\.manufacturer),
-            SortDescriptor(\.catalogNumber),
-        ]
+struct AccessoriesList: View {
+    var body: some View {
+        List {
+            AccessoriesByCatalog()
+        }
+        .listStyle(.plain)
+        .navigationTitle("Accessories")
+        .frame(minWidth: 250)
     }
 }
 
-struct AccessoriesList: View {
+private extension SectionedFetchResults.Section where Element == Accessory, SectionIdentifier == String? {
+    var title: String {
+        return id!
+    }
+}
+
+struct AccessoriesByCatalog: View {
     @SectionedFetchRequest(
-        sectionIdentifier: Accessory.sectionIdentifier(),
-        sortDescriptors: Accessory.sortDescriptors(),
+        sectionIdentifier: \Accessory.manufacturer,
+        sortDescriptors: [
+            SortDescriptor(\Accessory.manufacturer),
+            SortDescriptor(\Accessory.catalogNumber),
+        ],
         animation: .default)
     var accessories: SectionedFetchResults<String?, Accessory>
 
     var body: some View {
-        List {
-            ForEach(accessories) { section in
-                Section(header: Text(section.id!)) {
-                    ForEach(section) { accessory in
-                        AccessoryCell(accessory: accessory)
-                    }
+        ForEach(accessories) { section in
+            Section(header: Text(section.title)) {
+                ForEach(section) { accessory in
+                    AccessoryCell(accessory: accessory)
                 }
             }
         }
-        .listStyle(.plain)
-        .navigationTitle("Accessories")
         #if os(macOS)
         .navigationSubtitle("\(accessories.reduce(0, { $0 + $1.count })) Accessories")
         #endif
-        .frame(minWidth: 250)
     }
 }
 
