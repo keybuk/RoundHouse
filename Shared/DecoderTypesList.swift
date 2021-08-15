@@ -25,6 +25,9 @@ struct DecoderTypesList: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 DecoderTypeGroupingPicker(grouping: $grouping)
+#if os(iOS)
+                    .padding([.leading, .trailing])
+#endif
             }
         }
         .frame(minWidth: 250)

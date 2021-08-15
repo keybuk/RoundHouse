@@ -37,6 +37,9 @@ struct ModelsList: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 ModelGroupingPicker(grouping: $grouping)
+#if os(iOS)
+                    .padding([.leading, .trailing])
+#endif
             }
         }
         .frame(minWidth: 250)

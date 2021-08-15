@@ -24,6 +24,9 @@ struct PurchasesList: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 PurchaseGroupingPicker(grouping: $grouping)
+#if os(iOS)
+                    .padding([.leading, .trailing])
+#endif
             }
         }
         .frame(minWidth: 250)
