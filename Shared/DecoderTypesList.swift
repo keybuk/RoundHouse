@@ -31,31 +31,32 @@ struct DecoderTypesList: View {
     }
 }
 
-private extension SectionedFetchResults.Section where Element == DecoderType, SectionIdentifier == Socket? {
-    var title: String {
-        let socket = id!
-        return socket.title ?? ""
-    }
-}
-
 struct DecoderTypesBySocket: View {
     @SectionedFetchRequest(
         // BUG(FB9194735) We can't just use \.socket yet
-        sectionIdentifier: \DecoderType.socket,
+        sectionIdentifier: \DecoderType.socket?.objectID,
         sortDescriptors: [
-            SortDescriptor(\DecoderType.socket?.title, order: .reverse),
             SortDescriptor(\DecoderType.socket?.numberOfPins, order: .reverse),
+            SortDescriptor(\DecoderType.socket?.title, order: .reverse),
             SortDescriptor(\DecoderType.minimumStock, order: .reverse),
             SortDescriptor(\DecoderType.remainingStock, order: .reverse),
             SortDescriptor(\DecoderType.manufacturer),
             SortDescriptor(\DecoderType.catalogNumber),
         ],
         animation: .default)
-    var decoderTypes: SectionedFetchResults<Socket?, DecoderType>
+    var decoderTypes: SectionedFetchResults<NSManagedObjectID?, DecoderType>
+
+    @Environment(\.managedObjectContext) var viewContext
+    func sectionTitleForObjectID(_ objectID: NSManagedObjectID?) -> String {
+        guard let objectID = objectID else { return "" }
+
+        let socket = viewContext.object(with: objectID) as! Socket
+        return socket.title ?? "\(socket.numberOfPins)"
+    }
 
     var body: some View {
         ForEach(decoderTypes) { section in
-            Section(header: Text(section.title)) {
+            Section(header: Text(sectionTitleForObjectID(section.id))) {
                 ForEach(section) { decoderType in
                     DecoderTypeCell(decoderType: decoderType)
                 }
