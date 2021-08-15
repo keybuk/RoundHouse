@@ -22,8 +22,6 @@ extension Accessory {
 }
 
 struct AccessoriesList: View {
-    @Environment(\.managedObjectContext) var viewContext
-
     @SectionedFetchRequest(
         sectionIdentifier: Accessory.sectionIdentifier(),
         sortDescriptors: Accessory.sortDescriptors(),
