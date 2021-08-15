@@ -31,7 +31,16 @@ struct DecoderTypesList: View {
     }
 }
 
+private extension SectionedFetchResults.Section where Element == DecoderType, SectionIdentifier == NSManagedObjectID? {
+    func title(in context: NSManagedObjectContext) -> String {
+        let socket = context.object(with: id!) as! Socket
+        return socket.title ?? "\(socket.numberOfPins)"
+    }
+}
+
 struct DecoderTypesBySocket: View {
+    @Environment(\.managedObjectContext) var viewContext
+
     @SectionedFetchRequest(
         // BUG(FB9194735) We can't just use \.socket yet
         sectionIdentifier: \DecoderType.socket?.objectID,
@@ -46,17 +55,9 @@ struct DecoderTypesBySocket: View {
         animation: .default)
     var decoderTypes: SectionedFetchResults<NSManagedObjectID?, DecoderType>
 
-    @Environment(\.managedObjectContext) var viewContext
-    func sectionTitleForObjectID(_ objectID: NSManagedObjectID?) -> String {
-        guard let objectID = objectID else { return "" }
-
-        let socket = viewContext.object(with: objectID) as! Socket
-        return socket.title ?? "\(socket.numberOfPins)"
-    }
-
     var body: some View {
         ForEach(decoderTypes) { section in
-            Section(header: Text(sectionTitleForObjectID(section.id))) {
+            Section(header: Text(section.title(in: viewContext))) {
                 ForEach(section) { decoderType in
                     DecoderTypeCell(decoderType: decoderType)
                 }
