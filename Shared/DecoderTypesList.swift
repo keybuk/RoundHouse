@@ -95,7 +95,9 @@ struct DecoderTypesByCatalog: View {
 
 struct DecoderTypesList_Previews: PreviewProvider {
     static var previews: some View {
-        DecoderTypesList()
-            .environment(\.managedObjectContext, PreviewData.shared.viewContext)
+        NavigationView {
+            DecoderTypesList()
+                .environment(\.managedObjectContext, PreviewData.shared.viewContext)
+        }
     }
 }

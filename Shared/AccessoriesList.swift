@@ -50,7 +50,9 @@ struct AccessoriesByCatalog: View {
 
 struct AccessoriesList_Previews: PreviewProvider {
     static var previews: some View {
-        AccessoriesList()
-            .environment(\.managedObjectContext, PreviewData.shared.viewContext)
+        NavigationView {
+            AccessoriesList()
+                .environment(\.managedObjectContext, PreviewData.shared.viewContext)
+        }
     }
 }

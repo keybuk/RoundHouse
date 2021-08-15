@@ -94,7 +94,9 @@ struct PurchasesByCatalog: View {
 
 struct PurchasesList_Previews: PreviewProvider {
     static var previews: some View {
-        PurchasesList()
-            .environment(\.managedObjectContext, PreviewData.shared.viewContext)
+        NavigationView {
+            PurchasesList()
+                .environment(\.managedObjectContext, PreviewData.shared.viewContext)
+        }
     }
 }
