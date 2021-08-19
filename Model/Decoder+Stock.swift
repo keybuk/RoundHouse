@@ -13,10 +13,10 @@ extension Decoder {
     
     /// Returns `true` if the decoder has a sound project allocated or written to it.
     public var isAllocated: Bool {
-        (soundAuthor ?? "") != "" ||
-        (soundProject ?? "") != "" ||
-        (soundProjectVersion ?? "") != "" ||
-        (soundSettings ?? "") != ""
+        soundAuthor! != "" ||
+        soundProject! != "" ||
+        soundProjectVersion! != "" ||
+        soundSettings! != ""
     }
     
     /// Returns `true` if the decoder is not allocated to any model or sound file.
