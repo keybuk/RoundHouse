@@ -66,9 +66,9 @@ struct DecoderTypesBySocket: View {
                 }
             }
         }
-        #if os(macOS)
+#if os(macOS)
         .navigationSubtitle("\(decoderTypes.recordCount) Types")
-        #endif
+#endif
     }
 }
 
@@ -90,9 +90,9 @@ struct DecoderTypesByCatalog: View {
                 }
             }
         }
-        #if os(macOS)
+#if os(macOS)
         .navigationSubtitle("\(decoderTypes.recordCount) Types")
-        #endif
+#endif
     }
 }
 

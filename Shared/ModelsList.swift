@@ -86,9 +86,9 @@ struct ModelsByClass: View {
                 }
             }
         }
-        #if os(macOS)
+#if os(macOS)
         .navigationSubtitle("\(models.recordCount) Models")
-        #endif
+#endif
     }
 }
 
@@ -118,9 +118,9 @@ struct ModelsByEra: View {
                 }
             }
         }
-        #if os(macOS)
+#if os(macOS)
         .navigationSubtitle("\(models.recordCount) Models")
-        #endif
+#endif
     }
 }
 
@@ -150,9 +150,9 @@ struct ModelsByLivery: View {
                 }
             }
         }
-        #if os(macOS)
+#if os(macOS)
         .navigationSubtitle("\(models.recordCount) Models")
-        #endif
+#endif
     }
 }
 

@@ -42,9 +42,9 @@ struct AccessoriesByCatalog: View {
                 }
             }
         }
-        #if os(macOS)
+#if os(macOS)
         .navigationSubtitle("\(accessories.reduce(0, { $0 + $1.count })) Accessories")
-        #endif
+#endif
     }
 }
 

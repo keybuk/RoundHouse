@@ -64,9 +64,9 @@ struct PurchasesByDate: View {
                 }
             }
         }
-        #if os(macOS)
+#if os(macOS)
         .navigationSubtitle("\(purchases.recordCount) Purchases")
-        #endif
+#endif
     }
 }
 
@@ -89,9 +89,9 @@ struct PurchasesByCatalog: View {
                 }
             }
         }
-        #if os(macOS)
+#if os(macOS)
         .navigationSubtitle("\(purchases.recordCount) Purchases")
-        #endif
+#endif
     }
 }
 
