@@ -10,6 +10,7 @@ import SwiftUI
 extension DecoderType {
     enum Grouping {
         case socket
+        case family
         case catalog
     }
 }
@@ -21,6 +22,8 @@ struct DecoderTypeGroupingPicker: View {
         Picker("Group By", selection: $grouping) {
             Text("Socket")
                 .tag(DecoderType.Grouping.socket)
+            Text("Family")
+                .tag(DecoderType.Grouping.family)
             Text("Catalog")
                 .tag(DecoderType.Grouping.catalog)
         }

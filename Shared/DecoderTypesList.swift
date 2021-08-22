@@ -16,6 +16,8 @@ struct DecoderTypesList: View {
             switch grouping {
             case .socket:
                 DecoderTypesBySocket()
+            case .family:
+                DecoderTypesByFamily()
             case .catalog:
                 DecoderTypesByCatalog()
             }
@@ -63,6 +65,31 @@ struct DecoderTypesBySocket: View {
             Section(header: Text(section.title(in: viewContext))) {
                 ForEach(section) { decoderType in
                     DecoderTypeCell(decoderType: decoderType)
+                }
+            }
+        }
+#if os(macOS)
+        .navigationSubtitle("\(decoderTypes.recordCount) Types")
+#endif
+    }
+}
+
+struct DecoderTypesByFamily: View {
+    @SectionedFetchRequest(
+        sectionIdentifier: \DecoderType.catalogFamily,
+        sortDescriptors: [
+            SortDescriptor(\DecoderType.catalogFamily),
+            SortDescriptor(\DecoderType.socket?.numberOfPins, order: .reverse),
+            SortDescriptor(\DecoderType.catalogNumber),
+        ],
+        animation: .default)
+    var decoderTypes: SectionedFetchResults<String?, DecoderType>
+
+    var body: some View {
+        ForEach(decoderTypes) { section in
+            Section(header: Text(section.id!)) {
+                ForEach(section) { decoderType in
+                    DecoderTypeCell(decoderType: decoderType, showManufacturer: false, showSocket: true)
                 }
             }
         }
