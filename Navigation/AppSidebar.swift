@@ -10,14 +10,14 @@ import SwiftUI
 extension Model.Classification {
     var imageName: String {
         switch self {
-        case .dieselElectricLocomotive: return "tram"
-        case .steamLocomotive: return "cablecar"
-        case .coach: return "train.side.middle.car"
-        case .wagon: return "train.side.middle.car"
-        case .multipleUnit: return "train.side.front.car"
-        case .departmental: return "wrench"
-        case .noPrototype: return "paperplane"
-        case .vehicle: return "bus"
+        case .dieselElectricLocomotive: return "railway.locomotive"
+        case .steamLocomotive: return "railway.steam"
+        case .coach: return "railway.coach"
+        case .wagon: return "railway.wagon"
+        case .multipleUnit: return "railway.demu"
+        case .departmental: return "railway.departmental"
+        case .noPrototype: return "railway.noprototype"
+        case .vehicle: return "railway.vehicle"
         }
     }
 }
@@ -49,7 +49,7 @@ struct AppSidebar: View {
                     NavigationLink(tag: NavigationItem.models(classification), selection: $selection) {
                         ModelsList(classification: classification)
                     } label: {
-                        Label("\(classification.pluralDescription)", systemImage: classification.imageName)
+                        Label("\(classification.pluralDescription)", image: classification.imageName)
                     }
                 }
             }
