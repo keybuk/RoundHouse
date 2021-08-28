@@ -116,9 +116,6 @@ final class RoundHouseMigrationPolicy: NSEntityMigrationPolicy {
             
             let dateComponents = dInstance.value(forKey: "dateComponents") as! DateComponents?
             
-            let dateForGrouping = Purchase.makeDateForGrouping(from: dateComponents)
-            dInstance.setValue(dateForGrouping, forKey: "dateForGrouping")
-            
             let dateForSort = Purchase.makeDateForSort(from: dateComponents)
             dInstance.setValue(dateForSort, forKey: "dateForSort")
         }

@@ -15,9 +15,6 @@ extension Purchase {
         let newCatalogNumberPrefix = Self.makeCatalogNumberPrefix(from: catalogNumber!)
         if catalogNumberPrefix != newCatalogNumberPrefix { catalogNumberPrefix = newCatalogNumberPrefix }
         
-        let newDateForGrouping = Self.makeDateForGrouping(from: dateComponents)
-        if dateForGrouping != newDateForGrouping { dateForGrouping = newDateForGrouping }
-
         let newDateForSort = Self.makeDateForSort(from: dateComponents)
         if dateForSort != newDateForSort { dateForSort = newDateForSort }
     }

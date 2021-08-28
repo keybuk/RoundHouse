@@ -33,28 +33,27 @@ struct PurchasesList: View {
     }
 }
 
-private extension SectionedFetchResults.Section where Element == Purchase, SectionIdentifier == Date? {
+private extension SectionedFetchResults.Section where Element == Purchase, SectionIdentifier == Date {
     var title: String {
-        let dateForGrouping = id!
-        guard dateForGrouping != .distantPast else { return "" }
+        let purchaseMonth = id
+        guard purchaseMonth != .distantPast else { return "" }
                 
         let formatStyle = Date.FormatStyle(date: .omitted, time: .omitted, timeZone: TimeZone(identifier: "UTC")!)
             .year().month(.wide)
-        return dateForGrouping.formatted(formatStyle)
+        return purchaseMonth.formatted(formatStyle)
     }
 }
 
 struct PurchasesByDate: View {
     @SectionedFetchRequest(
-        sectionIdentifier: \Purchase.dateForGrouping,
+        sectionIdentifier: \Purchase.purchaseMonth,
         sortDescriptors: [
-            SortDescriptor(\Purchase.dateForGrouping, order: .reverse),
             SortDescriptor(\Purchase.dateForSort, order: .reverse),
             SortDescriptor(\Purchase.manufacturer),
             SortDescriptor(\Purchase.catalogNumber),
         ],
         animation: .default)
-    var purchases: SectionedFetchResults<Date?, Purchase>
+    var purchases: SectionedFetchResults<Date, Purchase>
 
     var body: some View {
         ForEach(purchases) { section in

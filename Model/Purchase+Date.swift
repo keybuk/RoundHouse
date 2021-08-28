@@ -10,7 +10,8 @@ import CoreData
 
 extension Purchase {
     /// `dateComponents` as `Date` in current time zone.
-    public var date: Date? {
+    @objc
+    var date: Date? {
         get { dateComponents.flatMap { Calendar.current.date(from: $0) } }
         set {
             dateComponents = newValue.map {
@@ -19,12 +20,10 @@ extension Purchase {
         }
     }
 
-    /// Returns a date value suitable for grouping purchaes into months.
-    ///
-    /// - Parameter dateComponents: components of date.
-    /// - Returns: a `Date` equivalent to UTC midnight on the first day of the month in`dateComponents` or
+    /// `Date` equivalent to UTC midnight on the first day of the month in`dateComponents` or
     /// `.distantPast` when `dateComponents` is `nil`.
-    static func makeDateForGrouping(from dateComponents: DateComponents?) -> Date {
+    @objc
+    var purchaseMonth: Date {
         guard var dateComponents = dateComponents else { return .distantPast }
 
         var calendar = Calendar.current

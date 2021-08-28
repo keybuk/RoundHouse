@@ -33,45 +33,25 @@ class PurchaseDateTests: XCTestCase {
                        "dateComponents did not have expected value after refresh")
     }
     
-    // MARK: dateForGrouping
+    // MARK: purchaseMonth
 
     /// Check that we convert a date components to the UTC midnight on the first of the month.
-    func testMakeDateForGrouping() throws {
-        let dateForGrouping = Purchase.makeDateForGrouping(from: DateComponents(year: 2005, month: 7, day: 18))
-        
-        XCTAssertEqual(dateForGrouping, Date(timeIntervalSince1970: 1120176000),
-                       "return value did not have expected value")
-    }
-    
-    /// Check that we convert `nil` to `.distantPast`
-    func testMakeDateForGroupingFromNil() throws {
-        let dateForGrouping = Purchase.makeDateForGrouping(from: nil)
-        
-        XCTAssertEqual(dateForGrouping, Date.distantPast,
-                       "return value did not have expected value")
-    }
-    
-    /// Check that the dateForGrouping field is set on save.
-    func testDateForGrouping() throws {
+    func testPurchaseMonth() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
         purchase.dateComponents = DateComponents(year: 2005, month: 7, day: 18)
 
-        try persistenceController.container.viewContext.save()
-
-        XCTAssertEqual(purchase.dateForGrouping, Date(timeIntervalSince1970: 1120176000),
-                       "dateForSort did not have expected value")
+        XCTAssertEqual(purchase.purchaseMonth, Date(timeIntervalSince1970: 1120176000),
+                       "purchaseMonth did not have expected value")
     }
-
-    /// Check dateForGrouping contains `.distantPast` when `dateComponents`  is`nil`.
-    func testNilDateForGrouping() throws {
+    
+    /// Check that we convert `nil` to `.distantPast`
+    func testPurchaseMonthFromNil() throws {
         let purchase = Purchase(context: persistenceController.container.viewContext)
 
-        try persistenceController.container.viewContext.save()
-
-        XCTAssertEqual(purchase.dateForGrouping, Date.distantPast,
-                       "dateForSort did not have expected value")
+        XCTAssertEqual(purchase.purchaseMonth, Date.distantPast,
+                       "purchaseMonth did not have expected value")
     }
-
+    
     // MARK: dateForSort
 
     /// Check that we convert a date components to the UTC midnight.
