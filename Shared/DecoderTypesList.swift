@@ -76,18 +76,17 @@ struct DecoderTypesBySocket: View {
 
 struct DecoderTypesByFamily: View {
     @SectionedFetchRequest(
-        sectionIdentifier: \DecoderType.catalogFamily,
-        sortDescriptors: [
-            SortDescriptor(\DecoderType.catalogFamily),
+        sectionIdentifier: \DecoderType.catalogTitle,
+        sortDescriptors: DecoderType.catalogSortDescriptors + [
             SortDescriptor(\DecoderType.socket?.numberOfPins, order: .reverse),
             SortDescriptor(\DecoderType.catalogNumber),
         ],
         animation: .default)
-    var decoderTypes: SectionedFetchResults<String?, DecoderType>
+    var decoderTypes: SectionedFetchResults<String, DecoderType>
 
     var body: some View {
         ForEach(decoderTypes) { section in
-            Section(header: Text(section.id!)) {
+            Section(header: Text(section.id)) {
                 ForEach(section) { decoderType in
                     DecoderTypeCell(decoderType: decoderType, showManufacturer: false, showSocket: true)
                 }

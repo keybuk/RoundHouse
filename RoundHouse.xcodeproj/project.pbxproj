@@ -95,6 +95,8 @@
 		D2C49684267601FE0008AFB8 /* PurchaseModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4963C2675F9D40008AFB8 /* PurchaseModelsTests.swift */; };
 		D2D75D0A26D9B70400B473DF /* Model+Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D75D0926D9B70400B473DF /* Model+Class.swift */; };
 		D2D75D0B26D9B70400B473DF /* Model+Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D75D0926D9B70400B473DF /* Model+Class.swift */; };
+		D2D75D0D26D9BD0400B473DF /* DecoderType+Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D75D0C26D9BD0400B473DF /* DecoderType+Catalog.swift */; };
+		D2D75D0E26D9BD0400B473DF /* DecoderType+Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D75D0C26D9BD0400B473DF /* DecoderType+Catalog.swift */; };
 		D2E307E0267D794C00577B27 /* Accessory+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307DF267D794C00577B27 /* Accessory+Image.swift */; };
 		D2E307E1267D794C00577B27 /* Accessory+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307DF267D794C00577B27 /* Accessory+Image.swift */; };
 		D2E307E9267D7C0100577B27 /* AccessoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E307E8267D7C0100577B27 /* AccessoryCell.swift */; };
@@ -212,6 +214,7 @@
 		D2C49660267601330008AFB8 /* Unit Tests (macOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests (macOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C4966D267601420008AFB8 /* Unit Tests (iOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests (iOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D75D0926D9B70400B473DF /* Model+Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+Class.swift"; sourceTree = "<group>"; };
+		D2D75D0C26D9BD0400B473DF /* DecoderType+Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecoderType+Catalog.swift"; sourceTree = "<group>"; };
 		D2E307DF267D794C00577B27 /* Accessory+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Accessory+Image.swift"; sourceTree = "<group>"; };
 		D2E307E8267D7C0100577B27 /* AccessoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryCell.swift; sourceTree = "<group>"; };
 		D2E307EB267E8C6000577B27 /* RoundHouseMigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseMigrationTests.swift; sourceTree = "<group>"; };
@@ -382,6 +385,7 @@
 				D2C4961F2675EAE90008AFB8 /* Model+Image.swift */,
 				D2E307DF267D794C00577B27 /* Accessory+Image.swift */,
 				D2C496342675F8110008AFB8 /* Train+Members.swift */,
+				D2D75D0C26D9BD0400B473DF /* DecoderType+Catalog.swift */,
 				D2E307F8267ECFA100577B27 /* DecoderType+Decoders.swift */,
 				D2E3080D267EDEC400577B27 /* DecoderType+Image.swift */,
 				D278B1C326954C9700CD4609 /* DecoderType+Stock.swift */,
@@ -661,6 +665,7 @@
 				D29F5CBB2675771D00EC2F85 /* SecureDateComponentsTransformer.swift in Sources */,
 				D278B1A826953E6900CD4609 /* Purchase+CatalogNumber.swift in Sources */,
 				D2C4962C2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
+				D2D75D0D26D9BD0400B473DF /* DecoderType+Catalog.swift in Sources */,
 				D2E307F9267ECFA100577B27 /* DecoderType+Decoders.swift in Sources */,
 				D2E30817267EE77000577B27 /* StorableImage.swift in Sources */,
 				D2C496262675F4AA0008AFB8 /* Model+Classification.swift in Sources */,
@@ -709,6 +714,7 @@
 				D2E3080F267EDEC400577B27 /* DecoderType+Image.swift in Sources */,
 				D278B1A926953E6900CD4609 /* Purchase+CatalogNumber.swift in Sources */,
 				D2C4962D2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
+				D2D75D0E26D9BD0400B473DF /* DecoderType+Catalog.swift in Sources */,
 				D2E307FA267ECFA100577B27 /* DecoderType+Decoders.swift in Sources */,
 				D2E30818267EE77000577B27 /* StorableImage.swift in Sources */,
 				D2C496272675F4AA0008AFB8 /* Model+Classification.swift in Sources */,
