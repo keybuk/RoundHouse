@@ -49,11 +49,8 @@ struct PurchaseCell: View {
                     Text(date, format: .dateTime.year().month(.defaultDigits).day())
                         .font(.caption)
                 }
-                if showManufacturer && !purchase.manufacturer!.isEmpty && !purchase.catalogNumber!.isEmpty {
-                    Text("\(purchase.manufacturer!) \(purchase.catalogNumber!)")
-                        .font(.headline)
-                } else if showManufacturer && !purchase.manufacturer!.isEmpty {
-                    Text(purchase.manufacturer!)
+                if showManufacturer && !purchase.catalogTitle.isEmpty {
+                    Text(purchase.catalogTitle)
                         .font(.headline)
                 } else if !purchase.catalogNumber!.isEmpty {
                     Text(purchase.catalogNumber!)

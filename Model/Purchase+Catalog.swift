@@ -1,5 +1,5 @@
 //
-//  Purchase+CatalogNumber.swift
+//  Purchase+Catalog.swift
 //  RoundHouse
 //
 //  Created by Scott James Remnant on 2/1/20.
@@ -48,4 +48,16 @@ extension Purchase {
 
         return parts.joined()
     }
+
+    @objc
+    var catalogTitle: String {
+        return [ manufacturer!, catalogNumber! ]
+            .filter { !$0.isEmpty }
+            .joined(separator: " ")
+    }
+
+    static let catalogSortDescriptors: [SortDescriptor<Purchase>] = [
+        SortDescriptor(\.manufacturer),
+        SortDescriptor(\.catalogNumber),
+    ]
 }

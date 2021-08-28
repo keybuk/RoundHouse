@@ -17,8 +17,8 @@
 		D23C3BE72676D6640017BC5B /* AccessoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BE52676D6640017BC5B /* AccessoriesList.swift */; };
 		D23C3BE92676D67A0017BC5B /* DecoderTypesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BE82676D67A0017BC5B /* DecoderTypesList.swift */; };
 		D23C3BEA2676D67A0017BC5B /* DecoderTypesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BE82676D67A0017BC5B /* DecoderTypesList.swift */; };
-		D278B1A826953E6900CD4609 /* Purchase+CatalogNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1A726953E6900CD4609 /* Purchase+CatalogNumber.swift */; };
-		D278B1A926953E6900CD4609 /* Purchase+CatalogNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1A726953E6900CD4609 /* Purchase+CatalogNumber.swift */; };
+		D278B1A826953E6900CD4609 /* Purchase+Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1A726953E6900CD4609 /* Purchase+Catalog.swift */; };
+		D278B1A926953E6900CD4609 /* Purchase+Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1A726953E6900CD4609 /* Purchase+Catalog.swift */; };
 		D278B1AF269546B600CD4609 /* PurchaseCatalogNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1AE269546B600CD4609 /* PurchaseCatalogNumberTests.swift */; };
 		D278B1B0269546B600CD4609 /* PurchaseCatalogNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1AE269546B600CD4609 /* PurchaseCatalogNumberTests.swift */; };
 		D278B1B1269546BA00CD4609 /* CatalogNumberPrefixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B1AA26953E7D00CD4609 /* CatalogNumberPrefixTests.swift */; };
@@ -167,7 +167,7 @@
 		D23C3BE22676D61D0017BC5B /* PurchasesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesList.swift; sourceTree = "<group>"; };
 		D23C3BE52676D6640017BC5B /* AccessoriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesList.swift; sourceTree = "<group>"; };
 		D23C3BE82676D67A0017BC5B /* DecoderTypesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTypesList.swift; sourceTree = "<group>"; };
-		D278B1A726953E6900CD4609 /* Purchase+CatalogNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Purchase+CatalogNumber.swift"; sourceTree = "<group>"; };
+		D278B1A726953E6900CD4609 /* Purchase+Catalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Purchase+Catalog.swift"; sourceTree = "<group>"; };
 		D278B1AA26953E7D00CD4609 /* CatalogNumberPrefixTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogNumberPrefixTests.swift; sourceTree = "<group>"; };
 		D278B1AE269546B600CD4609 /* PurchaseCatalogNumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCatalogNumberTests.swift; sourceTree = "<group>"; };
 		D278B1B826954BC000CD4609 /* DecoderTypeStockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoderTypeStockTests.swift; sourceTree = "<group>"; };
@@ -370,7 +370,7 @@
 				D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */,
 				D29F5CBA2675771D00EC2F85 /* SecureDateComponentsTransformer.swift */,
 				D29F5C6B267571ED00EC2F85 /* PersistenceController.swift */,
-				D278B1A726953E6900CD4609 /* Purchase+CatalogNumber.swift */,
+				D278B1A726953E6900CD4609 /* Purchase+Catalog.swift */,
 				D2E30804267EDAF700577B27 /* Purchase+Date.swift */,
 				D2C4962E2675F7250008AFB8 /* Purchase+Currency.swift */,
 				D2C496222675F46E0008AFB8 /* Purchase+Condition.swift */,
@@ -663,7 +663,7 @@
 				D2E3080E267EDEC400577B27 /* DecoderType+Image.swift in Sources */,
 				D2E30820267FD50E00577B27 /* ModelGroupingPicker.swift in Sources */,
 				D29F5CBB2675771D00EC2F85 /* SecureDateComponentsTransformer.swift in Sources */,
-				D278B1A826953E6900CD4609 /* Purchase+CatalogNumber.swift in Sources */,
+				D278B1A826953E6900CD4609 /* Purchase+Catalog.swift in Sources */,
 				D2C4962C2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
 				D2D75D0D26D9BD0400B473DF /* DecoderType+Catalog.swift in Sources */,
 				D2E307F9267ECFA100577B27 /* DecoderType+Decoders.swift in Sources */,
@@ -712,7 +712,7 @@
 				D29F5CBC2675771D00EC2F85 /* SecureDateComponentsTransformer.swift in Sources */,
 				D2E30821267FD50E00577B27 /* ModelGroupingPicker.swift in Sources */,
 				D2E3080F267EDEC400577B27 /* DecoderType+Image.swift in Sources */,
-				D278B1A926953E6900CD4609 /* Purchase+CatalogNumber.swift in Sources */,
+				D278B1A926953E6900CD4609 /* Purchase+Catalog.swift in Sources */,
 				D2C4962D2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
 				D2D75D0E26D9BD0400B473DF /* DecoderType+Catalog.swift in Sources */,
 				D2E307FA267ECFA100577B27 /* DecoderType+Decoders.swift in Sources */,

@@ -71,9 +71,7 @@ struct PurchasesByDate: View {
 struct PurchasesByCatalog: View {
     @SectionedFetchRequest(
         sectionIdentifier: \Purchase.manufacturer,
-        sortDescriptors: [
-            SortDescriptor(\Purchase.manufacturer),
-            SortDescriptor(\Purchase.catalogNumber),
+        sortDescriptors: Purchase.catalogSortDescriptors + [
             SortDescriptor(\Purchase.dateForSort),
         ],
         animation: .default)
