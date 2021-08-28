@@ -33,6 +33,10 @@ extension Purchase {
         return calendar.date(from: dateComponents)!
     }
 
+    static let purchaseMonthSortDescriptors: [SortDescriptor<Purchase>] = [
+        SortDescriptor(\Purchase.dateForSort, order: .reverse)
+    ]
+
     /// Returns a date value suitable for sorting purchaes.
     ///
     /// - Parameter dateComponents: components of date.

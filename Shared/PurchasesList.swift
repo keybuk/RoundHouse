@@ -47,8 +47,7 @@ private extension SectionedFetchResults.Section where Element == Purchase, Secti
 struct PurchasesByDate: View {
     @SectionedFetchRequest(
         sectionIdentifier: \Purchase.purchaseMonth,
-        sortDescriptors: [
-            SortDescriptor(\Purchase.dateForSort, order: .reverse),
+        sortDescriptors: Purchase.purchaseMonthSortDescriptors + [
             SortDescriptor(\Purchase.manufacturer),
             SortDescriptor(\Purchase.catalogNumber),
         ],
