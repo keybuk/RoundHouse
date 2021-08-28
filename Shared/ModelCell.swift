@@ -22,17 +22,13 @@ struct ModelCell: View {
             }
 
             VStack(alignment: .leading) {
-                if showClass && !model.classTitle.isEmpty {
-                    Text("\(model.classTitle)")
+                if showClass {
+                    OptionalText(model.classTitle)
                         .font(.caption)
                 }
-                if !model.number!.isEmpty {
-                    Text(model.number!)
-                        .font(.headline)
-                }
-                if !model.name!.isEmpty {
-                    Text(model.name!)
-                }
+                OptionalText(model.number!)
+                    .font(.headline)
+                OptionalText(model.name!)
             }
         }
         .frame(minHeight: 60)

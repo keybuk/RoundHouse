@@ -49,16 +49,14 @@ struct PurchaseCell: View {
                     Text(date, format: .dateTime.year().month(.defaultDigits).day())
                         .font(.caption)
                 }
-                if showManufacturer && !purchase.catalogTitle.isEmpty {
-                    Text(purchase.catalogTitle)
+                if showManufacturer {
+                    OptionalText(purchase.catalogTitle)
                         .font(.headline)
-                } else if !purchase.catalogNumber!.isEmpty {
-                    Text(purchase.catalogNumber!)
+                } else {
+                    OptionalText(purchase.catalogNumber!)
                         .font(.headline)
                 }
-                if !purchase.catalogDescription!.isEmpty {
-                    Text(purchase.catalogDescription!)
-                }
+                OptionalText(purchase.catalogDescription!)
             }
         }
         .frame(minHeight: 60)
