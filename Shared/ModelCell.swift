@@ -22,8 +22,8 @@ struct ModelCell: View {
             }
 
             VStack(alignment: .leading) {
-                if showClass && !model.modelClass!.isEmpty {
-                    Text("\(model.modelClass!) \(model.wheelArrangement!)")
+                if showClass && !model.classTitle.isEmpty {
+                    Text("\(model.classTitle)")
                         .font(.caption)
                 }
                 if !model.number!.isEmpty {

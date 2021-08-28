@@ -46,30 +46,14 @@ struct ModelsList: View {
     }
 }
 
-private extension SectionedFetchResults.Section where Element == Model, SectionIdentifier == String? {
-    var title: String {
-        let modelClass = id!
-        let wheelArrangements = Set(map({ $0.wheelArrangement! }))
-
-        if wheelArrangements.count != 1 {
-            return modelClass
-        } else {
-            return [ modelClass, wheelArrangements.first! ]
-                .filter({ !$0.isEmpty })
-                .joined(separator: " ")
-        }
-    }
-}
-
 struct ModelsByClass: View {
     @SectionedFetchRequest
-    var models: SectionedFetchResults<String?, Model>
+    var models: SectionedFetchResults<String, Model>
 
     init(classification: Model.Classification? = nil) {
         _models = SectionedFetchRequest(
-            sectionIdentifier: \Model.modelClass,
-            sortDescriptors: [
-                SortDescriptor(\Model.modelClass),
+            sectionIdentifier: \Model.classTitle,
+            sortDescriptors: Model.classSortDescriptors + [
                 SortDescriptor(\Model.number),
                 SortDescriptor(\Model.name),
                 SortDescriptor(\Model.dispositionRawValue)
@@ -80,7 +64,7 @@ struct ModelsByClass: View {
 
     var body: some View {
         ForEach(models) { section in
-            Section(header: Text(section.title)) {
+            Section(header: Text(section.id)) {
                 ForEach(section) { model in
                     ModelCell(model: model)
                 }
