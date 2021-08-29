@@ -16,7 +16,7 @@ extension DecoderType {
             .joined(separator: " ")
     }
 
-    /// Standard sort descriptors for sorting accessories by catalog entry.
+    /// Standard sort descriptors for sorting decoder types by catalog entry.
     ///
     /// Also may be used if grouping by `catalogTitle`.
     static let catalogSortDescriptors: [SortDescriptor<DecoderType>] = [
@@ -24,7 +24,7 @@ extension DecoderType {
         SortDescriptor(\.catalogNumber)
     ]
 
-    /// Combined accessory `manufacturer` and `catalogFamily`.
+    /// Combined decoder type `manufacturer` and `catalogFamily`.
     @objc
     var catalogFamilyTitle: String {
         return [ manufacturer!, catalogFamily! ]
@@ -32,7 +32,7 @@ extension DecoderType {
             .joined(separator: " ")
     }
 
-    /// Standard sort descriptors for sorting accessories by catalog family.
+    /// Standard sort descriptors for sorting decoder types by catalog family.
     ///
     /// Also may be used if grouping by `catalogFamilyTitle`.
     static let catalogFamilySortDescriptors: [SortDescriptor<DecoderType>] = [

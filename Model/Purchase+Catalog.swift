@@ -49,7 +49,7 @@ extension Purchase {
         return parts.joined()
     }
     
-    /// Combined accessory `manufacturer` and `catalogNumber`.
+    /// Combined purchase `manufacturer` and `catalogNumber`.
     @objc
     var catalogTitle: String {
         return [ manufacturer!, catalogNumber! ]
@@ -57,7 +57,7 @@ extension Purchase {
             .joined(separator: " ")
     }
 
-    /// Standard sort descriptors for sorting accessories by catalog entry.
+    /// Standard sort descriptors for sorting purchases by catalog entry.
     ///
     /// Also may be used if grouping by `catalogTitle`.
     static let catalogSortDescriptors: [SortDescriptor<Purchase>] = [
