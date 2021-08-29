@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    #if os(iOS)
+#if os(iOS)
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
-    #endif
+#endif
     
     var body: some View {
-        #if os(iOS)
+#if os(iOS)
         // BUG(FB9182105) This is a workaround; by not using the three-pane view on iPhone we
         // get a functional app.
         if horizontalSizeClass == .compact {
@@ -21,9 +21,9 @@ struct ContentView: View {
         } else {
             AppSidebarNavigation()
         }
-        #elseif os(macOS)
+#elseif os(macOS)
         AppSidebarNavigation()
-        #endif
+#endif
     }
 }
 

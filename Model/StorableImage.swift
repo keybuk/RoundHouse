@@ -52,35 +52,35 @@ extension StorableImage {
         set { imageData = newValue?.pngData() }
     }
 
-    #if os(iOS)
+#if os(iOS)
     var uiImage: UIImage? {
         get { imageData.flatMap { UIImage(data: $0) } }
         set { imageData = newValue?.pngData() }
     }
-    #elseif os(macOS)
+#elseif os(macOS)
     var nsImage: NSImage? {
         get { imageData.flatMap { NSImage(data: $0) } }
         set { imageData = try? newValue?.pngData() }
     }
-    #endif
+#endif
 
     var image: Image? {
         get {
-            #if os(iOS)
+#if os(iOS)
             uiImage.map { Image(uiImage: $0) }
-            #elseif os(macOS)
+#elseif os(macOS)
             nsImage.map { Image(nsImage: $0) }
-            #endif
+#endif
         }
     }
 
     /// Set the image from an asset catalog.
     /// - Parameter name: name of asset.
     func setPreviewImage(named name: String) {
-        #if os(iOS)
+#if os(iOS)
         uiImage = UIImage(named: name)
-        #elseif os(macOS)
+#elseif os(macOS)
         nsImage = NSImage(named: name)
-        #endif
+#endif
     }
 }
