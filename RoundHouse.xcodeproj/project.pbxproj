@@ -316,12 +316,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D29A206026DBFA8A00FE8DD5 /* List Views */ = {
+			isa = PBXGroup;
+			children = (
+				D2C496052675810D0008AFB8 /* ModelCell.swift */,
+				D2E3081F267FD50E00577B27 /* ModelGroupingPicker.swift */,
+				D2C4960B267585920008AFB8 /* ModelsList.swift */,
+				D2E30801267ED88400577B27 /* PurchaseCell.swift */,
+				D278B1C92695561000CD4609 /* PurchaseGroupingPicker.swift */,
+				D23C3BE22676D61D0017BC5B /* PurchasesList.swift */,
+				D2E307E8267D7C0100577B27 /* AccessoryCell.swift */,
+				D23C3BE52676D6640017BC5B /* AccessoriesList.swift */,
+				D2E3080A267EDDDE00577B27 /* DecoderTypeCell.swift */,
+				D29E1EDF269565AC00F13F13 /* DecoderTypeGroupingPicker.swift */,
+				D23C3BE82676D67A0017BC5B /* DecoderTypesList.swift */,
+			);
+			path = "List Views";
+			sourceTree = "<group>";
+		};
 		D29F5C61267571ED00EC2F85 = {
 			isa = PBXGroup;
 			children = (
 				D29F5CB02675742800EC2F85 /* Model */,
 				D23C3BF12676F96D0017BC5B /* Navigation */,
 				D29F5C66267571ED00EC2F85 /* Shared */,
+				D29A206026DBFA8A00FE8DD5 /* List Views */,
 				D29F5C7F267571EF00EC2F85 /* UI Tests (iOS) */,
 				D29F5C89267571EF00EC2F85 /* UI Tests (macOS) */,
 				D29F5C72267571EF00EC2F85 /* Products */,
@@ -335,17 +354,6 @@
 				D2C49602267581070008AFB8 /* BoxedImage.swift */,
 				D29A204E26DB003F00FE8DD5 /* OptionalText.swift */,
 				D29A205426DB10A300FE8DD5 /* SectionedFetchRequest+RecordCount.swift */,
-				D2C496052675810D0008AFB8 /* ModelCell.swift */,
-				D2E3081F267FD50E00577B27 /* ModelGroupingPicker.swift */,
-				D2C4960B267585920008AFB8 /* ModelsList.swift */,
-				D2E30801267ED88400577B27 /* PurchaseCell.swift */,
-				D278B1C92695561000CD4609 /* PurchaseGroupingPicker.swift */,
-				D23C3BE22676D61D0017BC5B /* PurchasesList.swift */,
-				D2E307E8267D7C0100577B27 /* AccessoryCell.swift */,
-				D23C3BE52676D6640017BC5B /* AccessoriesList.swift */,
-				D2E3080A267EDDDE00577B27 /* DecoderTypeCell.swift */,
-				D29E1EDF269565AC00F13F13 /* DecoderTypeGroupingPicker.swift */,
-				D23C3BE82676D67A0017BC5B /* DecoderTypesList.swift */,
 				D29F5CBD267578F300EC2F85 /* PreviewData.swift */,
 				D29F5C6C267571EF00EC2F85 /* Assets.xcassets */,
 				D29F5CC0267579BE00EC2F85 /* Preview Content */,
