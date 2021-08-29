@@ -13,10 +13,6 @@ extension Model {
     }
 }
 
-extension SectionedFetchResults {
-    var recordCount: Int { reduce(0, { $0 + $1.count }) }
-}
-
 struct ModelsList: View {
     var classification: Model.Classification?
     @State var grouping: Model.Grouping = .modelClass

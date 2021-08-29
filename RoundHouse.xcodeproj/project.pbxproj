@@ -45,6 +45,8 @@
 		D29A205026DB003F00FE8DD5 /* OptionalText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A204E26DB003F00FE8DD5 /* OptionalText.swift */; };
 		D29A205226DB085C00FE8DD5 /* Accessory+Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A205126DB085C00FE8DD5 /* Accessory+Catalog.swift */; };
 		D29A205326DB085C00FE8DD5 /* Accessory+Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A205126DB085C00FE8DD5 /* Accessory+Catalog.swift */; };
+		D29A205526DB10A300FE8DD5 /* SectionedFetchRequest+RecordCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A205426DB10A300FE8DD5 /* SectionedFetchRequest+RecordCount.swift */; };
+		D29A205626DB10A300FE8DD5 /* SectionedFetchRequest+RecordCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A205426DB10A300FE8DD5 /* SectionedFetchRequest+RecordCount.swift */; };
 		D29E1EE0269565AC00F13F13 /* DecoderTypeGroupingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29E1EDF269565AC00F13F13 /* DecoderTypeGroupingPicker.swift */; };
 		D29E1EE1269565AC00F13F13 /* DecoderTypeGroupingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29E1EDF269565AC00F13F13 /* DecoderTypeGroupingPicker.swift */; };
 		D29F5C81267571EF00EC2F85 /* UI Tests (iOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C80267571EF00EC2F85 /* UI Tests (iOS).swift */; };
@@ -184,6 +186,7 @@
 		D28CDF37268E5AC300F761D5 /* ModelEnumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelEnumTests.swift; sourceTree = "<group>"; };
 		D29A204E26DB003F00FE8DD5 /* OptionalText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalText.swift; sourceTree = "<group>"; };
 		D29A205126DB085C00FE8DD5 /* Accessory+Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Accessory+Catalog.swift"; sourceTree = "<group>"; };
+		D29A205426DB10A300FE8DD5 /* SectionedFetchRequest+RecordCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionedFetchRequest+RecordCount.swift"; sourceTree = "<group>"; };
 		D29E1EDF269565AC00F13F13 /* DecoderTypeGroupingPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTypeGroupingPicker.swift; sourceTree = "<group>"; };
 		D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseApp.swift; sourceTree = "<group>"; };
 		D29F5C6A267571ED00EC2F85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -322,6 +325,7 @@
 			children = (
 				D2C49602267581070008AFB8 /* BoxedImage.swift */,
 				D29A204E26DB003F00FE8DD5 /* OptionalText.swift */,
+				D29A205426DB10A300FE8DD5 /* SectionedFetchRequest+RecordCount.swift */,
 				D2C496052675810D0008AFB8 /* ModelCell.swift */,
 				D2E3081F267FD50E00577B27 /* ModelGroupingPicker.swift */,
 				D2C4960B267585920008AFB8 /* ModelsList.swift */,
@@ -687,6 +691,7 @@
 				D23C3BE62676D6640017BC5B /* AccessoriesList.swift in Sources */,
 				D278B1C126954C9000CD4609 /* Decoder+Stock.swift in Sources */,
 				D2C496382675F8860008AFB8 /* Purchase+Accessories.swift in Sources */,
+				D29A205526DB10A300FE8DD5 /* SectionedFetchRequest+RecordCount.swift in Sources */,
 				D2C49603267581070008AFB8 /* BoxedImage.swift in Sources */,
 				D2E30805267EDAF700577B27 /* Purchase+Date.swift in Sources */,
 				D2D75D0A26D9B70400B473DF /* Model+Class.swift in Sources */,
@@ -738,6 +743,7 @@
 				D23C3BE72676D6640017BC5B /* AccessoriesList.swift in Sources */,
 				D278B1C226954C9000CD4609 /* Decoder+Stock.swift in Sources */,
 				D2C496392675F8860008AFB8 /* Purchase+Accessories.swift in Sources */,
+				D29A205626DB10A300FE8DD5 /* SectionedFetchRequest+RecordCount.swift in Sources */,
 				D2C49604267581070008AFB8 /* BoxedImage.swift in Sources */,
 				D2C496362675F8110008AFB8 /* Train+Members.swift in Sources */,
 				D2D75D0B26D9B70400B473DF /* Model+Class.swift in Sources */,
