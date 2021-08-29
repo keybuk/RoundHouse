@@ -23,21 +23,14 @@ struct DecoderTypeCell: View {
             }
 
             VStack(alignment: .leading) {
-                if showManufacturer && !decoderType.manufacturer!.isEmpty && !decoderType.catalogNumber!.isEmpty {
-                    Text("\(decoderType.manufacturer!) \(decoderType.catalogNumber!)")
+                if showManufacturer {
+                    OptionalText(decoderType.catalogTitle)
                         .font(.headline)
-                } else if showManufacturer && !decoderType.manufacturer!.isEmpty {
-                    Text(decoderType.manufacturer!)
-                        .font(.headline)
-                } else if !decoderType.catalogNumber!.isEmpty {
-                    Text(decoderType.catalogNumber!)
+                } else {
+                    OptionalText(decoderType.catalogNumber!)
                         .font(.headline)
                 }
-                if !decoderType.catalogName!.isEmpty {
-                    Text(decoderType.catalogName!)
-                } else if !decoderType.catalogFamily!.isEmpty {
-                    Text(decoderType.catalogFamily!)
-                }
+                OptionalText(decoderType.catalogName!)
                 if showSocket {
                     Text(decoderType.socket!.title!)
                         .font(.caption)

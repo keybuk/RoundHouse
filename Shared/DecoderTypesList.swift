@@ -76,8 +76,8 @@ struct DecoderTypesBySocket: View {
 
 struct DecoderTypesByFamily: View {
     @SectionedFetchRequest(
-        sectionIdentifier: \DecoderType.catalogTitle,
-        sortDescriptors: DecoderType.catalogSortDescriptors + [
+        sectionIdentifier: \DecoderType.catalogFamilyTitle,
+        sortDescriptors: DecoderType.catalogFamilySortDescriptors + [
             SortDescriptor(\DecoderType.socket?.numberOfPins, order: .reverse),
             SortDescriptor(\DecoderType.catalogNumber),
         ],
@@ -101,10 +101,7 @@ struct DecoderTypesByFamily: View {
 struct DecoderTypesByCatalog: View {
     @SectionedFetchRequest(
         sectionIdentifier: \DecoderType.manufacturer,
-        sortDescriptors: [
-            SortDescriptor(\DecoderType.manufacturer),
-            SortDescriptor(\DecoderType.catalogNumber),
-        ],
+        sortDescriptors: DecoderType.catalogSortDescriptors,
         animation: .default)
     var decoderTypes: SectionedFetchResults<String?, DecoderType>
 
