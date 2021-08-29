@@ -8,6 +8,9 @@
 import Foundation
 
 extension Model {
+    /// Full title of the model's class.
+    ///
+    /// Combines `modelClass` and `wheelArrangement` or `vehicleType`.
     @objc
     var classTitle: String {
         [ modelClass!, wheelArrangement!, vehicleType! ]
@@ -15,6 +18,9 @@ extension Model {
             .joined(separator: " ")
     }
 
+    /// Standard sort descriptors for sorting models by class.
+    ///
+    /// Also may be used if grouping by `classTitle`.
     static let classSortDescriptors: [SortDescriptor<Model>] = [
         SortDescriptor(\.modelClass),
         SortDescriptor(\.wheelArrangement),

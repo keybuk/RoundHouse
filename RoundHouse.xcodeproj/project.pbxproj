@@ -51,6 +51,8 @@
 		D29A205926DB181400FE8DD5 /* AccessoryCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A205726DB181400FE8DD5 /* AccessoryCatalogTests.swift */; };
 		D29A205B26DB187600FE8DD5 /* DecoderTypeCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A205A26DB187600FE8DD5 /* DecoderTypeCatalogTests.swift */; };
 		D29A205C26DB187600FE8DD5 /* DecoderTypeCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A205A26DB187600FE8DD5 /* DecoderTypeCatalogTests.swift */; };
+		D29A205E26DB200200FE8DD5 /* ModelClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A205D26DB200200FE8DD5 /* ModelClassTests.swift */; };
+		D29A205F26DB200200FE8DD5 /* ModelClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A205D26DB200200FE8DD5 /* ModelClassTests.swift */; };
 		D29E1EE0269565AC00F13F13 /* DecoderTypeGroupingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29E1EDF269565AC00F13F13 /* DecoderTypeGroupingPicker.swift */; };
 		D29E1EE1269565AC00F13F13 /* DecoderTypeGroupingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29E1EDF269565AC00F13F13 /* DecoderTypeGroupingPicker.swift */; };
 		D29F5C81267571EF00EC2F85 /* UI Tests (iOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C80267571EF00EC2F85 /* UI Tests (iOS).swift */; };
@@ -193,6 +195,7 @@
 		D29A205426DB10A300FE8DD5 /* SectionedFetchRequest+RecordCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionedFetchRequest+RecordCount.swift"; sourceTree = "<group>"; };
 		D29A205726DB181400FE8DD5 /* AccessoryCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryCatalogTests.swift; sourceTree = "<group>"; };
 		D29A205A26DB187600FE8DD5 /* DecoderTypeCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTypeCatalogTests.swift; sourceTree = "<group>"; };
+		D29A205D26DB200200FE8DD5 /* ModelClassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClassTests.swift; sourceTree = "<group>"; };
 		D29E1EDF269565AC00F13F13 /* DecoderTypeGroupingPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTypeGroupingPicker.swift; sourceTree = "<group>"; };
 		D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseApp.swift; sourceTree = "<group>"; };
 		D29F5C6A267571ED00EC2F85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -435,6 +438,7 @@
 				D278B1AE269546B600CD4609 /* PurchaseCatalogTests.swift */,
 				D28CDF37268E5AC300F761D5 /* ModelEnumTests.swift */,
 				D2E307F5267ECC8E00577B27 /* ModelDateTests.swift */,
+				D29A205D26DB200200FE8DD5 /* ModelClassTests.swift */,
 				D29A205726DB181400FE8DD5 /* AccessoryCatalogTests.swift */,
 				D2C4963B2675F9D40008AFB8 /* TrainMembersTests.swift */,
 				D29A205A26DB187600FE8DD5 /* DecoderTypeCatalogTests.swift */,
@@ -795,6 +799,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D29A205F26DB200200FE8DD5 /* ModelClassTests.swift in Sources */,
 				D29A205926DB181400FE8DD5 /* AccessoryCatalogTests.swift in Sources */,
 				D2E307F7267ECC8E00577B27 /* ModelDateTests.swift in Sources */,
 				D2E307F4267ECC3200577B27 /* PurchaseDateTests.swift in Sources */,
@@ -819,6 +824,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D29A205E26DB200200FE8DD5 /* ModelClassTests.swift in Sources */,
 				D29A205826DB181400FE8DD5 /* AccessoryCatalogTests.swift in Sources */,
 				D2E307F6267ECC8E00577B27 /* ModelDateTests.swift in Sources */,
 				D2E307F3267ECC3200577B27 /* PurchaseDateTests.swift in Sources */,
