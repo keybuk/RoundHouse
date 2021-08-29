@@ -43,6 +43,8 @@
 		D28CDF39268E5AC300F761D5 /* ModelEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CDF37268E5AC300F761D5 /* ModelEnumTests.swift */; };
 		D29A204F26DB003F00FE8DD5 /* OptionalText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A204E26DB003F00FE8DD5 /* OptionalText.swift */; };
 		D29A205026DB003F00FE8DD5 /* OptionalText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A204E26DB003F00FE8DD5 /* OptionalText.swift */; };
+		D29A205226DB085C00FE8DD5 /* Accessory+Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A205126DB085C00FE8DD5 /* Accessory+Catalog.swift */; };
+		D29A205326DB085C00FE8DD5 /* Accessory+Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A205126DB085C00FE8DD5 /* Accessory+Catalog.swift */; };
 		D29E1EE0269565AC00F13F13 /* DecoderTypeGroupingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29E1EDF269565AC00F13F13 /* DecoderTypeGroupingPicker.swift */; };
 		D29E1EE1269565AC00F13F13 /* DecoderTypeGroupingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29E1EDF269565AC00F13F13 /* DecoderTypeGroupingPicker.swift */; };
 		D29F5C81267571EF00EC2F85 /* UI Tests (iOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C80267571EF00EC2F85 /* UI Tests (iOS).swift */; };
@@ -181,6 +183,7 @@
 		D28CDF34268E58AB00F761D5 /* PurchaseEnumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseEnumTests.swift; sourceTree = "<group>"; };
 		D28CDF37268E5AC300F761D5 /* ModelEnumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelEnumTests.swift; sourceTree = "<group>"; };
 		D29A204E26DB003F00FE8DD5 /* OptionalText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalText.swift; sourceTree = "<group>"; };
+		D29A205126DB085C00FE8DD5 /* Accessory+Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Accessory+Catalog.swift"; sourceTree = "<group>"; };
 		D29E1EDF269565AC00F13F13 /* DecoderTypeGroupingPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTypeGroupingPicker.swift; sourceTree = "<group>"; };
 		D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseApp.swift; sourceTree = "<group>"; };
 		D29F5C6A267571ED00EC2F85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -387,6 +390,7 @@
 				D2C4962B2675F5160008AFB8 /* Model+Disposition.swift */,
 				D2E30816267EE77000577B27 /* StorableImage.swift */,
 				D2C4961F2675EAE90008AFB8 /* Model+Image.swift */,
+				D29A205126DB085C00FE8DD5 /* Accessory+Catalog.swift */,
 				D2E307DF267D794C00577B27 /* Accessory+Image.swift */,
 				D2C496342675F8110008AFB8 /* Train+Members.swift */,
 				D2D75D0C26D9BD0400B473DF /* DecoderType+Catalog.swift */,
@@ -695,6 +699,7 @@
 				D278B1C426954C9700CD4609 /* DecoderType+Stock.swift in Sources */,
 				D2E307E9267D7C0100577B27 /* AccessoryCell.swift in Sources */,
 				D29F5C8E267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
+				D29A205226DB085C00FE8DD5 /* Accessory+Catalog.swift in Sources */,
 				D2C496292675F4EC0008AFB8 /* Model+Era.swift in Sources */,
 				D278B1CA2695561000CD4609 /* PurchaseGroupingPicker.swift in Sources */,
 				D2C4962F2675F7250008AFB8 /* Purchase+Currency.swift in Sources */,
@@ -745,6 +750,7 @@
 				D278B1C526954C9700CD4609 /* DecoderType+Stock.swift in Sources */,
 				D29F5C8F267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
 				D2E307EA267D7C0100577B27 /* AccessoryCell.swift in Sources */,
+				D29A205326DB085C00FE8DD5 /* Accessory+Catalog.swift in Sources */,
 				D2C4962A2675F4EC0008AFB8 /* Model+Era.swift in Sources */,
 				D278B1CB2695561000CD4609 /* PurchaseGroupingPicker.swift in Sources */,
 				D2C496302675F7250008AFB8 /* Purchase+Currency.swift in Sources */,

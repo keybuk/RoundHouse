@@ -196,6 +196,8 @@ struct PreviewData {
             powerController.catalogDescription = "Analogue Train and Accessory Controller"
             powerController.setPreviewImage(named: "R7229")
 
+            accessories["R7229"] = powerController
+
             let powerTransformer = purchase.addAccessory()
             powerTransformer.manufacturer = "Hornby"
             powerTransformer.catalogNumber = "P9000"

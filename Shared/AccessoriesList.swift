@@ -18,25 +18,16 @@ struct AccessoriesList: View {
     }
 }
 
-private extension SectionedFetchResults.Section where Element == Accessory, SectionIdentifier == String? {
-    var title: String {
-        return id!
-    }
-}
-
 struct AccessoriesByCatalog: View {
     @SectionedFetchRequest(
         sectionIdentifier: \Accessory.manufacturer,
-        sortDescriptors: [
-            SortDescriptor(\Accessory.manufacturer),
-            SortDescriptor(\Accessory.catalogNumber),
-        ],
+        sortDescriptors: Accessory.catalogSortDescriptors,
         animation: .default)
     var accessories: SectionedFetchResults<String?, Accessory>
 
     var body: some View {
         ForEach(accessories) { section in
-            Section(header: Text(section.title)) {
+            Section(header: Text(section.id!)) {
                 ForEach(section) { accessory in
                     AccessoryCell(accessory: accessory)
                 }

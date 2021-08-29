@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AccessoryCell: View {
     var accessory: Accessory
+    var showManufacturer = false
 
     var body: some View {
         HStack {
@@ -21,8 +22,13 @@ struct AccessoryCell: View {
             }
 
             VStack(alignment: .leading) {
-                OptionalText(accessory.catalogNumber!)
-                    .font(.headline)
+                if showManufacturer {
+                    OptionalText(accessory.catalogTitle)
+                        .font(.headline)
+                } else {
+                    OptionalText(accessory.catalogNumber!)
+                        .font(.headline)
+                }
                 OptionalText(accessory.catalogDescription!)
             }
         }
@@ -34,6 +40,8 @@ struct AccessoryCell_Previews: PreviewProvider {
     static var previews: some View {
         List {
             AccessoryCell(accessory: PreviewData.shared.accessories["R8206"]!)
+
+            AccessoryCell(accessory: PreviewData.shared.accessories["R7229"]!, showManufacturer: true)
         }
     }
 }
