@@ -88,4 +88,14 @@ extension Purchase {
             }
         }
     }
+
+    /// Key `Model` in the purchase.
+    ///
+    /// The key model in the purchase is the first model (sorted by `index`) with an `image`.
+    var keyModel: Model? {
+         (models as! Set<Model>?)?
+            .filter({ $0.imageData != nil })
+            .sorted(by: { $0.index < $1.index })
+            .first
+    }
 }

@@ -364,4 +364,59 @@ class PurchaseAccessoriesTests: XCTestCase {
         XCTAssertFalse(accessories[0].hasChanges)
         XCTAssertFalse(accessories[4].hasChanges)
     }
+
+    // MARK: keyAccessory
+
+    /// Check that the first accessory is the key accessory.
+    func testKeyAccessory() throws {
+        let purchase = Purchase(context: persistenceController.container.viewContext)
+
+        var accessories: [Accessory] = []
+        for index in 0...5 {
+            let accessory = Accessory(context: persistenceController.container.viewContext)
+            accessory.index = Int16(clamping: index)
+            accessory.imageData = "Test".data(using: .utf8)
+            purchase.addToAccessories(accessory)
+            accessories.append(accessory)
+            purchase.maxAccessoryIndex = accessory.index
+        }
+
+        XCTAssertEqual(purchase.keyAccessory, accessories[0])
+    }
+
+    /// Check that the first accessory with an image is the key accessory.
+    func testKeyAccessoryNotFirst() throws {
+        let purchase = Purchase(context: persistenceController.container.viewContext)
+
+        var accessories: [Accessory] = []
+        for index in 0...5 {
+            let accessory = Accessory(context: persistenceController.container.viewContext)
+            accessory.index = Int16(clamping: index)
+            if index > 0 {
+                accessory.imageData = "Test".data(using: .utf8)
+            }
+            purchase.addToAccessories(accessory)
+            accessories.append(accessory)
+            purchase.maxAccessoryIndex = accessory.index
+        }
+
+        XCTAssertEqual(purchase.keyAccessory, accessories[1])
+    }
+
+    /// Check that no accessories are the key accessory when they have no images.
+    func testKeyAccessoryNoImages() throws {
+        let purchase = Purchase(context: persistenceController.container.viewContext)
+
+        var accessories: [Accessory] = []
+        for index in 0...5 {
+            let accessory = Accessory(context: persistenceController.container.viewContext)
+            accessory.index = Int16(clamping: index)
+            purchase.addToAccessories(accessory)
+            accessories.append(accessory)
+            purchase.maxAccessoryIndex = accessory.index
+        }
+
+        XCTAssertNil(purchase.keyAccessory)
+    }
+
 }

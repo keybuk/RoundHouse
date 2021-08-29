@@ -88,4 +88,15 @@ extension Purchase {
             }
         }
     }
+
+    /// Key `Accessory` in the purchase.
+    ///
+    /// The key accessory in the purchase is the first accessory (sorted by `index`) with an `image`.
+    var keyAccessory: Accessory? {
+         (accessories as! Set<Accessory>?)?
+            .filter({ $0.imageData != nil })
+            .sorted(by: { $0.index < $1.index })
+            .first
+    }
+
 }

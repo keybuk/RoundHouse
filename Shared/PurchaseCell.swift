@@ -7,28 +7,6 @@
 
 import SwiftUI
 
-extension Purchase {
-    var image: Image? {
-        if let image = (models as! Set<Model>?)?
-            .filter({ $0.imageData != nil })
-            .sorted(by: { $0.index < $1.index })
-            .first
-            .flatMap({ $0.image }) {
-            return image
-        }
-
-        if let image = (accessories as! Set<Accessory>?)?
-            .filter({ $0.imageData != nil })
-            .sorted(by: { $0.index < $1.index })
-            .first
-            .flatMap({ $0.image }) {
-            return image
-        }
-
-        return nil
-    }
-}
-
 struct PurchaseCell: View {
     var purchase: Purchase
     var showDate = false
@@ -39,7 +17,7 @@ struct PurchaseCell: View {
 
     var body: some View {
         HStack {
-            BoxedImage(image: purchase.image, width: 100)
+            BoxedImage(image: purchase.keyModel?.image ?? purchase.keyAccessory?.image, width: 100)
 
             VStack(alignment: .leading) {
                 if showDate, let date = purchase.date {

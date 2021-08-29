@@ -364,4 +364,58 @@ class PurchaseModelsTests: XCTestCase {
         XCTAssertFalse(models[0].hasChanges)
         XCTAssertFalse(models[4].hasChanges)
     }
+
+    // MARK: keyModel
+
+    /// Check that the first model is the key model.
+    func testKeyModel() throws {
+        let purchase = Purchase(context: persistenceController.container.viewContext)
+
+        var models: [Model] = []
+        for index in 0...5 {
+            let model = Model(context: persistenceController.container.viewContext)
+            model.index = Int16(clamping: index)
+            model.imageData = "Test".data(using: .utf8)
+            purchase.addToModels(model)
+            models.append(model)
+            purchase.maxModelIndex = model.index
+        }
+
+        XCTAssertEqual(purchase.keyModel, models[0])
+    }
+
+    /// Check that the first model with an image is the key model.
+    func testKeyModelNotFirst() throws {
+        let purchase = Purchase(context: persistenceController.container.viewContext)
+
+        var models: [Model] = []
+        for index in 0...5 {
+            let model = Model(context: persistenceController.container.viewContext)
+            model.index = Int16(clamping: index)
+            if index > 0 {
+                model.imageData = "Test".data(using: .utf8)
+            }
+            purchase.addToModels(model)
+            models.append(model)
+            purchase.maxModelIndex = model.index
+        }
+
+        XCTAssertEqual(purchase.keyModel, models[1])
+    }
+
+    /// Check that no models are the key model when they have no images.
+    func testKeyModelNoImages() throws {
+        let purchase = Purchase(context: persistenceController.container.viewContext)
+
+        var models: [Model] = []
+        for index in 0...5 {
+            let model = Model(context: persistenceController.container.viewContext)
+            model.index = Int16(clamping: index)
+            purchase.addToModels(model)
+            models.append(model)
+            purchase.maxModelIndex = model.index
+        }
+
+        XCTAssertNil(purchase.keyModel)
+    }
 }
