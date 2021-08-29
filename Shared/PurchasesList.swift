@@ -33,17 +33,6 @@ struct PurchasesList: View {
     }
 }
 
-private extension SectionedFetchResults.Section where Element == Purchase, SectionIdentifier == Date {
-    var title: String {
-        let purchaseMonth = id
-        guard purchaseMonth != .distantPast else { return "" }
-                
-        let formatStyle = Date.FormatStyle(date: .omitted, time: .omitted, timeZone: TimeZone(identifier: "UTC")!)
-            .year().month(.wide)
-        return purchaseMonth.formatted(formatStyle)
-    }
-}
-
 struct PurchasesByDate: View {
     @SectionedFetchRequest(
         sectionIdentifier: \Purchase.purchaseMonth,
@@ -54,9 +43,12 @@ struct PurchasesByDate: View {
         animation: .default)
     var purchases: SectionedFetchResults<Date, Purchase>
 
+    let purchaseMonthFormat = Date.FormatStyle(timeZone: TimeZone(identifier: "UTC")!)
+        .year().month(.wide)
+
     var body: some View {
         ForEach(purchases) { section in
-            Section(header: Text(section.title)) {
+            Section(header: Text(section.id, format: purchaseMonthFormat)) {
                 ForEach(section) { purchase in
                     PurchaseCell(purchase: purchase, showDate: true, showManufacturer: true)
                 }
