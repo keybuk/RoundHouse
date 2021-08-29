@@ -27,7 +27,7 @@ import SwiftUI
 ///       }
 ///     }
 struct BoxedImage: View {
-    var image: Image
+    var image: Image?
     var width: CGFloat
     var fillColor: Color = .white
 
@@ -35,7 +35,7 @@ struct BoxedImage: View {
         Rectangle()
             .fill(fillColor)
             .frame(width: width)
-            .overlay(image
+            .overlay(image?
                 .resizable()
                 .aspectRatio(contentMode: .fit))
             .cornerRadius(4)
@@ -62,6 +62,18 @@ struct BoxedImage_Previews: PreviewProvider {
 
             HStack {
                 BoxedImage(image: Image("R3804"),
+                           width: 100)
+
+                Rectangle()
+                    .fill(.quaternary)
+                    .frame(width: 100, height: 50)
+            }
+            .padding()
+            .background(.green)
+            .layoutPriority(-2)
+
+            HStack {
+                BoxedImage(image: nil,
                            width: 100)
 
                 Rectangle()

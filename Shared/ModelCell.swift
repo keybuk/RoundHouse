@@ -13,13 +13,7 @@ struct ModelCell: View {
 
     var body: some View {
         HStack {
-            if let image = model.image {
-                BoxedImage(image: image, width: 100)
-            } else {
-                Rectangle()
-                    .frame(width: 100)
-                    .hidden()
-            }
+            BoxedImage(image: model.image, width: 100)
 
             VStack(alignment: .leading) {
                 if showClass {

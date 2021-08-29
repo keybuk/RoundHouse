@@ -39,13 +39,7 @@ struct PurchaseCell: View {
 
     var body: some View {
         HStack {
-            if let image = purchase.image {
-                BoxedImage(image: image, width: 100)
-            } else {
-                Rectangle()
-                    .frame(width: 100)
-                    .hidden()
-            }
+            BoxedImage(image: purchase.image, width: 100)
 
             VStack(alignment: .leading) {
                 if showDate, let date = purchase.date {

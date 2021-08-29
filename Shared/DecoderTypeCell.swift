@@ -14,14 +14,8 @@ struct DecoderTypeCell: View {
 
     var body: some View {
         HStack {
-            if let image = decoderType.image {
-                BoxedImage(image: image, width: 100)
-            } else {
-                Rectangle()
-                    .frame(width: 100)
-                    .hidden()
-            }
-
+            BoxedImage(image: decoderType.image, width: 100)
+            
             VStack(alignment: .leading) {
                 if showManufacturer {
                     OptionalText(decoderType.catalogTitle)
