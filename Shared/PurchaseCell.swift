@@ -34,6 +34,9 @@ struct PurchaseCell: View {
     var showDate = false
     var showManufacturer = false
 
+    let dateFormat = Date.FormatStyle.dateTime
+        .year().month(.defaultDigits).day()
+
     var body: some View {
         HStack {
             if let image = purchase.image {
@@ -46,7 +49,7 @@ struct PurchaseCell: View {
 
             VStack(alignment: .leading) {
                 if showDate, let date = purchase.date {
-                    Text(date, format: .dateTime.year().month(.defaultDigits).day())
+                    Text(date, format: dateFormat)
                         .font(.caption)
                 }
                 if showManufacturer {
