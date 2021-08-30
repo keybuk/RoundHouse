@@ -44,7 +44,7 @@ final class RoundHouseMigrationPolicy: NSEntityMigrationPolicy {
     }
 
     private func accessoryCatalogSplit(_ modelClass: String) -> (String, String) {
-        let components = modelClass.components(separatedBy: .whitespaces)
+        let components = modelClass.split(whereSeparator: \.isWhitespace)
         guard components.count > 2 else { return ("", modelClass) }
         guard let _ = components[0].rangeOfCharacter(from: .decimalDigits) else { return ("", modelClass) }
         guard !components[0].hasSuffix("ft") else { return ("", modelClass) }
@@ -53,7 +53,7 @@ final class RoundHouseMigrationPolicy: NSEntityMigrationPolicy {
             .dropFirst(components[0].count)
             .drop(while: \.isWhitespace)
 
-        return (components[0], String(catalogDescription))
+        return (String(components[0]), String(catalogDescription))
     }
 
     /// Extracts the accessory catalog number from a model class.
@@ -83,8 +83,8 @@ final class RoundHouseMigrationPolicy: NSEntityMigrationPolicy {
         if mapping.name == "ModelToModel" || mapping.name == "DecoderTypeToDecoderType" {
             guard let dInstance = manager.destinationInstances(forEntityMappingName: mapping.name, sourceInstances: [sInstance]).first else { preconditionFailure("Missing destination instance") }
             if let title = sInstance.value(forKey: "socket") as! String?, !title.isEmpty {
-                let pinCount = title.components(separatedBy: .decimalDigits.inverted)
-                    .first { $0 != "" }
+                let pinCount = title.split(whereSeparator: { !$0.isNumber })
+                    .first
                     .flatMap { Int16($0) }
                 let numberOfPins = pinCount ?? 0
 
