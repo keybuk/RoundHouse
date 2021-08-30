@@ -66,14 +66,33 @@ struct AppSidebar: View {
         }
     }
 
-    // Can't set a default value, and whenever we present just AppSidebar on iOS/iPadOS this has
-    // the value `nil` so we can't compare against that to set a default anywhere else.
-    @SceneStorage("AppSidebar.selection") var selection: NavigationItem?// = .models(.dieselElectricLocomotive)
+    // We can't set a default value for @SceneStorage when the type is an optional, and we want a
+    // default value for macOS and non-compact views so they open to real data instead of
+    // placeholders.
+    //
+    // But NavigationLink requires that the selection Binding be to an optional since this will
+    // have the value `nil` when showing just AppSidebar on iOS or compact iPad views. And for that
+    // same reason we can't just compare the selection against `nil` to return the default value.
+    //
+    // Workaround this limitation using an extra storage item that effectively works as a "does the
+    // scene storage have a selection?" test.
+    @SceneStorage("AppSidebar.hasSelection") var hasSelection: Bool = false
+    @SceneStorage("AppSidebar.selection") var savedSelection: NavigationItem?
+    let defaultSelection: NavigationItem = .models(.dieselElectricLocomotive)
+
+    var selection: Binding<NavigationItem?> {
+        Binding {
+            hasSelection ? savedSelection : defaultSelection
+        } set: {
+            hasSelection = true
+            savedSelection = $0
+        }
+    }
 
     var body: some View {
         List {
             Section {
-                NavigationLink(tag: NavigationItem.purchases, selection: $selection) {
+                NavigationLink(tag: NavigationItem.purchases, selection: selection) {
                     PurchasesList()
                 } label: {
                     Label("Purchases", systemImage: "bag")
@@ -82,7 +101,7 @@ struct AppSidebar: View {
 
             Section(header: Text("Models")) {
                 ForEach(Model.Classification.allCases, id: \.self) { classification in
-                    NavigationLink(tag: NavigationItem.models(classification), selection: $selection) {
+                    NavigationLink(tag: NavigationItem.models(classification), selection: selection) {
                         ModelsList(classification: classification)
                     } label: {
                         Label("\(classification.pluralDescription)", image: classification.imageName)
@@ -91,13 +110,13 @@ struct AppSidebar: View {
             }
 
             Section(header: Text("Accessories")) {
-                NavigationLink(tag: NavigationItem.accessories, selection: $selection) {
+                NavigationLink(tag: NavigationItem.accessories, selection: selection) {
                     AccessoriesList()
                 } label: {
                     Label("Accessories", systemImage: "ticket")
                 }
 
-                NavigationLink(tag: NavigationItem.decoders, selection: $selection) {
+                NavigationLink(tag: NavigationItem.decoders, selection: selection) {
                     DecoderTypesList()
                 } label: {
                     Label("Decoders", systemImage: "esim")
