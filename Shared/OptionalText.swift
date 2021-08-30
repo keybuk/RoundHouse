@@ -9,7 +9,8 @@ import SwiftUI
 
 /// A text view that is only present in the hierarchy when the content is non-empty.
 ///
-/// Unlike `Text`, the content of this view is never localized, since it can be assumed that the empty string is never a localized string key. Likewise initializes aren't provided for formatted values since it's assumed those aways result in a string.
+/// Unlike `Text`, the content of this view is never localized, since it can be assumed that the empty string is never a localized
+/// string key. Likewise initializes aren't provided for formatted values since it's assumed those aways result in a string.
 struct OptionalText: View {
     var body: Text?
 
