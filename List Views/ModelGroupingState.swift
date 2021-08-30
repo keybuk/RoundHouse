@@ -8,9 +8,19 @@
 import Foundation
 
 /// Provides scene storage for the grouping state of all `ModelsList` views by `Model.Classification`.
-struct ModelGroupingState: RawRepresentable, Equatable, Hashable {
-    var groupings: [Model.Classification: Model.Grouping]
+///
+/// As a state value this provides a mapping from `Model.Classification` to `Model.Grouping` and a subscript operator
+/// to change the values. This can be used through a binding:
+///
+///     grouping[.coach] = .livery
+///     $grouping[.coach] // Binding<Model.Grouping>
+///
+/// `@SceneStorage` allows us to only store very simple types: `Bool`, `Int`, `Double`, `String`, and `URL`. But it also
+/// allows `RawRepresentable` types with a `RawValue` or `Int` or `String`. This value conforms to the latter producing
+/// a string value that can be persisted in the scene storage.
+struct ModelGroupingState: RawRepresentable {
     let defaultValue: Model.Grouping = .modelClass
+    var groupings: [Model.Classification: Model.Grouping]
 
     init?(rawValue: String) {
         groupings = Dictionary(uniqueKeysWithValues: rawValue
