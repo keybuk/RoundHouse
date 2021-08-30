@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension DecoderType {
-    enum Grouping {
+    enum Grouping: String {
         case socket
         case family
         case catalog

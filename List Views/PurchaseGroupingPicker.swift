@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension Purchase {
-    enum Grouping {
+    enum Grouping: String {
         case catalog
         case date
     }

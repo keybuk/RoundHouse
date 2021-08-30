@@ -15,11 +15,11 @@ extension Model {
 
 struct ModelsList: View {
     var classification: Model.Classification?
-    @State var grouping: Model.Grouping = .modelClass
+    @SceneStorage("Model.grouping") var grouping = ModelGroupingState()
 
     var body: some View {
         List {
-            switch grouping {
+            switch grouping[classification] {
             case .modelClass:
                 ModelsByClass(classification: classification)
             case .era:
@@ -32,7 +32,7 @@ struct ModelsList: View {
         .navigationTitle(classification?.pluralDescription ?? "Models")
         .toolbar {
             ToolbarItem(placement: .principal) {
-                ModelGroupingPicker(grouping: $grouping)
+                ModelGroupingPicker(grouping: $grouping[classification])
 #if os(iOS)
                     .padding([.leading, .trailing])
 #endif

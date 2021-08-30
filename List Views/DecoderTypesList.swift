@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct DecoderTypesList: View {
-    @State var grouping: DecoderType.Grouping = .socket
+    @SceneStorage("DecoderType.grouping") var grouping: DecoderType.Grouping = .socket
 
     var body: some View {
         List {

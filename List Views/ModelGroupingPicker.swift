@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension Model {
-    enum Grouping {
+    enum Grouping: String {
         case modelClass
         case era
         case livery
