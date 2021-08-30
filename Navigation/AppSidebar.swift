@@ -68,7 +68,7 @@ struct AppSidebar: View {
 
     // Can't set a default value, and whenever we present just AppSidebar on iOS/iPadOS this has
     // the value `nil` so we can't compare against that to set a default anywhere else.
-    @SceneStorage("selection") var selection: NavigationItem?// = .models(.dieselElectricLocomotive)
+    @SceneStorage("AppSidebar.selection") var selection: NavigationItem?// = .models(.dieselElectricLocomotive)
 
     var body: some View {
         List {

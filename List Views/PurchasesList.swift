@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PurchasesList: View {
-    @SceneStorage("Purchase.grouping") var grouping: Purchase.Grouping = .date
+    @SceneStorage("PurchasesList.grouping") var grouping: Purchase.Grouping = .date
 
     var body: some View {
         List {

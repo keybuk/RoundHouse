@@ -15,7 +15,7 @@ extension Model {
 
 struct ModelsList: View {
     var classification: Model.Classification?
-    @SceneStorage("Model.grouping") var grouping = ModelGroupingState()
+    @SceneStorage("ModelsList.grouping") var grouping = ModelGroupingState()
 
     var body: some View {
         List {
