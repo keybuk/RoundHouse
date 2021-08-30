@@ -62,7 +62,11 @@ struct ModelsByClass: View {
         ForEach(models) { section in
             Section(header: Text(section.id)) {
                 ForEach(section) { model in
-                    ModelCell(model: model)
+                    NavigationLink {
+                        ModelView(model: model)
+                    } label: {
+                        ModelCell(model: model)
+                    }
                 }
             }
         }

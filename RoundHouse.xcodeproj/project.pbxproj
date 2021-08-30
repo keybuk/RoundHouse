@@ -57,6 +57,12 @@
 		D29A208B26DCB34C00FE8DD5 /* ModelGroupingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A208926DCB34C00FE8DD5 /* ModelGroupingState.swift */; };
 		D29A208D26DD690A00FE8DD5 /* PurchaseItemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A208C26DD690A00FE8DD5 /* PurchaseItemsList.swift */; };
 		D29A208E26DD690A00FE8DD5 /* PurchaseItemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A208C26DD690A00FE8DD5 /* PurchaseItemsList.swift */; };
+		D29A209126DD6F2100FE8DD5 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A209026DD6F2100FE8DD5 /* ModelView.swift */; };
+		D29A209226DD6F2100FE8DD5 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A209026DD6F2100FE8DD5 /* ModelView.swift */; };
+		D29A209426DD6F4B00FE8DD5 /* PurchaseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A209326DD6F4B00FE8DD5 /* PurchaseDetail.swift */; };
+		D29A209526DD6F4B00FE8DD5 /* PurchaseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A209326DD6F4B00FE8DD5 /* PurchaseDetail.swift */; };
+		D29A209726DD6F8600FE8DD5 /* ModelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A209626DD6F8600FE8DD5 /* ModelDetail.swift */; };
+		D29A209826DD6F8600FE8DD5 /* ModelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A209626DD6F8600FE8DD5 /* ModelDetail.swift */; };
 		D29E1EE0269565AC00F13F13 /* DecoderTypeGroupingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29E1EDF269565AC00F13F13 /* DecoderTypeGroupingPicker.swift */; };
 		D29E1EE1269565AC00F13F13 /* DecoderTypeGroupingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29E1EDF269565AC00F13F13 /* DecoderTypeGroupingPicker.swift */; };
 		D29F5C81267571EF00EC2F85 /* UI Tests (iOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C80267571EF00EC2F85 /* UI Tests (iOS).swift */; };
@@ -202,6 +208,9 @@
 		D29A205D26DB200200FE8DD5 /* ModelClassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClassTests.swift; sourceTree = "<group>"; };
 		D29A208926DCB34C00FE8DD5 /* ModelGroupingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelGroupingState.swift; sourceTree = "<group>"; };
 		D29A208C26DD690A00FE8DD5 /* PurchaseItemsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseItemsList.swift; sourceTree = "<group>"; };
+		D29A209026DD6F2100FE8DD5 /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
+		D29A209326DD6F4B00FE8DD5 /* PurchaseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseDetail.swift; sourceTree = "<group>"; };
+		D29A209626DD6F8600FE8DD5 /* ModelDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDetail.swift; sourceTree = "<group>"; };
 		D29E1EDF269565AC00F13F13 /* DecoderTypeGroupingPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTypeGroupingPicker.swift; sourceTree = "<group>"; };
 		D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseApp.swift; sourceTree = "<group>"; };
 		D29F5C6A267571ED00EC2F85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -344,6 +353,9 @@
 		D29A208F26DD6BE300FE8DD5 /* Detail Views */ = {
 			isa = PBXGroup;
 			children = (
+				D29A209026DD6F2100FE8DD5 /* ModelView.swift */,
+				D29A209326DD6F4B00FE8DD5 /* PurchaseDetail.swift */,
+				D29A209626DD6F8600FE8DD5 /* ModelDetail.swift */,
 				D29A208C26DD690A00FE8DD5 /* PurchaseItemsList.swift */,
 			);
 			path = "Detail Views";
@@ -707,6 +719,7 @@
 				D23C3BD42676B8B70017BC5B /* Model+Image.swift in Sources */,
 				D2C4960C267585920008AFB8 /* ModelsList.swift in Sources */,
 				D29E1EE0269565AC00F13F13 /* DecoderTypeGroupingPicker.swift in Sources */,
+				D29A209726DD6F8600FE8DD5 /* ModelDetail.swift in Sources */,
 				D23C3BE32676D61D0017BC5B /* PurchasesList.swift in Sources */,
 				D2E3080E267EDEC400577B27 /* DecoderType+Image.swift in Sources */,
 				D2E30820267FD50E00577B27 /* ModelGroupingPicker.swift in Sources */,
@@ -718,6 +731,7 @@
 				D2E30817267EE77000577B27 /* StorableImage.swift in Sources */,
 				D2C496262675F4AA0008AFB8 /* Model+Classification.swift in Sources */,
 				D2C496062675810D0008AFB8 /* ModelCell.swift in Sources */,
+				D29A209126DD6F2100FE8DD5 /* ModelView.swift in Sources */,
 				D2E30808267EDB2000577B27 /* Purchase+WillSave.swift in Sources */,
 				D2E307E0267D794C00577B27 /* Accessory+Image.swift in Sources */,
 				D278B1C72695506300CD4609 /* DecoderType+WillSave.swift in Sources */,
@@ -750,6 +764,7 @@
 				D2C496232675F46E0008AFB8 /* Purchase+Condition.swift in Sources */,
 				D2E3080B267EDDDE00577B27 /* DecoderTypeCell.swift in Sources */,
 				D29F5C90267571EF00EC2F85 /* ContentView.swift in Sources */,
+				D29A209426DD6F4B00FE8DD5 /* PurchaseDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,6 +776,7 @@
 				D23C3BD52676B8B80017BC5B /* Model+Image.swift in Sources */,
 				D2C4960D267585920008AFB8 /* ModelsList.swift in Sources */,
 				D29E1EE1269565AC00F13F13 /* DecoderTypeGroupingPicker.swift in Sources */,
+				D29A209826DD6F8600FE8DD5 /* ModelDetail.swift in Sources */,
 				D23C3BE42676D61D0017BC5B /* PurchasesList.swift in Sources */,
 				D29F5CBC2675771D00EC2F85 /* SecureDateComponentsTransformer.swift in Sources */,
 				D2E30821267FD50E00577B27 /* ModelGroupingPicker.swift in Sources */,
@@ -772,6 +788,7 @@
 				D2E30818267EE77000577B27 /* StorableImage.swift in Sources */,
 				D2C496272675F4AA0008AFB8 /* Model+Classification.swift in Sources */,
 				D2C496072675810D0008AFB8 /* ModelCell.swift in Sources */,
+				D29A209226DD6F2100FE8DD5 /* ModelView.swift in Sources */,
 				D2E30809267EDB2000577B27 /* Purchase+WillSave.swift in Sources */,
 				D2E307E1267D794C00577B27 /* Accessory+Image.swift in Sources */,
 				D278B1C82695506300CD4609 /* DecoderType+WillSave.swift in Sources */,
@@ -804,6 +821,7 @@
 				D2C496242675F46E0008AFB8 /* Purchase+Condition.swift in Sources */,
 				D2E3080C267EDDDE00577B27 /* DecoderTypeCell.swift in Sources */,
 				D29F5C91267571EF00EC2F85 /* ContentView.swift in Sources */,
+				D29A209526DD6F4B00FE8DD5 /* PurchaseDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,6 @@
 //
 //  PurchaseItemsList.swift
-//  PurchaseItemsList
+//  RoundHouse
 //
 //  Created by Scott James Remnant on 8/30/21.
 //
@@ -37,7 +37,11 @@ struct PurchaseItemsList: View {
             if models.count > 0 {
                 Section(header: accessories.count > 0 ? Text("Models") : nil) {
                     ForEach(models) { model in
-                        ModelCell(model: model, showClass: true)
+                        NavigationLink {
+                            ModelView(model: model)
+                        } label: {
+                            ModelCell(model: model, showClass: true)
+                        }
                     }
                 }
             }
