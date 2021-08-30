@@ -55,6 +55,8 @@
 		D29A205F26DB200200FE8DD5 /* ModelClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A205D26DB200200FE8DD5 /* ModelClassTests.swift */; };
 		D29A208A26DCB34C00FE8DD5 /* ModelGroupingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A208926DCB34C00FE8DD5 /* ModelGroupingState.swift */; };
 		D29A208B26DCB34C00FE8DD5 /* ModelGroupingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A208926DCB34C00FE8DD5 /* ModelGroupingState.swift */; };
+		D29A208D26DD690A00FE8DD5 /* PurchaseItemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A208C26DD690A00FE8DD5 /* PurchaseItemsList.swift */; };
+		D29A208E26DD690A00FE8DD5 /* PurchaseItemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A208C26DD690A00FE8DD5 /* PurchaseItemsList.swift */; };
 		D29E1EE0269565AC00F13F13 /* DecoderTypeGroupingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29E1EDF269565AC00F13F13 /* DecoderTypeGroupingPicker.swift */; };
 		D29E1EE1269565AC00F13F13 /* DecoderTypeGroupingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29E1EDF269565AC00F13F13 /* DecoderTypeGroupingPicker.swift */; };
 		D29F5C81267571EF00EC2F85 /* UI Tests (iOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C80267571EF00EC2F85 /* UI Tests (iOS).swift */; };
@@ -199,6 +201,7 @@
 		D29A205A26DB187600FE8DD5 /* DecoderTypeCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTypeCatalogTests.swift; sourceTree = "<group>"; };
 		D29A205D26DB200200FE8DD5 /* ModelClassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClassTests.swift; sourceTree = "<group>"; };
 		D29A208926DCB34C00FE8DD5 /* ModelGroupingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelGroupingState.swift; sourceTree = "<group>"; };
+		D29A208C26DD690A00FE8DD5 /* PurchaseItemsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseItemsList.swift; sourceTree = "<group>"; };
 		D29E1EDF269565AC00F13F13 /* DecoderTypeGroupingPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTypeGroupingPicker.swift; sourceTree = "<group>"; };
 		D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseApp.swift; sourceTree = "<group>"; };
 		D29F5C6A267571ED00EC2F85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -338,6 +341,14 @@
 			path = "List Views";
 			sourceTree = "<group>";
 		};
+		D29A208F26DD6BE300FE8DD5 /* Detail Views */ = {
+			isa = PBXGroup;
+			children = (
+				D29A208C26DD690A00FE8DD5 /* PurchaseItemsList.swift */,
+			);
+			path = "Detail Views";
+			sourceTree = "<group>";
+		};
 		D29F5C61267571ED00EC2F85 = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +356,7 @@
 				D23C3BF12676F96D0017BC5B /* Navigation */,
 				D29F5C66267571ED00EC2F85 /* Shared */,
 				D29A206026DBFA8A00FE8DD5 /* List Views */,
+				D29A208F26DD6BE300FE8DD5 /* Detail Views */,
 				D29F5C7F267571EF00EC2F85 /* UI Tests (iOS) */,
 				D29F5C89267571EF00EC2F85 /* UI Tests (macOS) */,
 				D29F5C72267571EF00EC2F85 /* Products */,
@@ -712,6 +724,7 @@
 				D29F5CBE267578F300EC2F85 /* PreviewData.swift in Sources */,
 				D23C3BDA2676BC9F0017BC5B /* AppSidebar.swift in Sources */,
 				D2E30802267ED88400577B27 /* PurchaseCell.swift in Sources */,
+				D29A208D26DD690A00FE8DD5 /* PurchaseItemsList.swift in Sources */,
 				D23C3BE62676D6640017BC5B /* AccessoriesList.swift in Sources */,
 				D278B1C126954C9000CD4609 /* Decoder+Stock.swift in Sources */,
 				D2C496382675F8860008AFB8 /* Purchase+Accessories.swift in Sources */,
@@ -765,6 +778,7 @@
 				D29F5CBF267578F300EC2F85 /* PreviewData.swift in Sources */,
 				D23C3BDB2676BC9F0017BC5B /* AppSidebar.swift in Sources */,
 				D2E30803267ED88400577B27 /* PurchaseCell.swift in Sources */,
+				D29A208E26DD690A00FE8DD5 /* PurchaseItemsList.swift in Sources */,
 				D23C3BE72676D6640017BC5B /* AccessoriesList.swift in Sources */,
 				D278B1C226954C9000CD4609 /* Decoder+Stock.swift in Sources */,
 				D2C496392675F8860008AFB8 /* Purchase+Accessories.swift in Sources */,
