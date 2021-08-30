@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AccessoryCell: View {
-    var accessory: Accessory
+    @ObservedObject var accessory: Accessory
     var showManufacturer = false
 
     var body: some View {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ModelCell: View {
-    var model: Model
+    @ObservedObject var model: Model
     var showClass = false
 
     var body: some View {

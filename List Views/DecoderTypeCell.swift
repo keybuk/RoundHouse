@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DecoderTypeCell: View {
-    var decoderType: DecoderType
+    @ObservedObject var decoderType: DecoderType
     var showManufacturer = true
     var showSocket = false
 

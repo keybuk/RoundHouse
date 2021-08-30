@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PurchaseCell: View {
-    var purchase: Purchase
+    @ObservedObject var purchase: Purchase
     var showDate = false
     var showManufacturer = false
 
