@@ -38,8 +38,7 @@ struct DecoderTypesList: View {
 
 struct DecoderTypesBySocket: View {
     @SectionedFetchRequest(
-        // BUG(FB9194735) We can't just use \.socket yet
-        sectionIdentifier: \DecoderType.socket?.objectID,
+        sectionIdentifier: \DecoderType.socket?,
         sortDescriptors: [
             SortDescriptor(\DecoderType.socket?.numberOfPins, order: .reverse),
             SortDescriptor(\DecoderType.socket?.title, order: .reverse),
@@ -49,16 +48,11 @@ struct DecoderTypesBySocket: View {
             SortDescriptor(\DecoderType.catalogNumber),
         ],
         animation: .default)
-    var decoderTypes: SectionedFetchResults<NSManagedObjectID?, DecoderType>
-
-    @Environment(\.managedObjectContext) var viewContext
-    func socket(with objectID: NSManagedObjectID) -> Socket {
-        viewContext.object(with: objectID) as! Socket
-    }
+    var decoderTypes: SectionedFetchResults<Socket?, DecoderType>
 
     var body: some View {
         ForEach(decoderTypes) { section in
-            Section(header: Text(socket(with: section.id!).title!)) {
+            Section(header: Text(section.id!.title!)) {
                 ForEach(section) { decoderType in
                     DecoderTypeCell(decoderType: decoderType)
                 }
