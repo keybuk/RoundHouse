@@ -43,7 +43,7 @@ struct PurchaseCell_Previews: PreviewProvider {
         List {
             PurchaseCell(purchase: PreviewData.shared.purchases["R1234M"]!)
             
-            PurchaseCell(purchase: PreviewData.shared.purchases["R1234M"]!, showDate: true, showManufacturer: true)
+            PurchaseCell(purchase: PreviewData.shared.purchases["32-908"]!, showDate: true, showManufacturer: true)
         }
     }
 }

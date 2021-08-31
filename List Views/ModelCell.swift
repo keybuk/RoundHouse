@@ -38,6 +38,7 @@ struct ModelCell_Previews: PreviewProvider {
 
             ModelCell(model: PreviewData.shared.models["R3804"]!, showClass: true)
 
+            ModelCell(model: PreviewData.shared.models["32-908 DMBS"]!, showClass: true)
         }
     }
 }

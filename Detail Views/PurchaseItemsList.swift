@@ -59,7 +59,11 @@ struct PurchaseItemsList: View {
 
 struct PurchaseItemsList_Previews: PreviewProvider {
     static var previews: some View {
-        PurchaseItemsList(purchase: PreviewData.shared.purchases["R1234M"]!)
-            .environment(\.managedObjectContext, PreviewData.shared.viewContext)
+        Group {
+            PurchaseItemsList(purchase: PreviewData.shared.purchases["R1234M"]!)
+
+            PurchaseItemsList(purchase: PreviewData.shared.purchases["32-908"]!)
+        }
+        .environment(\.managedObjectContext, PreviewData.shared.viewContext)
     }
 }
