@@ -26,7 +26,7 @@ struct DecoderTypeCell: View {
                 }
                 OptionalText(decoderType.catalogName!)
                 if showSocket {
-                    Text(decoderType.socket!.title!)
+                    Text(decoderType.socket?.title! ?? "None")
                         .font(.caption)
                 }
             }
@@ -63,6 +63,8 @@ struct DecoderTypeCell_Previews: PreviewProvider {
             DecoderTypeCell(decoderType: PreviewData.shared.decoderTypes["58429"]!)
             
             DecoderTypeCell(decoderType: PreviewData.shared.decoderTypes["58412"]!, showManufacturer: false, showSocket: true)
+
+            DecoderTypeCell(decoderType: PreviewData.shared.decoderTypes["58823"]!, showSocket: true)
         }
     }
 }

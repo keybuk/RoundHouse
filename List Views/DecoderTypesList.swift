@@ -52,7 +52,7 @@ struct DecoderTypesBySocket: View {
 
     var body: some View {
         ForEach(decoderTypes) { section in
-            Section(header: Text(section.id!.title!)) {
+            Section(header: Text(section.id?.title! ?? "None")) {
                 ForEach(section) { decoderType in
                     DecoderTypeCell(decoderType: decoderType)
                 }

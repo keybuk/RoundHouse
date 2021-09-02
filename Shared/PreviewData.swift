@@ -104,6 +104,26 @@ struct PreviewData {
         }
 
         do {
+            // DecoderType with no socket.
+            let decoderType = DecoderType(context: viewContext)
+            decoderType.manufacturer = "ESU"
+            decoderType.catalogNumber = "58823"
+            decoderType.catalogName = "LokSound 5 micro DCC"
+            decoderType.catalogFamily = "LokSound 5 micro"
+            decoderType.catalogDescription = "LokSound 5 micro DCC \"blank decoder\", single wires, gauge: N, TT, H0"
+            decoderType.isProgrammable = true
+            decoderType.isSoundSupported = true
+            decoderType.isRailComSupported = true
+            decoderType.setPreviewImage(named: "58823")
+
+            decoderTypes["58823"] = decoderType
+            
+            let decoder = Decoder(context: viewContext)
+            decoder.type = decoderType
+            decoder.serialNumber = "1"
+        }
+
+        do {
             let purchase = Purchase(context: viewContext)
             purchase.manufacturer = "Hornby"
             purchase.catalogNumber = "R1234M"
