@@ -8,19 +8,12 @@
 import SwiftUI
 
 /// ModelView is the navigation target for showing details on a selected model.
-///
-/// On non-compact views this will show the details of the purchase, purchase items, and selected model.
 struct ModelView: View {
     @ObservedObject var model: Model
 
     var body: some View {
-        VStack {
-            PurchaseDetail(purchase: model.purchase!)
-            HStack {
-                PurchaseItemsList(purchase: model.purchase!)
-                ModelDetail(model: model)
-            }
-        }
+        ModelDetail(model: model)
+            .navigationTitle(model.classTitle)
     }
 }
 

@@ -10,48 +10,9 @@ import SwiftUI
 struct PurchaseItemsList: View {
     @ObservedObject var purchase: Purchase
 
-    @FetchRequest
-    var models: FetchedResults<Model>
-
-    @FetchRequest
-    var accessories: FetchedResults<Accessory>
-
-    init(purchase: Purchase) {
-        self.purchase = purchase
-        _models = FetchRequest(
-            sortDescriptors: [
-                SortDescriptor(\Model.index)
-            ],
-            predicate: NSPredicate(format: "purchase == %@", purchase),
-            animation: .default)
-        _accessories = FetchRequest(
-            sortDescriptors: [
-                SortDescriptor(\Accessory.index)
-            ],
-            predicate: NSPredicate(format: "purchase == %@", purchase),
-            animation: .default)
-    }
-
     var body: some View {
         List {
-            if models.count > 0 {
-                Section(header: accessories.count > 0 ? Text("Models") : nil) {
-                    ForEach(models) { model in
-                        NavigationLink {
-                            ModelView(model: model)
-                        } label: {
-                            ModelCell(model: model, showClass: true)
-                        }
-                    }
-                }
-            }
-            if accessories.count > 0 {
-                Section(header: models.count > 0 ? Text("Accessories") : nil) {
-                    ForEach(accessories) { accessory in
-                        AccessoryCell(accessory: accessory)
-                    }
-                }
-            }
+            PurchaseItems(purchase: purchase, alwaysShowHeaders: false)
         }
         .listStyle(.plain)
     }

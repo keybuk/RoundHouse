@@ -50,7 +50,11 @@ struct PurchasesByDate: View {
         ForEach(purchases) { section in
             Section(header: Text(section.id, format: purchaseMonthFormat)) {
                 ForEach(section) { purchase in
-                    PurchaseCell(purchase: purchase, showDate: true, showManufacturer: true)
+                    NavigationLink {
+                        PurchaseView(purchase: purchase)
+                    } label: {
+                        PurchaseCell(purchase: purchase, showDate: true, showManufacturer: true)
+                    }
                 }
             }
         }
@@ -73,7 +77,11 @@ struct PurchasesByCatalog: View {
         ForEach(purchases) { section in
             Section(header: Text(section.id!)) {
                 ForEach(section) { purchase in
-                    PurchaseCell(purchase: purchase)
+                    NavigationLink {
+                        PurchaseView(purchase: purchase)
+                    } label: {
+                        PurchaseCell(purchase: purchase)
+                    }
                 }
             }
         }

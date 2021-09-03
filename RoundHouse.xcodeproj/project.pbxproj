@@ -41,6 +41,10 @@
 		D28CDF36268E58AB00F761D5 /* PurchaseEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CDF34268E58AB00F761D5 /* PurchaseEnumTests.swift */; };
 		D28CDF38268E5AC300F761D5 /* ModelEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CDF37268E5AC300F761D5 /* ModelEnumTests.swift */; };
 		D28CDF39268E5AC300F761D5 /* ModelEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CDF37268E5AC300F761D5 /* ModelEnumTests.swift */; };
+		D290486026E2B7C6007F2980 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290485F26E2B7C6007F2980 /* PurchaseView.swift */; };
+		D290486126E2B7C6007F2980 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290485F26E2B7C6007F2980 /* PurchaseView.swift */; };
+		D290486326E2C1E6007F2980 /* PurchaseItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290486226E2C1E6007F2980 /* PurchaseItems.swift */; };
+		D290486426E2C1E6007F2980 /* PurchaseItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290486226E2C1E6007F2980 /* PurchaseItems.swift */; };
 		D29A204F26DB003F00FE8DD5 /* OptionalText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A204E26DB003F00FE8DD5 /* OptionalText.swift */; };
 		D29A205026DB003F00FE8DD5 /* OptionalText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A204E26DB003F00FE8DD5 /* OptionalText.swift */; };
 		D29A205226DB085C00FE8DD5 /* Accessory+Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A205126DB085C00FE8DD5 /* Accessory+Catalog.swift */; };
@@ -200,6 +204,8 @@
 		D278B1C92695561000CD4609 /* PurchaseGroupingPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseGroupingPicker.swift; sourceTree = "<group>"; };
 		D28CDF34268E58AB00F761D5 /* PurchaseEnumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseEnumTests.swift; sourceTree = "<group>"; };
 		D28CDF37268E5AC300F761D5 /* ModelEnumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelEnumTests.swift; sourceTree = "<group>"; };
+		D290485F26E2B7C6007F2980 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
+		D290486226E2C1E6007F2980 /* PurchaseItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseItems.swift; sourceTree = "<group>"; };
 		D29A204E26DB003F00FE8DD5 /* OptionalText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalText.swift; sourceTree = "<group>"; };
 		D29A205126DB085C00FE8DD5 /* Accessory+Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Accessory+Catalog.swift"; sourceTree = "<group>"; };
 		D29A205426DB10A300FE8DD5 /* SectionedFetchRequest+RecordCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionedFetchRequest+RecordCount.swift"; sourceTree = "<group>"; };
@@ -334,13 +340,13 @@
 		D29A206026DBFA8A00FE8DD5 /* List Views */ = {
 			isa = PBXGroup;
 			children = (
+				D2E30801267ED88400577B27 /* PurchaseCell.swift */,
+				D278B1C92695561000CD4609 /* PurchaseGroupingPicker.swift */,
+				D23C3BE22676D61D0017BC5B /* PurchasesList.swift */,
 				D2C496052675810D0008AFB8 /* ModelCell.swift */,
 				D2E3081F267FD50E00577B27 /* ModelGroupingPicker.swift */,
 				D29A208926DCB34C00FE8DD5 /* ModelGroupingState.swift */,
 				D2C4960B267585920008AFB8 /* ModelsList.swift */,
-				D2E30801267ED88400577B27 /* PurchaseCell.swift */,
-				D278B1C92695561000CD4609 /* PurchaseGroupingPicker.swift */,
-				D23C3BE22676D61D0017BC5B /* PurchasesList.swift */,
 				D2E307E8267D7C0100577B27 /* AccessoryCell.swift */,
 				D23C3BE52676D6640017BC5B /* AccessoriesList.swift */,
 				D2E3080A267EDDDE00577B27 /* DecoderTypeCell.swift */,
@@ -353,10 +359,12 @@
 		D29A208F26DD6BE300FE8DD5 /* Detail Views */ = {
 			isa = PBXGroup;
 			children = (
+				D290485F26E2B7C6007F2980 /* PurchaseView.swift */,
 				D29A209026DD6F2100FE8DD5 /* ModelView.swift */,
 				D29A209326DD6F4B00FE8DD5 /* PurchaseDetail.swift */,
 				D29A209626DD6F8600FE8DD5 /* ModelDetail.swift */,
 				D29A208C26DD690A00FE8DD5 /* PurchaseItemsList.swift */,
+				D290486226E2C1E6007F2980 /* PurchaseItems.swift */,
 			);
 			path = "Detail Views";
 			sourceTree = "<group>";
@@ -722,6 +730,7 @@
 				D29A209726DD6F8600FE8DD5 /* ModelDetail.swift in Sources */,
 				D23C3BE32676D61D0017BC5B /* PurchasesList.swift in Sources */,
 				D2E3080E267EDEC400577B27 /* DecoderType+Image.swift in Sources */,
+				D290486326E2C1E6007F2980 /* PurchaseItems.swift in Sources */,
 				D2E30820267FD50E00577B27 /* ModelGroupingPicker.swift in Sources */,
 				D29F5CBB2675771D00EC2F85 /* SecureDateComponentsTransformer.swift in Sources */,
 				D278B1A826953E6900CD4609 /* Purchase+Catalog.swift in Sources */,
@@ -748,6 +757,7 @@
 				D2E30805267EDAF700577B27 /* Purchase+Date.swift in Sources */,
 				D2D75D0A26D9B70400B473DF /* Model+Class.swift in Sources */,
 				D29A204F26DB003F00FE8DD5 /* OptionalText.swift in Sources */,
+				D290486026E2B7C6007F2980 /* PurchaseView.swift in Sources */,
 				D2C496352675F8110008AFB8 /* Train+Members.swift in Sources */,
 				D29F5C92267571EF00EC2F85 /* PersistenceController.swift in Sources */,
 				D2C496322675F7A80008AFB8 /* Purchase+Models.swift in Sources */,
@@ -779,6 +789,7 @@
 				D29A209826DD6F8600FE8DD5 /* ModelDetail.swift in Sources */,
 				D23C3BE42676D61D0017BC5B /* PurchasesList.swift in Sources */,
 				D29F5CBC2675771D00EC2F85 /* SecureDateComponentsTransformer.swift in Sources */,
+				D290486426E2C1E6007F2980 /* PurchaseItems.swift in Sources */,
 				D2E30821267FD50E00577B27 /* ModelGroupingPicker.swift in Sources */,
 				D2E3080F267EDEC400577B27 /* DecoderType+Image.swift in Sources */,
 				D278B1A926953E6900CD4609 /* Purchase+Catalog.swift in Sources */,
@@ -805,6 +816,7 @@
 				D2C496362675F8110008AFB8 /* Train+Members.swift in Sources */,
 				D2D75D0B26D9B70400B473DF /* Model+Class.swift in Sources */,
 				D29A205026DB003F00FE8DD5 /* OptionalText.swift in Sources */,
+				D290486126E2B7C6007F2980 /* PurchaseView.swift in Sources */,
 				D2E30806267EDAF700577B27 /* Purchase+Date.swift in Sources */,
 				D29F5C93267571EF00EC2F85 /* PersistenceController.swift in Sources */,
 				D2C496332675F7A80008AFB8 /* Purchase+Models.swift in Sources */,
