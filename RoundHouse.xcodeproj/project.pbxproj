@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D22B733126E2D30E00DDE47F /* Model+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B733026E2D30E00DDE47F /* Model+Date.swift */; };
+		D22B733226E2D30E00DDE47F /* Model+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B733026E2D30E00DDE47F /* Model+Date.swift */; };
+		D22B733426E2D44E00DDE47F /* Decoder+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B733326E2D44E00DDE47F /* Decoder+Date.swift */; };
+		D22B733526E2D44E00DDE47F /* Decoder+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B733326E2D44E00DDE47F /* Decoder+Date.swift */; };
 		D23C3BD42676B8B70017BC5B /* Model+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4961F2675EAE90008AFB8 /* Model+Image.swift */; };
 		D23C3BD52676B8B80017BC5B /* Model+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4961F2675EAE90008AFB8 /* Model+Image.swift */; };
 		D23C3BDA2676BC9F0017BC5B /* AppSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BD92676BC9F0017BC5B /* AppSidebar.swift */; };
@@ -189,6 +193,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D22B733026E2D30E00DDE47F /* Model+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Model+Date.swift"; path = "Model/Model+Date.swift"; sourceTree = SOURCE_ROOT; };
+		D22B733326E2D44E00DDE47F /* Decoder+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decoder+Date.swift"; sourceTree = "<group>"; };
 		D23C3BD92676BC9F0017BC5B /* AppSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSidebar.swift; sourceTree = "<group>"; };
 		D23C3BE22676D61D0017BC5B /* PurchasesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesList.swift; sourceTree = "<group>"; };
 		D23C3BE52676D6640017BC5B /* AccessoriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesList.swift; sourceTree = "<group>"; };
@@ -447,6 +453,7 @@
 				D2C4962B2675F5160008AFB8 /* Model+Disposition.swift */,
 				D2E30816267EE77000577B27 /* StorableImage.swift */,
 				D2C4961F2675EAE90008AFB8 /* Model+Image.swift */,
+				D22B733026E2D30E00DDE47F /* Model+Date.swift */,
 				D29A205126DB085C00FE8DD5 /* Accessory+Catalog.swift */,
 				D2E307DF267D794C00577B27 /* Accessory+Image.swift */,
 				D2C496342675F8110008AFB8 /* Train+Members.swift */,
@@ -456,6 +463,7 @@
 				D278B1C326954C9700CD4609 /* DecoderType+Stock.swift */,
 				D278B1C62695506300CD4609 /* DecoderType+WillSave.swift */,
 				D278B1C026954C9000CD4609 /* Decoder+Stock.swift */,
+				D22B733326E2D44E00DDE47F /* Decoder+Date.swift */,
 				D2C4963A2675F9BA0008AFB8 /* Tests */,
 			);
 			path = Model;
@@ -727,6 +735,7 @@
 				D23C3BD42676B8B70017BC5B /* Model+Image.swift in Sources */,
 				D2C4960C267585920008AFB8 /* ModelsList.swift in Sources */,
 				D29E1EE0269565AC00F13F13 /* DecoderTypeGroupingPicker.swift in Sources */,
+				D22B733126E2D30E00DDE47F /* Model+Date.swift in Sources */,
 				D29A209726DD6F8600FE8DD5 /* ModelDetail.swift in Sources */,
 				D23C3BE32676D61D0017BC5B /* PurchasesList.swift in Sources */,
 				D2E3080E267EDEC400577B27 /* DecoderType+Image.swift in Sources */,
@@ -764,6 +773,7 @@
 				D2C496132675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */,
 				D2C4961926758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
 				D278B1C426954C9700CD4609 /* DecoderType+Stock.swift in Sources */,
+				D22B733426E2D44E00DDE47F /* Decoder+Date.swift in Sources */,
 				D2E307E9267D7C0100577B27 /* AccessoryCell.swift in Sources */,
 				D29F5C8E267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
 				D29A205226DB085C00FE8DD5 /* Accessory+Catalog.swift in Sources */,
@@ -786,6 +796,7 @@
 				D23C3BD52676B8B80017BC5B /* Model+Image.swift in Sources */,
 				D2C4960D267585920008AFB8 /* ModelsList.swift in Sources */,
 				D29E1EE1269565AC00F13F13 /* DecoderTypeGroupingPicker.swift in Sources */,
+				D22B733226E2D30E00DDE47F /* Model+Date.swift in Sources */,
 				D29A209826DD6F8600FE8DD5 /* ModelDetail.swift in Sources */,
 				D23C3BE42676D61D0017BC5B /* PurchasesList.swift in Sources */,
 				D29F5CBC2675771D00EC2F85 /* SecureDateComponentsTransformer.swift in Sources */,
@@ -823,6 +834,7 @@
 				D2C496142675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */,
 				D2C4961A26758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
 				D278B1C526954C9700CD4609 /* DecoderType+Stock.swift in Sources */,
+				D22B733526E2D44E00DDE47F /* Decoder+Date.swift in Sources */,
 				D29F5C8F267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
 				D2E307EA267D7C0100577B27 /* AccessoryCell.swift in Sources */,
 				D29A205326DB085C00FE8DD5 /* Accessory+Catalog.swift in Sources */,
