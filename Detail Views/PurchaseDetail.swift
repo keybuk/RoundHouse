@@ -15,7 +15,7 @@ struct PurchaseDetail: View {
 
     var body: some View {
         List {
-            Section(header: Text("Catalog")) {
+            Section("Catalog") {
                 if !purchase.manufacturer!.isEmpty {
                     PurchaseDetailRow(title: "Manufacturer") {
                         Text(purchase.manufacturer!)
@@ -48,27 +48,31 @@ struct PurchaseDetail: View {
                 }
             }
             
-            Section(header: Text("Purchase")) {
+            Section("Purchase") {
                 if let date = purchase.date {
                     PurchaseDetailRow(title: "Date") {
                         Text(date, format: dateFormat)
                     }
                 }
+                
                 if !purchase.store!.isEmpty {
                     PurchaseDetailRow(title: "Store") {
                         Text(purchase.store!)
                     }
                 }
+                
                 if let price = purchase.price {
                     PurchaseDetailRow(title: "Price") {
                         Text(price, format: .currency(code: purchase.priceCurrencyCode!))
                     }
                 }
+                
                 if let condition = purchase.condition {
                     PurchaseDetailRow(title: "Condition") {
                         Text(condition.description)
                     }
                 }
+                
                 if let valuation = purchase.valuation {
                     PurchaseDetailRow(title: "Valuation") {
                         Text(valuation, format: .currency(code: purchase.valuationCurrencyCode!))
