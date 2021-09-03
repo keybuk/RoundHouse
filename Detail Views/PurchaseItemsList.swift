@@ -12,7 +12,7 @@ struct PurchaseItemsList: View {
 
     var body: some View {
         List {
-            PurchaseItems(purchase: purchase, alwaysShowHeaders: false)
+            PurchaseItems(purchase: purchase)
         }
         .listStyle(.plain)
     }

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PurchaseItems: View {
     @ObservedObject var purchase: Purchase
-    var alwaysShowHeaders: Bool
 
     @FetchRequest
     var models: FetchedResults<Model>
@@ -17,9 +16,8 @@ struct PurchaseItems: View {
     @FetchRequest
     var accessories: FetchedResults<Accessory>
 
-    init(purchase: Purchase, alwaysShowHeaders: Bool = true) {
+    init(purchase: Purchase) {
         self.purchase = purchase
-        self.alwaysShowHeaders = alwaysShowHeaders
         _models = FetchRequest(
             sortDescriptors: [
                 SortDescriptor(\Model.index)
@@ -36,7 +34,7 @@ struct PurchaseItems: View {
 
     var body: some View {
         if models.count > 0 {
-            Section(header: alwaysShowHeaders || accessories.count > 0 ? Text("Models") : nil) {
+            Section("Models") {
                 ForEach(models) { model in
                     NavigationLink {
                         ModelView(model: model)
@@ -48,7 +46,7 @@ struct PurchaseItems: View {
         }
 
         if accessories.count > 0 {
-            Section(header: alwaysShowHeaders || models.count > 0 ? Text("Accessories") : nil) {
+            Section("Accessories") {
                 ForEach(accessories) { accessory in
                     AccessoryCell(accessory: accessory)
                 }
