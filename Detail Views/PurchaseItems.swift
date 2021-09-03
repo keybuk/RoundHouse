@@ -37,7 +37,7 @@ struct PurchaseItems: View {
             Section("Models") {
                 ForEach(models) { model in
                     NavigationLink {
-                        ModelView(model: model)
+                        ModelView(model: model, showPurchase: false)
                     } label: {
                         ModelCell(model: model, showClass: true)
                     }

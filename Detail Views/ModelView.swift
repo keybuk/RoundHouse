@@ -10,9 +10,10 @@ import SwiftUI
 /// ModelView is the navigation target for showing details on a selected model.
 struct ModelView: View {
     @ObservedObject var model: Model
-
+    var showPurchase: Bool = true
+    
     var body: some View {
-        ModelDetail(model: model)
+        ModelDetail(model: model, showPurchase: showPurchase)
             .navigationTitle(model.classTitle)
     }
 }
