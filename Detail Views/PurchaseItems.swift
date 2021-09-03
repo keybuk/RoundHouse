@@ -48,7 +48,11 @@ struct PurchaseItems: View {
         if accessories.count > 0 {
             Section("Accessories") {
                 ForEach(accessories) { accessory in
-                    AccessoryCell(accessory: accessory)
+                    NavigationLink {
+                        AccessoryView(accessory: accessory, showPurchase: false)
+                    } label: {
+                        AccessoryCell(accessory: accessory)
+                    }
                 }
             }
         }

@@ -29,7 +29,11 @@ struct AccessoriesByCatalog: View {
         ForEach(accessories) { section in
             Section(header: Text(section.id!)) {
                 ForEach(section) { accessory in
-                    AccessoryCell(accessory: accessory)
+                    NavigationLink {
+                        AccessoryView(accessory: accessory)
+                    } label: {
+                        AccessoryCell(accessory: accessory)
+                    }
                 }
             }
         }
