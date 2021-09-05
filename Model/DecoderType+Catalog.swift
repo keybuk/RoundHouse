@@ -1,6 +1,6 @@
 //
 //  DecoderType+Catalog.swift
-//  DecoderType+Catalog
+//  RoundHouse
 //
 //  Created by Scott James Remnant on 8/27/21.
 //
