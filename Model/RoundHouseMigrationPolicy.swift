@@ -79,33 +79,6 @@ final class RoundHouseMigrationPolicy: NSEntityMigrationPolicy {
     override func createDestinationInstances(forSource sInstance: NSManagedObject, in mapping: NSEntityMapping, manager: NSMigrationManager) throws {
         try super.createDestinationInstances(forSource: sInstance, in: mapping, manager: manager)
 
-        // Migrate "socket" string field of Model and DecoderType to a new Socket table.
-        if mapping.name == "ModelToModel" || mapping.name == "DecoderTypeToDecoderType" {
-            guard let dInstance = manager.destinationInstances(forEntityMappingName: mapping.name, sourceInstances: [sInstance]).first else { preconditionFailure("Missing destination instance") }
-            if let title = sInstance.value(forKey: "socket") as! String?, !title.isEmpty {
-                let pinCount = title.split(whereSeparator: { !$0.isNumber })
-                    .first
-                    .flatMap { Int16($0) }
-                let numberOfPins = pinCount ?? 0
-
-                var userInfo = manager.userInfo ?? ["sockets": [String: NSManagedObject]()]
-                var sockets = userInfo["sockets"] as! [String: NSManagedObject]
-
-                var socketInstance = sockets[title]
-                if socketInstance == nil {
-                    socketInstance = NSEntityDescription.insertNewObject(forEntityName: Socket.entity().name!, into: manager.destinationContext)
-                    socketInstance!.setValue(title, forKey: "title")
-                    socketInstance!.setValue(numberOfPins, forKey: "numberOfPins")
-
-                    sockets[title] = socketInstance!
-                    userInfo["sockets"] = sockets
-                    manager.userInfo = userInfo
-                }
-
-                dInstance.setValue(socketInstance, forKey: "socket")
-            }
-        }
-        
         // Populated "willSave" fields".
         if mapping.name == "PurchaseToPurchase" {
             guard let dInstance = manager.destinationInstances(forEntityMappingName: mapping.name, sourceInstances: [sInstance]).first else { preconditionFailure("Missing destination instance") }

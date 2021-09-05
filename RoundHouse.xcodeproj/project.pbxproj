@@ -105,6 +105,8 @@
 		D29F5CBC2675771D00EC2F85 /* SecureDateComponentsTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5CBA2675771D00EC2F85 /* SecureDateComponentsTransformer.swift */; };
 		D29F5CBE267578F300EC2F85 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5CBD267578F300EC2F85 /* PreviewData.swift */; };
 		D29F5CBF267578F300EC2F85 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5CBD267578F300EC2F85 /* PreviewData.swift */; };
+		D2B97BE726E56B1A00CA6954 /* SocketMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B97BE626E56B1A00CA6954 /* SocketMigrationPolicy.swift */; };
+		D2B97BE826E56B1A00CA6954 /* SocketMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B97BE626E56B1A00CA6954 /* SocketMigrationPolicy.swift */; };
 		D2C4960026757FBB0008AFB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C495FF26757FBB0008AFB8 /* Preview Assets.xcassets */; };
 		D2C4960126757FBB0008AFB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C495FF26757FBB0008AFB8 /* Preview Assets.xcassets */; };
 		D2C49603267581070008AFB8 /* BoxedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C49602267581070008AFB8 /* BoxedImage.swift */; };
@@ -261,6 +263,7 @@
 		D29F5CB32675743700EC2F85 /* EngineShed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EngineShed.xcdatamodel; sourceTree = "<group>"; };
 		D29F5CBA2675771D00EC2F85 /* SecureDateComponentsTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureDateComponentsTransformer.swift; sourceTree = "<group>"; };
 		D29F5CBD267578F300EC2F85 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		D2B97BE626E56B1A00CA6954 /* SocketMigrationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketMigrationPolicy.swift; sourceTree = "<group>"; };
 		D2C495FF26757FBB0008AFB8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D2C49602267581070008AFB8 /* BoxedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxedImage.swift; sourceTree = "<group>"; };
 		D2C496052675810D0008AFB8 /* ModelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelCell.swift; sourceTree = "<group>"; };
@@ -470,6 +473,7 @@
 				D29F5CB12675743700EC2F85 /* RoundHouse.xcdatamodeld */,
 				D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */,
 				D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */,
+				D2B97BE626E56B1A00CA6954 /* SocketMigrationPolicy.swift */,
 				D29F5CBA2675771D00EC2F85 /* SecureDateComponentsTransformer.swift */,
 				D29F5C6B267571ED00EC2F85 /* PersistenceController.swift */,
 				D278B1A726953E6900CD4609 /* Purchase+Catalog.swift */,
@@ -819,6 +823,7 @@
 				D278B1CA2695561000CD4609 /* PurchaseGroupingPicker.swift in Sources */,
 				D2C4962F2675F7250008AFB8 /* Purchase+Currency.swift in Sources */,
 				D23C3BE92676D67A0017BC5B /* DecoderTypesList.swift in Sources */,
+				D2B97BE726E56B1A00CA6954 /* SocketMigrationPolicy.swift in Sources */,
 				D22B734926E5418900DDE47F /* DecoderView.swift in Sources */,
 				D22B734026E2DB1100DDE47F /* DecoderTypeDetail.swift in Sources */,
 				D2C496232675F46E0008AFB8 /* Purchase+Condition.swift in Sources */,
@@ -888,6 +893,7 @@
 				D278B1CB2695561000CD4609 /* PurchaseGroupingPicker.swift in Sources */,
 				D2C496302675F7250008AFB8 /* Purchase+Currency.swift in Sources */,
 				D23C3BEA2676D67A0017BC5B /* DecoderTypesList.swift in Sources */,
+				D2B97BE826E56B1A00CA6954 /* SocketMigrationPolicy.swift in Sources */,
 				D22B734A26E5418900DDE47F /* DecoderView.swift in Sources */,
 				D22B734126E2DB1100DDE47F /* DecoderTypeDetail.swift in Sources */,
 				D2C496242675F46E0008AFB8 /* Purchase+Condition.swift in Sources */,
