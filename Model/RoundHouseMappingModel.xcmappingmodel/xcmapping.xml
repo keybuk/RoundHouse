@@ -48,7 +48,7 @@
     </databaseInfo>
     <object type="XDDEVENTITYMAPPING" id="z102">
         <attribute name="sourcefilterpredicatestring" type="string">classificationRawValue != 7</attribute>
-        <attribute name="migrationpolicyclassname" type="string">RoundHouse.RoundHouseMigrationPolicy</attribute>
+        <attribute name="migrationpolicyclassname" type="string">RoundHouse.ModelMigrationPolicy</attribute>
         <attribute name="sourcename" type="string">Model</attribute>
         <attribute name="mappingtypename" type="string">Undefined</attribute>
         <attribute name="mappingnumber" type="int16">1</attribute>
@@ -107,7 +107,7 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z102"></relationship>
     </object>
     <object type="XDDEVENTITYMAPPING" id="z112">
-        <attribute name="migrationpolicyclassname" type="string">RoundHouse.RoundHouseMigrationPolicy</attribute>
+        <attribute name="migrationpolicyclassname" type="string">RoundHouse.DefaultMigrationPolicy</attribute>
         <attribute name="sourcename" type="string">Train</attribute>
         <attribute name="mappingtypename" type="string">Undefined</attribute>
         <attribute name="mappingnumber" type="int16">10</attribute>
@@ -164,7 +164,7 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z120"></relationship>
     </object>
     <object type="XDDEVENTITYMAPPING" id="z119">
-        <attribute name="migrationpolicyclassname" type="string">RoundHouse.RoundHouseMigrationPolicy</attribute>
+        <attribute name="migrationpolicyclassname" type="string">RoundHouse.DefaultMigrationPolicy</attribute>
         <attribute name="sourcename" type="string">TrainMember</attribute>
         <attribute name="mappingtypename" type="string">Undefined</attribute>
         <attribute name="mappingnumber" type="int16">9</attribute>
@@ -175,7 +175,7 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
         <relationship name="relationshipmappings" type="0/0" destination="XDDEVRELATIONSHIPMAPPING" idrefs="z170 z205"></relationship>
     </object>
     <object type="XDDEVENTITYMAPPING" id="z120">
-        <attribute name="migrationpolicyclassname" type="string">RoundHouse.RoundHouseMigrationPolicy</attribute>
+        <attribute name="migrationpolicyclassname" type="string">RoundHouse.DefaultMigrationPolicy</attribute>
         <attribute name="sourcename" type="string">Decoder</attribute>
         <attribute name="mappingtypename" type="string">Undefined</attribute>
         <attribute name="mappingnumber" type="int16">6</attribute>
@@ -677,7 +677,7 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z203"></relationship>
     </object>
     <object type="XDDEVENTITYMAPPING" id="z203">
-        <attribute name="migrationpolicyclassname" type="string">RoundHouse.RoundHouseMigrationPolicy</attribute>
+        <attribute name="migrationpolicyclassname" type="string">RoundHouse.DecoderTypeMigrationPolicy</attribute>
         <attribute name="sourcename" type="string">DecoderType</attribute>
         <attribute name="mappingtypename" type="string">Undefined</attribute>
         <attribute name="mappingnumber" type="int16">7</attribute>
@@ -704,7 +704,7 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z207"></relationship>
     </object>
     <object type="XDDEVENTITYMAPPING" id="z207">
-        <attribute name="migrationpolicyclassname" type="string">RoundHouse.RoundHouseMigrationPolicy</attribute>
+        <attribute name="migrationpolicyclassname" type="string">RoundHouse.PurchaseMigrationPolicy</attribute>
         <attribute name="sourcename" type="string">Purchase</attribute>
         <attribute name="mappingtypename" type="string">Undefined</attribute>
         <attribute name="mappingnumber" type="int16">5</attribute>
@@ -774,7 +774,7 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
     </object>
     <object type="XDDEVENTITYMAPPING" id="z218">
         <attribute name="sourcefilterpredicatestring" type="string">classificationRawValue == 7</attribute>
-        <attribute name="migrationpolicyclassname" type="string">RoundHouse.RoundHouseMigrationPolicy</attribute>
+        <attribute name="migrationpolicyclassname" type="string">RoundHouse.ModelMigrationPolicy</attribute>
         <attribute name="destinationname" type="string">Accessory</attribute>
         <attribute name="sourcename" type="string">Model</attribute>
         <attribute name="name" type="string">ModelToAccessory</attribute>
@@ -867,7 +867,7 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
         <attribute name="sourcename" type="string">Model</attribute>
         <attribute name="sourcefilterpredicatestring" type="string">speaker != nil AND speaker != ""</attribute>
         <attribute name="name" type="string">ModelToSpeaker</attribute>
-        <attribute name="migrationpolicyclassname" type="string">RoundHouse.RoundHouseMigrationPolicy</attribute>
+        <attribute name="migrationpolicyclassname" type="string"></attribute>
         <attribute name="mappingtypename" type="string">Undefined</attribute>
         <attribute name="mappingnumber" type="int16">4</attribute>
         <attribute name="destinationname" type="string">Speaker</attribute>

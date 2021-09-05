@@ -107,6 +107,12 @@
 		D29F5CBF267578F300EC2F85 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5CBD267578F300EC2F85 /* PreviewData.swift */; };
 		D2B97BE726E56B1A00CA6954 /* SocketMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B97BE626E56B1A00CA6954 /* SocketMigrationPolicy.swift */; };
 		D2B97BE826E56B1A00CA6954 /* SocketMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B97BE626E56B1A00CA6954 /* SocketMigrationPolicy.swift */; };
+		D2B97BEB26E5726E00CA6954 /* ModelMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B97BEA26E5726E00CA6954 /* ModelMigrationPolicy.swift */; };
+		D2B97BEC26E5726E00CA6954 /* ModelMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B97BEA26E5726E00CA6954 /* ModelMigrationPolicy.swift */; };
+		D2B97BEE26E572CF00CA6954 /* PurchaseMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B97BED26E572CF00CA6954 /* PurchaseMigrationPolicy.swift */; };
+		D2B97BEF26E572CF00CA6954 /* PurchaseMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B97BED26E572CF00CA6954 /* PurchaseMigrationPolicy.swift */; };
+		D2B97BF126E5731600CA6954 /* DecoderTypeMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B97BF026E5731600CA6954 /* DecoderTypeMigrationPolicy.swift */; };
+		D2B97BF226E5731600CA6954 /* DecoderTypeMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B97BF026E5731600CA6954 /* DecoderTypeMigrationPolicy.swift */; };
 		D2C4960026757FBB0008AFB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C495FF26757FBB0008AFB8 /* Preview Assets.xcassets */; };
 		D2C4960126757FBB0008AFB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C495FF26757FBB0008AFB8 /* Preview Assets.xcassets */; };
 		D2C49603267581070008AFB8 /* BoxedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C49602267581070008AFB8 /* BoxedImage.swift */; };
@@ -115,8 +121,8 @@
 		D2C496072675810D0008AFB8 /* ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496052675810D0008AFB8 /* ModelCell.swift */; };
 		D2C4960C267585920008AFB8 /* ModelsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4960B267585920008AFB8 /* ModelsList.swift */; };
 		D2C4960D267585920008AFB8 /* ModelsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4960B267585920008AFB8 /* ModelsList.swift */; };
-		D2C496132675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */; };
-		D2C496142675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */; };
+		D2C496132675885E0008AFB8 /* DefaultMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496122675885E0008AFB8 /* DefaultMigrationPolicy.swift */; };
+		D2C496142675885E0008AFB8 /* DefaultMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496122675885E0008AFB8 /* DefaultMigrationPolicy.swift */; };
 		D2C4961926758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */; };
 		D2C4961A26758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */; };
 		D2C496232675F46E0008AFB8 /* Purchase+Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C496222675F46E0008AFB8 /* Purchase+Condition.swift */; };
@@ -264,12 +270,15 @@
 		D29F5CBA2675771D00EC2F85 /* SecureDateComponentsTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureDateComponentsTransformer.swift; sourceTree = "<group>"; };
 		D29F5CBD267578F300EC2F85 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		D2B97BE626E56B1A00CA6954 /* SocketMigrationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketMigrationPolicy.swift; sourceTree = "<group>"; };
+		D2B97BEA26E5726E00CA6954 /* ModelMigrationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMigrationPolicy.swift; sourceTree = "<group>"; };
+		D2B97BED26E572CF00CA6954 /* PurchaseMigrationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseMigrationPolicy.swift; sourceTree = "<group>"; };
+		D2B97BF026E5731600CA6954 /* DecoderTypeMigrationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTypeMigrationPolicy.swift; sourceTree = "<group>"; };
 		D2C495FF26757FBB0008AFB8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D2C49602267581070008AFB8 /* BoxedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxedImage.swift; sourceTree = "<group>"; };
 		D2C496052675810D0008AFB8 /* ModelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelCell.swift; sourceTree = "<group>"; };
 		D2C4960B267585920008AFB8 /* ModelsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsList.swift; sourceTree = "<group>"; };
 		D2C4960E267586A60008AFB8 /* RoundHouse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoundHouse.xcdatamodel; sourceTree = "<group>"; };
-		D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseMigrationPolicy.swift; sourceTree = "<group>"; };
+		D2C496122675885E0008AFB8 /* DefaultMigrationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMigrationPolicy.swift; sourceTree = "<group>"; };
 		D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = RoundHouseMappingModel.xcmappingmodel; sourceTree = "<group>"; };
 		D2C4961F2675EAE90008AFB8 /* Model+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+Image.swift"; sourceTree = "<group>"; };
 		D2C496222675F46E0008AFB8 /* Purchase+Condition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Purchase+Condition.swift"; sourceTree = "<group>"; };
@@ -472,8 +481,7 @@
 			children = (
 				D29F5CB12675743700EC2F85 /* RoundHouse.xcdatamodeld */,
 				D2C4961826758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel */,
-				D2C496122675885E0008AFB8 /* RoundHouseMigrationPolicy.swift */,
-				D2B97BE626E56B1A00CA6954 /* SocketMigrationPolicy.swift */,
+				D2B97BE926E5725800CA6954 /* Migration */,
 				D29F5CBA2675771D00EC2F85 /* SecureDateComponentsTransformer.swift */,
 				D29F5C6B267571ED00EC2F85 /* PersistenceController.swift */,
 				D278B1A726953E6900CD4609 /* Purchase+Catalog.swift */,
@@ -511,6 +519,18 @@
 				D2C495FF26757FBB0008AFB8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D2B97BE926E5725800CA6954 /* Migration */ = {
+			isa = PBXGroup;
+			children = (
+				D2C496122675885E0008AFB8 /* DefaultMigrationPolicy.swift */,
+				D2B97BEA26E5726E00CA6954 /* ModelMigrationPolicy.swift */,
+				D2B97BED26E572CF00CA6954 /* PurchaseMigrationPolicy.swift */,
+				D2B97BF026E5731600CA6954 /* DecoderTypeMigrationPolicy.swift */,
+				D2B97BE626E56B1A00CA6954 /* SocketMigrationPolicy.swift */,
+			);
+			path = Migration;
 			sourceTree = "<group>";
 		};
 		D2C4963A2675F9BA0008AFB8 /* Tests */ = {
@@ -767,6 +787,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2B97BEB26E5726E00CA6954 /* ModelMigrationPolicy.swift in Sources */,
 				D29F5CB82675743800EC2F85 /* RoundHouse.xcdatamodeld in Sources */,
 				D23C3BD42676B8B70017BC5B /* Model+Image.swift in Sources */,
 				D2C4960C267585920008AFB8 /* ModelsList.swift in Sources */,
@@ -782,6 +803,7 @@
 				D290486326E2C1E6007F2980 /* PurchaseItems.swift in Sources */,
 				D2E30820267FD50E00577B27 /* ModelGroupingPicker.swift in Sources */,
 				D29F5CBB2675771D00EC2F85 /* SecureDateComponentsTransformer.swift in Sources */,
+				D2B97BEE26E572CF00CA6954 /* PurchaseMigrationPolicy.swift in Sources */,
 				D278B1A826953E6900CD4609 /* Purchase+Catalog.swift in Sources */,
 				D2C4962C2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
 				D2D75D0D26D9BD0400B473DF /* DecoderType+Catalog.swift in Sources */,
@@ -809,9 +831,10 @@
 				D29A204F26DB003F00FE8DD5 /* OptionalText.swift in Sources */,
 				D290486026E2B7C6007F2980 /* PurchaseView.swift in Sources */,
 				D2C496352675F8110008AFB8 /* Train+Members.swift in Sources */,
+				D2B97BF126E5731600CA6954 /* DecoderTypeMigrationPolicy.swift in Sources */,
 				D29F5C92267571EF00EC2F85 /* PersistenceController.swift in Sources */,
 				D2C496322675F7A80008AFB8 /* Purchase+Models.swift in Sources */,
-				D2C496132675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */,
+				D2C496132675885E0008AFB8 /* DefaultMigrationPolicy.swift in Sources */,
 				D2C4961926758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
 				D278B1C426954C9700CD4609 /* DecoderType+Stock.swift in Sources */,
 				D22B734626E2DEFF00DDE47F /* DecoderCell.swift in Sources */,
@@ -837,6 +860,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2B97BEC26E5726E00CA6954 /* ModelMigrationPolicy.swift in Sources */,
 				D29F5CB92675743800EC2F85 /* RoundHouse.xcdatamodeld in Sources */,
 				D23C3BD52676B8B80017BC5B /* Model+Image.swift in Sources */,
 				D2C4960D267585920008AFB8 /* ModelsList.swift in Sources */,
@@ -852,6 +876,7 @@
 				D290486426E2C1E6007F2980 /* PurchaseItems.swift in Sources */,
 				D2E30821267FD50E00577B27 /* ModelGroupingPicker.swift in Sources */,
 				D2E3080F267EDEC400577B27 /* DecoderType+Image.swift in Sources */,
+				D2B97BEF26E572CF00CA6954 /* PurchaseMigrationPolicy.swift in Sources */,
 				D278B1A926953E6900CD4609 /* Purchase+Catalog.swift in Sources */,
 				D2C4962D2675F5160008AFB8 /* Model+Disposition.swift in Sources */,
 				D2D75D0E26D9BD0400B473DF /* DecoderType+Catalog.swift in Sources */,
@@ -879,9 +904,10 @@
 				D29A205026DB003F00FE8DD5 /* OptionalText.swift in Sources */,
 				D290486126E2B7C6007F2980 /* PurchaseView.swift in Sources */,
 				D2E30806267EDAF700577B27 /* Purchase+Date.swift in Sources */,
+				D2B97BF226E5731600CA6954 /* DecoderTypeMigrationPolicy.swift in Sources */,
 				D29F5C93267571EF00EC2F85 /* PersistenceController.swift in Sources */,
 				D2C496332675F7A80008AFB8 /* Purchase+Models.swift in Sources */,
-				D2C496142675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */,
+				D2C496142675885E0008AFB8 /* DefaultMigrationPolicy.swift in Sources */,
 				D2C4961A26758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
 				D278B1C526954C9700CD4609 /* DecoderType+Stock.swift in Sources */,
 				D22B734726E2DEFF00DDE47F /* DecoderCell.swift in Sources */,
