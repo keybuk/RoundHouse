@@ -548,7 +548,6 @@ class RoundHouseMigrationTests: XCTestCase {
         sModel.setValue(Model.Era.currentEra.rawValue, forKey: "eraRawValue")
         sModel.setValue(Model.Disposition.collectorItem.rawValue, forKey: "dispositionRawValue")
         sModel.setValue("5-pole", forKey: "motor")
-        sModel.setValue("2W Bass Reflex", forKey: "speaker")
         sModel.setValue(DateComponents(year: 2020, month: 6, day: 17), forKey: "lastOil")
         sModel.setValue(DateComponents(year: 2020, month: 6, day: 19), forKey: "lastRun")
         sModel.setValue("Test", forKey: "notes")
@@ -588,8 +587,6 @@ class RoundHouseMigrationTests: XCTestCase {
                        "dispositionRawValue not copied from source Model")
         XCTAssertEqual(dModel.value(forKey: "motor") as! String?, "5-pole",
                        "motor not copied from source Model")
-        XCTAssertEqual(dModel.value(forKey: "speaker") as! String?, "2W Bass Reflex",
-                       "speaker not copied from source Model")
         XCTAssertEqual(dModel.value(forKey: "lastOilDateComponents") as! DateComponents?,
                        DateComponents(year: 2020, month: 6, day: 17),
                        "lastOilDateComponents not copied from source Model")
@@ -633,8 +630,6 @@ class RoundHouseMigrationTests: XCTestCase {
                        "details not converted to empty string")
         XCTAssertEqual(dModel.value(forKey: "motor") as! String?, "",
                        "motor not converted to empty string")
-        XCTAssertEqual(dModel.value(forKey: "speaker") as! String?, "",
-                       "speaker not converted to empty string")
         XCTAssertEqual(dModel.value(forKey: "notes") as! String?, "",
                        "notes not converted to empty string")
     }
@@ -1839,5 +1834,120 @@ class RoundHouseMigrationTests: XCTestCase {
                        "title not copied from source DecoderType")
         XCTAssertEqual(dSocket.value(forKey: "numberOfPins") as! Int16, 22,
                        "numberOfPins not correctly calcluated")
+    }
+    
+    // MARK: Speaker
+
+    /// Check that a Speaker entity is created from a Model speaker.
+    func testModelSpeaker() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+
+        let sModel = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel.setValue(sPurchase, forKey: "purchase")
+        sModel.setValue(1, forKey: "classificationRawValue")
+        sModel.setValue("2W Bass Reflex", forKey: "speaker")
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dModelsFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Model")
+        let dModels = try managedObjectContext.fetch(dModelsFetchRequest)
+        XCTAssertEqual(dModels.count, 1, "Expected models after migration")
+        
+        let dSpeakers = try XCTUnwrap(dModels[0].value(forKey: "speakers") as! Set<NSManagedObject>?)
+        XCTAssertEqual(dSpeakers.count, 1, "Expected speakers in purchase")
+
+//        let dSpeaker = dSpeakers[dSpeakers.startIndex]
+//        XCTAssertEqual(dSpeaker.value(forKey: "title") as! String?, "2W Bass Reflex",
+//                       "title not copied from source Model")
+        
+        // Sanity check record counts.
+        let dSpeakersFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Speaker")
+        let dAllSpeakers = try managedObjectContext.fetch(dSpeakersFetchRequest)
+        XCTAssertEqual(dAllSpeakers.count, dSpeakers.count, "Mis-matched speaker fitting count after migration")
+    }
+
+    /// Check that SpeakerFittings are migrated from Model to Speaker.
+    func testModelSpeakerFittings() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+
+        let sModel = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel.setValue(sPurchase, forKey: "purchase")
+        sModel.setValue(1, forKey: "classificationRawValue")
+        sModel.setValue("2W Bass Reflex", forKey: "speaker")
+
+        let sFitting1 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["SpeakerFitting"]!,
+                                     insertInto: managedObjectContext)
+        sFitting1.setValue(sModel, forKey: "model")
+        sFitting1.setValue("PCB Soldered", forKey: "title")
+
+        let sFitting2 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["SpeakerFitting"]!,
+                                     insertInto: managedObjectContext)
+        sFitting2.setValue(sModel, forKey: "model")
+        sFitting2.setValue("Enclosed", forKey: "title")
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dModelsFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Model")
+        let dModels = try managedObjectContext.fetch(dModelsFetchRequest)
+        XCTAssertEqual(dModels.count, 1, "Expected models after migration")
+        
+        let dSpeakers = try XCTUnwrap(dModels[0].value(forKey: "speakers") as! Set<NSManagedObject>?)
+        XCTAssertEqual(dSpeakers.count, 1, "Expected speakers in purchase")
+
+        let dSpeaker = dSpeakers[dSpeakers.startIndex]
+        let dSpeakerFittings = try XCTUnwrap(dSpeaker.value(forKey: "fittings") as! Set<NSManagedObject>?)
+        XCTAssertEqual(dSpeakerFittings.count, 2, "Expected fittings in speaker")
+
+        let sortedSpeakerFittings = dSpeakerFittings.sorted {
+            ($0.value(forKey: "title") as! String) < ($1.value(forKey: "title") as! String)
+        }
+
+        XCTAssertEqual(sortedSpeakerFittings[0].value(forKey: "title") as! String?, "Enclosed",
+                       "title not copied from source Model")
+        XCTAssertEqual(sortedSpeakerFittings[1].value(forKey: "title") as! String?, "PCB Soldered",
+                       "title not copied from source Model")
+        
+        // Sanity check none left over
+        let dSpeakerFittingsFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "SpeakerFitting")
+        let dAllSpeakerFittings = try managedObjectContext.fetch(dSpeakerFittingsFetchRequest)
+        XCTAssertEqual(dAllSpeakerFittings.count, dSpeakerFittings.count, "Mis-matched speaker fitting count after migration")
+    }
+
+    /// Check that a Speaker entity is not created when theModel speaker is empty.
+    func testModelSpeakerEmpty() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+
+        let sModel = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel.setValue(sPurchase, forKey: "purchase")
+        sModel.setValue(1, forKey: "classificationRawValue")
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dModelsFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Model")
+        let dModels = try managedObjectContext.fetch(dModelsFetchRequest)
+        XCTAssertEqual(dModels.count, 1, "Expected models after migration")
+        
+        let dSpeakers = try XCTUnwrap(dModels[0].value(forKey: "speakers") as! Set<NSManagedObject>?)
+        XCTAssertEqual(dSpeakers.count, 0, "Unexpected speakers in purchase")
+        
+        // Sanity check record counts.
+        let dSpeakersFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Speaker")
+        let dAllSpeakers = try managedObjectContext.fetch(dSpeakersFetchRequest)
+        XCTAssertEqual(dAllSpeakers.count, dSpeakers.count, "Mis-matched speaker fitting count after migration")
     }
 }
