@@ -55,8 +55,8 @@
         <attribute name="destinationname" type="string">Model</attribute>
         <attribute name="autogenerateexpression" type="bool">1</attribute>
         <relationship name="mappingmodel" type="1/1" destination="XDDEVMAPPINGMODEL" idrefs="z113"></relationship>
-        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z134 z171 z185 z157 z186 z116 z188 z195 z204 z103 z187 z130 z141 z168 z200 z198"></relationship>
-        <relationship name="relationshipmappings" type="0/0" destination="XDDEVRELATIONSHIPMAPPING" idrefs="z111 z145 z215 z194 z121 z166 z237 z127 z199 z184"></relationship>
+        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z168 z171 z185 z204 z186 z198 z188 z195 z130 z200 z103 z187 z157 z116 z134 z141"></relationship>
+        <relationship name="relationshipmappings" type="0/0" destination="XDDEVRELATIONSHIPMAPPING" idrefs="z166 z145 z121 z194 z237 z184 z111 z215 z199 z127"></relationship>
     </object>
     <object type="XDDEVATTRIBUTEMAPPING" id="z103">
         <attribute name="valueexpressiondata" type="binary">YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8Q
@@ -114,7 +114,7 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
         <attribute name="destinationname" type="string">Train</attribute>
         <attribute name="autogenerateexpression" type="bool">1</attribute>
         <relationship name="mappingmodel" type="1/1" destination="XDDEVMAPPINGMODEL" idrefs="z113"></relationship>
-        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z124 z158 z178 z155 z175 z148"></relationship>
+        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z175 z148 z158 z155 z124 z178"></relationship>
         <relationship name="relationshipmappings" type="0/0" destination="XDDEVRELATIONSHIPMAPPING" idrefs="z167"></relationship>
     </object>
     <object type="XDDEVMAPPINGMODEL" id="z113">
@@ -171,7 +171,7 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
         <attribute name="destinationname" type="string">TrainMember</attribute>
         <attribute name="autogenerateexpression" type="bool">1</attribute>
         <relationship name="mappingmodel" type="1/1" destination="XDDEVMAPPINGMODEL" idrefs="z113"></relationship>
-        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z212 z191 z135 z142 z140 z151"></relationship>
+        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z151 z142 z140 z135 z212 z191"></relationship>
         <relationship name="relationshipmappings" type="0/0" destination="XDDEVRELATIONSHIPMAPPING" idrefs="z170 z205"></relationship>
     </object>
     <object type="XDDEVENTITYMAPPING" id="z120">
@@ -182,8 +182,8 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
         <attribute name="destinationname" type="string">Decoder</attribute>
         <attribute name="autogenerateexpression" type="bool">1</attribute>
         <relationship name="mappingmodel" type="1/1" destination="XDDEVMAPPINGMODEL" idrefs="z113"></relationship>
-        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z160 z109 z118 z105 z153 z163 z164 z211"></relationship>
-        <relationship name="relationshipmappings" type="0/0" destination="XDDEVRELATIONSHIPMAPPING" idrefs="z147 z179"></relationship>
+        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z109 z164 z105 z211 z118 z153 z160 z163"></relationship>
+        <relationship name="relationshipmappings" type="0/0" destination="XDDEVRELATIONSHIPMAPPING" idrefs="z179 z147"></relationship>
     </object>
     <object type="XDDEVRELATIONSHIPMAPPING" id="z121">
         <attribute name="autogenerateexpression" type="bool">1</attribute>
@@ -684,7 +684,7 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
         <attribute name="destinationname" type="string">DecoderType</attribute>
         <attribute name="autogenerateexpression" type="bool">1</attribute>
         <relationship name="mappingmodel" type="1/1" destination="XDDEVMAPPINGMODEL" idrefs="z113"></relationship>
-        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z126 z229 z213 z161 z152 z172 z146 z165 z202 z169"></relationship>
+        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z213 z202 z146 z152 z229 z161 z172 z126 z165 z169"></relationship>
         <relationship name="relationshipmappings" type="0/0" destination="XDDEVRELATIONSHIPMAPPING" idrefs="z177"></relationship>
     </object>
     <object type="XDDEVATTRIBUTEMAPPING" id="z204">
@@ -711,8 +711,8 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
         <attribute name="destinationname" type="string">Purchase</attribute>
         <attribute name="autogenerateexpression" type="bool">1</attribute>
         <relationship name="mappingmodel" type="1/1" destination="XDDEVMAPPINGMODEL" idrefs="z113"></relationship>
-        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z125 z132 z131 z123 z181 z139 z173 z206 z149 z209 z201 z137 z143 z210 z154"></relationship>
-        <relationship name="relationshipmappings" type="0/0" destination="XDDEVRELATIONSHIPMAPPING" idrefs="z129 z224"></relationship>
+        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z131 z181 z206 z209 z123 z137 z143 z139 z154 z132 z125 z201 z149 z173 z210"></relationship>
+        <relationship name="relationshipmappings" type="0/0" destination="XDDEVRELATIONSHIPMAPPING" idrefs="z224 z129"></relationship>
     </object>
     <object type="XDDEVATTRIBUTEMAPPING" id="z208">
         <attribute name="valueexpressiondata" type="binary">YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8Q
@@ -779,10 +779,10 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
         <attribute name="sourcename" type="string">Model</attribute>
         <attribute name="name" type="string">ModelToAccessory</attribute>
         <attribute name="mappingtypename" type="string">Undefined</attribute>
-        <attribute name="mappingnumber" type="int16">3</attribute>
+        <attribute name="mappingnumber" type="int16">2</attribute>
         <attribute name="autogenerateexpression" type="bool">1</attribute>
         <relationship name="mappingmodel" type="1/1" destination="XDDEVMAPPINGMODEL" idrefs="z113"></relationship>
-        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z225 z231 z232 z221 z220 z230 z222"></relationship>
+        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z230 z221 z225 z220 z231 z222 z232"></relationship>
         <relationship name="relationshipmappings" type="0/0" destination="XDDEVRELATIONSHIPMAPPING" idrefs="z219"></relationship>
     </object>
     <object type="XDDEVRELATIONSHIPMAPPING" id="z219">
@@ -812,6 +812,8 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING"></relationship>
     </object>
     <object type="XDDEVRELATIONSHIPMAPPING" id="z224">
+        <attribute name="sourcemappingname" type="string">ModelToAccessory</attribute>
+        <attribute name="sourcekeypath" type="string">$source.models</attribute>
         <attribute name="autogenerateexpression" type="bool">1</attribute>
         <attribute name="valueexpressiondata" type="binary">YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8Q
 D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBYLDBcYHR4mLDEyNTo7Pj9DSElMUFRWVSRudWxs1Q0ODxAREhMUFRZZTlNPcGVyYW5kXk5TU2VsZWN0b3JOYW1lXxAQTlNFeHByZXNzaW9uVHlwZVtOU0FyZ3VtZW50c1YkY2xhc3OAA4ACEASABoAVXxA6ZGVzdGluYXRpb25JbnN0YW5jZXNGb3JFbnRpdHlNYXBwaW5nTmFtZWQ6c291cmNlSW5zdGFuY2VzOtMZDxEaGxxaTlNWYXJpYWJsZYAEEAKABVdtYW5hZ2Vy0h8gISJaJGNsYXNzbmFtZVgkY2xhc3Nlc18QFE5TVmFyaWFibGVFeHByZXNzaW9uoyMkJV8QFE5TVmFyaWFibGVFeHByZXNzaW9uXE5TRXhwcmVzc2lvblhOU09iamVjdNInESgrWk5TLm9iamVjdHOiKSqAB4AKgBTTLQ8RLi8wXxAPTlNDb25zdGFudFZhbHVlgAgQAIAJXxAQTW9kZWxUb0FjY2Vzc29yedIfIDM0XxAZTlNDb25zdGFudFZhbHVlRXhwcmVzc2lvbqMzJCXVDQ4PEBE2NxQ4OYAMgAuADoATXxAQdmFsdWVGb3JLZXlQYXRoOtMZDxE8GxyADYAFVnNvdXJjZdInEUBCoUGAD4AS0xEPREVGR1lOU0tleVBhdGiAERAKgBBWbW9kZWxz0h8gSktfEBxOU0tleVBhdGhTcGVjaWZpZXJFeHByZXNzaW9uo0okJdIfIE1OXk5TTXV0YWJsZUFycmF5o01PJVdOU0FycmF50h8gUVJfEBNOU0tleVBhdGhFeHByZXNzaW9upFFTJCVfEBROU0Z1bmN0aW9uRXhwcmVzc2lvbtIfIE9Vok8l0h8gU1ejUyQlAAgAEQAaACQAKQAyADcASQBMAFEAUwBsAHIAfQCHAJYAqQC1ALwAvgDAAMIAxADGAQMBCgEVARcBGQEbASMBKAEzATwBUwFXAW4BewGEAYkBlAGXAZkBmwGdAaQBtgG4AboBvAHPAdQB8AH0Af8CAQIDAgUCBwIaAiECIwIlAiwCMQIzAjUCNwI+AkgCSgJMAk4CVQJaAnkCfQKCApEClQKdAqICuAK9AtQC2QLcAuEAAAAAAAACAQAAAAAAAABYAAAAAAAAAAAAAAAAAAAC5Q==
@@ -867,7 +869,7 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
         <attribute name="name" type="string">ModelToSpeaker</attribute>
         <attribute name="migrationpolicyclassname" type="string">RoundHouse.RoundHouseMigrationPolicy</attribute>
         <attribute name="mappingtypename" type="string">Undefined</attribute>
-        <attribute name="mappingnumber" type="int16">2</attribute>
+        <attribute name="mappingnumber" type="int16">3</attribute>
         <attribute name="destinationname" type="string">Speaker</attribute>
         <attribute name="autogenerateexpression" type="bool">1</attribute>
         <relationship name="mappingmodel" type="1/1" destination="XDDEVMAPPINGMODEL" idrefs="z113"></relationship>
@@ -882,6 +884,8 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGsCwwXGB0eJiswMTQ4VSRudWxs1Q0ODxAREhMUFRZZTlNP
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z233"></relationship>
     </object>
     <object type="XDDEVRELATIONSHIPMAPPING" id="z235">
+        <attribute name="sourcemappingname" type="string">ModelToSpeaker</attribute>
+        <attribute name="sourcekeypath" type="string">$source.model</attribute>
         <attribute name="autogenerateexpression" type="bool">1</attribute>
         <attribute name="valueexpressiondata" type="binary">YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8Q
 D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBYLDBcYHR4mLDEyNTo7Pj9DSElMUFRWVSRudWxs1Q0ODxAREhMUFRZZTlNPcGVyYW5kXk5TU2VsZWN0b3JOYW1lXxAQTlNFeHByZXNzaW9uVHlwZVtOU0FyZ3VtZW50c1YkY2xhc3OAA4ACEASABoAVXxA6ZGVzdGluYXRpb25JbnN0YW5jZXNGb3JFbnRpdHlNYXBwaW5nTmFtZWQ6c291cmNlSW5zdGFuY2VzOtMZDxEaGxxaTlNWYXJpYWJsZYAEEAKABVdtYW5hZ2Vy0h8gISJaJGNsYXNzbmFtZVgkY2xhc3Nlc18QFE5TVmFyaWFibGVFeHByZXNzaW9uoyMkJV8QFE5TVmFyaWFibGVFeHByZXNzaW9uXE5TRXhwcmVzc2lvblhOU09iamVjdNInESgrWk5TLm9iamVjdHOiKSqAB4AKgBTTLQ8RLi8wXxAPTlNDb25zdGFudFZhbHVlgAgQAIAJXk1vZGVsVG9TcGVha2Vy0h8gMzRfEBlOU0NvbnN0YW50VmFsdWVFeHByZXNzaW9uozMkJdUNDg8QETY3FDg5gAyAC4AOgBNfEBB2YWx1ZUZvcktleVBhdGg60xkPETwbHIANgAVWc291cmNl0icRQEKhQYAPgBLTEQ9ERUZHWU5TS2V5UGF0aIAREAqAEFVtb2RlbNIfIEpLXxAcTlNLZXlQYXRoU3BlY2lmaWVyRXhwcmVzc2lvbqNKJCXSHyBNTl5OU011dGFibGVBcnJheaNNTyVXTlNBcnJhedIfIFFSXxATTlNLZXlQYXRoRXhwcmVzc2lvbqRRUyQlXxAUTlNGdW5jdGlvbkV4cHJlc3Npb27SHyBPVaJPJdIfIFNXo1MkJQAIABEAGgAkACkAMgA3AEkATABRAFMAbAByAH0AhwCWAKkAtQC8AL4AwADCAMQAxgEDAQoBFQEXARkBGwEjASgBMwE8AVMBVwFuAXsBhAGJAZQBlwGZAZsBnQGkAbYBuAG6AbwBywHQAewB8AH7Af0B/wIBAgMCFgIdAh8CIQIoAi0CLwIxAjMCOgJEAkYCSAJKAlACVQJ0AngCfQKMApACmAKdArMCuALPAtQC1wLcAAAAAAAAAgEAAAAAAAAAWAAAAAAAAAAAAAAAAAAAAuA=
@@ -890,6 +894,8 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBYLDBcYHR4mLDEyNTo7Pj9DSElMUFRWVSRudWxs1Q0O
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z189"></relationship>
     </object>
     <object type="XDDEVRELATIONSHIPMAPPING" id="z236">
+        <attribute name="sourcemappingname" type="string">ModelToSpeaker</attribute>
+        <attribute name="sourcekeypath" type="string">$source.speakerFittings</attribute>
         <attribute name="autogenerateexpression" type="bool">1</attribute>
         <attribute name="valueexpressiondata" type="binary">YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8Q
 D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBYLDBcYHR4mLDEyNTo7Pj9DSElMUFRWVSRudWxs1Q0ODxAREhMUFRZZTlNPcGVyYW5kXk5TU2VsZWN0b3JOYW1lXxAQTlNFeHByZXNzaW9uVHlwZVtOU0FyZ3VtZW50c1YkY2xhc3OAA4ACEASABoAVXxA6ZGVzdGluYXRpb25JbnN0YW5jZXNGb3JFbnRpdHlNYXBwaW5nTmFtZWQ6c291cmNlSW5zdGFuY2VzOtMZDxEaGxxaTlNWYXJpYWJsZYAEEAKABVdtYW5hZ2Vy0h8gISJaJGNsYXNzbmFtZVgkY2xhc3Nlc18QFE5TVmFyaWFibGVFeHByZXNzaW9uoyMkJV8QFE5TVmFyaWFibGVFeHByZXNzaW9uXE5TRXhwcmVzc2lvblhOU09iamVjdNInESgrWk5TLm9iamVjdHOiKSqAB4AKgBTTLQ8RLi8wXxAPTlNDb25zdGFudFZhbHVlgAgQAIAJXk1vZGVsVG9TcGVha2Vy0h8gMzRfEBlOU0NvbnN0YW50VmFsdWVFeHByZXNzaW9uozMkJdUNDg8QETY3FDg5gAyAC4AOgBNfEBB2YWx1ZUZvcktleVBhdGg60xkPETwbHIANgAVWc291cmNl0icRQEKhQYAPgBLTEQ9ERUZHWU5TS2V5UGF0aIAREAqAEF8QD3NwZWFrZXJGaXR0aW5nc9IfIEpLXxAcTlNLZXlQYXRoU3BlY2lmaWVyRXhwcmVzc2lvbqNKJCXSHyBNTl5OU011dGFibGVBcnJheaNNTyVXTlNBcnJhedIfIFFSXxATTlNLZXlQYXRoRXhwcmVzc2lvbqRRUyQlXxAUTlNGdW5jdGlvbkV4cHJlc3Npb27SHyBPVaJPJdIfIFNXo1MkJQAIABEAGgAkACkAMgA3AEkATABRAFMAbAByAH0AhwCWAKkAtQC8AL4AwADCAMQAxgEDAQoBFQEXARkBGwEjASgBMwE8AVMBVwFuAXsBhAGJAZQBlwGZAZsBnQGkAbYBuAG6AbwBywHQAewB8AH7Af0B/wIBAgMCFgIdAh8CIQIoAi0CLwIxAjMCOgJEAkYCSAJKAlwCYQKAAoQCiQKYApwCpAKpAr8CxALbAuAC4wLoAAAAAAAAAgEAAAAAAAAAWAAAAAAAAAAAAAAAAAAAAuw=
@@ -898,6 +904,8 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBYLDBcYHR4mLDEyNTo7Pj9DSElMUFRWVSRudWxs1Q0O
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z233"></relationship>
     </object>
     <object type="XDDEVRELATIONSHIPMAPPING" id="z237">
+        <attribute name="sourcemappingname" type="string">ModelToSpeaker</attribute>
+        <attribute name="sourcekeypath" type="string">$source</attribute>
         <attribute name="autogenerateexpression" type="bool">1</attribute>
         <attribute name="valueexpressiondata" type="binary">YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8Q
 D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGuCwwXGB0eJiwxMjU4OTxVJG51bGzVDQ4PEBESExQVFllOU09wZXJhbmReTlNTZWxlY3Rvck5hbWVfEBBOU0V4cHJlc3Npb25UeXBlW05TQXJndW1lbnRzViRjbGFzc4ADgAIQBIAGgA1fEDpkZXN0aW5hdGlvbkluc3RhbmNlc0ZvckVudGl0eU1hcHBpbmdOYW1lZDpzb3VyY2VJbnN0YW5jZXM60xkPERobHFpOU1ZhcmlhYmxlgAQQAoAFV21hbmFnZXLSHyAhIlokY2xhc3NuYW1lWCRjbGFzc2VzXxAUTlNWYXJpYWJsZUV4cHJlc3Npb26jIyQlXxAUTlNWYXJpYWJsZUV4cHJlc3Npb25cTlNFeHByZXNzaW9uWE5TT2JqZWN00icRKCtaTlMub2JqZWN0c6IpKoAHgAqADNMtDxEuLzBfEA9OU0NvbnN0YW50VmFsdWWACBAAgAleTW9kZWxUb1NwZWFrZXLSHyAzNF8QGU5TQ29uc3RhbnRWYWx1ZUV4cHJlc3Npb26jMyQl0xkPETYbHIALgAVWc291cmNl0h8gOjtXTlNBcnJheaI6JdIfID0+XxAUTlNGdW5jdGlvbkV4cHJlc3Npb26jPSQlAAgAEQAaACQAKQAyADcASQBMAFEAUwBiAGgAcwB9AIwAnwCrALIAtAC2ALgAugC8APkBAAELAQ0BDwERARkBHgEpATIBSQFNAWQBcQF6AX8BigGNAY8BkQGTAZoBrAGuAbABsgHBAcYB4gHmAe0B7wHxAfgB/QIFAggCDQIkAAAAAAAAAgEAAAAAAAAAPwAAAAAAAAAAAAAAAAAAAig=
