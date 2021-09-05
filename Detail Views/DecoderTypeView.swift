@@ -10,9 +10,10 @@ import SwiftUI
 /// DecoderTypeView is the navigation target for showing details on a selected decoder type.
 struct DecoderTypeView: View {
     @ObservedObject var decoderType: DecoderType
+    var showDecoders: Bool = true
 
     var body: some View {
-        DecoderTypeDetail(decoderType: decoderType)
+        DecoderTypeDetail(decoderType: decoderType, showDecoders: showDecoders)
             .navigationTitle(decoderType.catalogTitle)
     }
 }

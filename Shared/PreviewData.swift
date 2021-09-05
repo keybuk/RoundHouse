@@ -74,6 +74,9 @@ struct PreviewData {
                 let decoder = Decoder(context: viewContext)
                 decoder.type = decoderType
                 decoder.serialNumber = "FFFF429\(index)"
+                
+                decoder.firmwareVersion = "5.0.0"
+                decoder.firmwareDateComponents = DateComponents(year: 2021, month: 1, day: 1)
 
                 decoders[decoder.serialNumber!] = decoder
             }
@@ -106,6 +109,9 @@ struct PreviewData {
                 let decoder = Decoder(context: viewContext)
                 decoder.type = decoderType
                 decoder.serialNumber = "FFFF412\(index)"
+
+                decoder.firmwareVersion = "5.1.0"
+                decoder.firmwareDateComponents = DateComponents(year: 2021, month: 2, day: 1)
 
                 decoders[decoder.serialNumber!] = decoder
             }
@@ -391,6 +397,9 @@ struct PreviewData {
             decoder.soundAuthor = "Bachmann"
             decoder.soundProject = "20/3"
 
+            decoder.firmwareVersion = "5.2.0"
+            decoder.firmwareDateComponents = DateComponents(year: 2021, month: 3, day: 1)
+
             locomotive.decoder = decoder
         }
 
@@ -437,6 +446,9 @@ struct PreviewData {
             decoder.serialNumber = "FFFF0312"
             decoder.soundAuthor = "Bachmann"
             decoder.soundProject = "20/3"
+
+            decoder.firmwareVersion = "5.2.0"
+            decoder.firmwareDateComponents = DateComponents(year: 2021, month: 3, day: 1)
 
             locomotive.decoder = decoder
         }

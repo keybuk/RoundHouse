@@ -163,6 +163,24 @@ struct ModelDetail: View {
                     }
                 }
 
+                if let decoder = model.decoder {
+                    NavigationLink {
+                        DecoderView(decoder: decoder)
+                    } label: {
+                        VStack(alignment: .leading) {
+                            Text("Decoder")
+                                .font(.caption)
+                            if let decoderType = decoder.type {
+                                Text(decoderType.catalogTitle)
+                            }
+                            if !decoder.serialNumber!.isEmpty {
+                                Text(decoder.serialNumber!)
+                                    .font(.caption)
+                            }
+                        }
+                    }
+                }
+
                 if model.lights!.count > 0 {
                     ModelDetailRow(title: "Lights") {
                         Text(model.lightsList, format: .list(type: .and))
@@ -171,8 +189,6 @@ struct ModelDetail: View {
                 
                 // TODO: Speaker
             }
-            
-            // TODO: Decoder
 
             Section("Details") {
                 if model.couplings!.count > 0 {

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DecoderTypeDetail: View {
     @ObservedObject var decoderType: DecoderType
+    var showDecoders: Bool = true
 
     var body: some View {
         List {
@@ -94,7 +95,9 @@ struct DecoderTypeDetail: View {
                 }
             }
             
-            DecoderTypeDecoders(decoderType: decoderType)
+            if showDecoders {
+                DecoderTypeDecoders(decoderType: decoderType)
+            }
         }
     }
 }

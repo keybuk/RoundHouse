@@ -31,7 +31,11 @@ struct DecoderTypeDecoders: View {
 
     var body: some View {
         ForEach(decoders) { decoder in
-            DecoderCell(decoder: decoder)
+            NavigationLink {
+                DecoderView(decoder: decoder, showType: false)
+            } label: {
+                DecoderCell(decoder: decoder)
+            }
         }
     }
 }
