@@ -60,7 +60,11 @@ struct DecoderTypesBySocket: View {
         ForEach(decoderTypes) { section in
             Section(header: Text(socket(with: section.id!).title!)) {
                 ForEach(section) { decoderType in
-                    DecoderTypeCell(decoderType: decoderType)
+                    NavigationLink {
+                        DecoderTypeView(decoderType: decoderType)
+                    } label: {
+                        DecoderTypeCell(decoderType: decoderType)
+                    }
                 }
             }
         }
@@ -84,7 +88,11 @@ struct DecoderTypesByFamily: View {
         ForEach(decoderTypes) { section in
             Section(header: Text(section.id)) {
                 ForEach(section) { decoderType in
-                    DecoderTypeCell(decoderType: decoderType, showManufacturer: false, showSocket: true)
+                    NavigationLink {
+                        DecoderTypeView(decoderType: decoderType)
+                    } label: {
+                        DecoderTypeCell(decoderType: decoderType, showManufacturer: false, showSocket: true)
+                    }
                 }
             }
         }
@@ -105,7 +113,11 @@ struct DecoderTypesByCatalog: View {
         ForEach(decoderTypes) { section in
             Section(header: Text(section.id!)) {
                 ForEach(section) { decoderType in
-                    DecoderTypeCell(decoderType: decoderType, showManufacturer: false, showSocket: true)
+                    NavigationLink {
+                        DecoderTypeView(decoderType: decoderType)
+                    } label: {
+                        DecoderTypeCell(decoderType: decoderType, showManufacturer: false, showSocket: true)
+                    }
                 }
             }
         }

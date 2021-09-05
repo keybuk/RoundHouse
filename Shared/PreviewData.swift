@@ -19,6 +19,7 @@ struct PreviewData {
     var accessories: [String: Accessory] = [:]
     var trains: [String: Train] = [:]
     var decoderTypes: [String: DecoderType] = [:]
+    var decoders: [String: Decoder] = [:]
 
     init() {
         persistenceController = PersistenceController(inMemory: true)
@@ -67,10 +68,12 @@ struct PreviewData {
 
             decoderTypes["58429"] = decoderType
             
-            for serial in 1...decoderType.minimumStock {
+            for index in 1...decoderType.minimumStock {
                 let decoder = Decoder(context: viewContext)
                 decoder.type = decoderType
-                decoder.serialNumber = "\(serial)"
+                decoder.serialNumber = "FFFF429\(index)"
+
+                decoders[decoder.serialNumber!] = decoder
             }
         }
 
@@ -96,10 +99,12 @@ struct PreviewData {
 
             decoderTypes["58412"] = decoderType
             
-            for serial in 1...(decoderType.minimumStock - 2) {
+            for index in 1...(decoderType.minimumStock - 2) {
                 let decoder = Decoder(context: viewContext)
                 decoder.type = decoderType
-                decoder.serialNumber = "\(serial)"
+                decoder.serialNumber = "FFFF412\(index)"
+
+                decoders[decoder.serialNumber!] = decoder
             }
         }
 

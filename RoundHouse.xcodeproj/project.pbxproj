@@ -15,6 +15,14 @@
 		D22B733826E2D85A00DDE47F /* AccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B733626E2D85A00DDE47F /* AccessoryView.swift */; };
 		D22B733A26E2D89E00DDE47F /* AccessoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B733926E2D89E00DDE47F /* AccessoryDetail.swift */; };
 		D22B733B26E2D89E00DDE47F /* AccessoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B733926E2D89E00DDE47F /* AccessoryDetail.swift */; };
+		D22B733D26E2DAB100DDE47F /* DecoderTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B733C26E2DAB100DDE47F /* DecoderTypeView.swift */; };
+		D22B733E26E2DAB100DDE47F /* DecoderTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B733C26E2DAB100DDE47F /* DecoderTypeView.swift */; };
+		D22B734026E2DB1100DDE47F /* DecoderTypeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B733F26E2DB1100DDE47F /* DecoderTypeDetail.swift */; };
+		D22B734126E2DB1100DDE47F /* DecoderTypeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B733F26E2DB1100DDE47F /* DecoderTypeDetail.swift */; };
+		D22B734326E2DE5800DDE47F /* DecoderTypeDecoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B734226E2DE5800DDE47F /* DecoderTypeDecoders.swift */; };
+		D22B734426E2DE5800DDE47F /* DecoderTypeDecoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B734226E2DE5800DDE47F /* DecoderTypeDecoders.swift */; };
+		D22B734626E2DEFF00DDE47F /* DecoderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B734526E2DEFF00DDE47F /* DecoderCell.swift */; };
+		D22B734726E2DEFF00DDE47F /* DecoderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B734526E2DEFF00DDE47F /* DecoderCell.swift */; };
 		D23C3BD42676B8B70017BC5B /* Model+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4961F2675EAE90008AFB8 /* Model+Image.swift */; };
 		D23C3BD52676B8B80017BC5B /* Model+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C4961F2675EAE90008AFB8 /* Model+Image.swift */; };
 		D23C3BDA2676BC9F0017BC5B /* AppSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C3BD92676BC9F0017BC5B /* AppSidebar.swift */; };
@@ -201,6 +209,10 @@
 		D22B733326E2D44E00DDE47F /* Decoder+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decoder+Date.swift"; sourceTree = "<group>"; };
 		D22B733626E2D85A00DDE47F /* AccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryView.swift; sourceTree = "<group>"; };
 		D22B733926E2D89E00DDE47F /* AccessoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryDetail.swift; sourceTree = "<group>"; };
+		D22B733C26E2DAB100DDE47F /* DecoderTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTypeView.swift; sourceTree = "<group>"; };
+		D22B733F26E2DB1100DDE47F /* DecoderTypeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTypeDetail.swift; sourceTree = "<group>"; };
+		D22B734226E2DE5800DDE47F /* DecoderTypeDecoders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTypeDecoders.swift; sourceTree = "<group>"; };
+		D22B734526E2DEFF00DDE47F /* DecoderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderCell.swift; sourceTree = "<group>"; };
 		D23C3BD92676BC9F0017BC5B /* AppSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSidebar.swift; sourceTree = "<group>"; };
 		D23C3BE22676D61D0017BC5B /* PurchasesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesList.swift; sourceTree = "<group>"; };
 		D23C3BE52676D6640017BC5B /* AccessoriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesList.swift; sourceTree = "<group>"; };
@@ -374,11 +386,15 @@
 				D290485F26E2B7C6007F2980 /* PurchaseView.swift */,
 				D29A209026DD6F2100FE8DD5 /* ModelView.swift */,
 				D22B733626E2D85A00DDE47F /* AccessoryView.swift */,
+				D22B733C26E2DAB100DDE47F /* DecoderTypeView.swift */,
 				D29A209326DD6F4B00FE8DD5 /* PurchaseDetail.swift */,
 				D29A209626DD6F8600FE8DD5 /* ModelDetail.swift */,
 				D22B733926E2D89E00DDE47F /* AccessoryDetail.swift */,
+				D22B733F26E2DB1100DDE47F /* DecoderTypeDetail.swift */,
 				D29A208C26DD690A00FE8DD5 /* PurchaseItemsList.swift */,
 				D290486226E2C1E6007F2980 /* PurchaseItems.swift */,
+				D22B734226E2DE5800DDE47F /* DecoderTypeDecoders.swift */,
+				D22B734526E2DEFF00DDE47F /* DecoderCell.swift */,
 			);
 			path = "Detail Views";
 			sourceTree = "<group>";
@@ -744,7 +760,9 @@
 				D2C4960C267585920008AFB8 /* ModelsList.swift in Sources */,
 				D29E1EE0269565AC00F13F13 /* DecoderTypeGroupingPicker.swift in Sources */,
 				D22B733126E2D30E00DDE47F /* Model+Date.swift in Sources */,
+				D22B733D26E2DAB100DDE47F /* DecoderTypeView.swift in Sources */,
 				D29A209726DD6F8600FE8DD5 /* ModelDetail.swift in Sources */,
+				D22B734326E2DE5800DDE47F /* DecoderTypeDecoders.swift in Sources */,
 				D23C3BE32676D61D0017BC5B /* PurchasesList.swift in Sources */,
 				D22B733A26E2D89E00DDE47F /* AccessoryDetail.swift in Sources */,
 				D2E3080E267EDEC400577B27 /* DecoderType+Image.swift in Sources */,
@@ -783,6 +801,7 @@
 				D2C496132675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */,
 				D2C4961926758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
 				D278B1C426954C9700CD4609 /* DecoderType+Stock.swift in Sources */,
+				D22B734626E2DEFF00DDE47F /* DecoderCell.swift in Sources */,
 				D22B733426E2D44E00DDE47F /* Decoder+Date.swift in Sources */,
 				D2E307E9267D7C0100577B27 /* AccessoryCell.swift in Sources */,
 				D29F5C8E267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
@@ -791,6 +810,7 @@
 				D278B1CA2695561000CD4609 /* PurchaseGroupingPicker.swift in Sources */,
 				D2C4962F2675F7250008AFB8 /* Purchase+Currency.swift in Sources */,
 				D23C3BE92676D67A0017BC5B /* DecoderTypesList.swift in Sources */,
+				D22B734026E2DB1100DDE47F /* DecoderTypeDetail.swift in Sources */,
 				D2C496232675F46E0008AFB8 /* Purchase+Condition.swift in Sources */,
 				D2E3080B267EDDDE00577B27 /* DecoderTypeCell.swift in Sources */,
 				D29F5C90267571EF00EC2F85 /* ContentView.swift in Sources */,
@@ -807,7 +827,9 @@
 				D2C4960D267585920008AFB8 /* ModelsList.swift in Sources */,
 				D29E1EE1269565AC00F13F13 /* DecoderTypeGroupingPicker.swift in Sources */,
 				D22B733226E2D30E00DDE47F /* Model+Date.swift in Sources */,
+				D22B733E26E2DAB100DDE47F /* DecoderTypeView.swift in Sources */,
 				D29A209826DD6F8600FE8DD5 /* ModelDetail.swift in Sources */,
+				D22B734426E2DE5800DDE47F /* DecoderTypeDecoders.swift in Sources */,
 				D23C3BE42676D61D0017BC5B /* PurchasesList.swift in Sources */,
 				D22B733B26E2D89E00DDE47F /* AccessoryDetail.swift in Sources */,
 				D29F5CBC2675771D00EC2F85 /* SecureDateComponentsTransformer.swift in Sources */,
@@ -846,6 +868,7 @@
 				D2C496142675885E0008AFB8 /* RoundHouseMigrationPolicy.swift in Sources */,
 				D2C4961A26758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
 				D278B1C526954C9700CD4609 /* DecoderType+Stock.swift in Sources */,
+				D22B734726E2DEFF00DDE47F /* DecoderCell.swift in Sources */,
 				D22B733526E2D44E00DDE47F /* Decoder+Date.swift in Sources */,
 				D29F5C8F267571EF00EC2F85 /* RoundHouseApp.swift in Sources */,
 				D2E307EA267D7C0100577B27 /* AccessoryCell.swift in Sources */,
@@ -854,6 +877,7 @@
 				D278B1CB2695561000CD4609 /* PurchaseGroupingPicker.swift in Sources */,
 				D2C496302675F7250008AFB8 /* Purchase+Currency.swift in Sources */,
 				D23C3BEA2676D67A0017BC5B /* DecoderTypesList.swift in Sources */,
+				D22B734126E2DB1100DDE47F /* DecoderTypeDetail.swift in Sources */,
 				D2C496242675F46E0008AFB8 /* Purchase+Condition.swift in Sources */,
 				D2E3080C267EDDDE00577B27 /* DecoderTypeCell.swift in Sources */,
 				D29F5C91267571EF00EC2F85 /* ContentView.swift in Sources */,
