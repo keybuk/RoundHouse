@@ -22,13 +22,13 @@ struct PurchaseItems: View {
             sortDescriptors: [
                 SortDescriptor(\Model.index)
             ],
-            predicate: NSPredicate(format: "purchase == %@", purchase),
+            predicate: NSPredicate(format: "purchase = %@", purchase),
             animation: .default)
         _accessories = FetchRequest(
             sortDescriptors: [
                 SortDescriptor(\Accessory.index)
             ],
-            predicate: NSPredicate(format: "purchase == %@", purchase),
+            predicate: NSPredicate(format: "purchase = %@", purchase),
             animation: .default)
     }
 

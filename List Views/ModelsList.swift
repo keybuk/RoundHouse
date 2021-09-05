@@ -9,7 +9,7 @@ import SwiftUI
 
 extension Model {
     static func predicateForClassification(_ classification: Classification) -> NSPredicate {
-        NSPredicate(format: "classificationRawValue == \(classification.rawValue)")
+        NSPredicate(format: "classificationRawValue = \(classification.rawValue)")
     }
 }
 
