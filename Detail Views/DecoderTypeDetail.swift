@@ -52,15 +52,39 @@ struct DecoderTypeDetail: View {
                 }
             }
             
-            Section("Capabilities") {
-                if decoderType.isProgrammable {
+            Section("Features") {
+                if let socket = decoderType.socket {
+                    DecoderTypeDetailRow(title: "Socket") {
+                        Text(socket.title!)
+                    }
+                }
+                HStack {
                     Text("Programmable")
+                    Spacer()
+                    if decoderType.isProgrammable {
+                        Image(systemName: "checkmark")
+                    }
                 }
-                if decoderType.isSoundSupported {
+                HStack {
                     Text("Sound")
+                    Spacer()
+                    if decoderType.isSoundSupported {
+                        Image(systemName: "checkmark")
+                    }
                 }
-                if decoderType.isRailComSupported {
+                HStack {
                     Text("RailCom")
+                    Spacer()
+                    if decoderType.isRailComSupported {
+                        Image(systemName: "checkmark")
+                    }
+                }
+                HStack {
+                    Text("RailCom Plus")
+                    Spacer()
+                    if decoderType.isRailComPlusSupported {
+                        Image(systemName: "checkmark")
+                    }
                 }
             }
 
@@ -69,6 +93,8 @@ struct DecoderTypeDetail: View {
                     Text(decoderType.minimumStock, format: .number)
                 }
             }
+            
+            DecoderTypeDecoders(decoderType: decoderType)
         }
     }
 }
