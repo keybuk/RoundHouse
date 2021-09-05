@@ -5,7 +5,7 @@
     <databaseInfo>
         <version>134481920</version>
         <UUID>68FD2EA2-7550-4E16-9527-F4E57AB87F29</UUID>
-        <nextObjectID>246</nextObjectID>
+        <nextObjectID>248</nextObjectID>
         <metadata>
             <plist version="1.0">
                 <dict>
@@ -711,7 +711,7 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
         <attribute name="destinationname" type="string">Purchase</attribute>
         <attribute name="autogenerateexpression" type="bool">1</attribute>
         <relationship name="mappingmodel" type="1/1" destination="XDDEVMAPPINGMODEL" idrefs="z113"></relationship>
-        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z131 z181 z206 z209 z123 z137 z143 z139 z154 z132 z125 z201 z149 z173 z210"></relationship>
+        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z131 z181 z206 z209 z123 z137 z143 z139 z154 z248 z132 z125 z201 z247 z149 z173 z210"></relationship>
         <relationship name="relationshipmappings" type="0/0" destination="XDDEVRELATIONSHIPMAPPING" idrefs="z224 z129"></relationship>
     </object>
     <object type="XDDEVATTRIBUTEMAPPING" id="z208">
@@ -983,5 +983,19 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGsCwwXGB0eJiswMTQ4VSRudWxs1Q0ODxAREhMUFRZZTlNP
         <attribute name="autogenerateexpression" type="bool">1</attribute>
         <attribute name="name" type="string">socket</attribute>
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z203"></relationship>
+    </object>
+    <object type="XDDEVATTRIBUTEMAPPING" id="z247">
+        <attribute name="valueexpressiondata" type="binary">YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8Q
+D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAREhMUFRZZTlNPcGVyYW5kXk5TU2VsZWN0b3JOYW1lXxAQTlNFeHByZXNzaW9uVHlwZVtOU0FyZ3VtZW50c1YkY2xhc3OAA4ACEASABoASXxAYbWFrZUNhdGFsb2dOdW1iZXJQcmVmaXg60xkPERobHFpOU1ZhcmlhYmxlgAQQAoAFXGVudGl0eVBvbGljedIfICEiWiRjbGFzc25hbWVYJGNsYXNzZXNfEBROU1ZhcmlhYmxlRXhwcmVzc2lvbqMjJCVfEBROU1ZhcmlhYmxlRXhwcmVzc2lvblxOU0V4cHJlc3Npb25YTlNPYmplY3TSJxEoKlpOUy5vYmplY3RzoSmAB4AR1Q0ODxARLC0ULi+ACYAIgAuAEF8QEHZhbHVlRm9yS2V5UGF0aDrTGQ8RMhscgAqABVZzb3VyY2XSJxE2OKE3gAyAD9MRDzo7PD1ZTlNLZXlQYXRogA4QCoANXWNhdGFsb2dOdW1iZXLSHyBAQV8QHE5TS2V5UGF0aFNwZWNpZmllckV4cHJlc3Npb26jQCQl0h8gQ0ReTlNNdXRhYmxlQXJyYXmjQ0UlV05TQXJyYXnSHyBHSF8QE05TS2V5UGF0aEV4cHJlc3Npb26kR0kkJV8QFE5TRnVuY3Rpb25FeHByZXNzaW9u0h8gRUuiRSXSHyBJTaNJJCUACAARABoAJAApADIANwBJAEwAUQBTAGkAbwB6AIQAkwCmALIAuQC7AL0AvwDBAMMA3gDlAPAA8gD0APYBAwEIARMBHAEzATcBTgFbAWQBaQF0AXYBeAF6AYUBhwGJAYsBjQGgAacBqQGrAbIBtwG5AbsBvQHEAc4B0AHSAdQB4gHnAgYCCgIPAh4CIgIqAi8CRQJKAmECZgJpAm4AAAAAAAACAQAAAAAAAABOAAAAAAAAAAAAAAAAAAACcg==
+</attribute>
+        <attribute name="name" type="string">catalogNumberPrefix</attribute>
+        <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z207"></relationship>
+    </object>
+    <object type="XDDEVATTRIBUTEMAPPING" id="z248">
+        <attribute name="valueexpressiondata" type="binary">YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8Q
+D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAREhMUFRZZTlNPcGVyYW5kXk5TU2VsZWN0b3JOYW1lXxAQTlNFeHByZXNzaW9uVHlwZVtOU0FyZ3VtZW50c1YkY2xhc3OAA4ACEASABoASXxAQbWFrZURhdGVGb3JTb3J0OtMZDxEaGxxaTlNWYXJpYWJsZYAEEAKABVxlbnRpdHlQb2xpY3nSHyAhIlokY2xhc3NuYW1lWCRjbGFzc2VzXxAUTlNWYXJpYWJsZUV4cHJlc3Npb26jIyQlXxAUTlNWYXJpYWJsZUV4cHJlc3Npb25cTlNFeHByZXNzaW9uWE5TT2JqZWN00icRKCpaTlMub2JqZWN0c6EpgAeAEdUNDg8QESwtFC4vgAmACIALgBBfEBB2YWx1ZUZvcktleVBhdGg60xkPETIbHIAKgAVWc291cmNl0icRNjihN4AMgA/TEQ86Ozw9WU5TS2V5UGF0aIAOEAqADVRkYXRl0h8gQEFfEBxOU0tleVBhdGhTcGVjaWZpZXJFeHByZXNzaW9uo0AkJdIfIENEXk5TTXV0YWJsZUFycmF5o0NFJVdOU0FycmF50h8gR0hfEBNOU0tleVBhdGhFeHByZXNzaW9upEdJJCVfEBROU0Z1bmN0aW9uRXhwcmVzc2lvbtIfIEVLokUl0h8gSU2jSSQlAAgAEQAaACQAKQAyADcASQBMAFEAUwBpAG8AegCEAJMApgCyALkAuwC9AL8AwQDDANYA3QDoAOoA7ADuAPsBAAELARQBKwEvAUYBUwFcAWEBbAFuAXABcgF9AX8BgQGDAYUBmAGfAaEBowGqAa8BsQGzAbUBvAHGAcgBygHMAdEB1gH1AfkB/gINAhECGQIeAjQCOQJQAlUCWAJdAAAAAAAAAgEAAAAAAAAATgAAAAAAAAAAAAAAAAAAAmE=
+</attribute>
+        <attribute name="name" type="string">dateForSort</attribute>
+        <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z207"></relationship>
     </object>
 </database>

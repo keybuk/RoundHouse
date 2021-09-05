@@ -75,23 +75,18 @@ final class RoundHouseMigrationPolicy: NSEntityMigrationPolicy {
         let (_, catalogDescription) = accessoryCatalogSplit(modelClass)
         return catalogDescription
     }
-
-    override func createDestinationInstances(forSource sInstance: NSManagedObject, in mapping: NSEntityMapping, manager: NSMigrationManager) throws {
-        try super.createDestinationInstances(forSource: sInstance, in: mapping, manager: manager)
-
-        // Populated "willSave" fields".
-        if mapping.name == "PurchaseToPurchase" {
-            guard let dInstance = manager.destinationInstances(forEntityMappingName: mapping.name, sourceInstances: [sInstance]).first else { preconditionFailure("Missing destination instance") }
-            
-            let catalogNumber = dInstance.value(forKey: "catalogNumber") as! String?
-            let catalogNumberPrefix = Purchase.makeCatalogNumberPrefix(from: catalogNumber!)
-            dInstance.setValue(catalogNumberPrefix, forKey: "catalogNumberPrefix")
-            
-            let dateComponents = dInstance.value(forKey: "dateComponents") as! DateComponents?
-            
-            let dateForSort = Purchase.makeDateForSort(from: dateComponents)
-            dInstance.setValue(dateForSort, forKey: "dateForSort")
-        }
+    
+    /// Creates the catalog number prefix from a catalog number.
+    @objc
+    func makeCatalogNumberPrefix(_ catalogNumber: String?) -> String {
+        guard let catalogNumber = catalogNumber else { return "" }
+        return Purchase.makeCatalogNumberPrefix(from: catalogNumber)
+    }
+    
+    /// Creates the dateForSort value from the date components.
+    @objc
+    func makeDateForSort(_ dateComponents: DateComponents?) -> Date {
+        return Purchase.makeDateForSort(from: dateComponents)
     }
 
     override func createRelationships(forDestination dInstance: NSManagedObject, in mapping: NSEntityMapping, manager: NSMigrationManager) throws {
