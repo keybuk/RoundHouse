@@ -41,6 +41,7 @@ struct PreviewData {
             decoderType.isProgrammable = true
             decoderType.isSoundSupported = true
             decoderType.isRailComSupported = true
+            decoderType.isRailComPlusSupported = true
             decoderType.setPreviewImage(named: "58420")
 
             decoderTypes["58420"] = decoderType
@@ -63,6 +64,7 @@ struct PreviewData {
             decoderType.isProgrammable = true
             decoderType.isSoundSupported = true
             decoderType.isRailComSupported = true
+            decoderType.isRailComPlusSupported = true
             decoderType.setPreviewImage(named: "58429")
             decoderType.minimumStock = 5
 
@@ -94,6 +96,7 @@ struct PreviewData {
             decoderType.isProgrammable = true
             decoderType.isSoundSupported = true
             decoderType.isRailComSupported = true
+            decoderType.isRailComPlusSupported = true
             decoderType.setPreviewImage(named: "58412")
             decoderType.minimumStock = 5
 
