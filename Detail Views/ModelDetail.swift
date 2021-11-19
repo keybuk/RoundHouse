@@ -49,6 +49,21 @@ extension Model {
             .sorted()
         ?? []
     }
+    
+    var speakersList: [Speaker] {
+        (speakers as! Set<Speaker>?)?
+            .sorted(by: { $0.title! < $1.title! })
+        ?? []
+    }
+}
+
+extension Speaker {
+    var fittingsList: [String] {
+        (fittings as! Set<SpeakerFitting>?)?
+            .map(\.title!)
+            .sorted()
+        ?? []
+    }
 }
 
 struct ModelDetail: View {
@@ -187,7 +202,19 @@ struct ModelDetail: View {
                     }
                 }
                 
-                // TODO: Speaker
+                ForEach(model.speakersList) { speaker in
+                    VStack(alignment: .leading) {
+                        Text("Speaker")
+                            .font(.caption)
+                        Text(speaker.title!)
+                    }
+                    
+                    if speaker.fittings!.count > 0 {
+                        ModelDetailRow(title: "Fitting") {
+                            Text(speaker.fittingsList, format: .list(type: .and))
+                        }
+                    }
+                }
             }
 
             Section("Details") {

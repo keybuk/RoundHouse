@@ -118,6 +118,31 @@ struct PreviewData {
         }
 
         do {
+            let decoderType = DecoderType(context: viewContext)
+            decoderType.socket = sockets[22]!
+            decoderType.manufacturer = "Zimo"
+            decoderType.catalogNumber = "MX645P22"
+            decoderType.catalogFamily = "MX640"
+            decoderType.isProgrammable = true
+            decoderType.isSoundSupported = true
+            decoderType.isRailComSupported = true
+            decoderType.isRailComPlusSupported = true
+            decoderType.setPreviewImage(named: "58412")
+            decoderType.minimumStock = 0
+
+            decoderTypes["MX645P22"] = decoderType
+            
+            let decoder = Decoder(context: viewContext)
+            decoder.type = decoderType
+            decoder.serialNumber = "200:200:10:1"
+
+            decoder.firmwareVersion = "40.0"
+            decoder.firmwareDateComponents = DateComponents(year: 2021, month: 2, day: 1)
+
+            decoders[decoder.serialNumber!] = decoder
+        }
+
+        do {
             let purchase = Purchase(context: viewContext)
             purchase.manufacturer = "Hornby"
             purchase.catalogNumber = "R1234M"

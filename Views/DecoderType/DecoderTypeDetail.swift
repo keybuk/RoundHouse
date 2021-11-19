@@ -21,78 +21,12 @@ struct DecoderTypeDetail: View {
                 }
             }
             
-            Section("Catalog") {
-                if !decoderType.manufacturer!.isEmpty {
-                    DecoderTypeDetailRow(title: "Manufacturer") {
-                        Text(decoderType.manufacturer!)
-                    }
-                }
-
-                if !decoderType.catalogNumber!.isEmpty {
-                    DecoderTypeDetailRow(title: "Number") {
-                        Text(decoderType.catalogNumber!)
-                    }
-                }
-
-                if !decoderType.catalogName!.isEmpty {
-                    DecoderTypeDetailRow(title: "Name") {
-                        Text(decoderType.catalogName!)
-                    }
-                }
-
-                if !decoderType.catalogFamily!.isEmpty {
-                    DecoderTypeDetailRow(title: "Family") {
-                        Text(decoderType.catalogFamily!)
-                    }
-                }
-
-                if !decoderType.catalogDescription!.isEmpty {
-                    DecoderTypeDetailRow(title: "Description") {
-                        Text(decoderType.catalogDescription!)
-                    }
-                }
-            }
+            DecoderTypeCatalog(decoderType: decoderType)
             
-            Section("Features") {
-                if let socket = decoderType.socket {
-                    DecoderTypeDetailRow(title: "Socket") {
-                        Text(socket.title!)
-                    }
-                }
-                HStack {
-                    Text("Programmable")
-                    Spacer()
-                    if decoderType.isProgrammable {
-                        Image(systemName: "checkmark")
-                    }
-                }
-                HStack {
-                    Text("Sound")
-                    Spacer()
-                    if decoderType.isSoundSupported {
-                        Image(systemName: "checkmark")
-                    }
-                }
-                HStack {
-                    Text("RailCom")
-                    Spacer()
-                    if decoderType.isRailComSupported {
-                        Image(systemName: "checkmark")
-                    }
-                }
-                HStack {
-                    Text("RailCom Plus")
-                    Spacer()
-                    if decoderType.isRailComPlusSupported {
-                        Image(systemName: "checkmark")
-                    }
-                }
-            }
+            DecoderTypeFeatures(decoderType: decoderType)
 
             Section("Stock") {
-                DecoderTypeDetailRow(title: "Minimum Stock") {
-                    Text(decoderType.minimumStock, format: .number)
-                }
+                FormattedTextFieldRow("Minimum Stock", value: $decoderType.minimumStock, format: .number)
             }
             
             if showDecoders {
@@ -115,8 +49,53 @@ struct DecoderTypeDetailRow<Content: View>: View {
     }
 }
 
-struct DecoderTypeDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        DecoderTypeDetail(decoderType: PreviewData.shared.decoderTypes["58412"]!)
+struct DecoderTypeCatalog: View {
+    @ObservedObject var decoderType: DecoderType
+    
+    var body: some View {
+        Section("Catalog") {
+            SuggestingTextFieldRow("Manufacturer",text: Binding($decoderType.manufacturer, default: ""), suggestions: decoderType.suggestionsForManufacturer(matching:))
+            
+            TextFieldRow("Number", text: Binding($decoderType.catalogNumber, default: ""))
+            
+            TextFieldRow("Name", text: Binding($decoderType.catalogName, default: ""))
+            
+            SuggestingTextFieldRow("Family", text: Binding($decoderType.catalogFamily, default: ""), suggestions: decoderType.suggestionsForCatalogFamily(matching:))
+            
+            // Description: multi-line text
+                        
+            TextEditorRow("Description", text: Binding($decoderType.catalogDescription, default: ""))
+                .lineLimit(0)
+        }
+        .onSubmit {
+            print("SECTION SUBMIT!")
+        }
     }
 }
+
+struct DecoderTypeFeatures: View {
+    @ObservedObject var decoderType: DecoderType
+
+    var body: some View {
+        Section("Features") {
+            SocketPicker("Socket", socket: $decoderType.socket)
+            
+            ToggleableRow("Programmable", value: $decoderType.isProgrammable)
+
+            ToggleableRow("Sound", value: $decoderType.isSoundSupported)
+
+            ToggleableRow("RailCom", value: $decoderType.isRailComSupported)
+
+            ToggleableRow("RailCom Plus", value: $decoderType.isRailComPlusSupported)
+        }
+    }
+}
+
+struct DecoderTypeDetail_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            DecoderTypeDetail(decoderType: PreviewData.shared.decoderTypes["58412"]!)
+        }
+    }
+}
+
