@@ -37,7 +37,9 @@ struct SuggestingTextFieldRow: View {
                             .foregroundColor(.primary)
                     }
                     .listRowInsets(.init(top: 0, leading: 35, bottom: 0, trailing: 0))
+#if os(iOS)
                     .listRowSeparator(.hidden, edges: [.top])
+#endif
                 }
             }
         }
