@@ -48,7 +48,7 @@
 		D29A209426DD6F4B00FE8DD5 /* PurchaseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A209326DD6F4B00FE8DD5 /* PurchaseDetail.swift */; };
 		D29A209726DD6F8600FE8DD5 /* ModelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A209626DD6F8600FE8DD5 /* ModelDetail.swift */; };
 		D29E1EE0269565AC00F13F13 /* DecoderTypeGroupingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29E1EDF269565AC00F13F13 /* DecoderTypeGroupingPicker.swift */; };
-		D29F5C81267571EF00EC2F85 /* UI Tests (iOS).swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C80267571EF00EC2F85 /* UI Tests (iOS).swift */; };
+		D29F5C81267571EF00EC2F85 /* UI Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C80267571EF00EC2F85 /* UI Tests.swift */; };
 		D29F5C8E267571EF00EC2F85 /* RoundHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */; };
 		D29F5C90267571EF00EC2F85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C6A267571ED00EC2F85 /* ContentView.swift */; };
 		D29F5C92267571EF00EC2F85 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F5C6B267571ED00EC2F85 /* PersistenceController.swift */; };
@@ -161,8 +161,7 @@
 		D29F5C6C267571EF00EC2F85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D29F5C71267571EF00EC2F85 /* RoundHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29F5C7C267571EF00EC2F85 /* RoundHouseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoundHouseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D29F5C80267571EF00EC2F85 /* UI Tests (iOS).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI Tests (iOS).swift"; sourceTree = "<group>"; };
-		D29F5C8A267571EF00EC2F85 /* UI Tests (macOS).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI Tests (macOS).swift"; sourceTree = "<group>"; };
+		D29F5C80267571EF00EC2F85 /* UI Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI Tests.swift"; sourceTree = "<group>"; };
 		D29F5CB32675743700EC2F85 /* EngineShed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EngineShed.xcdatamodel; sourceTree = "<group>"; };
 		D29F5CBA2675771D00EC2F85 /* SecureDateComponentsTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureDateComponentsTransformer.swift; sourceTree = "<group>"; };
 		D29F5CBD267578F300EC2F85 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
@@ -313,8 +312,7 @@
 				D29F5C66267571ED00EC2F85 /* Shared */,
 				D29A206026DBFA8A00FE8DD5 /* List Views */,
 				D29A208F26DD6BE300FE8DD5 /* Detail Views */,
-				D29F5C7F267571EF00EC2F85 /* UI Tests (iOS) */,
-				D29F5C89267571EF00EC2F85 /* UI Tests (macOS) */,
+				D29F5C7F267571EF00EC2F85 /* UI Tests */,
 				D29F5C72267571EF00EC2F85 /* Products */,
 				D278B1B32695484E00CD4609 /* Frameworks */,
 			);
@@ -340,20 +338,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D29F5C7F267571EF00EC2F85 /* UI Tests (iOS) */ = {
+		D29F5C7F267571EF00EC2F85 /* UI Tests */ = {
 			isa = PBXGroup;
 			children = (
-				D29F5C80267571EF00EC2F85 /* UI Tests (iOS).swift */,
+				D29F5C80267571EF00EC2F85 /* UI Tests.swift */,
 			);
-			path = "UI Tests (iOS)";
-			sourceTree = "<group>";
-		};
-		D29F5C89267571EF00EC2F85 /* UI Tests (macOS) */ = {
-			isa = PBXGroup;
-			children = (
-				D29F5C8A267571EF00EC2F85 /* UI Tests (macOS).swift */,
-			);
-			path = "UI Tests (macOS)";
+			path = "UI Tests";
 			sourceTree = "<group>";
 		};
 		D29F5CB02675742800EC2F85 /* Model */ = {
@@ -647,7 +637,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D29F5C81267571EF00EC2F85 /* UI Tests (iOS).swift in Sources */,
+				D29F5C81267571EF00EC2F85 /* UI Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
