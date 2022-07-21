@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D29F5C70267571EF00EC2F85"
                BuildableName = "RoundHouse.app"
-               BlueprintName = "RoundHouse (iOS)"
+               BlueprintName = "RoundHouse"
                ReferencedContainer = "container:RoundHouse.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,22 +29,24 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "NO"
+            parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D2C4966C267601420008AFB8"
-               BuildableName = "Unit Tests (iOS).xctest"
-               BlueprintName = "Unit Tests (iOS)"
+               BuildableName = "RoundHouseTests.xctest"
+               BlueprintName = "RoundHouseTests"
                ReferencedContainer = "container:RoundHouse.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
-            skipped = "NO">
+            skipped = "NO"
+            parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D29F5C7B267571EF00EC2F85"
-               BuildableName = "UI Tests (iOS).xctest"
-               BlueprintName = "UI Tests (iOS)"
+               BuildableName = "RoundHouseUITests.xctest"
+               BlueprintName = "RoundHouseUITests"
                ReferencedContainer = "container:RoundHouse.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -66,7 +68,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D29F5C70267571EF00EC2F85"
             BuildableName = "RoundHouse.app"
-            BlueprintName = "RoundHouse (iOS)"
+            BlueprintName = "RoundHouse"
             ReferencedContainer = "container:RoundHouse.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -89,7 +91,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D29F5C70267571EF00EC2F85"
             BuildableName = "RoundHouse.app"
-            BlueprintName = "RoundHouse (iOS)"
+            BlueprintName = "RoundHouse"
             ReferencedContainer = "container:RoundHouse.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
