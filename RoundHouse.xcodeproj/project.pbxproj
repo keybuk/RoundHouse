@@ -236,10 +236,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D23C3BF12676F96D0017BC5B /* Navigation */ = {
+		D212CC332889CFAD00D6A31A /* RoundHouse */ = {
 			isa = PBXGroup;
 			children = (
 				D29F5C69267571ED00EC2F85 /* RoundHouseApp.swift */,
+				D29F5CBD267578F300EC2F85 /* PreviewData.swift */,
+				D29F5C6C267571EF00EC2F85 /* Assets.xcassets */,
+				D212CC312889CB2F00D6A31A /* RoundHouse.entitlements */,
+				D29F5CC0267579BE00EC2F85 /* Preview Content */,
+			);
+			path = RoundHouse;
+			sourceTree = "<group>";
+		};
+		D23C3BF12676F96D0017BC5B /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
 				D29F5C6A267571ED00EC2F85 /* ContentView.swift */,
 				D23C3BD92676BC9F0017BC5B /* AppSidebar.swift */,
 			);
@@ -296,6 +307,7 @@
 		D29F5C61267571ED00EC2F85 = {
 			isa = PBXGroup;
 			children = (
+				D212CC332889CFAD00D6A31A /* RoundHouse */,
 				D29F5CB02675742800EC2F85 /* Model */,
 				D23C3BF12676F96D0017BC5B /* Navigation */,
 				D29F5C66267571ED00EC2F85 /* Shared */,
@@ -314,10 +326,6 @@
 				D2C49602267581070008AFB8 /* BoxedImage.swift */,
 				D29A204E26DB003F00FE8DD5 /* OptionalText.swift */,
 				D29A205426DB10A300FE8DD5 /* SectionedFetchRequest+RecordCount.swift */,
-				D29F5CBD267578F300EC2F85 /* PreviewData.swift */,
-				D212CC312889CB2F00D6A31A /* RoundHouse.entitlements */,
-				D29F5C6C267571EF00EC2F85 /* Assets.xcassets */,
-				D29F5CC0267579BE00EC2F85 /* Preview Content */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -804,10 +812,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Shared/RoundHouse.entitlements;
+				CODE_SIGN_ENTITLEMENTS = RoundHouse/RoundHouse.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "Shared/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "RoundHouse/Preview\\ Content";
 				DEVELOPMENT_TEAM = 79P776W2YF;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -838,10 +846,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Shared/RoundHouse.entitlements;
+				CODE_SIGN_ENTITLEMENTS = RoundHouse/RoundHouse.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "Shared/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "RoundHouse/Preview\\ Content";
 				DEVELOPMENT_TEAM = 79P776W2YF;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
