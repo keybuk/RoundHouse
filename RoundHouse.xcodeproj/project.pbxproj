@@ -1,0 +1,638 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D2580F7A2A035DC900F0C889 /* RoundHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580F792A035DC900F0C889 /* RoundHouseApp.swift */; };
+		D2580F7C2A035DC900F0C889 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580F7B2A035DC900F0C889 /* Persistence.swift */; };
+		D2580F7F2A035DC900F0C889 /* RoundHouse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D2580F7D2A035DC900F0C889 /* RoundHouse.xcdatamodeld */; };
+		D2580F812A035DC900F0C889 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580F802A035DC900F0C889 /* ContentView.swift */; };
+		D2580F832A035DCA00F0C889 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2580F822A035DCA00F0C889 /* Assets.xcassets */; };
+		D2580F872A035DCA00F0C889 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2580F862A035DCA00F0C889 /* Preview Assets.xcassets */; };
+		D2580F912A035DCB00F0C889 /* RoundHouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580F902A035DCB00F0C889 /* RoundHouseTests.swift */; };
+		D2580F9B2A035DCB00F0C889 /* RoundHouseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580F9A2A035DCB00F0C889 /* RoundHouseUITests.swift */; };
+		D2580F9D2A035DCB00F0C889 /* RoundHouseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580F9C2A035DCB00F0C889 /* RoundHouseUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D2580F8D2A035DCB00F0C889 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2580F6E2A035DC900F0C889 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2580F752A035DC900F0C889;
+			remoteInfo = RoundHouse;
+		};
+		D2580F972A035DCB00F0C889 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2580F6E2A035DC900F0C889 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2580F752A035DC900F0C889;
+			remoteInfo = RoundHouse;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D2580F762A035DC900F0C889 /* RoundHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2580F792A035DC900F0C889 /* RoundHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseApp.swift; sourceTree = "<group>"; };
+		D2580F7B2A035DC900F0C889 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		D2580F7E2A035DC900F0C889 /* RoundHouse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoundHouse.xcdatamodel; sourceTree = "<group>"; };
+		D2580F802A035DC900F0C889 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D2580F822A035DCA00F0C889 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2580F842A035DCA00F0C889 /* RoundHouse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RoundHouse.entitlements; sourceTree = "<group>"; };
+		D2580F862A035DCA00F0C889 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D2580F8C2A035DCB00F0C889 /* RoundHouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoundHouseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2580F902A035DCB00F0C889 /* RoundHouseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseTests.swift; sourceTree = "<group>"; };
+		D2580F962A035DCB00F0C889 /* RoundHouseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoundHouseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2580F9A2A035DCB00F0C889 /* RoundHouseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseUITests.swift; sourceTree = "<group>"; };
+		D2580F9C2A035DCB00F0C889 /* RoundHouseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2580F732A035DC900F0C889 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2580F892A035DCB00F0C889 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2580F932A035DCB00F0C889 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D2580F6D2A035DC900F0C889 = {
+			isa = PBXGroup;
+			children = (
+				D2580F782A035DC900F0C889 /* RoundHouse */,
+				D2580F8F2A035DCB00F0C889 /* RoundHouseTests */,
+				D2580F992A035DCB00F0C889 /* RoundHouseUITests */,
+				D2580F772A035DC900F0C889 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D2580F772A035DC900F0C889 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2580F762A035DC900F0C889 /* RoundHouse.app */,
+				D2580F8C2A035DCB00F0C889 /* RoundHouseTests.xctest */,
+				D2580F962A035DCB00F0C889 /* RoundHouseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2580F782A035DC900F0C889 /* RoundHouse */ = {
+			isa = PBXGroup;
+			children = (
+				D2580F792A035DC900F0C889 /* RoundHouseApp.swift */,
+				D2580F7B2A035DC900F0C889 /* Persistence.swift */,
+				D2580F802A035DC900F0C889 /* ContentView.swift */,
+				D2580F822A035DCA00F0C889 /* Assets.xcassets */,
+				D2580F842A035DCA00F0C889 /* RoundHouse.entitlements */,
+				D2580F7D2A035DC900F0C889 /* RoundHouse.xcdatamodeld */,
+				D2580F852A035DCA00F0C889 /* Preview Content */,
+			);
+			path = RoundHouse;
+			sourceTree = "<group>";
+		};
+		D2580F852A035DCA00F0C889 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D2580F862A035DCA00F0C889 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D2580F8F2A035DCB00F0C889 /* RoundHouseTests */ = {
+			isa = PBXGroup;
+			children = (
+				D2580F902A035DCB00F0C889 /* RoundHouseTests.swift */,
+			);
+			path = RoundHouseTests;
+			sourceTree = "<group>";
+		};
+		D2580F992A035DCB00F0C889 /* RoundHouseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D2580F9A2A035DCB00F0C889 /* RoundHouseUITests.swift */,
+				D2580F9C2A035DCB00F0C889 /* RoundHouseUITestsLaunchTests.swift */,
+			);
+			path = RoundHouseUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2580F752A035DC900F0C889 /* RoundHouse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2580FA02A035DCB00F0C889 /* Build configuration list for PBXNativeTarget "RoundHouse" */;
+			buildPhases = (
+				D2580F722A035DC900F0C889 /* Sources */,
+				D2580F732A035DC900F0C889 /* Frameworks */,
+				D2580F742A035DC900F0C889 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RoundHouse;
+			productName = RoundHouse;
+			productReference = D2580F762A035DC900F0C889 /* RoundHouse.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D2580F8B2A035DCB00F0C889 /* RoundHouseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2580FA32A035DCB00F0C889 /* Build configuration list for PBXNativeTarget "RoundHouseTests" */;
+			buildPhases = (
+				D2580F882A035DCB00F0C889 /* Sources */,
+				D2580F892A035DCB00F0C889 /* Frameworks */,
+				D2580F8A2A035DCB00F0C889 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2580F8E2A035DCB00F0C889 /* PBXTargetDependency */,
+			);
+			name = RoundHouseTests;
+			productName = RoundHouseTests;
+			productReference = D2580F8C2A035DCB00F0C889 /* RoundHouseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D2580F952A035DCB00F0C889 /* RoundHouseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2580FA62A035DCB00F0C889 /* Build configuration list for PBXNativeTarget "RoundHouseUITests" */;
+			buildPhases = (
+				D2580F922A035DCB00F0C889 /* Sources */,
+				D2580F932A035DCB00F0C889 /* Frameworks */,
+				D2580F942A035DCB00F0C889 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2580F982A035DCB00F0C889 /* PBXTargetDependency */,
+			);
+			name = RoundHouseUITests;
+			productName = RoundHouseUITests;
+			productReference = D2580F962A035DCB00F0C889 /* RoundHouseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2580F6E2A035DC900F0C889 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					D2580F752A035DC900F0C889 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					D2580F8B2A035DCB00F0C889 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = D2580F752A035DC900F0C889;
+					};
+					D2580F952A035DCB00F0C889 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = D2580F752A035DC900F0C889;
+					};
+				};
+			};
+			buildConfigurationList = D2580F712A035DC900F0C889 /* Build configuration list for PBXProject "RoundHouse" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D2580F6D2A035DC900F0C889;
+			productRefGroup = D2580F772A035DC900F0C889 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2580F752A035DC900F0C889 /* RoundHouse */,
+				D2580F8B2A035DCB00F0C889 /* RoundHouseTests */,
+				D2580F952A035DCB00F0C889 /* RoundHouseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2580F742A035DC900F0C889 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2580F872A035DCA00F0C889 /* Preview Assets.xcassets in Resources */,
+				D2580F832A035DCA00F0C889 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2580F8A2A035DCB00F0C889 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2580F942A035DCB00F0C889 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2580F722A035DC900F0C889 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2580F7A2A035DC900F0C889 /* RoundHouseApp.swift in Sources */,
+				D2580F7C2A035DC900F0C889 /* Persistence.swift in Sources */,
+				D2580F812A035DC900F0C889 /* ContentView.swift in Sources */,
+				D2580F7F2A035DC900F0C889 /* RoundHouse.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2580F882A035DCB00F0C889 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2580F912A035DCB00F0C889 /* RoundHouseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2580F922A035DCB00F0C889 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2580F9D2A035DCB00F0C889 /* RoundHouseUITestsLaunchTests.swift in Sources */,
+				D2580F9B2A035DCB00F0C889 /* RoundHouseUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2580F8E2A035DCB00F0C889 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2580F752A035DC900F0C889 /* RoundHouse */;
+			targetProxy = D2580F8D2A035DCB00F0C889 /* PBXContainerItemProxy */;
+		};
+		D2580F982A035DCB00F0C889 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2580F752A035DC900F0C889 /* RoundHouse */;
+			targetProxy = D2580F972A035DCB00F0C889 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D2580F9E2A035DCB00F0C889 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D2580F9F2A035DCB00F0C889 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		D2580FA12A035DCB00F0C889 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RoundHouse/RoundHouse.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RoundHouse/Preview Content\"";
+				DEVELOPMENT_TEAM = 79P776W2YF;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.netsplit.RoundHouse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D2580FA22A035DCB00F0C889 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RoundHouse/RoundHouse.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RoundHouse/Preview Content\"";
+				DEVELOPMENT_TEAM = 79P776W2YF;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.netsplit.RoundHouse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D2580FA42A035DCB00F0C889 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79P776W2YF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.netsplit.RoundHouseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RoundHouse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RoundHouse";
+			};
+			name = Debug;
+		};
+		D2580FA52A035DCB00F0C889 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79P776W2YF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.netsplit.RoundHouseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RoundHouse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RoundHouse";
+			};
+			name = Release;
+		};
+		D2580FA72A035DCB00F0C889 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79P776W2YF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.netsplit.RoundHouseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RoundHouse;
+			};
+			name = Debug;
+		};
+		D2580FA82A035DCB00F0C889 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79P776W2YF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.netsplit.RoundHouseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RoundHouse;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2580F712A035DC900F0C889 /* Build configuration list for PBXProject "RoundHouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2580F9E2A035DCB00F0C889 /* Debug */,
+				D2580F9F2A035DCB00F0C889 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2580FA02A035DCB00F0C889 /* Build configuration list for PBXNativeTarget "RoundHouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2580FA12A035DCB00F0C889 /* Debug */,
+				D2580FA22A035DCB00F0C889 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2580FA32A035DCB00F0C889 /* Build configuration list for PBXNativeTarget "RoundHouseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2580FA42A035DCB00F0C889 /* Debug */,
+				D2580FA52A035DCB00F0C889 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2580FA62A035DCB00F0C889 /* Build configuration list for PBXNativeTarget "RoundHouseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2580FA72A035DCB00F0C889 /* Debug */,
+				D2580FA82A035DCB00F0C889 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D2580F7D2A035DC900F0C889 /* RoundHouse.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D2580F7E2A035DC900F0C889 /* RoundHouse.xcdatamodel */,
+			);
+			currentVersion = D2580F7E2A035DC900F0C889 /* RoundHouse.xcdatamodel */;
+			path = RoundHouse.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D2580F6E2A035DC900F0C889 /* Project object */;
+}
