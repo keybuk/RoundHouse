@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2050CB22A05A50000BE32BB /* PurchaseMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2050CB12A05A50000BE32BB /* PurchaseMigrationPolicy.swift */; };
 		D2580F7A2A035DC900F0C889 /* RoundHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580F792A035DC900F0C889 /* RoundHouseApp.swift */; };
 		D2580F7C2A035DC900F0C889 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580F7B2A035DC900F0C889 /* Persistence.swift */; };
 		D2580F7F2A035DC900F0C889 /* RoundHouse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D2580F7D2A035DC900F0C889 /* RoundHouse.xcdatamodeld */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D2050CB12A05A50000BE32BB /* PurchaseMigrationPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseMigrationPolicy.swift; sourceTree = "<group>"; };
 		D2580F762A035DC900F0C889 /* RoundHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2580F792A035DC900F0C889 /* RoundHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseApp.swift; sourceTree = "<group>"; };
 		D2580F7B2A035DC900F0C889 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				D2580FBC2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel */,
 				D2580FC02A058EDC00F0C889 /* DefaultMigrationPolicy.swift */,
 				D2580FCE2A059D8500F0C889 /* ModelMigrationPolicy.swift */,
+				D2050CB12A05A50000BE32BB /* PurchaseMigrationPolicy.swift */,
 				D2580FC62A059A3900F0C889 /* Purchase+Condition.swift */,
 				D2580FC82A059A4100F0C889 /* Model+Classification.swift */,
 				D2580FC92A059A4100F0C889 /* Model+Disposition.swift */,
@@ -307,6 +310,7 @@
 				D2580FC72A059A3900F0C889 /* Purchase+Condition.swift in Sources */,
 				D2580F7A2A035DC900F0C889 /* RoundHouseApp.swift in Sources */,
 				D2580F7C2A035DC900F0C889 /* Persistence.swift in Sources */,
+				D2050CB22A05A50000BE32BB /* PurchaseMigrationPolicy.swift in Sources */,
 				D2580FC12A058EDC00F0C889 /* DefaultMigrationPolicy.swift in Sources */,
 				D2580FBD2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
 				D2580FCC2A059A4100F0C889 /* Model+Disposition.swift in Sources */,

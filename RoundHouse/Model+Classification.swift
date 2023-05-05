@@ -17,7 +17,6 @@ extension Model {
         case departmental
         case noPrototype
         case vehicle
-        case accessory
     }
 
     var classification: Classification? {
@@ -37,7 +36,6 @@ extension Model.Classification: CustomStringConvertible {
         case .departmental: return "Departmental"
         case .noPrototype: return "No Prototype"
         case .vehicle: return "Vehicle"
-        case .accessory: return "Accessory"
         }
     }
 
@@ -51,7 +49,6 @@ extension Model.Classification: CustomStringConvertible {
         case .departmental: return "Departmentals"
         case .noPrototype: return "No Prototype"
         case .vehicle: return "Vehicles"
-        case .accessory: return "Accessory"
         }
     }
 }

@@ -16,14 +16,46 @@ final class ModelMigrationPolicy: DefaultMigrationPolicy {
     func renumberedClassification(_ oldClassification: NSNumber) -> NSNumber {
         switch oldClassification.int16Value {
         case 1: return oldClassification
-        // Make room for .steamLocomotive at 2
+            // Make room for .steamLocomotive at 2
         case 2...6: return NSNumber(value: oldClassification.int16Value + 1)
-        // .accessory is moved from 7 to 9, so .vehicle is unchanged
-        case 7: return NSNumber(integerLiteral: 9)
+            // .accessory is removed from 7, so .vehicle is unchanged
         case 8: return oldClassification
-        // .steamLocomotive is moved to 2.
+            // .steamLocomotive is moved to 2.
         case 9: return NSNumber(integerLiteral: 2)
         default: return NSNumber(integerLiteral: 0)
         }
+    }
+
+    private func accessoryCatalogSplit(_ modelClass: String) -> (String, String) {
+        let components = modelClass.split(whereSeparator: \.isWhitespace)
+        guard components.count > 2 else { return ("", modelClass) }
+        guard let _ = components[0].rangeOfCharacter(from: .decimalDigits) else { return ("", modelClass) }
+        guard !components[0].hasSuffix("ft") else { return ("", modelClass) }
+
+        let catalogDescription = modelClass
+            .dropFirst(components[0].count)
+            .drop(while: \.isWhitespace)
+
+        return (String(components[0]), String(catalogDescription))
+    }
+
+    /// Extracts the accessory catalog number from a model class.
+    /// - Parameter modelClass: model class in source instance.
+    /// - Returns: `modelClass` or the first component if it contains a catalog number.
+    @objc
+    func accessoryCatalogNumber(_ modelClass: String?) -> String {
+        guard let modelClass = modelClass else { return "" }
+        let (catalogNumber, _) = accessoryCatalogSplit(modelClass)
+        return catalogNumber
+    }
+
+    /// Extracts the accessory catalog decription from a model class.
+    /// - Parameter modelClass: model class in source instance.
+    /// - Returns: `modelClass` or the following components if the first contains a catalog number.
+    @objc
+    func accessoryCatalogDescription(_ modelClass: String?) -> String {
+        guard let modelClass = modelClass else { return "" }
+        let (_, catalogDescription) = accessoryCatalogSplit(modelClass)
+        return catalogDescription
     }
 }

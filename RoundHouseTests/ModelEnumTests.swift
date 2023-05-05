@@ -26,7 +26,6 @@ class ModelEnumTests: XCTestCase {
             case (6, .departmental): break
             case (7, .noPrototype): break
             case (8, .vehicle): break
-            case (9, .accessory): break
             default:
                 XCTFail("Classification has incorrect rawValue for \(classification)")
             }
@@ -47,7 +46,6 @@ class ModelEnumTests: XCTestCase {
             case (6, .departmental): break
             case (7, .noPrototype): break
             case (8, .vehicle): break
-            case (9, .accessory): break
             default:
                 XCTFail("Classification has incorrect value for rawValue \(rawValue)")
             }

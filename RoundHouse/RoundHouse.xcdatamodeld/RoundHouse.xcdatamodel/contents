@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22E261" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Accessory" representedClassName="Accessory" syncable="YES" codeGenerationType="class">
+        <attribute name="catalogDescription" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="catalogNumber" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="gauge" optional="YES" attributeType="String" defaultValueString="OO"/>
+        <attribute name="imageData" optional="YES" attributeType="Binary"/>
+        <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="manufacturer" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="notes" optional="YES" attributeType="String" defaultValueString=""/>
+        <relationship name="purchase" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Purchase" inverseName="accessories" inverseEntity="Purchase"/>
+    </entity>
     <entity name="Coupling" representedClassName="Coupling" syncable="YES" codeGenerationType="class">
         <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="model" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Model" inverseName="couplings" inverseEntity="Model"/>
@@ -91,6 +101,7 @@
         <attribute name="limitedEditionCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="limitedEditionNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="manufacturer" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="maxAccessoryIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="maxModelIndex" optional="YES" attributeType="Integer 16" defaultValueString="-1" usesScalarValueType="YES"/>
         <attribute name="notes" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="price" optional="YES" attributeType="Decimal"/>
@@ -98,6 +109,7 @@
         <attribute name="store" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="valuation" optional="YES" attributeType="Decimal"/>
         <attribute name="valuationCurrency" optional="YES" attributeType="String" defaultValueString="en_GB"/>
+        <relationship name="accessories" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Accessory" inverseName="purchase" inverseEntity="Accessory"/>
         <relationship name="models" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Model" inverseName="purchase" inverseEntity="Model"/>
     </entity>
     <entity name="SpeakerFitting" representedClassName="SpeakerFitting" syncable="YES" codeGenerationType="class">
