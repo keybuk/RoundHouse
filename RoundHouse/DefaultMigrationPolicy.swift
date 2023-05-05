@@ -16,4 +16,15 @@ class DefaultMigrationPolicy: NSEntityMigrationPolicy {
     func nilToEmptyString(_ string: String?) -> String? {
         string ?? ""
     }
+
+    /// Converts DateComponents-stored values to Date.
+    /// - Parameter dateComponents: date components in source instance.
+    /// - Returns: Date equivalent or `nil` when `dateComponents` is `nil`.
+    @objc
+    func dateComponentsToDate(_ dateComponents: DateComponents?) -> Date? {
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone(abbreviation: "UTC")!
+
+        return dateComponents.flatMap { calendar.date(from: $0) }
+    }
 }

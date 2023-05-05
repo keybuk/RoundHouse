@@ -118,6 +118,9 @@ final class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone(abbreviation: "UTC")!
+
         let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
         let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
         XCTAssertEqual(dPurchases.count, 1, "Expected Purchase after migration")
@@ -137,9 +140,9 @@ final class RoundHouseMigrationTests: XCTestCase {
                        "Purchase.limitedEditionNumber not copied from source")
         XCTAssertEqual(dPurchase.value(forKey: "limitedEditionCount") as! Int16, 500,
                        "Purchase.limitedEditionCount not copied from source")
-        XCTAssertEqual(dPurchase.value(forKey: "date") as! DateComponents?,
-                       DateComponents(year: 2010, month: 12, day: 25),
-                       "Purchase.date not copied from source")
+        XCTAssertEqual(dPurchase.value(forKey: "date") as! Date?,
+                       calendar.date(from: DateComponents(year: 2010, month: 12, day: 25)),
+                       "Purchase.date not converted from source")
         XCTAssertEqual(dPurchase.value(forKey: "store") as! String?, "Hattons",
                        "Purchase.store not copied from source")
         XCTAssertEqual(dPurchase.value(forKey: "priceRawValue") as! NSDecimalNumber?,
@@ -502,6 +505,9 @@ final class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone(abbreviation: "UTC")!
+
         let dModelsFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Model")
         let dModels = try managedObjectContext.fetch(dModelsFetchRequest)
         XCTAssertEqual(dModels.count, 1, "Expected Model after migration")
@@ -534,12 +540,12 @@ final class RoundHouseMigrationTests: XCTestCase {
                        "Model.dispositionRawValue not copied from source")
         XCTAssertEqual(dModel.value(forKey: "motor") as! String?, "5-pole",
                        "Model.motor not copied from source")
-        XCTAssertEqual(dModel.value(forKey: "lastOil") as! DateComponents?,
-                       DateComponents(year: 2020, month: 6, day: 17),
-                       "Model.lastOil not copied from source")
-        XCTAssertEqual(dModel.value(forKey: "lastRun") as! DateComponents?,
-                       DateComponents(year: 2020, month: 6, day: 19),
-                       "Model.lastRun not copied from source")
+        XCTAssertEqual(dModel.value(forKey: "lastOilDate") as! Date?,
+                       calendar.date(from: DateComponents(year: 2020, month: 6, day: 17)),
+                       "Model.lastOilDate not converted from source")
+        XCTAssertEqual(dModel.value(forKey: "lastRunDate") as! Date?,
+                       calendar.date(from: DateComponents(year: 2020, month: 6, day: 19)),
+                       "Model.lastRunDate not converted from source")
         XCTAssertEqual(dModel.value(forKey: "notes") as! String?, "Test",
                        "Model.notes not copied from source")
     }
@@ -968,6 +974,9 @@ final class RoundHouseMigrationTests: XCTestCase {
         try managedObjectContext.save()
         try performMigration()
 
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone(abbreviation: "UTC")!
+
         let dDecodersFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Decoder")
         let dDecoders = try managedObjectContext.fetch(dDecodersFetchRequest)
         XCTAssertEqual(dDecoders.count, 1, "Expected Decoder after migration")
@@ -981,9 +990,9 @@ final class RoundHouseMigrationTests: XCTestCase {
                        "Decoder.serialNumber not copied from source")
         XCTAssertEqual(dDecoder.value(forKey: "firmwareVersion") as! String?, "3.11",
                        "Decoder.firmwareVersion not copied from source")
-        XCTAssertEqual(dDecoder.value(forKey: "firmwareDate") as! DateComponents?,
-                       DateComponents(year: 2019, month: 9, day: 15),
-                       "Decoder.firmwareDate not copied from source")
+        XCTAssertEqual(dDecoder.value(forKey: "firmwareDate") as! Date?,
+                       calendar.date(from: DateComponents(year: 2019, month: 9, day: 15)),
+                       "Decoder.firmwareDate not converted from source")
         XCTAssertEqual(dDecoder.value(forKey: "soundAuthor") as! String?, "Legomanbiffo",
                        "Decoder.soundAuthor not copied from source")
         XCTAssertEqual(dDecoder.value(forKey: "soundProject") as! String?, "A4",
