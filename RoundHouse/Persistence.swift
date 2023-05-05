@@ -28,9 +28,18 @@ struct PersistenceController {
 
     init(inMemory: Bool = false) {
         container = NSPersistentCloudKitContainer(name: "RoundHouse")
+
+        guard let containerStoreDescription = container.persistentStoreDescriptions.first else {
+            preconditionFailure("Missing persistent store description")
+        }
+
+        containerStoreDescription.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
+
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
+            containerStoreDescription.cloudKitContainerOptions = nil
         }
+
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
