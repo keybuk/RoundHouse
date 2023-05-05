@@ -53,6 +53,7 @@
 		D2580FB32A057D3900F0C889 /* EngineShed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EngineShed.xcdatamodel; sourceTree = "<group>"; };
 		D2580FB62A057FA700F0C889 /* SecureDateComponentsTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureDateComponentsTransformer.swift; sourceTree = "<group>"; };
 		D2580FB82A05819700F0C889 /* SecureDateComponentsTransformerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureDateComponentsTransformerTests.swift; sourceTree = "<group>"; };
+		D2580FBA2A0586B100F0C889 /* RoundHouse.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RoundHouse.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +110,7 @@
 				D2580FB62A057FA700F0C889 /* SecureDateComponentsTransformer.swift */,
 				D2580F822A035DCA00F0C889 /* Assets.xcassets */,
 				D2580F842A035DCA00F0C889 /* RoundHouse.entitlements */,
+				D2580FBA2A0586B100F0C889 /* RoundHouse.xctestplan */,
 				D2580F7D2A035DC900F0C889 /* RoundHouse.xcdatamodeld */,
 				D2580F852A035DCA00F0C889 /* Preview Content */,
 			);

@@ -1,0 +1,39 @@
+{
+  "configurations" : [
+    {
+      "id" : "CA877B50-7B07-40EC-9BCC-2B72589A5CFB",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:RoundHouse.xcodeproj",
+      "identifier" : "D2580F752A035DC900F0C889",
+      "name" : "RoundHouse"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:RoundHouse.xcodeproj",
+        "identifier" : "D2580F8B2A035DCB00F0C889",
+        "name" : "RoundHouseTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:RoundHouse.xcodeproj",
+        "identifier" : "D2580F952A035DCB00F0C889",
+        "name" : "RoundHouseUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
