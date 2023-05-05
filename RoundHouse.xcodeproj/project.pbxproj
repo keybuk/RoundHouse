@@ -44,6 +44,14 @@
 		D2580FCC2A059A4100F0C889 /* Model+Disposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FC92A059A4100F0C889 /* Model+Disposition.swift */; };
 		D2580FCD2A059A4100F0C889 /* Model+Era.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FCA2A059A4100F0C889 /* Model+Era.swift */; };
 		D2580FCF2A059D8500F0C889 /* ModelMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FCE2A059D8500F0C889 /* ModelMigrationPolicy.swift */; };
+		D2A1D9AC2A05C3CC00EFC161 /* Purchase+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1D9AB2A05C3CC00EFC161 /* Purchase+Models.swift */; };
+		D2A1D9AE2A05C3D200EFC161 /* Purchase+Accessories.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1D9AD2A05C3D200EFC161 /* Purchase+Accessories.swift */; };
+		D2A1D9B02A05C3F900EFC161 /* Train+Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1D9AF2A05C3F900EFC161 /* Train+Members.swift */; };
+		D2A1D9B22A05C40200EFC161 /* DecoderType+Decoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1D9B12A05C40200EFC161 /* DecoderType+Decoders.swift */; };
+		D2A1D9B42A05C41700EFC161 /* PurchaseModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1D9B32A05C41700EFC161 /* PurchaseModelsTests.swift */; };
+		D2A1D9B62A05C42200EFC161 /* PurchaseAccessoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1D9B52A05C42200EFC161 /* PurchaseAccessoriesTests.swift */; };
+		D2A1D9B82A05C43C00EFC161 /* TrainMembersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1D9B72A05C43B00EFC161 /* TrainMembersTests.swift */; };
+		D2A1D9BA2A05C44B00EFC161 /* DecoderTypeDecodersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1D9B92A05C44B00EFC161 /* DecoderTypeDecodersTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +114,14 @@
 		D2580FC92A059A4100F0C889 /* Model+Disposition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+Disposition.swift"; sourceTree = "<group>"; };
 		D2580FCA2A059A4100F0C889 /* Model+Era.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+Era.swift"; sourceTree = "<group>"; };
 		D2580FCE2A059D8500F0C889 /* ModelMigrationPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelMigrationPolicy.swift; sourceTree = "<group>"; };
+		D2A1D9AB2A05C3CC00EFC161 /* Purchase+Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Purchase+Models.swift"; sourceTree = "<group>"; };
+		D2A1D9AD2A05C3D200EFC161 /* Purchase+Accessories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Purchase+Accessories.swift"; sourceTree = "<group>"; };
+		D2A1D9AF2A05C3F900EFC161 /* Train+Members.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Train+Members.swift"; sourceTree = "<group>"; };
+		D2A1D9B12A05C40200EFC161 /* DecoderType+Decoders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DecoderType+Decoders.swift"; sourceTree = "<group>"; };
+		D2A1D9B32A05C41700EFC161 /* PurchaseModelsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseModelsTests.swift; sourceTree = "<group>"; };
+		D2A1D9B52A05C42200EFC161 /* PurchaseAccessoriesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseAccessoriesTests.swift; sourceTree = "<group>"; };
+		D2A1D9B72A05C43B00EFC161 /* TrainMembersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainMembersTests.swift; sourceTree = "<group>"; };
+		D2A1D9B92A05C44B00EFC161 /* DecoderTypeDecodersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoderTypeDecodersTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,13 +191,17 @@
 				D2031DF12A05B821000A0FEF /* Purchase+Catalog.swift */,
 				D2031DED2A05B058000A0FEF /* Purchase+Currency.swift */,
 				D2580FC62A059A3900F0C889 /* Purchase+Condition.swift */,
+				D2A1D9AB2A05C3CC00EFC161 /* Purchase+Models.swift */,
+				D2A1D9AD2A05C3D200EFC161 /* Purchase+Accessories.swift */,
 				D2031DFA2A05B91E000A0FEF /* Purchase+WillSave.swift */,
 				D2580FC82A059A4100F0C889 /* Model+Classification.swift */,
 				D2580FC92A059A4100F0C889 /* Model+Disposition.swift */,
 				D2580FCA2A059A4100F0C889 /* Model+Era.swift */,
 				D2031DFE2A05B94E000A0FEF /* DecoderType+Stock.swift */,
+				D2A1D9B12A05C40200EFC161 /* DecoderType+Decoders.swift */,
 				D2031DFC2A05B948000A0FEF /* DecoderType+WillSave.swift */,
 				D2031E042A05B987000A0FEF /* Decoder+Stock.swift */,
+				D2A1D9AF2A05C3F900EFC161 /* Train+Members.swift */,
 				D2580F852A035DCA00F0C889 /* Preview Content */,
 			);
 			path = RoundHouse;
@@ -205,9 +225,13 @@
 				D2031DF82A05B906000A0FEF /* PurchaseCatalogTests.swift */,
 				D2580FC42A059A1C00F0C889 /* PurchaseEnumTests.swift */,
 				D2031DEF2A05B064000A0FEF /* PurchaseCurrencyTests.swift */,
+				D2A1D9B32A05C41700EFC161 /* PurchaseModelsTests.swift */,
+				D2A1D9B52A05C42200EFC161 /* PurchaseAccessoriesTests.swift */,
 				D2580FC22A059A1600F0C889 /* ModelEnumTests.swift */,
 				D2031E002A05B968000A0FEF /* DecoderTypeStockTests.swift */,
+				D2A1D9B92A05C44B00EFC161 /* DecoderTypeDecodersTests.swift */,
 				D2031E022A05B983000A0FEF /* DecoderStockTests.swift */,
+				D2A1D9B72A05C43B00EFC161 /* TrainMembersTests.swift */,
 			);
 			path = RoundHouseTests;
 			sourceTree = "<group>";
@@ -367,18 +391,22 @@
 				D2031DF22A05B821000A0FEF /* Purchase+Catalog.swift in Sources */,
 				D2580FC12A058EDC00F0C889 /* DefaultMigrationPolicy.swift in Sources */,
 				D2580FBD2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
+				D2A1D9B02A05C3F900EFC161 /* Train+Members.swift in Sources */,
 				D2580FCC2A059A4100F0C889 /* Model+Disposition.swift in Sources */,
+				D2A1D9AC2A05C3CC00EFC161 /* Purchase+Models.swift in Sources */,
 				D2031DFF2A05B94E000A0FEF /* DecoderType+Stock.swift in Sources */,
 				D2031DEA2A05AA1C000A0FEF /* TrainMigrationPolicy.swift in Sources */,
 				D2031DEC2A05AD3B000A0FEF /* SocketMigrationPolicy.swift in Sources */,
 				D2031DFB2A05B91F000A0FEF /* Purchase+WillSave.swift in Sources */,
 				D2580FB72A057FA700F0C889 /* SecureDateComponentsTransformer.swift in Sources */,
 				D2580F812A035DC900F0C889 /* ContentView.swift in Sources */,
+				D2A1D9B22A05C40200EFC161 /* DecoderType+Decoders.swift in Sources */,
 				D2580FCF2A059D8500F0C889 /* ModelMigrationPolicy.swift in Sources */,
 				D2031DFD2A05B948000A0FEF /* DecoderType+WillSave.swift in Sources */,
 				D2580F7F2A035DC900F0C889 /* RoundHouse.xcdatamodeld in Sources */,
 				D2580FCB2A059A4100F0C889 /* Model+Classification.swift in Sources */,
 				D2580FCD2A059A4100F0C889 /* Model+Era.swift in Sources */,
+				D2A1D9AE2A05C3D200EFC161 /* Purchase+Accessories.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,12 +414,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2A1D9B42A05C41700EFC161 /* PurchaseModelsTests.swift in Sources */,
 				D2580FC32A059A1600F0C889 /* ModelEnumTests.swift in Sources */,
 				D2580FB92A05819700F0C889 /* SecureDateComponentsTransformerTests.swift in Sources */,
 				D2580F912A035DCB00F0C889 /* RoundHouseTests.swift in Sources */,
 				D2031DF02A05B064000A0FEF /* PurchaseCurrencyTests.swift in Sources */,
 				D2580FBF2A058AD000F0C889 /* RoundHouseMigrationTests.swift in Sources */,
 				D2580FC52A059A1C00F0C889 /* PurchaseEnumTests.swift in Sources */,
+				D2A1D9B82A05C43C00EFC161 /* TrainMembersTests.swift in Sources */,
+				D2A1D9B62A05C42200EFC161 /* PurchaseAccessoriesTests.swift in Sources */,
+				D2A1D9BA2A05C44B00EFC161 /* DecoderTypeDecodersTests.swift in Sources */,
 				D2031E012A05B968000A0FEF /* DecoderTypeStockTests.swift in Sources */,
 				D2031E032A05B983000A0FEF /* DecoderStockTests.swift in Sources */,
 				D2031DF92A05B906000A0FEF /* PurchaseCatalogTests.swift in Sources */,
