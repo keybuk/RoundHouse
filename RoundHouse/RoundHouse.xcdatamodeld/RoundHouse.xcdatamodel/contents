@@ -80,7 +80,6 @@
         <relationship name="modifications" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Modification" inverseName="model" inverseEntity="Modification"/>
         <relationship name="purchase" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Purchase" inverseName="models" inverseEntity="Purchase"/>
         <relationship name="socket" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Socket" inverseName="models" inverseEntity="Socket"/>
-        <relationship name="speakerFittings" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SpeakerFitting"/>
         <relationship name="speakers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Speaker" inverseName="model" inverseEntity="Speaker"/>
         <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Task" inverseName="model" inverseEntity="Task"/>
         <relationship name="trainMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TrainMember" inverseName="model" inverseEntity="TrainMember"/>
