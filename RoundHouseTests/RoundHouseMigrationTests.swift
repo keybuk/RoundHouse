@@ -320,12 +320,12 @@ final class RoundHouseMigrationTests: XCTestCase {
         let dDecoderType = dDecoderTypes.first!
         XCTAssertEqual(dDecoderType.value(forKey: "manufacturer") as! String?, "ESU",
                        "DecoderType.manufacturer not copied from source")
-        XCTAssertEqual(dDecoderType.value(forKey: "productCode") as! String?, "50123",
-                       "DecoderType.productCode not copied from source")
-        XCTAssertEqual(dDecoderType.value(forKey: "productFamily") as! String?, "LokSound",
-                       "DecoderType.productFamily not copied from source")
-        XCTAssertEqual(dDecoderType.value(forKey: "productDescription") as! String?, "LokSound PluX22",
-                       "DecoderType.productDescription not copied from source")
+        XCTAssertEqual(dDecoderType.value(forKey: "catalogNumber") as! String?, "50123",
+                       "DecoderType.catalogNumber not copied from source productCode")
+        XCTAssertEqual(dDecoderType.value(forKey: "catalogFamily") as! String?, "LokSound",
+                       "DecoderType.catalogFamily not copied from source productFamily")
+        XCTAssertEqual(dDecoderType.value(forKey: "catalogDescription") as! String?, "LokSound PluX22",
+                       "DecoderType.catalogDescription not copied from source productDescription")
         XCTAssertEqual(dDecoderType.value(forKey: "imageData") as! Data?, "Test".data(using: .utf8),
                        "DecoderType.imageData not copied from source")
         XCTAssertEqual(dDecoderType.value(forKey: "socket") as! String?, "PluX22",
@@ -355,12 +355,12 @@ final class RoundHouseMigrationTests: XCTestCase {
         let dDecoderType = dDecoderTypes.first!
         XCTAssertEqual(dDecoderType.value(forKey: "manufacturer") as! String?, "",
                        "DecoderType.manufacturer not converted to empty string")
-        XCTAssertEqual(dDecoderType.value(forKey: "productCode") as! String?, "",
-                       "DecoderType.productCode not converted to empty string")
-        XCTAssertEqual(dDecoderType.value(forKey: "productFamily") as! String?, "",
-                       "DecoderType.productFamily not converted to empty string")
-        XCTAssertEqual(dDecoderType.value(forKey: "productDescription") as! String?, "",
-                       "DecoderType.productDescription not converted to empty string")
+        XCTAssertEqual(dDecoderType.value(forKey: "catalogNumber") as! String?, "",
+                       "DecoderType.catalogNumber not converted to empty string")
+        XCTAssertEqual(dDecoderType.value(forKey: "catalogFamily") as! String?, "",
+                       "DecoderType.catalogFamily not converted to empty string")
+        XCTAssertEqual(dDecoderType.value(forKey: "catalogDescription") as! String?, "",
+                       "DecoderType.catalogDescription not converted to empty string")
         XCTAssertEqual(dDecoderType.value(forKey: "socket") as! String?, "",
                        "DecoderType.socket not converted to empty string")
     }

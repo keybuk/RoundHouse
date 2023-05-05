@@ -17,15 +17,15 @@
         <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DecoderType" inverseName="decoders" inverseEntity="DecoderType"/>
     </entity>
     <entity name="DecoderType" representedClassName="DecoderType" syncable="YES" codeGenerationType="class">
+        <attribute name="catalogDescription" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="catalogFamily" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="catalogNumber" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="isProgrammable" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="isRailComSupported" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" elementID="hasRailCom"/>
         <attribute name="isSoundSupported" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" elementID="hasSound"/>
         <attribute name="manufacturer" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="minimumStock" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="productCode" optional="YES" attributeType="String" defaultValueString=""/>
-        <attribute name="productDescription" optional="YES" attributeType="String" defaultValueString=""/>
-        <attribute name="productFamily" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="remainingStock" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="socket" optional="YES" attributeType="String" defaultValueString=""/>
         <relationship name="decoders" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Decoder" inverseName="type" inverseEntity="Decoder"/>
