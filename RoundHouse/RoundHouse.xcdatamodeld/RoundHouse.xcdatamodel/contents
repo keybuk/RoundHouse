@@ -38,8 +38,8 @@
         <attribute name="manufacturer" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="minimumStock" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="remainingStock" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="socket" optional="YES" attributeType="String" defaultValueString=""/>
         <relationship name="decoders" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Decoder" inverseName="type" inverseEntity="Decoder"/>
+        <relationship name="socket" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Socket" inverseName="decoderTypes" inverseEntity="Socket"/>
     </entity>
     <entity name="DetailPart" representedClassName="DetailPart" syncable="YES" codeGenerationType="class">
         <attribute name="isFitted" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
@@ -70,7 +70,6 @@
         <attribute name="name" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="notes" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="number" optional="YES" attributeType="String" defaultValueString=""/>
-        <attribute name="socket" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="speaker" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="wheelArrangement" optional="YES" attributeType="String" defaultValueString=""/>
         <relationship name="couplings" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Coupling" inverseName="model" inverseEntity="Coupling"/>
@@ -80,6 +79,7 @@
         <relationship name="lights" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Light" inverseName="model" inverseEntity="Light"/>
         <relationship name="modifications" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Modification" inverseName="model" inverseEntity="Modification"/>
         <relationship name="purchase" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Purchase" inverseName="models" inverseEntity="Purchase"/>
+        <relationship name="socket" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Socket" inverseName="models" inverseEntity="Socket"/>
         <relationship name="speakerFittings" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SpeakerFitting" inverseName="model" inverseEntity="SpeakerFitting"/>
         <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Task" inverseName="model" inverseEntity="Task"/>
         <relationship name="trainMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TrainMember" inverseName="model" inverseEntity="TrainMember"/>
@@ -111,6 +111,12 @@
         <attribute name="valuationCurrency" optional="YES" attributeType="String" defaultValueString="en_GB"/>
         <relationship name="accessories" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Accessory" inverseName="purchase" inverseEntity="Accessory"/>
         <relationship name="models" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Model" inverseName="purchase" inverseEntity="Model"/>
+    </entity>
+    <entity name="Socket" representedClassName="Socket" syncable="YES" codeGenerationType="class">
+        <attribute name="numberOfPins" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="decoderTypes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DecoderType" inverseName="socket" inverseEntity="DecoderType"/>
+        <relationship name="models" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Model" inverseName="socket" inverseEntity="Model"/>
     </entity>
     <entity name="SpeakerFitting" representedClassName="SpeakerFitting" syncable="YES" codeGenerationType="class">
         <attribute name="title" optional="YES" attributeType="String"/>

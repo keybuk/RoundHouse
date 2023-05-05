@@ -399,7 +399,6 @@ final class RoundHouseMigrationTests: XCTestCase {
         sModel.setValue("Great British Railways", forKey: "details")
         sModel.setValue(11, forKey: "eraRawValue")
         sModel.setValue(2, forKey: "dispositionRawValue")
-        sModel.setValue("PluX22", forKey: "socket")
         sModel.setValue("5-pole", forKey: "motor")
         sModel.setValue(DateComponents(year: 2020, month: 6, day: 17), forKey: "lastOil")
         sModel.setValue(DateComponents(year: 2020, month: 6, day: 19), forKey: "lastRun")
@@ -438,8 +437,6 @@ final class RoundHouseMigrationTests: XCTestCase {
         XCTAssertEqual(dModel.value(forKey: "dispositionRawValue") as! Int16,
                        Model.Disposition.collectorItem.rawValue,
                        "Model.dispositionRawValue not copied from source")
-        XCTAssertEqual(dModel.value(forKey: "socket") as! String?, "PluX22",
-                       "Model.socket not copied from source")
         XCTAssertEqual(dModel.value(forKey: "motor") as! String?, "5-pole",
                        "Model.motor not copied from source")
         XCTAssertEqual(dModel.value(forKey: "lastOil") as! DateComponents?,
@@ -483,8 +480,6 @@ final class RoundHouseMigrationTests: XCTestCase {
                        "Model.livery not converted to empty string")
         XCTAssertEqual(dModel.value(forKey: "details") as! String?, "",
                        "Model.details not converted to empty string")
-        XCTAssertEqual(dModel.value(forKey: "socket") as! String?, "",
-                       "Model.socket not converted to empty string")
         XCTAssertEqual(dModel.value(forKey: "motor") as! String?, "",
                        "Model.motor not converted to empty string")
         XCTAssertEqual(dModel.value(forKey: "notes") as! String?, "",
@@ -735,7 +730,6 @@ final class RoundHouseMigrationTests: XCTestCase {
         sDecoderType.setValue("LokSound", forKey: "productFamily")
         sDecoderType.setValue("LokSound PluX22", forKey: "productDescription")
         sDecoderType.setValue("Test".data(using: .utf8), forKey: "imageData")
-        sDecoderType.setValue("PluX22", forKey: "socket")
         sDecoderType.setValue(true, forKey: "isProgrammable")
         sDecoderType.setValue(true, forKey: "isSoundSupported")
         sDecoderType.setValue(true, forKey: "isRailComSupported")
@@ -761,8 +755,6 @@ final class RoundHouseMigrationTests: XCTestCase {
                        "DecoderType.catalogDescription not copied from source productDescription")
         XCTAssertEqual(dDecoderType.value(forKey: "imageData") as! Data?, "Test".data(using: .utf8),
                        "DecoderType.imageData not copied from source")
-        XCTAssertEqual(dDecoderType.value(forKey: "socket") as! String?, "PluX22",
-                       "DecoderType.socket not copied from source")
         XCTAssertEqual(dDecoderType.value(forKey: "isProgrammable") as! Bool, true,
                        "DecoderType.isProgrammable not copied from source")
         XCTAssertEqual(dDecoderType.value(forKey: "isSoundSupported") as! Bool, true,
@@ -796,8 +788,6 @@ final class RoundHouseMigrationTests: XCTestCase {
                        "DecoderType.catalogFamily not converted to empty string")
         XCTAssertEqual(dDecoderType.value(forKey: "catalogDescription") as! String?, "",
                        "DecoderType.catalogDescription not converted to empty string")
-        XCTAssertEqual(dDecoderType.value(forKey: "socket") as! String?, "",
-                       "DecoderType.socket not converted to empty string")
     }
 
     // MARK: DecoderToDecoder
@@ -1046,5 +1036,253 @@ final class RoundHouseMigrationTests: XCTestCase {
                        "TrainMember.details not converted to empty string")
         XCTAssertEqual(dTrainMember.value(forKey: "notes") as! String?, "",
                        "TrainMember.notes not converted to empty string")
+    }
+
+    // MARK: Socket
+
+    /// Check that a Socket entity is created from a Model socket.
+    func testModelSocket() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+
+        let sModel = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel.setValue(sPurchase, forKey: "purchase")
+        sModel.setValue(1, forKey: "classificationRawValue")
+        sModel.setValue("PluX22", forKey: "socket")
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dModelsFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Model")
+        let dModels = try managedObjectContext.fetch(dModelsFetchRequest)
+        XCTAssertEqual(dModels.count, 1, "Expected Model after migration")
+
+        let dSocket = dModels[0].value(forKey: "socket") as! NSManagedObject?
+        XCTAssertNotNil(dSocket, "Socket not created from Model")
+
+        XCTAssertEqual(dSocket!.value(forKey: "title") as! String?, "PluX22",
+                       "Socket.title not copied from source Model.socket")
+    }
+
+    /// Check that a Socket entity is created from a DecoderType socket.
+    func testDecoderTypeSocket() throws {
+        let sDecoderType = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["DecoderType"]!,
+                                           insertInto: managedObjectContext)
+        sDecoderType.setValue("ESU", forKey: "manufacturer")
+        sDecoderType.setValue("50123", forKey: "productCode")
+        sDecoderType.setValue("PluX22", forKey: "socket")
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dDecoderTypesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "DecoderType")
+        let dDecoderTypes = try managedObjectContext.fetch(dDecoderTypesFetchRequest)
+        XCTAssertEqual(dDecoderTypes.count, 1, "Expected DecoderType after migration")
+
+        let dDecoderType = dDecoderTypes.first!
+        let dSocket = dDecoderType.value(forKey: "socket") as! NSManagedObject?
+        XCTAssertNotNil(dSocket, "Socket not created from DecoderType")
+
+        XCTAssertEqual(dSocket?.value(forKey: "title") as! String?, "PluX22",
+                       "Socket.title not copied from source DecoderType.socket")
+    }
+
+    /// Check that a Socket entities are re-used for multiple Models.
+    func testModelSocketReused() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+
+        let sModel1 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel1.setValue(sPurchase, forKey: "purchase")
+        sModel1.setValue(1, forKey: "classificationRawValue")
+        sModel1.setValue("PluX22", forKey: "socket")
+
+        let sModel2 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel2.setValue(sPurchase, forKey: "purchase")
+        sModel2.setValue(1, forKey: "classificationRawValue")
+        sModel2.setValue("PluX22", forKey: "socket")
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dModelsFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Model")
+        let dModels = try managedObjectContext.fetch(dModelsFetchRequest)
+        XCTAssertEqual(dModels.count, 2, "Expected Model after migration")
+
+        let dSocket = dModels[0].value(forKey: "socket") as! NSManagedObject?
+        XCTAssertNotNil(dSocket, "Socket not created from Model")
+
+        XCTAssertEqual(dModels[1].value(forKey: "socket") as! NSManagedObject?, dSocket,
+                       "Socket not re-used from previous Model")
+    }
+
+    /// Check that a Socket entities with different names are not re-used for multiple Models.
+    func testModelSocketNotReused() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+
+        let sModel1 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel1.setValue(sPurchase, forKey: "purchase")
+        sModel1.setValue(1, forKey: "classificationRawValue")
+        sModel1.setValue("PluX22", forKey: "socket")
+
+        let sModel2 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel2.setValue(sPurchase, forKey: "purchase")
+        sModel2.setValue(1, forKey: "classificationRawValue")
+        sModel2.setValue("21MTC", forKey: "socket")
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dModelsFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Model")
+        let dModels = try managedObjectContext.fetch(dModelsFetchRequest)
+        XCTAssertEqual(dModels.count, 2, "Expected Model after migration")
+
+        let dSocket = dModels[0].value(forKey: "socket") as! NSManagedObject?
+        XCTAssertNotNil(dSocket, "Socket not created from Model")
+
+        XCTAssertNotEqual(dModels[1].value(forKey: "socket") as! NSManagedObject?, dSocket,
+                          "Socket incorrectly re-used from previous Model")
+    }
+
+    /// Check that a Socket entities are re-used for multiple DecoderTypes.
+    func testDecoderTypeSocketReused() throws {
+        let sDecoderType1 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["DecoderType"]!,
+                                           insertInto: managedObjectContext)
+        sDecoderType1.setValue("ESU", forKey: "manufacturer")
+        sDecoderType1.setValue("50123", forKey: "productCode")
+        sDecoderType1.setValue("PluX22", forKey: "socket")
+
+        let sDecoderType2 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["DecoderType"]!,
+                                           insertInto: managedObjectContext)
+        sDecoderType2.setValue("ESU", forKey: "manufacturer")
+        sDecoderType2.setValue("50456", forKey: "productCode")
+        sDecoderType2.setValue("PluX22", forKey: "socket")
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dDecoderTypesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "DecoderType")
+        let dDecoderTypes = try managedObjectContext.fetch(dDecoderTypesFetchRequest)
+        XCTAssertEqual(dDecoderTypes.count, 2, "Expected DecoderType after migration")
+
+        let dSocket = dDecoderTypes[0].value(forKey: "socket") as! NSManagedObject?
+        XCTAssertNotNil(dSocket, "Socket not created from DecoderType")
+
+        XCTAssertEqual(dDecoderTypes[1].value(forKey: "socket") as! NSManagedObject?, dSocket,
+                       "Socket not re-used from previous DecoderType")
+    }
+
+    /// Check that a Socket entities with different names are not re-used for multiple DecoderTypes.
+    func testDecoderTypeSocketNotReused() throws {
+        let sDecoderType1 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["DecoderType"]!,
+                                           insertInto: managedObjectContext)
+        sDecoderType1.setValue("ESU", forKey: "manufacturer")
+        sDecoderType1.setValue("50123", forKey: "productCode")
+        sDecoderType1.setValue("PluX22", forKey: "socket")
+
+        let sDecoderType2 = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["DecoderType"]!,
+                                           insertInto: managedObjectContext)
+        sDecoderType2.setValue("ESU", forKey: "manufacturer")
+        sDecoderType2.setValue("50456", forKey: "productCode")
+        sDecoderType2.setValue("21MTC", forKey: "socket")
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dDecoderTypesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "DecoderType")
+        let dDecoderTypes = try managedObjectContext.fetch(dDecoderTypesFetchRequest)
+        XCTAssertEqual(dDecoderTypes.count, 2, "Expected DecoderType after migration")
+
+        let dSocket = dDecoderTypes[0].value(forKey: "socket") as! NSManagedObject?
+        XCTAssertNotNil(dSocket, "Socket not created from DecoderType")
+
+        XCTAssertNotEqual(dDecoderTypes[1].value(forKey: "socket") as! NSManagedObject?, dSocket,
+                          "Socket incorrectly re-used from previous DecoderType")
+    }
+
+    /// Check that Socket entities are re-used between Model and DecoderTypes.
+    func testModelDecoderTypeSocketReused() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+
+        let sModel = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel.setValue(sPurchase, forKey: "purchase")
+        sModel.setValue(1, forKey: "classificationRawValue")
+        sModel.setValue("PluX22", forKey: "socket")
+
+        let sDecoderType = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["DecoderType"]!,
+                                           insertInto: managedObjectContext)
+        sDecoderType.setValue("ESU", forKey: "manufacturer")
+        sDecoderType.setValue("50123", forKey: "productCode")
+        sDecoderType.setValue("PluX22", forKey: "socket")
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dModelsFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Model")
+        let dModels = try managedObjectContext.fetch(dModelsFetchRequest)
+        XCTAssertEqual(dModels.count, 1, "Expected Model after migration")
+
+        let dSocket = dModels[0].value(forKey: "socket") as! NSManagedObject?
+        XCTAssertNotNil(dSocket, "Socket not created from Model")
+
+        let dDecoderTypesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "DecoderType")
+        let dDecoderTypes = try managedObjectContext.fetch(dDecoderTypesFetchRequest)
+        XCTAssertEqual(dDecoderTypes.count, 1, "Expected DecoderType after migration")
+
+        XCTAssertEqual(dDecoderTypes[0].value(forKey: "socket") as! NSManagedObject?, dSocket,
+                       "Socket not re-used from previous DecoderType")
+    }
+
+    /// Check that numberOfPins is set correctly.
+    func testSocketNumberOfPins() throws {
+        let socketPinsMap = [
+            ("4-pin NEM654", 4),
+            ("6-pin NEM651", 6),
+            ("8-pin NEM652", 8),
+            ("PluX8", 8),
+            ("PluX16", 16),
+            ("Next18", 18),
+            ("Next18-S", 18),
+            ("21MTC", 21),
+            ("PluX22", 22),
+        ]
+
+        for (socket, _) in socketPinsMap {
+            let sDecoderType = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["DecoderType"]!,
+                                               insertInto: managedObjectContext)
+            sDecoderType.setValue("ESU", forKey: "manufacturer")
+            sDecoderType.setValue("50123", forKey: "productCode")
+            sDecoderType.setValue(socket, forKey: "socket")
+        }
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        for (socket, numberOfPins) in socketPinsMap {
+            let dSocketsFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Socket")
+            dSocketsFetchRequest.predicate = NSPredicate(format: "title = %@", socket)
+            let dSockets = try managedObjectContext.fetch(dSocketsFetchRequest)
+            XCTAssertEqual(dSockets.count, 1, "Expected Socket after migration")
+
+            let dSocket = dSockets.first!
+            XCTAssertEqual(dSocket.value(forKey: "numberOfPins") as! Int16, Int16(numberOfPins),
+                           "Socket.numberOfPins not correctly calcluated")
+        }
     }
 }

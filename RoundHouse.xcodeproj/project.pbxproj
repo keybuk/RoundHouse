@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D2031DEA2A05AA1C000A0FEF /* TrainMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2031DE92A05AA1C000A0FEF /* TrainMigrationPolicy.swift */; };
+		D2031DEC2A05AD3B000A0FEF /* SocketMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2031DEB2A05AD3B000A0FEF /* SocketMigrationPolicy.swift */; };
 		D2050CB22A05A50000BE32BB /* PurchaseMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2050CB12A05A50000BE32BB /* PurchaseMigrationPolicy.swift */; };
 		D2580F7A2A035DC900F0C889 /* RoundHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580F792A035DC900F0C889 /* RoundHouseApp.swift */; };
 		D2580F7C2A035DC900F0C889 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580F7B2A035DC900F0C889 /* Persistence.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		D2031DE92A05AA1C000A0FEF /* TrainMigrationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainMigrationPolicy.swift; sourceTree = "<group>"; };
+		D2031DEB2A05AD3B000A0FEF /* SocketMigrationPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketMigrationPolicy.swift; sourceTree = "<group>"; };
 		D2050CB12A05A50000BE32BB /* PurchaseMigrationPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseMigrationPolicy.swift; sourceTree = "<group>"; };
 		D2580F762A035DC900F0C889 /* RoundHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2580F792A035DC900F0C889 /* RoundHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseApp.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				D2580FCE2A059D8500F0C889 /* ModelMigrationPolicy.swift */,
 				D2050CB12A05A50000BE32BB /* PurchaseMigrationPolicy.swift */,
 				D2031DE92A05AA1C000A0FEF /* TrainMigrationPolicy.swift */,
+				D2031DEB2A05AD3B000A0FEF /* SocketMigrationPolicy.swift */,
 				D2580FC62A059A3900F0C889 /* Purchase+Condition.swift */,
 				D2580FC82A059A4100F0C889 /* Model+Classification.swift */,
 				D2580FC92A059A4100F0C889 /* Model+Disposition.swift */,
@@ -318,6 +321,7 @@
 				D2580FBD2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
 				D2580FCC2A059A4100F0C889 /* Model+Disposition.swift in Sources */,
 				D2031DEA2A05AA1C000A0FEF /* TrainMigrationPolicy.swift in Sources */,
+				D2031DEC2A05AD3B000A0FEF /* SocketMigrationPolicy.swift in Sources */,
 				D2580FB72A057FA700F0C889 /* SecureDateComponentsTransformer.swift in Sources */,
 				D2580F812A035DC900F0C889 /* ContentView.swift in Sources */,
 				D2580FCF2A059D8500F0C889 /* ModelMigrationPolicy.swift in Sources */,
