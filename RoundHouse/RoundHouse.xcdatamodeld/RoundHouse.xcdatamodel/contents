@@ -4,7 +4,7 @@
         <attribute name="catalogDescription" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="catalogNumber" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="gauge" optional="YES" attributeType="String" defaultValueString="OO"/>
-        <attribute name="imageData" optional="YES" attributeType="Binary"/>
+        <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="manufacturer" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="notes" optional="YES" attributeType="String" defaultValueString=""/>
