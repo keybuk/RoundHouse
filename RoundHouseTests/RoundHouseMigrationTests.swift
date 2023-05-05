@@ -296,6 +296,51 @@ final class RoundHouseMigrationTests: XCTestCase {
                        "Model.notes not converted to empty string")
     }
 
+    /// Check that classifications are renumbered.
+    func testModelClassification() throws {
+        let classificationMap = [
+            (1, Model.Classification.dieselElectricLocomotive),
+            (2, Model.Classification.coach),
+            (3, Model.Classification.wagon),
+            (4, Model.Classification.multipleUnit),
+            (5, Model.Classification.departmental),
+            (6, Model.Classification.noPrototype),
+            (7, Model.Classification.accessory),
+            (8, Model.Classification.vehicle),
+            (9, Model.Classification.steamLocomotive),
+        ]
+
+        for (oldRawValue, _) in classificationMap {
+            let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                            insertInto: managedObjectContext)
+            sPurchase.setValue("Hornby", forKey: "manufacturer")
+            sPurchase.setValue("R\(oldRawValue)", forKey: "catalogNumber")
+
+            let sModel = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                         insertInto: managedObjectContext)
+            sModel.setValue(sPurchase, forKey: "purchase")
+            sModel.setValue(oldRawValue, forKey: "classificationRawValue")
+        }
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        for (oldRawValue, newValue) in classificationMap {
+            let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+            dPurchasesFetchRequest.predicate = NSPredicate(format: "catalogNumber = %@", "R\(oldRawValue)")
+            let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+            XCTAssertEqual(dPurchases.count, 1, "Expected Purchase after migration")
+            
+            let dPurchase = dPurchases.first!
+            let dModels = try XCTUnwrap(dPurchase.value(forKey: "models") as! Set<NSManagedObject>?)
+            XCTAssertEqual(dModels.count, 1, "Expected Model in Purchase")
+            
+            let dModel = dModels[dModels.startIndex]
+            XCTAssertEqual(dModel.value(forKey: "classificationRawValue") as! Int16, newValue.rawValue,
+                           "Model.classificationRawValue has incorrect value after migration")
+        }
+    }
+
     // MARK: DecoderTypeToDecoderType
 
     /// Check that expected fields are copied.

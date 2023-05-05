@@ -19,14 +19,14 @@ class ModelEnumTests: XCTestCase {
         for classification in Model.Classification.allCases {
             switch (classification.rawValue, classification) {
             case (1, .dieselElectricLocomotive): break
-            case (2, .coach): break
-            case (3, .wagon): break
-            case (4, .multipleUnit): break
-            case (5, .departmental): break
-            case (6, .noPrototype): break
-            case (7, .accessory): break
+            case (2, .steamLocomotive): break
+            case (3, .coach): break
+            case (4, .wagon): break
+            case (5, .multipleUnit): break
+            case (6, .departmental): break
+            case (7, .noPrototype): break
             case (8, .vehicle): break
-            case (9, .steamLocomotive): break
+            case (9, .accessory): break
             default:
                 XCTFail("Classification has incorrect rawValue for \(classification)")
             }
@@ -40,14 +40,14 @@ class ModelEnumTests: XCTestCase {
         for rawValue in (1 as Int16)...(8 as Int16) {
             switch (rawValue, Model.Classification(rawValue: rawValue)) {
             case (1, .dieselElectricLocomotive): break
-            case (2, .coach): break
-            case (3, .wagon): break
-            case (4, .multipleUnit): break
-            case (5, .departmental): break
-            case (6, .noPrototype): break
-            case (7, .accessory): break
+            case (2, .steamLocomotive): break
+            case (3, .coach): break
+            case (4, .wagon): break
+            case (5, .multipleUnit): break
+            case (6, .departmental): break
+            case (7, .noPrototype): break
             case (8, .vehicle): break
-            case (9, .steamLocomotive): break
+            case (9, .accessory): break
             default:
                 XCTFail("Classification has incorrect value for rawValue \(rawValue)")
             }

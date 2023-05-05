@@ -27,6 +27,7 @@
 		D2580FCB2A059A4100F0C889 /* Model+Classification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FC82A059A4100F0C889 /* Model+Classification.swift */; };
 		D2580FCC2A059A4100F0C889 /* Model+Disposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FC92A059A4100F0C889 /* Model+Disposition.swift */; };
 		D2580FCD2A059A4100F0C889 /* Model+Era.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FCA2A059A4100F0C889 /* Model+Era.swift */; };
+		D2580FCF2A059D8500F0C889 /* ModelMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FCE2A059D8500F0C889 /* ModelMigrationPolicy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		D2580FC82A059A4100F0C889 /* Model+Classification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+Classification.swift"; sourceTree = "<group>"; };
 		D2580FC92A059A4100F0C889 /* Model+Disposition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+Disposition.swift"; sourceTree = "<group>"; };
 		D2580FCA2A059A4100F0C889 /* Model+Era.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+Era.swift"; sourceTree = "<group>"; };
+		D2580FCE2A059D8500F0C889 /* ModelMigrationPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelMigrationPolicy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				D2580F7D2A035DC900F0C889 /* RoundHouse.xcdatamodeld */,
 				D2580FBC2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel */,
 				D2580FC02A058EDC00F0C889 /* DefaultMigrationPolicy.swift */,
+				D2580FCE2A059D8500F0C889 /* ModelMigrationPolicy.swift */,
 				D2580FC62A059A3900F0C889 /* Purchase+Condition.swift */,
 				D2580FC82A059A4100F0C889 /* Model+Classification.swift */,
 				D2580FC92A059A4100F0C889 /* Model+Disposition.swift */,
@@ -309,6 +312,7 @@
 				D2580FCC2A059A4100F0C889 /* Model+Disposition.swift in Sources */,
 				D2580FB72A057FA700F0C889 /* SecureDateComponentsTransformer.swift in Sources */,
 				D2580F812A035DC900F0C889 /* ContentView.swift in Sources */,
+				D2580FCF2A059D8500F0C889 /* ModelMigrationPolicy.swift in Sources */,
 				D2580F7F2A035DC900F0C889 /* RoundHouse.xcdatamodeld in Sources */,
 				D2580FCB2A059A4100F0C889 /* Model+Classification.swift in Sources */,
 				D2580FCD2A059A4100F0C889 /* Model+Era.swift in Sources */,

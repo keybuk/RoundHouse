@@ -269,6 +269,9 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z115"></relationship>
     </object>
     <object type="XDDEVATTRIBUTEMAPPING" id="z137">
+        <attribute name="valueexpressiondata" type="binary">YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8Q
+D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGsCwwXGB0eJiswMTQ4VSRudWxs1Q0ODxAREhMUFRZZTlNPcGVyYW5kXk5TU2VsZWN0b3JOYW1lXxAQTlNFeHByZXNzaW9uVHlwZVtOU0FyZ3VtZW50c1YkY2xhc3OAA4ACEASABoALXxAQdmFsdWVGb3JLZXlQYXRoOtMZDxEaGxxaTlNWYXJpYWJsZYAEEAKABVZzb3VyY2XSHyAhIlokY2xhc3NuYW1lWCRjbGFzc2VzXxAUTlNWYXJpYWJsZUV4cHJlc3Npb26jIyQlXxAUTlNWYXJpYWJsZUV4cHJlc3Npb25cTlNFeHByZXNzaW9uWE5TT2JqZWN00icRKCpaTlMub2JqZWN0c6EpgAeACtMRDywtLi9ZTlNLZXlQYXRogAkQCoAIXxATZGlzcG9zaXRpb25SYXdWYWx1ZdIfIDIzXxAcTlNLZXlQYXRoU3BlY2lmaWVyRXhwcmVzc2lvbqMyJCXSHyA1Nl5OU011dGFibGVBcnJheaM1NyVXTlNBcnJhedIfIDk6XxATTlNLZXlQYXRoRXhwcmVzc2lvbqQ5OyQlXxAUTlNGdW5jdGlvbkV4cHJlc3Npb24ACAARABoAJAApADIANwBJAEwAUQBTAGAAZgBxAHsAigCdAKkAsACyALQAtgC4ALoAzQDUAN8A4QDjAOUA7ADxAPwBBQEcASABNwFEAU0BUgFdAV8BYQFjAWoBdAF2AXgBegGQAZUBtAG4Ab0BzAHQAdgB3QHzAfgAAAAAAAACAQAAAAAAAAA8AAAAAAAAAAAAAAAAAAACDw==
+</attribute>
         <attribute name="name" type="string">dispositionRawValue</attribute>
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z167"></relationship>
     </object>
@@ -277,6 +280,9 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z167"></relationship>
     </object>
     <object type="XDDEVATTRIBUTEMAPPING" id="z139">
+        <attribute name="valueexpressiondata" type="binary">YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8Q
+D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAREhMUFRZZTlNPcGVyYW5kXk5TU2VsZWN0b3JOYW1lXxAQTlNFeHByZXNzaW9uVHlwZVtOU0FyZ3VtZW50c1YkY2xhc3OAA4ACEASABoASXxAZcmVudW1iZXJlZENsYXNzaWZpY2F0aW9uOtMZDxEaGxxaTlNWYXJpYWJsZYAEEAKABVxlbnRpdHlQb2xpY3nSHyAhIlokY2xhc3NuYW1lWCRjbGFzc2VzXxAUTlNWYXJpYWJsZUV4cHJlc3Npb26jIyQlXxAUTlNWYXJpYWJsZUV4cHJlc3Npb25cTlNFeHByZXNzaW9uWE5TT2JqZWN00icRKCpaTlMub2JqZWN0c6EpgAeAEdUNDg8QESwtFC4vgAmACIALgBBfEBB2YWx1ZUZvcktleVBhdGg60xkPETIbHIAKgAVWc291cmNl0icRNjihN4AMgA/TEQ86Ozw9WU5TS2V5UGF0aIAOEAqADV8QFmNsYXNzaWZpY2F0aW9uUmF3VmFsdWXSHyBAQV8QHE5TS2V5UGF0aFNwZWNpZmllckV4cHJlc3Npb26jQCQl0h8gQ0ReTlNNdXRhYmxlQXJyYXmjQ0UlV05TQXJyYXnSHyBHSF8QE05TS2V5UGF0aEV4cHJlc3Npb26kR0kkJV8QFE5TRnVuY3Rpb25FeHByZXNzaW9u0h8gRUuiRSXSHyBJTaNJJCUACAARABoAJAApADIANwBJAEwAUQBTAGkAbwB6AIQAkwCmALIAuQC7AL0AvwDBAMMA3wDmAPEA8wD1APcBBAEJARQBHQE0ATgBTwFcAWUBagF1AXcBeQF7AYYBiAGKAYwBjgGhAagBqgGsAbMBuAG6AbwBvgHFAc8B0QHTAdUB7gHzAhICFgIbAioCLgI2AjsCUQJWAm0CcgJ1AnoAAAAAAAACAQAAAAAAAABOAAAAAAAAAAAAAAAAAAACfg==
+</attribute>
         <attribute name="name" type="string">classificationRawValue</attribute>
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z167"></relationship>
     </object>
@@ -419,15 +425,15 @@ D05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBMLDBcYHR4mKzAxNDU5Pj9CRkpMVSRudWxs1Q0ODxAR
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z114"></relationship>
     </object>
     <object type="XDDEVENTITYMAPPING" id="z167">
-        <attribute name="migrationpolicyclassname" type="string">RoundHouse.DefaultMigrationPolicy</attribute>
+        <attribute name="migrationpolicyclassname" type="string">RoundHouse.ModelMigrationPolicy</attribute>
         <attribute name="sourcename" type="string">Model</attribute>
         <attribute name="mappingtypename" type="string">Undefined</attribute>
         <attribute name="mappingnumber" type="int16">2</attribute>
         <attribute name="destinationname" type="string">Model</attribute>
         <attribute name="autogenerateexpression" type="bool">1</attribute>
         <relationship name="mappingmodel" type="1/1" destination="XDDEVMAPPINGMODEL" idrefs="z168"></relationship>
-        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z201 z198 z195 z196 z137 z197 z200 z147 z194 z199 z202 z140 z138 z149 z139 z142 z152 z143"></relationship>
-        <relationship name="relationshipmappings" type="0/0" destination="XDDEVRELATIONSHIPMAPPING" idrefs="z215 z146 z153 z155 z156 z169 z145 z148 z151 z150"></relationship>
+        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z194 z140 z199 z201 z138 z139 z198 z137 z196 z142 z197 z195 z202 z143 z200 z149 z147 z152"></relationship>
+        <relationship name="relationshipmappings" type="0/0" destination="XDDEVRELATIONSHIPMAPPING" idrefs="z150 z156 z148 z215 z169 z153 z151 z155 z145 z146"></relationship>
     </object>
     <object type="XDDEVMAPPINGMODEL" id="z168">
         <attribute name="sourcemodelpath" type="string">RoundHouse/RoundHouse.xcdatamodeld/EngineShed.xcdatamodel</attribute>
