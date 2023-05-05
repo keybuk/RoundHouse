@@ -18,6 +18,8 @@
 		D2580F9D2A035DCB00F0C889 /* RoundHouseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580F9C2A035DCB00F0C889 /* RoundHouseUITestsLaunchTests.swift */; };
 		D2580FB72A057FA700F0C889 /* SecureDateComponentsTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FB62A057FA700F0C889 /* SecureDateComponentsTransformer.swift */; };
 		D2580FB92A05819700F0C889 /* SecureDateComponentsTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FB82A05819700F0C889 /* SecureDateComponentsTransformerTests.swift */; };
+		D2580FBD2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2580FBC2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel */; };
+		D2580FBF2A058AD000F0C889 /* RoundHouseMigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FBE2A058AD000F0C889 /* RoundHouseMigrationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,9 @@
 		D2580FB62A057FA700F0C889 /* SecureDateComponentsTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureDateComponentsTransformer.swift; sourceTree = "<group>"; };
 		D2580FB82A05819700F0C889 /* SecureDateComponentsTransformerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureDateComponentsTransformerTests.swift; sourceTree = "<group>"; };
 		D2580FBA2A0586B100F0C889 /* RoundHouse.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RoundHouse.xctestplan; sourceTree = "<group>"; };
+		D2580FBB2A0589BD00F0C889 /* RoundHouse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoundHouse.xcdatamodel; sourceTree = "<group>"; };
+		D2580FBC2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = RoundHouseMappingModel.xcmappingmodel; sourceTree = "<group>"; };
+		D2580FBE2A058AD000F0C889 /* RoundHouseMigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseMigrationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,7 @@
 				D2580F842A035DCA00F0C889 /* RoundHouse.entitlements */,
 				D2580FBA2A0586B100F0C889 /* RoundHouse.xctestplan */,
 				D2580F7D2A035DC900F0C889 /* RoundHouse.xcdatamodeld */,
+				D2580FBC2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel */,
 				D2580F852A035DCA00F0C889 /* Preview Content */,
 			);
 			path = RoundHouse;
@@ -130,6 +136,7 @@
 			children = (
 				D2580F902A035DCB00F0C889 /* RoundHouseTests.swift */,
 				D2580FB82A05819700F0C889 /* SecureDateComponentsTransformerTests.swift */,
+				D2580FBE2A058AD000F0C889 /* RoundHouseMigrationTests.swift */,
 			);
 			path = RoundHouseTests;
 			sourceTree = "<group>";
@@ -275,6 +282,7 @@
 			files = (
 				D2580F7A2A035DC900F0C889 /* RoundHouseApp.swift in Sources */,
 				D2580F7C2A035DC900F0C889 /* Persistence.swift in Sources */,
+				D2580FBD2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
 				D2580FB72A057FA700F0C889 /* SecureDateComponentsTransformer.swift in Sources */,
 				D2580F812A035DC900F0C889 /* ContentView.swift in Sources */,
 				D2580F7F2A035DC900F0C889 /* RoundHouse.xcdatamodeld in Sources */,
@@ -287,6 +295,7 @@
 			files = (
 				D2580FB92A05819700F0C889 /* SecureDateComponentsTransformerTests.swift in Sources */,
 				D2580F912A035DCB00F0C889 /* RoundHouseTests.swift in Sources */,
+				D2580FBF2A058AD000F0C889 /* RoundHouseMigrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,9 +644,10 @@
 		D2580F7D2A035DC900F0C889 /* RoundHouse.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D2580FBB2A0589BD00F0C889 /* RoundHouse.xcdatamodel */,
 				D2580FB32A057D3900F0C889 /* EngineShed.xcdatamodel */,
 			);
-			currentVersion = D2580FB32A057D3900F0C889 /* EngineShed.xcdatamodel */;
+			currentVersion = D2580FBB2A0589BD00F0C889 /* RoundHouse.xcdatamodel */;
 			path = RoundHouse.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
