@@ -111,7 +111,7 @@ final class RoundHouseMigrationTests: XCTestCase {
         sPurchase.setValue(DateComponents(year: 2010, month: 12, day: 25), forKey: "date")
         sPurchase.setValue("Hattons", forKey: "store")
         sPurchase.setValue(NSDecimalNumber(value: 129.99), forKey: "price")
-        sPurchase.setValue(0, forKey: "conditionRawValue")
+        sPurchase.setValue(2, forKey: "conditionRawValue")
         sPurchase.setValue(NSDecimalNumber(value: 100), forKey: "valuation")
         sPurchase.setValue("Test", forKey: "notes")
 
@@ -145,7 +145,8 @@ final class RoundHouseMigrationTests: XCTestCase {
         XCTAssertEqual(dPurchase.value(forKey: "price") as! NSDecimalNumber?,
                        NSDecimalNumber(value: 129.99),
                        "Purchase.price not copied from source Purchase")
-        XCTAssertEqual(dPurchase.value(forKey: "conditionRawValue") as! Int16, 0,
+        XCTAssertEqual(dPurchase.value(forKey: "conditionRawValue") as! Int16,
+                       Purchase.Condition.likeNew.rawValue,
                        "Purchase.conditionRawValue not copied from source")
         XCTAssertEqual(dPurchase.value(forKey: "valuation") as! NSDecimalNumber?,
                        NSDecimalNumber(value: 100),
@@ -201,8 +202,8 @@ final class RoundHouseMigrationTests: XCTestCase {
         sModel.setValue("4600", forKey: "number")
         sModel.setValue("BR Blue", forKey: "livery")
         sModel.setValue("Great British Railways", forKey: "details")
-        sModel.setValue(0, forKey: "eraRawValue")
-        sModel.setValue(0, forKey: "dispositionRawValue")
+        sModel.setValue(11, forKey: "eraRawValue")
+        sModel.setValue(2, forKey: "dispositionRawValue")
         sModel.setValue("PluX22", forKey: "socket")
         sModel.setValue("5-pole", forKey: "motor")
         sModel.setValue(DateComponents(year: 2020, month: 6, day: 17), forKey: "lastOil")
@@ -236,9 +237,11 @@ final class RoundHouseMigrationTests: XCTestCase {
                        "Model.livery not copied from source")
         XCTAssertEqual(dModel.value(forKey: "details") as! String?, "Great British Railways",
                        "Model.details not copied from source")
-        XCTAssertEqual(dModel.value(forKey: "eraRawValue") as! Int16, 0,
+        XCTAssertEqual(dModel.value(forKey: "eraRawValue") as! Int16,
+                       Model.Era.currentEra.rawValue,
                        "Model.eraRawValue not copied from source")
-        XCTAssertEqual(dModel.value(forKey: "dispositionRawValue") as! Int16, 0,
+        XCTAssertEqual(dModel.value(forKey: "dispositionRawValue") as! Int16,
+                       Model.Disposition.collectorItem.rawValue,
                        "Model.dispositionRawValue not copied from source")
         XCTAssertEqual(dModel.value(forKey: "socket") as! String?, "PluX22",
                        "Model.socket not copied from source")

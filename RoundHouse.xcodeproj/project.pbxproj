@@ -21,6 +21,12 @@
 		D2580FBD2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2580FBC2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel */; };
 		D2580FBF2A058AD000F0C889 /* RoundHouseMigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FBE2A058AD000F0C889 /* RoundHouseMigrationTests.swift */; };
 		D2580FC12A058EDC00F0C889 /* DefaultMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FC02A058EDC00F0C889 /* DefaultMigrationPolicy.swift */; };
+		D2580FC32A059A1600F0C889 /* ModelEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FC22A059A1600F0C889 /* ModelEnumTests.swift */; };
+		D2580FC52A059A1C00F0C889 /* PurchaseEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FC42A059A1C00F0C889 /* PurchaseEnumTests.swift */; };
+		D2580FC72A059A3900F0C889 /* Purchase+Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FC62A059A3900F0C889 /* Purchase+Condition.swift */; };
+		D2580FCB2A059A4100F0C889 /* Model+Classification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FC82A059A4100F0C889 /* Model+Classification.swift */; };
+		D2580FCC2A059A4100F0C889 /* Model+Disposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FC92A059A4100F0C889 /* Model+Disposition.swift */; };
+		D2580FCD2A059A4100F0C889 /* Model+Era.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FCA2A059A4100F0C889 /* Model+Era.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +67,12 @@
 		D2580FBC2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = RoundHouseMappingModel.xcmappingmodel; sourceTree = "<group>"; };
 		D2580FBE2A058AD000F0C889 /* RoundHouseMigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseMigrationTests.swift; sourceTree = "<group>"; };
 		D2580FC02A058EDC00F0C889 /* DefaultMigrationPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultMigrationPolicy.swift; sourceTree = "<group>"; };
+		D2580FC22A059A1600F0C889 /* ModelEnumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelEnumTests.swift; sourceTree = "<group>"; };
+		D2580FC42A059A1C00F0C889 /* PurchaseEnumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseEnumTests.swift; sourceTree = "<group>"; };
+		D2580FC62A059A3900F0C889 /* Purchase+Condition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Purchase+Condition.swift"; sourceTree = "<group>"; };
+		D2580FC82A059A4100F0C889 /* Model+Classification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+Classification.swift"; sourceTree = "<group>"; };
+		D2580FC92A059A4100F0C889 /* Model+Disposition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+Disposition.swift"; sourceTree = "<group>"; };
+		D2580FCA2A059A4100F0C889 /* Model+Era.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+Era.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +133,10 @@
 				D2580F7D2A035DC900F0C889 /* RoundHouse.xcdatamodeld */,
 				D2580FBC2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel */,
 				D2580FC02A058EDC00F0C889 /* DefaultMigrationPolicy.swift */,
+				D2580FC62A059A3900F0C889 /* Purchase+Condition.swift */,
+				D2580FC82A059A4100F0C889 /* Model+Classification.swift */,
+				D2580FC92A059A4100F0C889 /* Model+Disposition.swift */,
+				D2580FCA2A059A4100F0C889 /* Model+Era.swift */,
 				D2580F852A035DCA00F0C889 /* Preview Content */,
 			);
 			path = RoundHouse;
@@ -140,6 +156,8 @@
 				D2580F902A035DCB00F0C889 /* RoundHouseTests.swift */,
 				D2580FB82A05819700F0C889 /* SecureDateComponentsTransformerTests.swift */,
 				D2580FBE2A058AD000F0C889 /* RoundHouseMigrationTests.swift */,
+				D2580FC42A059A1C00F0C889 /* PurchaseEnumTests.swift */,
+				D2580FC22A059A1600F0C889 /* ModelEnumTests.swift */,
 			);
 			path = RoundHouseTests;
 			sourceTree = "<group>";
@@ -283,13 +301,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2580FC72A059A3900F0C889 /* Purchase+Condition.swift in Sources */,
 				D2580F7A2A035DC900F0C889 /* RoundHouseApp.swift in Sources */,
 				D2580F7C2A035DC900F0C889 /* Persistence.swift in Sources */,
 				D2580FC12A058EDC00F0C889 /* DefaultMigrationPolicy.swift in Sources */,
 				D2580FBD2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
+				D2580FCC2A059A4100F0C889 /* Model+Disposition.swift in Sources */,
 				D2580FB72A057FA700F0C889 /* SecureDateComponentsTransformer.swift in Sources */,
 				D2580F812A035DC900F0C889 /* ContentView.swift in Sources */,
 				D2580F7F2A035DC900F0C889 /* RoundHouse.xcdatamodeld in Sources */,
+				D2580FCB2A059A4100F0C889 /* Model+Classification.swift in Sources */,
+				D2580FCD2A059A4100F0C889 /* Model+Era.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,9 +319,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2580FC32A059A1600F0C889 /* ModelEnumTests.swift in Sources */,
 				D2580FB92A05819700F0C889 /* SecureDateComponentsTransformerTests.swift in Sources */,
 				D2580F912A035DCB00F0C889 /* RoundHouseTests.swift in Sources */,
 				D2580FBF2A058AD000F0C889 /* RoundHouseMigrationTests.swift in Sources */,
+				D2580FC52A059A1C00F0C889 /* PurchaseEnumTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
