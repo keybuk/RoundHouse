@@ -33,6 +33,7 @@
         <attribute name="catalogNumber" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="isProgrammable" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="isRailComPlusSupported" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="isRailComSupported" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" elementID="hasRailCom"/>
         <attribute name="isSoundSupported" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" elementID="hasSound"/>
         <attribute name="manufacturer" optional="YES" attributeType="String" defaultValueString=""/>
