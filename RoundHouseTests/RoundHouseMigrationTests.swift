@@ -142,13 +142,13 @@ final class RoundHouseMigrationTests: XCTestCase {
                        "Purchase.date not copied from source")
         XCTAssertEqual(dPurchase.value(forKey: "store") as! String?, "Hattons",
                        "Purchase.store not copied from source")
-        XCTAssertEqual(dPurchase.value(forKey: "price") as! NSDecimalNumber?,
+        XCTAssertEqual(dPurchase.value(forKey: "priceRawValue") as! NSDecimalNumber?,
                        NSDecimalNumber(value: 129.99),
                        "Purchase.price not copied from source Purchase")
         XCTAssertEqual(dPurchase.value(forKey: "conditionRawValue") as! Int16,
                        Purchase.Condition.likeNew.rawValue,
                        "Purchase.conditionRawValue not copied from source")
-        XCTAssertEqual(dPurchase.value(forKey: "valuation") as! NSDecimalNumber?,
+        XCTAssertEqual(dPurchase.value(forKey: "valuationRawValue") as! NSDecimalNumber?,
                        NSDecimalNumber(value: 100),
                        "Purchase.valuation not copied from source")
         XCTAssertEqual(dPurchase.value(forKey: "notes") as! String?, "Test",
@@ -180,6 +180,64 @@ final class RoundHouseMigrationTests: XCTestCase {
                        "Purchase.store not converted to empty string")
         XCTAssertEqual(dPurchase.value(forKey: "notes") as! String?, "",
                        "Purchase.notes not converted to empty string")
+    }
+
+    /// Check that the price locale codes are converted to currency codes.
+    func testPriceCurrencyGBP() throws {
+        let currencyMap = [
+            ("en_GB", "GBP"),
+            ("en_US", "USD"),
+        ]
+
+        for (localeIdentifier, _) in currencyMap {
+            let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                            insertInto: managedObjectContext)
+            sPurchase.setValue(localeIdentifier, forKey: "catalogNumber")
+            sPurchase.setValue(localeIdentifier, forKey: "priceCurrency")
+        }
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        for (localeIdentifier, currencyIdentifier) in currencyMap {
+            let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+            dPurchasesFetchRequest.predicate = NSPredicate(format: "catalogNumber = %@", localeIdentifier)
+            let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+            XCTAssertEqual(dPurchases.count, 1, "Expected Purchase after migration")
+
+            let dPurchase = dPurchases.first!
+            XCTAssertEqual(dPurchase.value(forKey: "priceCurrency") as! String?, currencyIdentifier,
+                           "Purchase.priceCurrency not correctly converted")
+        }
+    }
+
+    /// Check that the valuation locale codes are converted to currency codes.
+    func testValuationCurrencyGBP() throws {
+        let currencyMap = [
+            ("en_GB", "GBP"),
+            ("en_US", "USD"),
+        ]
+
+        for (localeIdentifier, _) in currencyMap {
+            let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                            insertInto: managedObjectContext)
+            sPurchase.setValue(localeIdentifier, forKey: "catalogNumber")
+            sPurchase.setValue(localeIdentifier, forKey: "valuationCurrency")
+        }
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        for (localeIdentifier, currencyIdentifier) in currencyMap {
+            let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+            dPurchasesFetchRequest.predicate = NSPredicate(format: "catalogNumber = %@", localeIdentifier)
+            let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+            XCTAssertEqual(dPurchases.count, 1, "Expected Purchase after migration")
+
+            let dPurchase = dPurchases.first!
+            XCTAssertEqual(dPurchase.value(forKey: "valuationCurrency") as! String?, currencyIdentifier,
+                           "Purchase.valuationCurrency not correctly converted")
+        }
     }
 
     /// Check that models retain their order.

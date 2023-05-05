@@ -9,6 +9,14 @@ import Foundation
 import CoreData
 
 final class PurchaseMigrationPolicy: DefaultMigrationPolicy {
+    /// Converts locale identifiers in the old scheme to currency codes in the new.
+    /// - Parameter identifier: locale identifier.
+    /// - Returns: currency code identifier.
+    @objc
+    func currencyCodeForLocaleIdentifier(_ identifier: String?) -> String? {
+        identifier.flatMap { Locale(identifier: $0).currency?.identifier }
+    }
+
     override func createRelationships(forDestination dInstance: NSManagedObject, in mapping: NSEntityMapping, manager: NSMigrationManager) throws {
         try super.createRelationships(forDestination: dInstance, in: mapping, manager: manager)
 

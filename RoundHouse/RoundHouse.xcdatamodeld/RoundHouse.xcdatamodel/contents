@@ -104,11 +104,11 @@
         <attribute name="maxAccessoryIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="maxModelIndex" optional="YES" attributeType="Integer 16" defaultValueString="-1" usesScalarValueType="YES"/>
         <attribute name="notes" optional="YES" attributeType="String" defaultValueString=""/>
-        <attribute name="price" optional="YES" attributeType="Decimal"/>
-        <attribute name="priceCurrency" optional="YES" attributeType="String" defaultValueString="en_GB"/>
+        <attribute name="priceCurrency" optional="YES" attributeType="String" defaultValueString="GBP"/>
+        <attribute name="priceRawValue" optional="YES" attributeType="Decimal"/>
         <attribute name="store" optional="YES" attributeType="String" defaultValueString=""/>
-        <attribute name="valuation" optional="YES" attributeType="Decimal"/>
-        <attribute name="valuationCurrency" optional="YES" attributeType="String" defaultValueString="en_GB"/>
+        <attribute name="valuationCurrency" optional="YES" attributeType="String" defaultValueString="GBP"/>
+        <attribute name="valuationRawValue" optional="YES" attributeType="Decimal"/>
         <relationship name="accessories" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Accessory" inverseName="purchase" inverseEntity="Accessory"/>
         <relationship name="models" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Model" inverseName="purchase" inverseEntity="Model"/>
     </entity>
