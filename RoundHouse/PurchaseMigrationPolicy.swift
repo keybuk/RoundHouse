@@ -17,6 +17,13 @@ final class PurchaseMigrationPolicy: DefaultMigrationPolicy {
         identifier.flatMap { Locale(identifier: $0).currency?.identifier }
     }
 
+    /// Creates the catalog number prefix from a catalog number.
+    @objc
+    func makeCatalogNumberPrefix(_ catalogNumber: String?) -> String {
+        guard let catalogNumber = catalogNumber else { return "" }
+        return Purchase.makeCatalogNumberPrefix(from: catalogNumber)
+    }
+
     override func createRelationships(forDestination dInstance: NSManagedObject, in mapping: NSEntityMapping, manager: NSMigrationManager) throws {
         try super.createRelationships(forDestination: dInstance, in: mapping, manager: manager)
 

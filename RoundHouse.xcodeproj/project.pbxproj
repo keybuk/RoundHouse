@@ -11,6 +11,11 @@
 		D2031DEC2A05AD3B000A0FEF /* SocketMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2031DEB2A05AD3B000A0FEF /* SocketMigrationPolicy.swift */; };
 		D2031DEE2A05B058000A0FEF /* Purchase+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2031DED2A05B058000A0FEF /* Purchase+Currency.swift */; };
 		D2031DF02A05B064000A0FEF /* PurchaseCurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2031DEF2A05B064000A0FEF /* PurchaseCurrencyTests.swift */; };
+		D2031DF22A05B821000A0FEF /* Purchase+Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2031DF12A05B821000A0FEF /* Purchase+Catalog.swift */; };
+		D2031DF42A05B859000A0FEF /* PurchaseCatalogNumberPrefixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2031DF32A05B859000A0FEF /* PurchaseCatalogNumberPrefixTests.swift */; };
+		D2031DF72A05B8C4000A0FEF /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = D2031DF62A05B8C4000A0FEF /* Algorithms */; };
+		D2031DF92A05B906000A0FEF /* PurchaseCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2031DF82A05B906000A0FEF /* PurchaseCatalogTests.swift */; };
+		D2031DFB2A05B91F000A0FEF /* Purchase+WillSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2031DFA2A05B91E000A0FEF /* Purchase+WillSave.swift */; };
 		D2050CB22A05A50000BE32BB /* PurchaseMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2050CB12A05A50000BE32BB /* PurchaseMigrationPolicy.swift */; };
 		D2580F7A2A035DC900F0C889 /* RoundHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580F792A035DC900F0C889 /* RoundHouseApp.swift */; };
 		D2580F7C2A035DC900F0C889 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580F7B2A035DC900F0C889 /* Persistence.swift */; };
@@ -57,6 +62,10 @@
 		D2031DEB2A05AD3B000A0FEF /* SocketMigrationPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketMigrationPolicy.swift; sourceTree = "<group>"; };
 		D2031DED2A05B058000A0FEF /* Purchase+Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Purchase+Currency.swift"; sourceTree = "<group>"; };
 		D2031DEF2A05B064000A0FEF /* PurchaseCurrencyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseCurrencyTests.swift; sourceTree = "<group>"; };
+		D2031DF12A05B821000A0FEF /* Purchase+Catalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Purchase+Catalog.swift"; sourceTree = "<group>"; };
+		D2031DF32A05B859000A0FEF /* PurchaseCatalogNumberPrefixTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseCatalogNumberPrefixTests.swift; sourceTree = "<group>"; };
+		D2031DF82A05B906000A0FEF /* PurchaseCatalogTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseCatalogTests.swift; sourceTree = "<group>"; };
+		D2031DFA2A05B91E000A0FEF /* Purchase+WillSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Purchase+WillSave.swift"; sourceTree = "<group>"; };
 		D2050CB12A05A50000BE32BB /* PurchaseMigrationPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseMigrationPolicy.swift; sourceTree = "<group>"; };
 		D2580F762A035DC900F0C889 /* RoundHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2580F792A035DC900F0C889 /* RoundHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseApp.swift; sourceTree = "<group>"; };
@@ -92,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2031DF72A05B8C4000A0FEF /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,8 +159,10 @@
 				D2050CB12A05A50000BE32BB /* PurchaseMigrationPolicy.swift */,
 				D2031DE92A05AA1C000A0FEF /* TrainMigrationPolicy.swift */,
 				D2031DEB2A05AD3B000A0FEF /* SocketMigrationPolicy.swift */,
+				D2031DF12A05B821000A0FEF /* Purchase+Catalog.swift */,
 				D2031DED2A05B058000A0FEF /* Purchase+Currency.swift */,
 				D2580FC62A059A3900F0C889 /* Purchase+Condition.swift */,
+				D2031DFA2A05B91E000A0FEF /* Purchase+WillSave.swift */,
 				D2580FC82A059A4100F0C889 /* Model+Classification.swift */,
 				D2580FC92A059A4100F0C889 /* Model+Disposition.swift */,
 				D2580FCA2A059A4100F0C889 /* Model+Era.swift */,
@@ -173,6 +185,8 @@
 				D2580F902A035DCB00F0C889 /* RoundHouseTests.swift */,
 				D2580FB82A05819700F0C889 /* SecureDateComponentsTransformerTests.swift */,
 				D2580FBE2A058AD000F0C889 /* RoundHouseMigrationTests.swift */,
+				D2031DF32A05B859000A0FEF /* PurchaseCatalogNumberPrefixTests.swift */,
+				D2031DF82A05B906000A0FEF /* PurchaseCatalogTests.swift */,
 				D2580FC42A059A1C00F0C889 /* PurchaseEnumTests.swift */,
 				D2031DEF2A05B064000A0FEF /* PurchaseCurrencyTests.swift */,
 				D2580FC22A059A1600F0C889 /* ModelEnumTests.swift */,
@@ -205,6 +219,9 @@
 			dependencies = (
 			);
 			name = RoundHouse;
+			packageProductDependencies = (
+				D2031DF62A05B8C4000A0FEF /* Algorithms */,
+			);
 			productName = RoundHouse;
 			productReference = D2580F762A035DC900F0C889 /* RoundHouse.app */;
 			productType = "com.apple.product-type.application";
@@ -277,6 +294,9 @@
 				Base,
 			);
 			mainGroup = D2580F6D2A035DC900F0C889;
+			packageReferences = (
+				D2031DF52A05B8C4000A0FEF /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = D2580F772A035DC900F0C889 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -324,11 +344,13 @@
 				D2580F7C2A035DC900F0C889 /* Persistence.swift in Sources */,
 				D2031DEE2A05B058000A0FEF /* Purchase+Currency.swift in Sources */,
 				D2050CB22A05A50000BE32BB /* PurchaseMigrationPolicy.swift in Sources */,
+				D2031DF22A05B821000A0FEF /* Purchase+Catalog.swift in Sources */,
 				D2580FC12A058EDC00F0C889 /* DefaultMigrationPolicy.swift in Sources */,
 				D2580FBD2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
 				D2580FCC2A059A4100F0C889 /* Model+Disposition.swift in Sources */,
 				D2031DEA2A05AA1C000A0FEF /* TrainMigrationPolicy.swift in Sources */,
 				D2031DEC2A05AD3B000A0FEF /* SocketMigrationPolicy.swift in Sources */,
+				D2031DFB2A05B91F000A0FEF /* Purchase+WillSave.swift in Sources */,
 				D2580FB72A057FA700F0C889 /* SecureDateComponentsTransformer.swift in Sources */,
 				D2580F812A035DC900F0C889 /* ContentView.swift in Sources */,
 				D2580FCF2A059D8500F0C889 /* ModelMigrationPolicy.swift in Sources */,
@@ -348,6 +370,8 @@
 				D2031DF02A05B064000A0FEF /* PurchaseCurrencyTests.swift in Sources */,
 				D2580FBF2A058AD000F0C889 /* RoundHouseMigrationTests.swift in Sources */,
 				D2580FC52A059A1C00F0C889 /* PurchaseEnumTests.swift in Sources */,
+				D2031DF92A05B906000A0FEF /* PurchaseCatalogTests.swift in Sources */,
+				D2031DF42A05B859000A0FEF /* PurchaseCatalogNumberPrefixTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +715,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D2031DF52A05B8C4000A0FEF /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D2031DF62A05B8C4000A0FEF /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2031DF52A05B8C4000A0FEF /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D2580F7D2A035DC900F0C889 /* RoundHouse.xcdatamodeld */ = {

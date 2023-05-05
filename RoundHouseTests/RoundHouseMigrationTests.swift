@@ -182,6 +182,43 @@ final class RoundHouseMigrationTests: XCTestCase {
                        "Purchase.notes not converted to empty string")
     }
 
+    /// Check that the catalogNumberPrefix field is populated during migration.
+    func testPurchaseCatalogNumberPrefix() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234A", forKey: "catalogNumber")
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected Purchase after migration")
+
+        let dPurchase = dPurchases.first!
+        XCTAssertEqual(dPurchase.value(forKey: "catalogNumberPrefix") as! String?, "R1234",
+                       "Purchase.catalogNumberPrefix not set during migration")
+    }
+
+    /// Check that the catalogNumberPrefix field is set to empty string when catalogNumber is unset.
+    func testPurchaseNilCatalogNumberPrefix() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dPurchasesFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Purchase")
+        let dPurchases = try managedObjectContext.fetch(dPurchasesFetchRequest)
+        XCTAssertEqual(dPurchases.count, 1, "Expected Purchase after migration")
+
+        let dPurchase = dPurchases.first!
+        XCTAssertEqual(dPurchase.value(forKey: "catalogNumberPrefix") as! String?, "",
+                       "Purchase.catalogNumberPrefix not set during migration")
+    }
+
     /// Check that the price locale codes are converted to currency codes.
     func testPriceCurrencyGBP() throws {
         let currencyMap = [
