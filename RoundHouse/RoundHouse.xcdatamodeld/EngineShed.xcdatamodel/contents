@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22E261" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Coupling" representedClassName="Coupling" syncable="YES" codeGenerationType="class">
         <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="model" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Model" inverseName="couplings" inverseEntity="Model"/>
     </entity>
     <entity name="Decoder" representedClassName="Decoder" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="firmwareDate" optional="YES" attributeType="Transformable" valueTransformerName="Database.SecureUnarchiveDateComponentsFromDataTransformer" customClassName=".DateComponents"/>
+        <attribute name="firmwareDate" optional="YES" attributeType="Transformable" valueTransformerName="SecureDateComponentsTransformer" customClassName=".DateComponents"/>
         <attribute name="firmwareVersion" optional="YES" attributeType="String"/>
         <attribute name="serialNumber" optional="YES" attributeType="String"/>
         <attribute name="soundAuthor" optional="YES" attributeType="String"/>
@@ -51,8 +51,8 @@
         <attribute name="gauge" optional="YES" attributeType="String" defaultValueString="OO"/>
         <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="lastOil" optional="YES" attributeType="Transformable" valueTransformerName="Database.SecureUnarchiveDateComponentsFromDataTransformer" customClassName=".DateComponents"/>
-        <attribute name="lastRun" optional="YES" attributeType="Transformable" valueTransformerName="Database.SecureUnarchiveDateComponentsFromDataTransformer" customClassName=".DateComponents"/>
+        <attribute name="lastOil" optional="YES" attributeType="Transformable" valueTransformerName="SecureDateComponentsTransformer" customClassName=".DateComponents"/>
+        <attribute name="lastRun" optional="YES" attributeType="Transformable" valueTransformerName="SecureDateComponentsTransformer" customClassName=".DateComponents"/>
         <attribute name="livery" optional="YES" attributeType="String"/>
         <attribute name="modelClass" optional="YES" attributeType="String"/>
         <attribute name="motor" optional="YES" attributeType="String"/>
@@ -83,7 +83,7 @@
         <attribute name="catalogNumberPrefix" optional="YES" attributeType="String"/>
         <attribute name="catalogYear" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="conditionRawValue" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="date" optional="YES" attributeType="Transformable" valueTransformerName="Database.SecureUnarchiveDateComponentsFromDataTransformer" customClassName=".DateComponents"/>
+        <attribute name="date" optional="YES" attributeType="Transformable" valueTransformerName="SecureDateComponentsTransformer" customClassName=".DateComponents"/>
         <attribute name="dateForGrouping" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="dateForSort" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="limitedEdition" optional="YES" attributeType="String"/>
@@ -126,19 +126,4 @@
         <relationship name="model" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Model" inverseName="trainMember" inverseEntity="Model"/>
         <relationship name="train" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Train" inverseName="members" inverseEntity="Train"/>
     </entity>
-    <elements>
-        <element name="Coupling" positionX="27" positionY="189" width="128" height="73"/>
-        <element name="Decoder" positionX="0" positionY="180" width="128" height="193"/>
-        <element name="DecoderType" positionX="-9" positionY="171" width="128" height="223"/>
-        <element name="DetailPart" positionX="-27" positionY="135" width="128" height="88"/>
-        <element name="Feature" positionX="-18" positionY="144" width="128" height="73"/>
-        <element name="Light" positionX="-9" positionY="153" width="128" height="73"/>
-        <element name="Model" positionX="-54" positionY="108" width="128" height="449"/>
-        <element name="Modification" positionX="0" positionY="162" width="128" height="73"/>
-        <element name="Purchase" positionX="-63" positionY="-18" width="128" height="343"/>
-        <element name="SpeakerFitting" positionX="9" positionY="171" width="128" height="73"/>
-        <element name="Task" positionX="18" positionY="180" width="128" height="73"/>
-        <element name="Train" positionX="-36" positionY="153" width="128" height="148"/>
-        <element name="TrainMember" positionX="-27" positionY="162" width="128" height="163"/>
-    </elements>
 </model>
