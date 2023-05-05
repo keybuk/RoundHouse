@@ -71,7 +71,6 @@
         <attribute name="name" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="notes" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="number" optional="YES" attributeType="String" defaultValueString=""/>
-        <attribute name="speaker" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="wheelArrangement" optional="YES" attributeType="String" defaultValueString=""/>
         <relationship name="couplings" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Coupling" inverseName="model" inverseEntity="Coupling"/>
         <relationship name="decoder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Decoder" inverseName="model" inverseEntity="Decoder"/>
@@ -81,7 +80,8 @@
         <relationship name="modifications" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Modification" inverseName="model" inverseEntity="Modification"/>
         <relationship name="purchase" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Purchase" inverseName="models" inverseEntity="Purchase"/>
         <relationship name="socket" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Socket" inverseName="models" inverseEntity="Socket"/>
-        <relationship name="speakerFittings" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SpeakerFitting" inverseName="model" inverseEntity="SpeakerFitting"/>
+        <relationship name="speakerFittings" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SpeakerFitting"/>
+        <relationship name="speakers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Speaker" inverseName="model" inverseEntity="Speaker"/>
         <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Task" inverseName="model" inverseEntity="Task"/>
         <relationship name="trainMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TrainMember" inverseName="model" inverseEntity="TrainMember"/>
     </entity>
@@ -119,9 +119,14 @@
         <relationship name="decoderTypes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DecoderType" inverseName="socket" inverseEntity="DecoderType"/>
         <relationship name="models" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Model" inverseName="socket" inverseEntity="Model"/>
     </entity>
+    <entity name="Speaker" representedClassName="Speaker" syncable="YES" codeGenerationType="class">
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="fittings" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SpeakerFitting" inverseName="speaker" inverseEntity="SpeakerFitting"/>
+        <relationship name="model" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Model" inverseName="speakers" inverseEntity="Model"/>
+    </entity>
     <entity name="SpeakerFitting" representedClassName="SpeakerFitting" syncable="YES" codeGenerationType="class">
         <attribute name="title" optional="YES" attributeType="String"/>
-        <relationship name="model" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Model" inverseName="speakerFittings" inverseEntity="Model"/>
+        <relationship name="speaker" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Speaker" inverseName="fittings" inverseEntity="Speaker"/>
     </entity>
     <entity name="Task" representedClassName="Task" syncable="YES" codeGenerationType="class">
         <attribute name="title" optional="YES" attributeType="String"/>
