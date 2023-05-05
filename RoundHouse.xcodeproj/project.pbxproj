@@ -39,7 +39,6 @@
 		D2580F762A035DC900F0C889 /* RoundHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2580F792A035DC900F0C889 /* RoundHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseApp.swift; sourceTree = "<group>"; };
 		D2580F7B2A035DC900F0C889 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		D2580F7E2A035DC900F0C889 /* RoundHouse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoundHouse.xcdatamodel; sourceTree = "<group>"; };
 		D2580F802A035DC900F0C889 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D2580F822A035DCA00F0C889 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2580F842A035DCA00F0C889 /* RoundHouse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RoundHouse.entitlements; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		D2580F962A035DCB00F0C889 /* RoundHouseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoundHouseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2580F9A2A035DCB00F0C889 /* RoundHouseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseUITests.swift; sourceTree = "<group>"; };
 		D2580F9C2A035DCB00F0C889 /* RoundHouseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D2580FB32A057D3900F0C889 /* EngineShed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EngineShed.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -625,9 +625,9 @@
 		D2580F7D2A035DC900F0C889 /* RoundHouse.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D2580F7E2A035DC900F0C889 /* RoundHouse.xcdatamodel */,
+				D2580FB32A057D3900F0C889 /* EngineShed.xcdatamodel */,
 			);
-			currentVersion = D2580F7E2A035DC900F0C889 /* RoundHouse.xcdatamodel */;
+			currentVersion = D2580FB32A057D3900F0C889 /* EngineShed.xcdatamodel */;
 			path = RoundHouse.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
