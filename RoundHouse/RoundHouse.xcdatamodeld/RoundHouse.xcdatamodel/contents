@@ -7,12 +7,12 @@
     <entity name="Decoder" representedClassName="Decoder" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="firmwareDate" optional="YES" attributeType="Transformable" valueTransformerName="SecureDateComponentsTransformer" customClassName=".DateComponents"/>
-        <attribute name="firmwareVersion" optional="YES" attributeType="String"/>
-        <attribute name="serialNumber" optional="YES" attributeType="String"/>
-        <attribute name="soundAuthor" optional="YES" attributeType="String"/>
-        <attribute name="soundProject" optional="YES" attributeType="String"/>
-        <attribute name="soundProjectVersion" optional="YES" attributeType="String"/>
-        <attribute name="soundSettings" optional="YES" attributeType="String"/>
+        <attribute name="firmwareVersion" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="serialNumber" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="soundAuthor" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="soundProject" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="soundProjectVersion" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="soundSettings" optional="YES" attributeType="String" defaultValueString=""/>
         <relationship name="model" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Model" inverseName="decoder" inverseEntity="Model"/>
         <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DecoderType" inverseName="decoders" inverseEntity="DecoderType"/>
     </entity>
@@ -21,13 +21,13 @@
         <attribute name="isProgrammable" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="isRailComSupported" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" elementID="hasRailCom"/>
         <attribute name="isSoundSupported" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" elementID="hasSound"/>
-        <attribute name="manufacturer" optional="YES" attributeType="String"/>
+        <attribute name="manufacturer" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="minimumStock" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="productCode" optional="YES" attributeType="String"/>
-        <attribute name="productDescription" optional="YES" attributeType="String"/>
-        <attribute name="productFamily" optional="YES" attributeType="String"/>
+        <attribute name="productCode" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="productDescription" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="productFamily" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="remainingStock" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="socket" optional="YES" attributeType="String"/>
+        <attribute name="socket" optional="YES" attributeType="String" defaultValueString=""/>
         <relationship name="decoders" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Decoder" inverseName="type" inverseEntity="Decoder"/>
     </entity>
     <entity name="DetailPart" representedClassName="DetailPart" syncable="YES" codeGenerationType="class">
@@ -45,7 +45,7 @@
     </entity>
     <entity name="Model" representedClassName="Model" syncable="YES" codeGenerationType="class">
         <attribute name="classificationRawValue" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="details" optional="YES" attributeType="String"/>
+        <attribute name="details" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="dispositionRawValue" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="eraRawValue" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="gauge" optional="YES" attributeType="String" defaultValueString="OO"/>
@@ -53,15 +53,15 @@
         <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="lastOil" optional="YES" attributeType="Transformable" valueTransformerName="SecureDateComponentsTransformer" customClassName=".DateComponents"/>
         <attribute name="lastRun" optional="YES" attributeType="Transformable" valueTransformerName="SecureDateComponentsTransformer" customClassName=".DateComponents"/>
-        <attribute name="livery" optional="YES" attributeType="String"/>
-        <attribute name="modelClass" optional="YES" attributeType="String"/>
-        <attribute name="motor" optional="YES" attributeType="String"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="notes" optional="YES" attributeType="String"/>
-        <attribute name="number" optional="YES" attributeType="String"/>
-        <attribute name="socket" optional="YES" attributeType="String"/>
-        <attribute name="speaker" optional="YES" attributeType="String"/>
-        <attribute name="wheelArrangement" optional="YES" attributeType="String"/>
+        <attribute name="livery" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="modelClass" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="motor" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="name" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="notes" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="number" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="socket" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="speaker" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="wheelArrangement" optional="YES" attributeType="String" defaultValueString=""/>
         <relationship name="couplings" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Coupling" inverseName="model" inverseEntity="Coupling"/>
         <relationship name="decoder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Decoder" inverseName="model" inverseEntity="Decoder"/>
         <relationship name="detailParts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="DetailPart" inverseName="model" inverseEntity="DetailPart"/>
@@ -78,23 +78,23 @@
         <relationship name="model" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Model" inverseName="modifications" inverseEntity="Model"/>
     </entity>
     <entity name="Purchase" representedClassName="Purchase" syncable="YES" codeGenerationType="class">
-        <attribute name="catalogDescription" optional="YES" attributeType="String"/>
-        <attribute name="catalogNumber" optional="YES" attributeType="String"/>
+        <attribute name="catalogDescription" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="catalogNumber" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="catalogNumberPrefix" optional="YES" attributeType="String"/>
         <attribute name="catalogYear" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="conditionRawValue" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="date" optional="YES" attributeType="Transformable" valueTransformerName="SecureDateComponentsTransformer" customClassName=".DateComponents"/>
         <attribute name="dateForGrouping" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="dateForSort" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="limitedEdition" optional="YES" attributeType="String"/>
+        <attribute name="limitedEdition" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="limitedEditionCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="limitedEditionNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="manufacturer" optional="YES" attributeType="String"/>
+        <attribute name="manufacturer" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="maxModelIndex" optional="YES" attributeType="Integer 16" defaultValueString="-1" usesScalarValueType="YES"/>
-        <attribute name="notes" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="price" optional="YES" attributeType="Decimal"/>
         <attribute name="priceCurrency" optional="YES" attributeType="String" defaultValueString="en_GB"/>
-        <attribute name="store" optional="YES" attributeType="String"/>
+        <attribute name="store" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="valuation" optional="YES" attributeType="Decimal"/>
         <attribute name="valuationCurrency" optional="YES" attributeType="String" defaultValueString="en_GB"/>
         <relationship name="models" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Model" inverseName="purchase" inverseEntity="Model"/>
@@ -108,21 +108,21 @@
         <relationship name="model" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Model" inverseName="tasks" inverseEntity="Model"/>
     </entity>
     <entity name="Train" representedClassName="Train" syncable="YES" codeGenerationType="class">
-        <attribute name="details" optional="YES" attributeType="String"/>
+        <attribute name="details" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="maxMemberIndex" optional="YES" attributeType="Integer 16" defaultValueString="-1" usesScalarValueType="YES"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="notes" optional="YES" attributeType="String"/>
-        <attribute name="number" optional="YES" attributeType="String"/>
-        <attribute name="trainDescription" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="notes" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="number" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="trainDescription" optional="YES" attributeType="String" defaultValueString=""/>
         <relationship name="members" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TrainMember" inverseName="train" inverseEntity="TrainMember"/>
     </entity>
     <entity name="TrainMember" representedClassName="TrainMember" syncable="YES" codeGenerationType="class">
-        <attribute name="details" optional="YES" attributeType="String" elementID="title"/>
+        <attribute name="details" optional="YES" attributeType="String" defaultValueString="" elementID="title"/>
         <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="isFlipped" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
-        <attribute name="modelClass" optional="YES" attributeType="String"/>
-        <attribute name="notes" optional="YES" attributeType="String"/>
-        <attribute name="numberOrName" optional="YES" attributeType="String"/>
+        <attribute name="modelClass" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="notes" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="numberOrName" optional="YES" attributeType="String" defaultValueString=""/>
         <relationship name="model" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Model" inverseName="trainMember" inverseEntity="Model"/>
         <relationship name="train" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Train" inverseName="members" inverseEntity="Train"/>
     </entity>
