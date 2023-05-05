@@ -324,6 +324,8 @@ final class RoundHouseMigrationTests: XCTestCase {
                        "DecoderType.catalogNumber not copied from source productCode")
         XCTAssertEqual(dDecoderType.value(forKey: "catalogFamily") as! String?, "LokSound",
                        "DecoderType.catalogFamily not copied from source productFamily")
+        XCTAssertEqual(dDecoderType.value(forKey: "catalogName") as! String?, "LokSound",
+                       "DecoderType.catalogName not copied from source productFamily")
         XCTAssertEqual(dDecoderType.value(forKey: "catalogDescription") as! String?, "LokSound PluX22",
                        "DecoderType.catalogDescription not copied from source productDescription")
         XCTAssertEqual(dDecoderType.value(forKey: "imageData") as! Data?, "Test".data(using: .utf8),
@@ -357,6 +359,8 @@ final class RoundHouseMigrationTests: XCTestCase {
                        "DecoderType.manufacturer not converted to empty string")
         XCTAssertEqual(dDecoderType.value(forKey: "catalogNumber") as! String?, "",
                        "DecoderType.catalogNumber not converted to empty string")
+        XCTAssertEqual(dDecoderType.value(forKey: "catalogName") as! String?, "",
+                       "DecoderType.catalogName not converted to empty string")
         XCTAssertEqual(dDecoderType.value(forKey: "catalogFamily") as! String?, "",
                        "DecoderType.catalogFamily not converted to empty string")
         XCTAssertEqual(dDecoderType.value(forKey: "catalogDescription") as! String?, "",

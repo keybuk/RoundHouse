@@ -19,6 +19,7 @@
     <entity name="DecoderType" representedClassName="DecoderType" syncable="YES" codeGenerationType="class">
         <attribute name="catalogDescription" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="catalogFamily" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="catalogName" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="catalogNumber" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="isProgrammable" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
