@@ -60,6 +60,10 @@
 		D2A1D9CA2A05EAE100EFC161 /* DecoderTypeTitleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1D9C92A05EAE100EFC161 /* DecoderTypeTitleTests.swift */; };
 		D2A1D9CC2A05F2C000EFC161 /* Purchase+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1D9CB2A05F2C000EFC161 /* Purchase+Date.swift */; };
 		D2A1D9CE2A05F36400EFC161 /* PurchaseDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1D9CD2A05F36400EFC161 /* PurchaseDateTests.swift */; };
+		D2A1D9D32A06445400EFC161 /* DecoderType+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1D9D22A06445400EFC161 /* DecoderType+Image.swift */; };
+		D2A1D9D52A06445D00EFC161 /* Model+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1D9D42A06445D00EFC161 /* Model+Image.swift */; };
+		D2A1D9D72A06446800EFC161 /* StorableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1D9D62A06446800EFC161 /* StorableImage.swift */; };
+		D2A1D9D92A0644D900EFC161 /* Accessory+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1D9D82A0644D900EFC161 /* Accessory+Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +142,10 @@
 		D2A1D9C92A05EAE100EFC161 /* DecoderTypeTitleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoderTypeTitleTests.swift; sourceTree = "<group>"; };
 		D2A1D9CB2A05F2C000EFC161 /* Purchase+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Purchase+Date.swift"; sourceTree = "<group>"; };
 		D2A1D9CD2A05F36400EFC161 /* PurchaseDateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseDateTests.swift; sourceTree = "<group>"; };
+		D2A1D9D22A06445400EFC161 /* DecoderType+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DecoderType+Image.swift"; sourceTree = "<group>"; };
+		D2A1D9D42A06445D00EFC161 /* Model+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+Image.swift"; sourceTree = "<group>"; };
+		D2A1D9D62A06446800EFC161 /* StorableImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorableImage.swift; sourceTree = "<group>"; };
+		D2A1D9D82A0644D900EFC161 /* Accessory+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Accessory+Image.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +240,7 @@
 			children = (
 				D2580F7D2A035DC900F0C889 /* RoundHouse.xcdatamodeld */,
 				D2A1D9D02A0643D800EFC161 /* Migration */,
+				D2A1D9D62A06446800EFC161 /* StorableImage.swift */,
 				D2031DF12A05B821000A0FEF /* Purchase+Catalog.swift */,
 				D2A1D9BB2A05E8D200EFC161 /* Purchase+Title.swift */,
 				D2A1D9CB2A05F2C000EFC161 /* Purchase+Date.swift */,
@@ -244,9 +253,12 @@
 				D2580FC82A059A4100F0C889 /* Model+Classification.swift */,
 				D2580FC92A059A4100F0C889 /* Model+Disposition.swift */,
 				D2580FCA2A059A4100F0C889 /* Model+Era.swift */,
+				D2A1D9D42A06445D00EFC161 /* Model+Image.swift */,
 				D2A1D9BF2A05E96D00EFC161 /* Accessory+Title.swift */,
+				D2A1D9D82A0644D900EFC161 /* Accessory+Image.swift */,
 				D2A1D9C12A05E9B600EFC161 /* DecoderType+Title.swift */,
 				D2031DFE2A05B94E000A0FEF /* DecoderType+Stock.swift */,
+				D2A1D9D22A06445400EFC161 /* DecoderType+Image.swift */,
 				D2A1D9B12A05C40200EFC161 /* DecoderType+Decoders.swift */,
 				D2031DFC2A05B948000A0FEF /* DecoderType+WillSave.swift */,
 				D2031E042A05B987000A0FEF /* Decoder+Stock.swift */,
@@ -436,15 +448,18 @@
 				D2580F7C2A035DC900F0C889 /* Persistence.swift in Sources */,
 				D2A1D9C22A05E9B600EFC161 /* DecoderType+Title.swift in Sources */,
 				D2031DEE2A05B058000A0FEF /* Purchase+Currency.swift in Sources */,
+				D2A1D9D72A06446800EFC161 /* StorableImage.swift in Sources */,
 				D2031E052A05B987000A0FEF /* Decoder+Stock.swift in Sources */,
 				D2050CB22A05A50000BE32BB /* PurchaseMigrationPolicy.swift in Sources */,
 				D2031DF22A05B821000A0FEF /* Purchase+Catalog.swift in Sources */,
 				D2A1D9BC2A05E8D200EFC161 /* Purchase+Title.swift in Sources */,
+				D2A1D9D52A06445D00EFC161 /* Model+Image.swift in Sources */,
 				D2580FC12A058EDC00F0C889 /* DefaultMigrationPolicy.swift in Sources */,
 				D2580FBD2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
 				D2A1D9B02A05C3F900EFC161 /* Train+Members.swift in Sources */,
 				D2580FCC2A059A4100F0C889 /* Model+Disposition.swift in Sources */,
 				D2A1D9AC2A05C3CC00EFC161 /* Purchase+Models.swift in Sources */,
+				D2A1D9D32A06445400EFC161 /* DecoderType+Image.swift in Sources */,
 				D2A1D9BE2A05E91E00EFC161 /* Model+Title.swift in Sources */,
 				D2031DFF2A05B94E000A0FEF /* DecoderType+Stock.swift in Sources */,
 				D2031DEA2A05AA1C000A0FEF /* TrainMigrationPolicy.swift in Sources */,
@@ -456,6 +471,7 @@
 				D2031DFD2A05B948000A0FEF /* DecoderType+WillSave.swift in Sources */,
 				D2580F7F2A035DC900F0C889 /* RoundHouse.xcdatamodeld in Sources */,
 				D2A1D9C02A05E96D00EFC161 /* Accessory+Title.swift in Sources */,
+				D2A1D9D92A0644D900EFC161 /* Accessory+Image.swift in Sources */,
 				D2580FCB2A059A4100F0C889 /* Model+Classification.swift in Sources */,
 				D2580FCD2A059A4100F0C889 /* Model+Era.swift in Sources */,
 				D2A1D9AE2A05C3D200EFC161 /* Purchase+Accessories.swift in Sources */,
