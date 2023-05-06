@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D212CC352889DAAF00D6A31A /* AppContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D212CC342889DAAF00D6A31A /* AppContent.swift */; };
+		D212CC372889DBF300D6A31A /* AppDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D212CC362889DBF300D6A31A /* AppDetail.swift */; };
 		D22B733126E2D30E00DDE47F /* Model+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B733026E2D30E00DDE47F /* Model+Date.swift */; };
 		D22B733426E2D44E00DDE47F /* Decoder+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B733326E2D44E00DDE47F /* Decoder+Date.swift */; };
 		D22B733726E2D85A00DDE47F /* AccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B733626E2D85A00DDE47F /* AccessoryView.swift */; };
@@ -116,6 +118,8 @@
 
 /* Begin PBXFileReference section */
 		D212CC312889CB2F00D6A31A /* RoundHouse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RoundHouse.entitlements; sourceTree = "<group>"; };
+		D212CC342889DAAF00D6A31A /* AppContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContent.swift; sourceTree = "<group>"; };
+		D212CC362889DBF300D6A31A /* AppDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetail.swift; sourceTree = "<group>"; };
 		D22B733026E2D30E00DDE47F /* Model+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Model+Date.swift"; path = "Model/Model+Date.swift"; sourceTree = SOURCE_ROOT; };
 		D22B733326E2D44E00DDE47F /* Decoder+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decoder+Date.swift"; sourceTree = "<group>"; };
 		D22B733626E2D85A00DDE47F /* AccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryView.swift; sourceTree = "<group>"; };
@@ -252,6 +256,8 @@
 			children = (
 				D29F5C6A267571ED00EC2F85 /* ContentView.swift */,
 				D23C3BD92676BC9F0017BC5B /* AppSidebar.swift */,
+				D212CC342889DAAF00D6A31A /* AppContent.swift */,
+				D212CC362889DBF300D6A31A /* AppDetail.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -595,6 +601,7 @@
 				D29F5CBE267578F300EC2F85 /* PreviewData.swift in Sources */,
 				D23C3BDA2676BC9F0017BC5B /* AppSidebar.swift in Sources */,
 				D2E30802267ED88400577B27 /* PurchaseCell.swift in Sources */,
+				D212CC352889DAAF00D6A31A /* AppContent.swift in Sources */,
 				D29A208D26DD690A00FE8DD5 /* PurchaseItemsList.swift in Sources */,
 				D22B733726E2D85A00DDE47F /* AccessoryView.swift in Sources */,
 				D23C3BE62676D6640017BC5B /* AccessoriesList.swift in Sources */,
@@ -613,6 +620,7 @@
 				D2C496322675F7A80008AFB8 /* Purchase+Models.swift in Sources */,
 				D2C496132675885E0008AFB8 /* DefaultMigrationPolicy.swift in Sources */,
 				D2C4961926758BAB0008AFB8 /* RoundHouseMappingModel.xcmappingmodel in Sources */,
+				D212CC372889DBF300D6A31A /* AppDetail.swift in Sources */,
 				D278B1C426954C9700CD4609 /* DecoderType+Stock.swift in Sources */,
 				D22B734626E2DEFF00DDE47F /* DecoderCell.swift in Sources */,
 				D22B733426E2D44E00DDE47F /* Decoder+Date.swift in Sources */,

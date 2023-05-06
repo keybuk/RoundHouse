@@ -8,43 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
-#if os(iOS)
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
-#endif
+    //    @SceneStorage("AppSidebar.selection") var savedSelection: NavigationItem?
+    @State var selection: NavigationItem? = NavigationItem.models(.dieselElectricLocomotive)
+    @State var path = NavigationPath()
     
     var body: some View {
-#if os(iOS)
-        // BUG(FB9182105) This is a workaround; by not using the three-pane view on iPhone we
-        // get a functional app.
-        if horizontalSizeClass == .compact {
-            CompactAppSidebarNavigation()
-        } else {
-            AppSidebarNavigation()
+        NavigationSplitView {
+            AppSidebar(selection: $selection)
+        } content: {
+            AppContent(selection: $selection)
+        } detail: {
+            NavigationStack(path: $path) {
+                AppDetail()
+            }
         }
-#elseif os(macOS)
-        AppSidebarNavigation()
-#endif
-    }
-}
-
-struct AppSidebarNavigation: View {
-    var body: some View {
-        NavigationView {
-            AppSidebar()
-
-            // BUG(FB9182070) On iPad these will show placeholders until the sidebar is revealed.
-            Text("List Placeholder")
-            Text("Detail Placeholder")
-        }
-    }
-}
-
-struct CompactAppSidebarNavigation: View {
-    var body: some View {
-        NavigationView {
-            AppSidebar()
-
-            Text("Placeholder")
+        .onChange(of: selection) { _ in
+            path.removeLast(path.count)
         }
     }
 }
