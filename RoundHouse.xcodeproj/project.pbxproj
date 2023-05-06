@@ -32,8 +32,6 @@
 		D2580F912A035DCB00F0C889 /* RoundHouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580F902A035DCB00F0C889 /* RoundHouseTests.swift */; };
 		D2580F9B2A035DCB00F0C889 /* RoundHouseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580F9A2A035DCB00F0C889 /* RoundHouseUITests.swift */; };
 		D2580F9D2A035DCB00F0C889 /* RoundHouseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580F9C2A035DCB00F0C889 /* RoundHouseUITestsLaunchTests.swift */; };
-		D2580FB72A057FA700F0C889 /* SecureDateComponentsTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FB62A057FA700F0C889 /* SecureDateComponentsTransformer.swift */; };
-		D2580FB92A05819700F0C889 /* SecureDateComponentsTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FB82A05819700F0C889 /* SecureDateComponentsTransformerTests.swift */; };
 		D2580FBD2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2580FBC2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel */; };
 		D2580FBF2A058AD000F0C889 /* RoundHouseMigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FBE2A058AD000F0C889 /* RoundHouseMigrationTests.swift */; };
 		D2580FC12A058EDC00F0C889 /* DefaultMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2580FC02A058EDC00F0C889 /* DefaultMigrationPolicy.swift */; };
@@ -110,8 +108,6 @@
 		D2580F9A2A035DCB00F0C889 /* RoundHouseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseUITests.swift; sourceTree = "<group>"; };
 		D2580F9C2A035DCB00F0C889 /* RoundHouseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundHouseUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D2580FB32A057D3900F0C889 /* EngineShed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EngineShed.xcdatamodel; sourceTree = "<group>"; };
-		D2580FB62A057FA700F0C889 /* SecureDateComponentsTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureDateComponentsTransformer.swift; sourceTree = "<group>"; };
-		D2580FB82A05819700F0C889 /* SecureDateComponentsTransformerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureDateComponentsTransformerTests.swift; sourceTree = "<group>"; };
 		D2580FBA2A0586B100F0C889 /* RoundHouse.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RoundHouse.xctestplan; sourceTree = "<group>"; };
 		D2580FBB2A0589BD00F0C889 /* RoundHouse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoundHouse.xcdatamodel; sourceTree = "<group>"; };
 		D2580FBC2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = RoundHouseMappingModel.xcmappingmodel; sourceTree = "<group>"; };
@@ -196,7 +192,6 @@
 				D2580F792A035DC900F0C889 /* RoundHouseApp.swift */,
 				D2580F7B2A035DC900F0C889 /* Persistence.swift */,
 				D2580F802A035DC900F0C889 /* ContentView.swift */,
-				D2580FB62A057FA700F0C889 /* SecureDateComponentsTransformer.swift */,
 				D2580F822A035DCA00F0C889 /* Assets.xcassets */,
 				D2580F842A035DCA00F0C889 /* RoundHouse.entitlements */,
 				D2580FBA2A0586B100F0C889 /* RoundHouse.xctestplan */,
@@ -218,7 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				D2580F902A035DCB00F0C889 /* RoundHouseTests.swift */,
-				D2580FB82A05819700F0C889 /* SecureDateComponentsTransformerTests.swift */,
 				D2A1D9D12A0643EF00EFC161 /* Model */,
 			);
 			path = RoundHouseTests;
@@ -456,7 +450,6 @@
 				D2031DEA2A05AA1C000A0FEF /* TrainMigrationPolicy.swift in Sources */,
 				D2031DEC2A05AD3B000A0FEF /* SocketMigrationPolicy.swift in Sources */,
 				D2031DFB2A05B91F000A0FEF /* Purchase+WillSave.swift in Sources */,
-				D2580FB72A057FA700F0C889 /* SecureDateComponentsTransformer.swift in Sources */,
 				D2580F812A035DC900F0C889 /* ContentView.swift in Sources */,
 				D2A1D9B22A05C40200EFC161 /* DecoderType+Decoders.swift in Sources */,
 				D2580FCF2A059D8500F0C889 /* ModelMigrationPolicy.swift in Sources */,
@@ -476,7 +469,6 @@
 				D2A1D9B42A05C41700EFC161 /* PurchaseModelsTests.swift in Sources */,
 				D2A1D9CE2A05F36400EFC161 /* PurchaseDateTests.swift in Sources */,
 				D2580FC32A059A1600F0C889 /* ModelEnumTests.swift in Sources */,
-				D2580FB92A05819700F0C889 /* SecureDateComponentsTransformerTests.swift in Sources */,
 				D2580F912A035DCB00F0C889 /* RoundHouseTests.swift in Sources */,
 				D2031DF02A05B064000A0FEF /* PurchaseCurrencyTests.swift in Sources */,
 				D2580FBF2A058AD000F0C889 /* RoundHouseMigrationTests.swift in Sources */,
