@@ -64,6 +64,7 @@
 		D2A1D9D52A06445D00EFC161 /* Model+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1D9D42A06445D00EFC161 /* Model+Image.swift */; };
 		D2A1D9D72A06446800EFC161 /* StorableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1D9D62A06446800EFC161 /* StorableImage.swift */; };
 		D2A1D9D92A0644D900EFC161 /* Accessory+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1D9D82A0644D900EFC161 /* Accessory+Image.swift */; };
+		D2A1D9DB2A06474700EFC161 /* AppSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1D9DA2A06474700EFC161 /* AppSidebar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,7 @@
 		D2A1D9D42A06445D00EFC161 /* Model+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+Image.swift"; sourceTree = "<group>"; };
 		D2A1D9D62A06446800EFC161 /* StorableImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorableImage.swift; sourceTree = "<group>"; };
 		D2A1D9D82A0644D900EFC161 /* Accessory+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Accessory+Image.swift"; sourceTree = "<group>"; };
+		D2A1D9DA2A06474700EFC161 /* AppSidebar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSidebar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 				D2580F792A035DC900F0C889 /* RoundHouseApp.swift */,
 				D2580F7B2A035DC900F0C889 /* Persistence.swift */,
 				D2580F802A035DC900F0C889 /* ContentView.swift */,
+				D2A1D9DA2A06474700EFC161 /* AppSidebar.swift */,
 				D2580F822A035DCA00F0C889 /* Assets.xcassets */,
 				D2580F842A035DCA00F0C889 /* RoundHouse.entitlements */,
 				D2580FBA2A0586B100F0C889 /* RoundHouse.xctestplan */,
@@ -470,6 +473,7 @@
 				D2580FCF2A059D8500F0C889 /* ModelMigrationPolicy.swift in Sources */,
 				D2031DFD2A05B948000A0FEF /* DecoderType+WillSave.swift in Sources */,
 				D2580F7F2A035DC900F0C889 /* RoundHouse.xcdatamodeld in Sources */,
+				D2A1D9DB2A06474700EFC161 /* AppSidebar.swift in Sources */,
 				D2A1D9C02A05E96D00EFC161 /* Accessory+Title.swift in Sources */,
 				D2A1D9D92A0644D900EFC161 /* Accessory+Image.swift in Sources */,
 				D2580FCB2A059A4100F0C889 /* Model+Classification.swift in Sources */,

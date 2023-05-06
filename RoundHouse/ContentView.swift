@@ -12,7 +12,13 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     var body: some View {
-        Text("ContentView")
+        NavigationSplitView {
+            AppSidebar()
+        } content: {
+            Text("Content")
+        } detail: {
+            Text("Detail")
+        }
     }
 }
 
