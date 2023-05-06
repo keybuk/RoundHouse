@@ -200,14 +200,44 @@
 				D2580F822A035DCA00F0C889 /* Assets.xcassets */,
 				D2580F842A035DCA00F0C889 /* RoundHouse.entitlements */,
 				D2580FBA2A0586B100F0C889 /* RoundHouse.xctestplan */,
+				D2A1D9CF2A0643CD00EFC161 /* Model */,
+				D2580F852A035DCA00F0C889 /* Preview Content */,
+			);
+			path = RoundHouse;
+			sourceTree = "<group>";
+		};
+		D2580F852A035DCA00F0C889 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D2580F862A035DCA00F0C889 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D2580F8F2A035DCB00F0C889 /* RoundHouseTests */ = {
+			isa = PBXGroup;
+			children = (
+				D2580F902A035DCB00F0C889 /* RoundHouseTests.swift */,
+				D2580FB82A05819700F0C889 /* SecureDateComponentsTransformerTests.swift */,
+				D2A1D9D12A0643EF00EFC161 /* Model */,
+			);
+			path = RoundHouseTests;
+			sourceTree = "<group>";
+		};
+		D2580F992A035DCB00F0C889 /* RoundHouseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D2580F9A2A035DCB00F0C889 /* RoundHouseUITests.swift */,
+				D2580F9C2A035DCB00F0C889 /* RoundHouseUITestsLaunchTests.swift */,
+			);
+			path = RoundHouseUITests;
+			sourceTree = "<group>";
+		};
+		D2A1D9CF2A0643CD00EFC161 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				D2580F7D2A035DC900F0C889 /* RoundHouse.xcdatamodeld */,
-				D2580FBC2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel */,
-				D2580FC02A058EDC00F0C889 /* DefaultMigrationPolicy.swift */,
-				D2580FCE2A059D8500F0C889 /* ModelMigrationPolicy.swift */,
-				D2050CB12A05A50000BE32BB /* PurchaseMigrationPolicy.swift */,
-				D2031E062A05B9BB000A0FEF /* DecoderTypeMigrationPolicy.swift */,
-				D2031DE92A05AA1C000A0FEF /* TrainMigrationPolicy.swift */,
-				D2031DEB2A05AD3B000A0FEF /* SocketMigrationPolicy.swift */,
+				D2A1D9D02A0643D800EFC161 /* Migration */,
 				D2031DF12A05B821000A0FEF /* Purchase+Catalog.swift */,
 				D2A1D9BB2A05E8D200EFC161 /* Purchase+Title.swift */,
 				D2A1D9CB2A05F2C000EFC161 /* Purchase+Date.swift */,
@@ -227,24 +257,27 @@
 				D2031DFC2A05B948000A0FEF /* DecoderType+WillSave.swift */,
 				D2031E042A05B987000A0FEF /* Decoder+Stock.swift */,
 				D2A1D9AF2A05C3F900EFC161 /* Train+Members.swift */,
-				D2580F852A035DCA00F0C889 /* Preview Content */,
 			);
-			path = RoundHouse;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		D2580F852A035DCA00F0C889 /* Preview Content */ = {
+		D2A1D9D02A0643D800EFC161 /* Migration */ = {
 			isa = PBXGroup;
 			children = (
-				D2580F862A035DCA00F0C889 /* Preview Assets.xcassets */,
+				D2580FBC2A058A5900F0C889 /* RoundHouseMappingModel.xcmappingmodel */,
+				D2580FC02A058EDC00F0C889 /* DefaultMigrationPolicy.swift */,
+				D2580FCE2A059D8500F0C889 /* ModelMigrationPolicy.swift */,
+				D2050CB12A05A50000BE32BB /* PurchaseMigrationPolicy.swift */,
+				D2031E062A05B9BB000A0FEF /* DecoderTypeMigrationPolicy.swift */,
+				D2031DE92A05AA1C000A0FEF /* TrainMigrationPolicy.swift */,
+				D2031DEB2A05AD3B000A0FEF /* SocketMigrationPolicy.swift */,
 			);
-			path = "Preview Content";
+			path = Migration;
 			sourceTree = "<group>";
 		};
-		D2580F8F2A035DCB00F0C889 /* RoundHouseTests */ = {
+		D2A1D9D12A0643EF00EFC161 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D2580F902A035DCB00F0C889 /* RoundHouseTests.swift */,
-				D2580FB82A05819700F0C889 /* SecureDateComponentsTransformerTests.swift */,
 				D2580FBE2A058AD000F0C889 /* RoundHouseMigrationTests.swift */,
 				D2031DF32A05B859000A0FEF /* PurchaseCatalogNumberPrefixTests.swift */,
 				D2031DF82A05B906000A0FEF /* PurchaseCatalogTests.swift */,
@@ -263,16 +296,7 @@
 				D2031E022A05B983000A0FEF /* DecoderStockTests.swift */,
 				D2A1D9B72A05C43B00EFC161 /* TrainMembersTests.swift */,
 			);
-			path = RoundHouseTests;
-			sourceTree = "<group>";
-		};
-		D2580F992A035DCB00F0C889 /* RoundHouseUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D2580F9A2A035DCB00F0C889 /* RoundHouseUITests.swift */,
-				D2580F9C2A035DCB00F0C889 /* RoundHouseUITestsLaunchTests.swift */,
-			);
-			path = RoundHouseUITests;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
