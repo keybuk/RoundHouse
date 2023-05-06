@@ -39,6 +39,17 @@ final class ModelMigrationPolicy: DefaultMigrationPolicy {
         return (String(components[0]), String(catalogDescription))
     }
 
+    private func modelClassSplit(_ modelClass: String) -> (String, String) {
+        let components = modelClass.split(whereSeparator: \.isWhitespace)
+        guard components.count >= 2 else { return (modelClass, "") }
+
+        let modelClass = modelClass
+            .dropLast(components.last!.count)
+            .trimmingSuffix(while: \.isWhitespace)
+
+        return (String(modelClass), String(components.last!))
+    }
+
     /// Extracts the accessory catalog number from a model class.
     /// - Parameter modelClass: model class in source instance.
     /// - Returns: `modelClass` or the first component if it contains a catalog number.
@@ -57,5 +68,29 @@ final class ModelMigrationPolicy: DefaultMigrationPolicy {
         guard let modelClass = modelClass else { return "" }
         let (_, catalogDescription) = accessoryCatalogSplit(modelClass)
         return catalogDescription
+    }
+
+    /// Extracts the model class from a source model class.
+    /// - Parameter modelClass: model class in source instance.
+    /// - Parameter classification: classification in source instance.
+    /// - Returns: `modelClass` or first component if it's a multiple unit.
+    @objc
+    func modelClass(_ modelClass: String?, classification: NSNumber) -> String {
+        guard let modelClass = modelClass else { return "" }
+        guard classification.int16Value == 4 else { return modelClass }
+        let (newModelClass, _) = modelClassSplit(modelClass)
+        return newModelClass
+    }
+
+    /// Extracts the vehicle type from a model class.
+    /// - Parameter modelClass: model class in source instance.
+    /// - Parameter classification: classification in source instance.
+    /// - Returns: `modelClass` or the last component if it's a multiple unit.
+    @objc
+    func modelVehicleType(_ modelClass: String?, classification: NSNumber) -> String {
+        guard let modelClass = modelClass else { return "" }
+        guard classification.int16Value == 4 else { return "" }
+        let (_, vehicleType) = modelClassSplit(modelClass)
+        return vehicleType
     }
 }
