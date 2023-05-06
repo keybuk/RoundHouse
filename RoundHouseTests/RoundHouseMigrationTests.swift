@@ -522,6 +522,8 @@ final class RoundHouseMigrationTests: XCTestCase {
                        "Model.modelClass not copied from source")
         XCTAssertEqual(dModel.value(forKey: "wheelArrangement") as! String?, "4-6-2",
                        "Model.wheelArrangement not copied from source")
+        XCTAssertEqual(dModel.value(forKey: "vehicleType") as! String?, "",
+                       "Model.vehicleType not set to empty string")
         XCTAssertEqual(dModel.value(forKey: "gauge") as! String?, "HO",
                        "Model.gauge not copied from source")
         XCTAssertEqual(dModel.value(forKey: "name") as! String?, "Boris Johnson",
@@ -572,6 +574,8 @@ final class RoundHouseMigrationTests: XCTestCase {
                        "Model.modelClass not converted to empty string")
         XCTAssertEqual(dModel.value(forKey: "wheelArrangement") as! String?, "",
                        "Model.wheelArrangement not converted to empty string")
+        XCTAssertEqual(dModel.value(forKey: "vehicleType") as! String?, "",
+                       "Model.vehicleType not converted to empty string")
         // Gauge is defaulted to "OO" so will never be nil.
         XCTAssertEqual(dModel.value(forKey: "name") as! String?, "",
                        "Model.name not converted to empty string")
@@ -629,6 +633,87 @@ final class RoundHouseMigrationTests: XCTestCase {
             XCTAssertEqual(dModel.value(forKey: "classificationRawValue") as! Int16, newValue.rawValue,
                            "Model.classificationRawValue has incorrect value after migration")
         }
+    }
+
+    /// Check that vehicleType is extracted from modelClass for multiple units.
+    func testModelVehicleType() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+
+        let sModel = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel.setValue(sPurchase, forKey: "purchase")
+        sModel.setValue(4, forKey: "classificationRawValue")
+        sModel.setValue("390 DMBSO", forKey: "modelClass")
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dModelsFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Model")
+        let dModels = try managedObjectContext.fetch(dModelsFetchRequest)
+        XCTAssertEqual(dModels.count, 1, "Expected Model after migration")
+
+        let dModel = dModels.first!
+        XCTAssertEqual(dModel.value(forKey: "modelClass") as! String?, "390",
+                       "Model.modelClass not converted from source")
+        XCTAssertEqual(dModel.value(forKey: "vehicleType") as! String?, "DMBSO",
+                       "Model.vehicleType not converted from source")
+    }
+
+    /// Check that vehicleType is extracted from modelClass for Southern multiple units.
+    func testModelVehicleTypeSouthern() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+
+        let sModel = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel.setValue(sPurchase, forKey: "purchase")
+        sModel.setValue(4, forKey: "classificationRawValue")
+        sModel.setValue("414 2-HAP DTCsoL", forKey: "modelClass")
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dModelsFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Model")
+        let dModels = try managedObjectContext.fetch(dModelsFetchRequest)
+        XCTAssertEqual(dModels.count, 1, "Expected Model after migration")
+
+        let dModel = dModels.first!
+        XCTAssertEqual(dModel.value(forKey: "modelClass") as! String?, "414 2-HAP",
+                       "Model.modelClass not converted from source")
+        XCTAssertEqual(dModel.value(forKey: "vehicleType") as! String?, "DTCsoL",
+                       "Model.vehicleType not converted from source")
+    }
+
+    /// Check that modelClass is copied for multiple units when no vehicle type present.
+    func testModelVehicleTypeMissing() throws {
+        let sPurchase = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Purchase"]!,
+                                        insertInto: managedObjectContext)
+        sPurchase.setValue("Hornby", forKey: "manufacturer")
+        sPurchase.setValue("R1234", forKey: "catalogNumber")
+
+        let sModel = NSManagedObject(entity: sourceManagedObjectModel.entitiesByName["Model"]!,
+                                     insertInto: managedObjectContext)
+        sModel.setValue(sPurchase, forKey: "purchase")
+        sModel.setValue(4, forKey: "classificationRawValue")
+        sModel.setValue("419", forKey: "modelClass")
+
+        try managedObjectContext.save()
+        try performMigration()
+
+        let dModelsFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Model")
+        let dModels = try managedObjectContext.fetch(dModelsFetchRequest)
+        XCTAssertEqual(dModels.count, 1, "Expected Model after migration")
+
+        let dModel = dModels.first!
+        XCTAssertEqual(dModel.value(forKey: "modelClass") as! String?, "419",
+                       "Model.modelClass not converted from source")
+        XCTAssertEqual(dModel.value(forKey: "vehicleType") as! String?, "",
+                       "Model.vehicleType not converted from source")
     }
 
     // MARK: ModelToAccessory

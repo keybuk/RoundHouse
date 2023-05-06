@@ -71,6 +71,7 @@
         <attribute name="name" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="notes" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="number" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="vehicleType" optional="YES" attributeType="String" defaultValueString=""/>
         <attribute name="wheelArrangement" optional="YES" attributeType="String" defaultValueString=""/>
         <relationship name="couplings" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Coupling" inverseName="model" inverseEntity="Coupling"/>
         <relationship name="decoder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Decoder" inverseName="model" inverseEntity="Decoder"/>
