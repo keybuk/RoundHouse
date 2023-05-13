@@ -28,7 +28,6 @@ struct AppSidebar: View {
         case models(Model.Classification)
         case accessories
         case decoders
-        case trains
 
         init?(rawValue: String) {
             switch rawValue {
@@ -43,7 +42,6 @@ struct AppSidebar: View {
             case "models.vehicle": self = .models(.vehicle)
             case "accessories": self = .accessories
             case "decoders": self = .decoders
-            case "trains": self = .trains
             default: return nil
             }
         }
@@ -61,7 +59,6 @@ struct AppSidebar: View {
             case .models(.vehicle): return "models.vehicle"
             case .accessories: return "accessories"
             case .decoders: return "decoders"
-            case .trains: return "trains"
             }
         }
     }
